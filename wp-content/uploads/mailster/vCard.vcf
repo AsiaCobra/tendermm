@@ -1,0 +1,7 @@
+BEGIN:VCARD
+N:Firstname;Lastname;;;
+ADR;INTL;PARCEL;WORK:;;StreetName;City;State;123456;Country
+EMAIL;INTERNET:mpep@mmtender.com
+ORG:Myanmar Tender Portal
+URL;WORK:https://www.mmtender.com
+END:VCARD

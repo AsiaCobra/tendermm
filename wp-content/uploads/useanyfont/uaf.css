@@ -1,0 +1,32 @@
+				@font-face {
+					font-family: 'pyidaungsu';
+					src: url('/wp-content/uploads/useanyfont/191117074214Pyidaungsu.woff') format('woff');
+				}
+
+				.pyidaungsu{font-family: 'pyidaungsu' !important;}
+
+						body, h1, h2, h3, h4, h5, h6, p, blockquote, li, a, #menu-main li a, #menu-main li span, #menu-mainmm li a, #menu-mainmm li span, #menu-custom-menu1 li a, #menu-custom-menu1 li span, #menu-custom-menu li a, #menu-custom-menu li span, .select2-selection_rendered, .alsp-field-name, .alsp-fields-group-caption{
+					font-family: 'pyidaungsu' !important;
+				}
+						.pacz-page-heading{
+					font-family: 'pyidaungsu' !important;
+				}
+						#select2-selection__rendered{
+					font-family: 'pyidaungsu' !important;
+				}
+						::placeholder, :-ms-input-placeholder, ::-ms-input-placeholder{
+					font-family: 'pyidaungsu' !important;
+				}
+						.w4pl_post_title, .post_title{
+					font-family: 'pyidaungsu' !important;
+				}
+						.widgettitle{
+					font-family: 'pyidaungsu' !important;
+				}
+						.select2-search__field{
+					font-family: 'pyidaungsu' !important;
+				}
+						.form-control{
+					font-family: 'pyidaungsu' !important;
+				}
+		

@@ -1,0 +1,267 @@
+/*
+Theme Name: ClassiadsPro Child
+Theme URI: http://themeforest.net/user/designinvento/portfolio
+Description: A Beautiful, Professional and Ultimate Wordpress Theme Made by designinvento
+Author: DesignInvento
+Author URI: http://themeforest.net/user/designinvento
+Version: 5.6.1
+Template: classiadspro
+Text Domain: classiadspro
+Tags:translation-ready
+Tags:translation-ready
+License: GNU General Public License v2.0
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+.select2-results li {
+    margin: 0;
+    padding: 10px 21px;
+    background: #ffffff;
+    border-bottom: 1px solid #bfbfbf;
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+    background-color: #dcf0f8;
+}
+
+.select2-search--dropdown .select2-search__field {
+    padding: 10px 0px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #e0e0e0;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    border: 0px solid #ddd0 !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: inherit;
+}
+
+.select2-container--default .select2-selection--single {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    line-height: 44px;
+}
+
+.select2-container .select2-selection--single {
+    box-sizing: border-box;
+    cursor: pointer;
+    display: block;
+    height: 44px;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+/* UniPress */
+@font-face {
+    font-family: 'MyanmarFont';
+    src: local('Pyidaungsu'),
+        url('https://mmtender.com:443/wp-content/plugins/myanmar-unipress/_inc/fonts/pyidaungsu-1.8_Regular.woff') format('woff'),
+        url('https://mmtender.com:443/wp-content/plugins/myanmar-unipress/_inc/fonts/pyidaungsu-1.8_Regular.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: 'MyanmarFont';
+    src: local('Pyidaungsu'),
+        url('https://mmtender.com:443/wp-content/plugins/myanmar-unipress/_inc/fonts/pyidaungsu-1.8_Bold.woff') format('woff'),
+        url('https://mmtender.com:443/wp-content/plugins/myanmar-unipress/_inc/fonts/pyidaungsu-1.8_Bold.ttf') format('ttf');
+    font-weight: bold;
+}
+
+.myan_mar_Font {
+    font-family: MyanmarFont !important;
+}
+
+.myan_mar_text {
+    letter-spacing: normal !important;
+}
+
+/* WPML Style */
+.wpml-ls-menu-item .wpml-ls-flag {
+    display: inline;
+    vertical-align: baseline;
+    width: 18px;
+    height: 12px
+}
+
+.wpml-ls-menu-item .wpml-ls-flag+span {
+    margin-left: .3em
+}
+
+.rtl .wpml-ls-menu-item .wpml-ls-flag+span {
+    margin-left: 0;
+    margin-right: .3em
+}
+
+/* Image Aera Selected */
+/*
+ * imgAreaSelect animated border style
+ */
+
+.imgareaselect-border1 {
+    background: url(border-anim-v.gif) repeat-y left top;
+}
+
+.imgareaselect-border2 {
+    background: url(border-anim-h.gif) repeat-x left top;
+}
+
+.imgareaselect-border3 {
+    background: url(border-anim-v.gif) repeat-y right top;
+}
+
+.imgareaselect-border4 {
+    background: url(border-anim-h.gif) repeat-x left bottom;
+}
+
+.imgareaselect-border1,
+.imgareaselect-border2,
+.imgareaselect-border3,
+.imgareaselect-border4 {
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+}
+
+.imgareaselect-handle {
+    background-color: #fff;
+    border: solid 1px #000;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+}
+
+.imgareaselect-outer {
+    background-color: #000;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+}
+
+#pacz-boxed-layout .pacz-header-toolbar {
+    height: 140px;
+}
+
+.pacz-header-toolbar .pacz-grid .logo-left {
+    height: 100px !important;
+}
+
+.logo-left>ul {
+    /* overflow: hidden; */
+    display: inline-flex;
+}
+
+.logo-left>ul>li.pacz-header-logo {
+    width: 250px;
+}
+
+h1.c-title {
+    font-size: 16px;
+    margin-bottom: 0;
+    margin-top: -5px;
+    font-weight: bold;
+    color: #3674ba;
+    padding: 0;
+}
+
+.pacz-mobile-logo-wrap a {
+    width: auto !important;
+}
+
+
+span.alsp-field-content.content-multi:after {
+    content: '';
+}
+
+.alsp-field-output-block-92 span.alsp-field-caption {
+    display: block;
+}
+
+@media(max-width:959px) {
+    .logo-left>ul>li.pacz-header-logo {
+        /* 	width:auto; */
+    }
+
+    .pacz-mobile-header-bottom.clearfix {
+        display: flex;
+        position: relative;
+    }
+
+    .ubermenu-skin-white.ubermenu-responsive-toggle {
+        width: auto;
+        padding: 10px;
+        display: inline-block;
+    }
+
+    .ubermenu.ubermenu-main:not(.ubermenu-responsive-collapse) {
+        position: absolute;
+    }
+}
+
+@media(max-width: 777px) {
+    .alsp-listings-block.cz-listview article .listing-wrapper .alsp-listing-text-content-wrap {
+        width: fit-content !important;
+        float: none;
+    }
+
+    .listing-wrapper .listng-author-img {
+        padding-top: 30px;
+        width: 100px;
+        width: fit-content;
+        margin: 0 0;
+        padding: 0 0 !important;
+        left: 0;
+        right: 0;
+        top: 0;
+        position: relative !important;
+        /* background: red; */
+        display: block;
+        width: auto !important;
+        text-align: left;
+        padding-left: 10px !important;
+        height: auto !important;
+        padding-top: 0px !important;
+    }
+
+    .list-exerpt-field .listng-author-img .alsp-field-output-block {
+        margin-top: 10px !important;
+    }
+
+    .listing-wrapper .listng-author-img .alsp-field-output-block {
+        margin-top: 0px !important;
+    }
+
+    .alsp-field.alsp-field-output-block.alsp-field-output-block-select.alsp-field-output-block-92 {
+        margin-top: 20px !important;
+    }
+
+    .alsp-listings-block.cz-listview article .alsp-field-caption .alsp-field-name {
+        font-weight: 700 !important;
+    }
+
+    .listing-wrapper .listng-author-img .alsp-field-output-block {
+        margin-top: 0px;
+    }
+
+    .pagination>li {
+        margin-left: 0px !important;
+    }
+
+    .alsp-field.alsp-field-output-block.alsp-field-output-block-datetime.alsp-field-output-block-91 {
+        margin-bottom: 20px;
+    }
+
+    .pagination>li>a,
+    .pagination>li>span {
+        padding: 6px 10px !important;
+    }
+
+    p.listing-location {
+        position: absolute;
+        top: auto;
+        color: #3676ba;
+        font-weight: 700;
+        /* right: 0; */
+        bottom: 0px;
+    }
+}

@@ -1,0 +1,162 @@
+2019-11-12T00:37:52+00:00 CRITICAL Uncaught Error: Call to undefined function pacz_is_user_online() in /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/advert.tpl.php:318
+Stack trace:
+#0 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_functions.php(265): include()
+#1 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-adverts/alsp_class_adverts.php(332): alsp_renderTemplate('/home3/inzkdy93...', Array, false)
+#2 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/alsp_adverts_wrapper.tpl.php(173): alsp_listing->display(Object(alsp_listings_controller))
+#3 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_functions.php(265): include('/home3/inzkdy93...')
+#4 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_class_public_control.php(222): alsp_renderTemplate('/home3/inzkdy93...', Array, true)
+#5 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/alsp.php(385): alsp_public_control->display()
+#6 /home in /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/advert.tpl.php on line 318
+
+2019-11-12T00:37:53+00:00 CRITICAL Uncaught Error: Call to undefined function pacz_is_user_online() in /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/advert.tpl.php:318
+Stack trace:
+#0 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_functions.php(265): include()
+#1 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-adverts/alsp_class_adverts.php(332): alsp_renderTemplate('/home3/inzkdy93...', Array, false)
+#2 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/alsp_adverts_wrapper.tpl.php(173): alsp_listing->display(Object(alsp_listings_controller))
+#3 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_functions.php(265): include('/home3/inzkdy93...')
+#4 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_class_public_control.php(222): alsp_renderTemplate('/home3/inzkdy93...', Array, true)
+#5 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/alsp.php(385): alsp_public_control->display()
+#6 /home in /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/advert.tpl.php on line 318
+
+2019-11-12T00:38:02+00:00 CRITICAL Uncaught Error: Call to undefined function pacz_is_user_online() in /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/advert.tpl.php:318
+Stack trace:
+#0 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_functions.php(265): include()
+#1 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-adverts/alsp_class_adverts.php(332): alsp_renderTemplate('/home3/inzkdy93...', Array, false)
+#2 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/alsp_adverts_wrapper.tpl.php(173): alsp_listing->display(Object(alsp_listings_controller))
+#3 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_functions.php(265): include('/home3/inzkdy93...')
+#4 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_class_public_control.php(222): alsp_renderTemplate('/home3/inzkdy93...', Array, true)
+#5 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-widgets/alsp_adverts.php(258): alsp_publ in /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/advert.tpl.php on line 318
+
+2019-11-12T00:38:07+00:00 CRITICAL Uncaught Error: Call to undefined function pacz_is_user_online() in /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/advert.tpl.php:318
+Stack trace:
+#0 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_functions.php(265): include()
+#1 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-adverts/alsp_class_adverts.php(332): alsp_renderTemplate('/home3/inzkdy93...', Array, false)
+#2 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/alsp_adverts_wrapper.tpl.php(173): alsp_listing->display(Object(alsp_listings_controller))
+#3 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_functions.php(265): include('/home3/inzkdy93...')
+#4 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_class_public_control.php(222): alsp_renderTemplate('/home3/inzkdy93...', Array, true)
+#5 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-widgets/alsp_adverts.php(258): alsp_publ in /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/advert.tpl.php on line 318
+
+2019-11-12T00:38:22+00:00 CRITICAL Uncaught Error: Call to undefined function pacz_is_user_online() in /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/advert.tpl.php:318
+Stack trace:
+#0 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_functions.php(265): include()
+#1 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-adverts/alsp_class_adverts.php(332): alsp_renderTemplate('/home3/inzkdy93...', Array, false)
+#2 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/alsp_adverts_wrapper.tpl.php(173): alsp_listing->display(Object(alsp_listings_controller))
+#3 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_functions.php(265): include('/home3/inzkdy93...')
+#4 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_class_public_control.php(222): alsp_renderTemplate('/home3/inzkdy93...', Array, true)
+#5 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-widgets/alsp_adverts.php(258): alsp_publ in /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/advert.tpl.php on line 318
+
+2019-11-12T00:38:36+00:00 CRITICAL Uncaught Error: Call to undefined function pacz_is_user_online() in /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/advert.tpl.php:318
+Stack trace:
+#0 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_functions.php(265): include()
+#1 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-adverts/alsp_class_adverts.php(332): alsp_renderTemplate('/home3/inzkdy93...', Array, false)
+#2 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/alsp_adverts_wrapper.tpl.php(173): alsp_listing->display(Object(alsp_listings_controller))
+#3 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_functions.php(265): include('/home3/inzkdy93...')
+#4 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_class_public_control.php(222): alsp_renderTemplate('/home3/inzkdy93...', Array, true)
+#5 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-widgets/alsp_adverts.php(258): alsp_publ in /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/advert.tpl.php on line 318
+
+2019-11-12T00:38:42+00:00 CRITICAL Uncaught Error: Call to undefined function pacz_is_user_online() in /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/advert.tpl.php:318
+Stack trace:
+#0 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_functions.php(265): include()
+#1 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-adverts/alsp_class_adverts.php(332): alsp_renderTemplate('/home3/inzkdy93...', Array, false)
+#2 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/alsp_adverts_wrapper.tpl.php(173): alsp_listing->display(Object(alsp_listings_controller))
+#3 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_functions.php(265): include('/home3/inzkdy93...')
+#4 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_class_public_control.php(222): alsp_renderTemplate('/home3/inzkdy93...', Array, true)
+#5 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-widgets/alsp_adverts.php(258): alsp_publ in /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/advert.tpl.php on line 318
+
+2019-11-12T00:38:47+00:00 CRITICAL Uncaught Error: Call to undefined function pacz_is_user_online() in /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/advert.tpl.php:318
+Stack trace:
+#0 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_functions.php(265): include()
+#1 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-adverts/alsp_class_adverts.php(332): alsp_renderTemplate('/home3/inzkdy93...', Array, false)
+#2 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/alsp_adverts_wrapper.tpl.php(173): alsp_listing->display(Object(alsp_directory_controller))
+#3 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_functions.php(265): include('/home3/inzkdy93...')
+#4 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/alsp_archive_main.tpl.php(98): alsp_renderTemplate('/home3/inzkdy93...', Array)
+#5 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_functions.php(265): include('/home3/inzkdy93.. in /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/advert.tpl.php on line 318
+
+2019-11-12T00:38:57+00:00 CRITICAL Uncaught Error: Call to undefined function pacz_is_user_online() in /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/advert.tpl.php:318
+Stack trace:
+#0 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_functions.php(265): include()
+#1 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-adverts/alsp_class_adverts.php(332): alsp_renderTemplate('/home3/inzkdy93...', Array, false)
+#2 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/alsp_adverts_wrapper.tpl.php(173): alsp_listing->display(Object(alsp_listings_controller))
+#3 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_functions.php(265): include('/home3/inzkdy93...')
+#4 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_class_public_control.php(222): alsp_renderTemplate('/home3/inzkdy93...', Array, true)
+#5 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-widgets/alsp_adverts.php(258): alsp_publ in /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/advert.tpl.php on line 318
+
+2019-11-12T00:38:58+00:00 CRITICAL Uncaught Error: Call to undefined function pacz_is_user_online() in /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/advert.tpl.php:318
+Stack trace:
+#0 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_functions.php(265): include()
+#1 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-adverts/alsp_class_adverts.php(332): alsp_renderTemplate('/home3/inzkdy93...', Array, false)
+#2 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/alsp_adverts_wrapper.tpl.php(173): alsp_listing->display(Object(alsp_listings_controller))
+#3 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_functions.php(265): include('/home3/inzkdy93...')
+#4 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_class_public_control.php(222): alsp_renderTemplate('/home3/inzkdy93...', Array, true)
+#5 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-widgets/alsp_adverts.php(258): alsp_publ in /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/advert.tpl.php on line 318
+
+2019-11-12T00:39:02+00:00 CRITICAL Uncaught Error: Call to undefined function pacz_is_user_online() in /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/advert.tpl.php:318
+Stack trace:
+#0 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_functions.php(265): include()
+#1 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-adverts/alsp_class_adverts.php(332): alsp_renderTemplate('/home3/inzkdy93...', Array, false)
+#2 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/alsp_adverts_wrapper.tpl.php(173): alsp_listing->display(Object(alsp_listings_controller))
+#3 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_functions.php(265): include('/home3/inzkdy93...')
+#4 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_class_public_control.php(222): alsp_renderTemplate('/home3/inzkdy93...', Array, true)
+#5 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-widgets/alsp_adverts.php(258): alsp_publ in /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/advert.tpl.php on line 318
+
+2019-11-12T00:39:09+00:00 CRITICAL Uncaught Error: Call to undefined function pacz_is_user_online() in /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/advert.tpl.php:318
+Stack trace:
+#0 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_functions.php(265): include()
+#1 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-adverts/alsp_class_adverts.php(332): alsp_renderTemplate('/home3/inzkdy93...', Array, false)
+#2 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/alsp_adverts_wrapper.tpl.php(173): alsp_listing->display(Object(alsp_listings_controller))
+#3 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_functions.php(265): include('/home3/inzkdy93...')
+#4 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_class_public_control.php(222): alsp_renderTemplate('/home3/inzkdy93...', Array, true)
+#5 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-widgets/alsp_adverts.php(258): alsp_publ in /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/advert.tpl.php on line 318
+
+2019-11-12T01:25:56+00:00 CRITICAL Uncaught Error: Call to undefined function pacz_is_user_online() in /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/advert.tpl.php:318
+Stack trace:
+#0 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_functions.php(265): include()
+#1 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-adverts/alsp_class_adverts.php(332): alsp_renderTemplate('/home3/inzkdy93...', Array, false)
+#2 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/alsp_adverts_wrapper.tpl.php(173): alsp_listing->display(Object(alsp_directory_controller))
+#3 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_functions.php(265): include('/home3/inzkdy93...')
+#4 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/alsp_archive_main.tpl.php(98): alsp_renderTemplate('/home3/inzkdy93...', Array)
+#5 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_functions.php(265): include('/home3/inzkdy93.. in /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/advert.tpl.php on line 318
+
+2019-11-12T02:51:17+00:00 CRITICAL Uncaught Error: Call to undefined function pacz_is_user_online() in /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/advert.tpl.php:318
+Stack trace:
+#0 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_functions.php(265): include()
+#1 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-adverts/alsp_class_adverts.php(332): alsp_renderTemplate('/home3/inzkdy93...', Array, false)
+#2 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/alsp_adverts_wrapper.tpl.php(173): alsp_listing->display(Object(alsp_listings_controller))
+#3 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_functions.php(265): include('/home3/inzkdy93...')
+#4 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_class_public_control.php(222): alsp_renderTemplate('/home3/inzkdy93...', Array, true)
+#5 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/alsp.php(385): alsp_public_control->display()
+#6 /home in /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/advert.tpl.php on line 318
+
+2019-11-12T02:55:57+00:00 CRITICAL Uncaught Error: Call to undefined function pacz_is_user_online() in /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/advert.tpl.php:318
+Stack trace:
+#0 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_functions.php(265): include()
+#1 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-adverts/alsp_class_adverts.php(332): alsp_renderTemplate('/home3/inzkdy93...', Array, false)
+#2 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/alsp_adverts_wrapper.tpl.php(173): alsp_listing->display(Object(alsp_directory_controller))
+#3 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_functions.php(265): include('/home3/inzkdy93...')
+#4 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/alsp_archive_main.tpl.php(98): alsp_renderTemplate('/home3/inzkdy93...', Array)
+#5 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_functions.php(265): include('/home3/inzkdy93.. in /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/advert.tpl.php on line 318
+
+2019-11-12T03:16:57+00:00 CRITICAL Uncaught Error: Call to undefined function pacz_is_user_online() in /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_functions.php:4000
+Stack trace:
+#0 /home3/inzkdy93/www.mmtender.com/wp-includes/class-wp-hook.php(286): alsp_dashboard_panel_html('gdud_dashboard_...')
+#1 /home3/inzkdy93/www.mmtender.com/wp-includes/plugin.php(208): WP_Hook->apply_filters('gdud_dashboard_...', Array)
+#2 /home3/inzkdy93/www.mmtender.com/wp-content/themes/classiadspro/gd-user-dashboard-template.php(40): apply_filters('dashboard_panel...', 'gdud_dashboard_...')
+#3 /home3/inzkdy93/www.mmtender.com/wp-includes/template-loader.php(78): include('/home3/inzkdy93...')
+#4 /home3/inzkdy93/www.mmtender.com/wp-blog-header.php(19): require_once('/home3/inzkdy93...')
+#5 /home3/inzkdy93/www.mmtender.com/index.php(17): require('/home3/inzkdy93...')
+#6 {main}
+  thrown in /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_functions.php on line 4000
+
+2019-11-12T03:17:01+00:00 CRITICAL Uncaught Error: Call to undefined function pacz_is_user_online() in /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_functions.php:4000
+Stack trace:
+#0 /home3/inzkdy93/www.mmtender.com/wp-includes/class-wp-hook.php(286): alsp_dashboard_panel_html('gdud_dashboard_...')
+#1 /home3/inzkdy93/www.mmtender.com/wp-includes/plugin.php(208): WP_Hook->apply_filters('gdud_dashboard_...', Array)
+#2 /home3/inzkdy93/www.mmtender.com/wp-content/themes/classiadspro/gd-user-dashboard-template.php(40): apply_filters('dashboard_panel...', 'gdud_dashboard_...')
+#3 /home3/inzkdy93/www.mmtender.com/wp-includes/template-loader.php(78): include('/home3/inzkdy93...')
+#4 /home3/inzkdy93/www.mmtender.com/wp-blog-header.php(19): require_once('/home3/inzkdy93...')
+#5 /home3/inzkdy93/www.mmtender.com/index.php(17): require('/home3/inzkdy93...')
+#6 {main}
+  thrown in /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_functions.php on line 4000
+
+2019-11-12T04:29:09+00:00 CRITICAL Cannot redeclare getDirList() (previously declared in /home3/inzkdy93/www.mmtender.com/wp-content/plugins/ubermenu/includes/class.plugin-modules.php:25) in /home3/inzkdy93/www.mmtender.com/wp-content/plugins/ubermenu/admin/class.plugin-modules.php on line 41
+

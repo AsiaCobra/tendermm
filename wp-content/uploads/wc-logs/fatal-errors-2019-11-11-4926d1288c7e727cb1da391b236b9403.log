@@ -1,0 +1,147 @@
+2019-11-11T16:29:55+00:00 CRITICAL Uncaught Error: Call to undefined function pacz_is_user_online() in /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/advert.tpl.php:318
+Stack trace:
+#0 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_functions.php(265): include()
+#1 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-adverts/alsp_class_adverts.php(332): alsp_renderTemplate('/home3/inzkdy93...', Array, false)
+#2 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/alsp_adverts_wrapper.tpl.php(173): alsp_listing->display(Object(alsp_listings_controller))
+#3 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_functions.php(265): include('/home3/inzkdy93...')
+#4 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_class_public_control.php(222): alsp_renderTemplate('/home3/inzkdy93...', Array, true)
+#5 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/alsp.php(385): alsp_public_control->display()
+#6 /home in /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/advert.tpl.php on line 318
+
+2019-11-11T16:31:29+00:00 CRITICAL Uncaught Error: Call to undefined function pacz_is_user_online() in /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/advert.tpl.php:318
+Stack trace:
+#0 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_functions.php(265): include()
+#1 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-adverts/alsp_class_adverts.php(332): alsp_renderTemplate('/home3/inzkdy93...', Array, false)
+#2 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/alsp_adverts_wrapper.tpl.php(173): alsp_listing->display(Object(alsp_listings_controller))
+#3 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_functions.php(265): include('/home3/inzkdy93...')
+#4 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_class_public_control.php(222): alsp_renderTemplate('/home3/inzkdy93...', Array, true)
+#5 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/alsp.php(385): alsp_public_control->display()
+#6 /home in /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/advert.tpl.php on line 318
+
+2019-11-11T16:31:32+00:00 CRITICAL Uncaught Error: Call to undefined function pacz_is_user_online() in /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/advert.tpl.php:318
+Stack trace:
+#0 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_functions.php(265): include()
+#1 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-adverts/alsp_class_adverts.php(332): alsp_renderTemplate('/home3/inzkdy93...', Array, false)
+#2 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/alsp_adverts_wrapper.tpl.php(173): alsp_listing->display(Object(alsp_directory_controller))
+#3 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_functions.php(265): include('/home3/inzkdy93...')
+#4 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/alsp_archive_main.tpl.php(98): alsp_renderTemplate('/home3/inzkdy93...', Array)
+#5 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_functions.php(265): include('/home3/inzkdy93.. in /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/advert.tpl.php on line 318
+
+2019-11-11T16:32:19+00:00 CRITICAL Uncaught Error: Call to undefined function pacz_is_user_online() in /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/advert.tpl.php:318
+Stack trace:
+#0 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_functions.php(265): include()
+#1 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-adverts/alsp_class_adverts.php(332): alsp_renderTemplate('/home3/inzkdy93...', Array, false)
+#2 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/alsp_adverts_wrapper.tpl.php(173): alsp_listing->display(Object(alsp_listings_controller))
+#3 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_functions.php(265): include('/home3/inzkdy93...')
+#4 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_class_public_control.php(222): alsp_renderTemplate('/home3/inzkdy93...', Array, true)
+#5 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/alsp.php(385): alsp_public_control->display()
+#6 /home in /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/advert.tpl.php on line 318
+
+2019-11-11T17:14:48+00:00 CRITICAL Uncaught Error: Call to undefined function icl_st_is_registered_string() in /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-fields/alsp_class_fields.php:813
+Stack trace:
+#0 /home3/inzkdy93/www.mmtender.com/wp-includes/class-wp-hook.php(286): alsp_filter_content_field_fields(Array, Object(alsp_content_field_string), Array)
+#1 /home3/inzkdy93/www.mmtender.com/wp-includes/plugin.php(208): WP_Hook->apply_filters(Array, Array)
+#2 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-fields/alsp_class_fields.php(638): apply_filters('alsp_content_fi...', Array, Object(alsp_content_field_string), Array)
+#3 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-fields/alsp_class_fields.php(137): alsp_content_field->save(Array)
+#4 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-fields/alsp_class_main_fields.php(96): alsp_content_fields->saveContentFieldFromArray('86', Array)
+#5 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/ in /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-fields/alsp_class_fields.php on line 813
+
+2019-11-11T17:15:43+00:00 CRITICAL Uncaught Error: Call to undefined function icl_st_is_registered_string() in /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-fields/alsp_class_fields.php:813
+Stack trace:
+#0 /home3/inzkdy93/www.mmtender.com/wp-includes/class-wp-hook.php(286): alsp_filter_content_field_fields(Array, Object(alsp_content_field_string), Array)
+#1 /home3/inzkdy93/www.mmtender.com/wp-includes/plugin.php(208): WP_Hook->apply_filters(Array, Array)
+#2 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-fields/alsp_class_fields.php(638): apply_filters('alsp_content_fi...', Array, Object(alsp_content_field_string), Array)
+#3 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-fields/alsp_class_fields.php(137): alsp_content_field->save(Array)
+#4 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-fields/alsp_class_main_fields.php(96): alsp_content_fields->saveContentFieldFromArray('86', Array)
+#5 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/ in /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-fields/alsp_class_fields.php on line 813
+
+2019-11-11T17:16:54+00:00 CRITICAL Uncaught Error: Call to undefined function icl_st_is_registered_string() in /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-packages/alsp_class_packages.php:394
+Stack trace:
+#0 /home3/inzkdy93/www.mmtender.com/wp-includes/class-wp-hook.php(286): alsp_filter_level_settings(Array, Array)
+#1 /home3/inzkdy93/www.mmtender.com/wp-includes/plugin.php(208): WP_Hook->apply_filters(Array, Array)
+#2 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-packages/alsp_class_packages.php(134): apply_filters('alsp_level_crea...', Array, Array)
+#3 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-packages/alsp_class_main_packages.php(97): alsp_levels->saveLevelFromArray('1', Array)
+#4 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-packages/alsp_class_main_packages.php(29): alsp_levels_manager->addOrEditLevel('1')
+#5 /home3/inzkdy93/www.mmtender.com/wp-includes/class-wp-hook.php(286): alsp_levels_manager->alsp_manage_levels_page(' in /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-packages/alsp_class_packages.php on line 394
+
+2019-11-11T17:31:22+00:00 CRITICAL Uncaught Error: Call to undefined function icl_st_is_registered_string() in /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-fields/alsp_class_fields.php:813
+Stack trace:
+#0 /home3/inzkdy93/www.mmtender.com/wp-includes/class-wp-hook.php(286): alsp_filter_content_field_fields(Array, Object(alsp_content_field_string), Array)
+#1 /home3/inzkdy93/www.mmtender.com/wp-includes/plugin.php(208): WP_Hook->apply_filters(Array, Array)
+#2 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-fields/alsp_class_fields.php(638): apply_filters('alsp_content_fi...', Array, Object(alsp_content_field_string), Array)
+#3 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-fields/alsp_class_fields.php(137): alsp_content_field->save(Array)
+#4 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-fields/alsp_class_main_fields.php(96): alsp_content_fields->saveContentFieldFromArray('86', Array)
+#5 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/ in /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-fields/alsp_class_fields.php on line 813
+
+2019-11-11T17:41:09+00:00 CRITICAL Uncaught Error: Call to undefined function icl_st_is_registered_string() in /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-packages/alsp_class_packages.php:394
+Stack trace:
+#0 /home3/inzkdy93/www.mmtender.com/wp-includes/class-wp-hook.php(286): alsp_filter_level_settings(Array, Array)
+#1 /home3/inzkdy93/www.mmtender.com/wp-includes/plugin.php(208): WP_Hook->apply_filters(Array, Array)
+#2 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-packages/alsp_class_packages.php(134): apply_filters('alsp_level_crea...', Array, Array)
+#3 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-packages/alsp_class_main_packages.php(97): alsp_levels->saveLevelFromArray('1', Array)
+#4 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-packages/alsp_class_main_packages.php(29): alsp_levels_manager->addOrEditLevel('1')
+#5 /home3/inzkdy93/www.mmtender.com/wp-includes/class-wp-hook.php(286): alsp_levels_manager->alsp_manage_levels_page(' in /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-packages/alsp_class_packages.php on line 394
+
+2019-11-11T18:02:34+00:00 CRITICAL Uncaught Error: Call to undefined function icl_st_is_registered_string() in /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-packages/alsp_class_packages.php:394
+Stack trace:
+#0 /home3/inzkdy93/www.mmtender.com/wp-includes/class-wp-hook.php(286): alsp_filter_level_settings(Array, Array)
+#1 /home3/inzkdy93/www.mmtender.com/wp-includes/plugin.php(208): WP_Hook->apply_filters(Array, Array)
+#2 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-packages/alsp_class_packages.php(134): apply_filters('alsp_level_crea...', Array, Array)
+#3 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-packages/alsp_class_main_packages.php(97): alsp_levels->saveLevelFromArray('1', Array)
+#4 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-packages/alsp_class_main_packages.php(29): alsp_levels_manager->addOrEditLevel('1')
+#5 /home3/inzkdy93/www.mmtender.com/wp-includes/class-wp-hook.php(286): alsp_levels_manager->alsp_manage_levels_page(' in /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-packages/alsp_class_packages.php on line 394
+
+2019-11-11T18:05:44+00:00 CRITICAL Uncaught Error: Call to undefined function icl_st_is_registered_string() in /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-fields/alsp_class_fields.php:813
+Stack trace:
+#0 /home3/inzkdy93/www.mmtender.com/wp-includes/class-wp-hook.php(286): alsp_filter_content_field_fields(Array, Object(alsp_content_field_string), Array)
+#1 /home3/inzkdy93/www.mmtender.com/wp-includes/plugin.php(208): WP_Hook->apply_filters(Array, Array)
+#2 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-fields/alsp_class_fields.php(638): apply_filters('alsp_content_fi...', Array, Object(alsp_content_field_string), Array)
+#3 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-fields/alsp_class_fields.php(137): alsp_content_field->save(Array)
+#4 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-fields/alsp_class_main_fields.php(96): alsp_content_fields->saveContentFieldFromArray('86', Array)
+#5 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/ in /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-fields/alsp_class_fields.php on line 813
+
+2019-11-11T18:12:05+00:00 CRITICAL Uncaught Error: Call to undefined function icl_st_is_registered_string() in /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-packages/alsp_class_packages.php:394
+Stack trace:
+#0 /home3/inzkdy93/www.mmtender.com/wp-includes/class-wp-hook.php(286): alsp_filter_level_settings(Array, Array)
+#1 /home3/inzkdy93/www.mmtender.com/wp-includes/plugin.php(208): WP_Hook->apply_filters(Array, Array)
+#2 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-packages/alsp_class_packages.php(134): apply_filters('alsp_level_crea...', Array, Array)
+#3 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-packages/alsp_class_main_packages.php(97): alsp_levels->saveLevelFromArray('1', Array)
+#4 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-packages/alsp_class_main_packages.php(29): alsp_levels_manager->addOrEditLevel('1')
+#5 /home3/inzkdy93/www.mmtender.com/wp-includes/class-wp-hook.php(286): alsp_levels_manager->alsp_manage_levels_page(' in /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-packages/alsp_class_packages.php on line 394
+
+2019-11-11T18:20:43+00:00 CRITICAL Uncaught Error: Call to undefined function icl_st_is_registered_string() in /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-fields/alsp_class_fields.php:813
+Stack trace:
+#0 /home3/inzkdy93/www.mmtender.com/wp-includes/class-wp-hook.php(286): alsp_filter_content_field_fields(Array, Object(alsp_content_field_string), Array)
+#1 /home3/inzkdy93/www.mmtender.com/wp-includes/plugin.php(208): WP_Hook->apply_filters(Array, Array)
+#2 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-fields/alsp_class_fields.php(638): apply_filters('alsp_content_fi...', Array, Object(alsp_content_field_string), Array)
+#3 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-fields/alsp_class_fields.php(137): alsp_content_field->save(Array)
+#4 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-fields/alsp_class_main_fields.php(96): alsp_content_fields->saveContentFieldFromArray('86', Array)
+#5 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/ in /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-fields/alsp_class_fields.php on line 813
+
+2019-11-11T19:02:44+00:00 CRITICAL Uncaught Error: Call to undefined function pacz_is_user_online() in /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/advert.tpl.php:318
+Stack trace:
+#0 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_functions.php(265): include()
+#1 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-adverts/alsp_class_adverts.php(332): alsp_renderTemplate('/home3/inzkdy93...', Array, false)
+#2 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/alsp_adverts_wrapper.tpl.php(173): alsp_listing->display(Object(alsp_listings_controller))
+#3 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_functions.php(265): include('/home3/inzkdy93...')
+#4 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_class_public_control.php(222): alsp_renderTemplate('/home3/inzkdy93...', Array, true)
+#5 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-widgets/alsp_adverts.php(258): alsp_publ in /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/advert.tpl.php on line 318
+
+2019-11-11T21:09:49+00:00 CRITICAL Uncaught Error: Call to undefined function pacz_is_user_online() in /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/advert.tpl.php:318
+Stack trace:
+#0 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_functions.php(265): include()
+#1 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-adverts/alsp_class_adverts.php(332): alsp_renderTemplate('/home3/inzkdy93...', Array, false)
+#2 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/alsp_adverts_wrapper.tpl.php(173): alsp_listing->display(Object(alsp_listings_controller))
+#3 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_functions.php(265): include('/home3/inzkdy93...')
+#4 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_class_public_control.php(222): alsp_renderTemplate('/home3/inzkdy93...', Array, true)
+#5 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-widgets/alsp_adverts.php(258): alsp_publ in /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/advert.tpl.php on line 318
+
+2019-11-11T21:11:43+00:00 CRITICAL Uncaught Error: Call to undefined function pacz_is_user_online() in /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/advert.tpl.php:318
+Stack trace:
+#0 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_functions.php(265): include()
+#1 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-adverts/alsp_class_adverts.php(332): alsp_renderTemplate('/home3/inzkdy93...', Array, false)
+#2 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/alsp_adverts_wrapper.tpl.php(173): alsp_listing->display(Object(alsp_listings_controller))
+#3 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_functions.php(265): include('/home3/inzkdy93...')
+#4 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp_class_public_control.php(222): alsp_renderTemplate('/home3/inzkdy93...', Array, true)
+#5 /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/includes/alsp-widgets/alsp_adverts.php(258): alsp_publ in /home3/inzkdy93/www.mmtender.com/wp-content/plugins/listing/public/views/advert.tpl.php on line 318
+

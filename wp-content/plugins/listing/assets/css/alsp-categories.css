@@ -1,0 +1,12 @@
+@media screen and (device-width: 768px) {
+	.search-form-style3.alsp-content.alsp-search-form {
+		margin-top: 0
+	}
+	.alsp-categories-column-1,
+	.alsp-categories-column-2,
+	.alsp-categories-column-3,
+	.alsp-categories-column-4 {
+		float: left!important;
+		width: 50%
+	}
+}

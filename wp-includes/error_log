@@ -1,0 +1,30 @@
+[29-Jul-2020 08:42:00 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function is_main_site() in /home3/inzkdy93/www.mmtender.com/wp-includes/update.php:801
+Stack trace:
+#0 {main}
+  thrown in /home3/inzkdy93/www.mmtender.com/wp-includes/update.php on line 801
+[29-Jul-2020 08:42:04 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function is_main_site() in /home3/inzkdy93/www.mmtender.com/wp-includes/update.php:801
+Stack trace:
+#0 {main}
+  thrown in /home3/inzkdy93/www.mmtender.com/wp-includes/update.php on line 801
+[30-Jul-2020 22:47:12 America/Chicago] PHP Fatal error:  Class 'IXR_Server' not found in /home3/inzkdy93/www.mmtender.com/wp-includes/class-wp-xmlrpc-server.php on line 23
+[30-Jul-2020 22:47:13 America/Chicago] PHP Fatal error:  Class 'IXR_Server' not found in /home3/inzkdy93/www.mmtender.com/wp-includes/class-wp-xmlrpc-server.php on line 23
+[31-Jul-2020 14:01:33 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function feed_content_type() in /home3/inzkdy93/www.mmtender.com/wp-includes/feed-atom-comments.php:8
+Stack trace:
+#0 {main}
+  thrown in /home3/inzkdy93/www.mmtender.com/wp-includes/feed-atom-comments.php on line 8
+[01-Aug-2020 03:59:17 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function feed_content_type() in /home3/inzkdy93/www.mmtender.com/wp-includes/feed-atom-comments.php:8
+Stack trace:
+#0 {main}
+  thrown in /home3/inzkdy93/www.mmtender.com/wp-includes/feed-atom-comments.php on line 8
+[31-Aug-2020 10:37:20 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function _deprecated_file() in /home3/inzkdy93/www.mmtender.com/wp-includes/rss-functions.php:8
+Stack trace:
+#0 {main}
+  thrown in /home3/inzkdy93/www.mmtender.com/wp-includes/rss-functions.php on line 8
+[27-Sep-2020 06:58:07 America/Chicago] PHP Warning:  require(ABSPATHWPINC/option.php): failed to open stream: No such file or directory in /home3/inzkdy93/www.mmtender.com/wp-includes/functions.php on line 8
+[27-Sep-2020 06:58:07 America/Chicago] PHP Warning:  require(ABSPATHWPINC/option.php): failed to open stream: No such file or directory in /home3/inzkdy93/www.mmtender.com/wp-includes/functions.php on line 8
+[27-Sep-2020 06:58:07 America/Chicago] PHP Fatal error:  require(): Failed opening required 'ABSPATHWPINC/option.php' (include_path='.:/opt/php71/lib/php') in /home3/inzkdy93/www.mmtender.com/wp-includes/functions.php on line 8
+[27-Sep-2020 10:29:34 America/Chicago] PHP Fatal error:  Uncaught Error: Call to undefined function _deprecated_file() in /home3/inzkdy93/www.mmtender.com/wp-includes/locale.php:10
+Stack trace:
+#0 {main}
+  thrown in /home3/inzkdy93/www.mmtender.com/wp-includes/locale.php on line 10
+[27-Sep-2020 23:32:17 America/Chicago] PHP Fatal error:  Class 'Walker' not found in /home3/inzkdy93/www.mmtender.com/wp-includes/class-walker-nav-menu.php on line 17

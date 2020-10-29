@@ -1,0 +1,445 @@
+
+.alsp-locations-column-hidden{
+	visibility: hidden;
+}
+.alsp-locations-column-wrapper,
+.alsp-locations-column-wrapper:hover {
+	transition: all .5s ease
+}
+.handpick-locations .alsp-locations-column-wrapper a {
+	font-size: 18px;
+	text-transform: uppercase;
+	color: #fff;
+	display: block;
+	font-weight: 700;
+	letter-spacing: 3px
+}
+.handpick-locations .alsp-locations-column-wrapper a span.location-count,
+.location-style1 .alsp-locations-column-wrapper .alsp-locations-column-wrapper-inner .location-plus-icon,
+.location-style2 .alsp-locations-column-wrapper .alsp-locations-column-wrapper-inner .location-plus-icon,
+.location-style3 .alsp-locations-column-wrapper .alsp-locations-column-wrapper-inner .location-plus-icon,
+.location-style4 .alsp-locations-column-wrapper .alsp-locations-column-wrapper-inner .location-plus-icon,
+.location-style5 .alsp-locations-column-wrapper .alsp-locations-column-wrapper-inner .location-plus-icon,
+.location-style6 .alsp-locations-column-wrapper .alsp-locations-column-wrapper-inner .location-plus-icon,
+.location-style8 .alsp-locations-column-wrapper .alsp-locations-column-wrapper-inner .location-plus-icon,
+.location-style9 .alsp-locations-column-wrapper .alsp-locations-column-wrapper-inner .location-plus-icon {
+	display: none
+}
+#pacz-sidebar .location-icon .alsp-field-icon {
+	display: block!important;
+	margin: 13px auto 0
+}
+#pacz-sidebar .alsp-locations-column-wrapper-inner .location-plus-icon,
+:not(.location-archive) .location-style1 .alsp-locations-column-wrapper .alsp-locations-column-wrapper-inner .alsp-locations-root a .location-icon,
+:not(.pacz-builtin) .location-style1 .alsp-locations-column-wrapper .alsp-locations-column-wrapper-inner .alsp-locations-root a .location-icon {
+	display: none
+}
+:not(.location-archive) .location-style1 .alsp-locations-column-wrapper,
+:not(.pacz-builtin) .location-style1 .alsp-locations-column-wrapper {
+	padding: 20px
+}
+:not(.location-archive) .location-style1 .alsp-locations-column-wrapper .alsp-locations-column-wrapper-inner,
+:not(.pacz-builtin) .location-style1 .alsp-locations-column-wrapper .alsp-locations-column-wrapper-inner {
+	border: 3px solid rgba(255, 255, 255, .15);
+	height: inherit;
+	width: 100%
+}
+:not(.location-archive) .location-style1 .alsp-locations-column-wrapper:hover .alsp-locations-column-wrapper-inner,
+:not(.pacz-builtin) .location-style1 .alsp-locations-column-wrapper:hover .alsp-locations-column-wrapper-inner {
+	border: 3px solid #fff
+}
+:not(.location-archive) .location-style1 .alsp-locations-column-wrapper .alsp-locations-column-wrapper-inner .alsp-locations-root,
+:not(.pacz-builtin) .location-style1 .alsp-locations-column-wrapper .alsp-locations-column-wrapper-inner .alsp-locations-root {
+	height: inherit;
+	width: 100%;
+	text-align: center;
+	position: relative
+}
+.theme-page-wrapper:not(.left-layout) .location-style1 .alsp-locations-column-wrapper .alsp-locations-column-wrapper-inner .alsp-locations-root a,
+.theme-page-wrapper:not(.right-layout) .location-style1 .alsp-locations-column-wrapper .alsp-locations-column-wrapper-inner .alsp-locations-root a {
+	font-size: 18px;
+	color: #fff;
+	text-transform: uppercase;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%)
+}
+
+
+:not(.location-archive) .location-style2 .alsp-locations-column-wrapper {
+	border: 10px solid #fff;
+	-webkit-box-shadow: 0 0 15px rgba(46, 47, 57, .19);
+	-moz-box-shadow: 0 0 15px rgba(46, 47, 57, .19);
+	box-shadow: 0 0 15px rgba(46, 47, 57, .19)
+}
+:not(.location-archive) .location-style2 .alsp-locations-column-wrapper .alsp-locations-column-wrapper-inner {
+	height: inherit;
+	width: 100%;
+	padding: 30px
+}
+:not(.location-archive) .location-style2 .alsp-locations-column-wrapper .alsp-locations-column-wrapper-inner .alsp-locations-root {
+	height: inherit;
+	width: 100%;
+	text-align: left;
+	position: relative
+}
+:not(.location-archive) .location-style2 .alsp-locations-column-wrapper .alsp-locations-column-wrapper-inner .alsp-locations-root a {
+	font-size: 18px;
+	color: #fff!important;
+	text-transform: uppercase;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0
+}
+:not(.location-archive) .location-style2 .alsp-locations-column-wrapper .alsp-locations-column-wrapper-inner .alsp-locations-root a .location-icon {
+	display: none
+}
+:not(.location-archive) .location-style2 .alsp-locations-column-wrapper .alsp-locations-column-wrapper-inner .alsp-locations-root a .location-count {
+	display: inline-block;
+	font-weight: 400;
+	color: #fff;
+	padding: 5px 15px 7px;
+	line-height: 1;
+	border-radius: 2px;
+	font-size: 11px;
+	text-transform: uppercase
+}
+:not(.location-archive) .location-style2 .alsp-locations-column-wrapper .alsp-locations-column-wrapper-inner .alsp-locations-root a .loaction-name {
+	display: block;
+	margin-top: 10px
+}
+:not(.location-archive) .location-style3 .alsp-locations-column-wrapper {
+	border-radius: 6px
+}
+.location-style3 .alsp-locations-column-wrapper .alsp-locations-column-wrapper-inner {
+	height: inherit;
+	width: 100%;
+	padding: 30px
+}
+:not(.location-archive).location-style3 .alsp-locations-column-wrapper .alsp-locations-column-wrapper-inner .alsp-locations-root {
+	height: inherit;
+	width: 100%;
+	text-align: left;
+	position: relative
+}
+:not(.location-archive).location-style3 .alsp-locations-column-wrapper .alsp-locations-column-wrapper-inner .alsp-locations-root a {
+	font-size: 18px;
+	color: #fff!important;
+	text-transform: uppercase;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0
+}
+:not(.location-archive) .location-style3 .alsp-locations-column-wrapper .alsp-locations-column-wrapper-inner .alsp-locations-root a .location-icon {
+	display: none
+}
+:not(.location-archive) .location-style3 .alsp-locations-column-wrapper .alsp-locations-column-wrapper-inner .alsp-locations-root a .location-count {
+	display: inline-block;
+	font-weight: 400;
+	color: #fff;
+	padding: 6px 15px;
+	line-height: 1;
+	border-radius: 2px;
+	font-size: 11px;
+	text-transform: uppercase
+}
+:not(.location-archive) .location-style3 .alsp-locations-column-wrapper .alsp-locations-column-wrapper-inner .alsp-locations-root a .loaction-name {
+	display: block;
+	margin-top: 10px
+}
+.location-style4.alsp-locations-columns .alsp-locations-column-wrapper .alsp-locations-root a .location-icon i {
+	display: none
+}
+.listings.location-archive .alsp-locations-columns {
+	margin: 80px -15px 60px;
+	width:100%;
+	float:none !important;
+	display:block !important;
+}
+.listings.location-archive .alsp-locations-columns .alsp-locations-column-wrapper,
+.listings.location-archive .alsp-locations-columns.alsp-locations-columns-2 .alsp-locations-column-wrapper,
+.location-style4.alsp-locations-columns .alsp-locations-column-wrapper {
+	width: 25%;
+	float: left;
+	padding: 0 15px;
+	margin-bottom: 30px
+}
+.listings.location-archive .alsp-locations-columns .alsp-locations-column-wrapper .alsp-locations-root,
+.location-style4.alsp-locations-columns .alsp-locations-column-wrapper .alsp-locations-root {
+	
+}
+.listings.location-archive .alsp-locations-columns .alsp-locations-column-wrapper .alsp-locations-root a,
+.location-style4.alsp-locations-columns .alsp-locations-column-wrapper .alsp-locations-root a {
+	font-weight: 400;
+}
+.location-style4.alsp-locations-columns {
+	width: 100%
+}
+.location-style4.alsp-locations-columns .sublocations{
+	padding:10px 15px;
+}
+.sublocations ul li a img{
+	min-width:auto !important;
+}
+.sublocations ul li a::before{
+	display:none !important;
+}
+.listings.location-archive .alsp-locations-columns .alsp-locations-column-wrapper .alsp-locations-root a:before,
+.location-style4.alsp-locations-columns .alsp-locations-column-wrapper .alsp-locations-root a:before {
+	background-position: center center;
+	background-repeat: no-repeat;
+	content: "";
+	display: inline-block;
+	height: 42px;
+	width: 42px;
+	margin-right: 15px;
+	vertical-align: middle
+}
+
+/* style 7 */
+
+.location-style7 .alsp-locations-column-wrapper {
+	border-radius: 10px
+}
+.location-style7 .alsp-locations-column-wrapper .alsp-locations-column-wrapper-inner {
+	height: 100%;
+	position: relative
+}
+.location-style7 .alsp-locations-column-wrapper .alsp-locations-column-wrapper-inner .alsp-locations-root {
+	position: absolute;
+	bottom: 6px;
+	padding: 0;
+	text-align: center;
+	width: 100%;
+	transition: all .4s ease
+}
+.location-style7 .alsp-locations-column-wrapper .alsp-locations-column-wrapper-inner .alsp-locations-root a {
+	color: #fff;
+	font-weight: 400;
+	font-size: 18px;
+	text-transform: capitalize
+}
+.location-style7 .alsp-locations-column-wrapper .alsp-locations-column-wrapper-inner .alsp-locations-root a .location-count {
+	display: block;
+	font-size: 14px;
+	opacity: 0;
+	transition: all .4s ease
+}
+.location-style7 .alsp-locations-column-wrapper .alsp-locations-column-wrapper-inner:hover .alsp-locations-root {
+	bottom: 30px;
+	transition: all .4s ease
+}
+.location-style7 .alsp-locations-column-wrapper .alsp-locations-column-wrapper-inner .location-plus-icon {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-60%);
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	text-align: center;
+	color: #fff;
+	font-size: 24px;
+	cursor: pointer;
+	opacity: 0;
+	transition: all .3s ease
+}
+.location-style7 .alsp-locations-column-wrapper .alsp-locations-column-wrapper-inner:hover .location-plus-icon {
+	opacity: 1;
+	transition: all .3s ease;
+	transform: translateY(-50%)
+}
+.location-style7 .alsp-locations-column-wrapper .alsp-locations-column-wrapper-inner:hover .alsp-locations-root a .location-count {
+	opacity: 1;
+	transition: all .4s ease
+}
+
+/* style 8 */
+
+.location-style8.alsp-locations-columns .alsp-locations-column-wrapper {
+	width: 25%;
+	float: left;
+	padding: 0 15px;
+	margin-bottom: 30px
+}
+.location-style8.alsp-locations-columns .alsp-locations-column-wrapper .alsp-locations-root {
+	padding: 2px;
+	background: #fff;
+	box-shadow: none;
+	border-radius: 25px;
+	text-align: left
+}
+.location-style8.alsp-locations-columns .alsp-locations-column-wrapper .alsp-locations-root a {
+	font-weight: 400!important
+}
+.location-style8.alsp-locations-columns .alsp-locations-column-wrapper .alsp-locations-root a .location-icon {
+	background: #333;
+	width: 48px;
+	height: 48px;
+	display: inline-block;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 48px;
+	margin-right: 15px;
+	color: #fff
+}
+.location-style8.alsp-locations-columns .alsp-locations-column-wrapper .alsp-locations-root a:hover .location-icon {
+	color: #fff
+}
+.location-style8.alsp-locations-columns {
+	
+}
+.location-style8.alsp-locations-columns .sublocations{
+	padding:0px 25px;
+}
+.location-style8.alsp-locations-columns .sublocations ul{
+	padding:15px;
+	background:#fff;
+	border-top:1px solid #eee;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+/* style 9  */
+
+.location-style9.alsp-locations-columns .alsp-locations-column-wrapper {
+	width: 25%;
+	float: left;
+	padding: 0 15px;
+	margin-bottom: 30px
+}
+.location-style9.alsp-locations-columns{width: auto}
+.search-element-col-1 {
+	width: 100%
+}
+.location-style9.alsp-locations-columns .alsp-locations-column-wrapper .alsp-locations-root {
+	padding: 0;
+	background: #fff;
+	box-shadow: none;
+	border-radius: 0;
+	text-align: left
+}
+.location-style9.alsp-locations-columns .alsp-locations-column-wrapper .sublocations {
+	background: #fff;
+	border-width: 0 1px 1px 5px;
+	border-style: solid;
+	border-color: #333;
+	padding: 10px 15px 0;
+}
+.location-style9.alsp-locations-columns .alsp-locations-column-wrapper .alsp-locations-root a {
+	font-weight: 400!important;
+	border-width: 1px 1px 1px 5px;
+	border-style: solid;
+	border-color: #333;
+	color: #333;
+	min-height: 46px;
+	line-height: 46px;
+	text-transform: capitalize
+}
+.location-style9.alsp-locations-columns .alsp-locations-column-wrapper .alsp-locations-root a .location-icon {
+	color: #333;
+	padding: 0 10px;
+	font-size: 16px
+}
+
+@media screen and (device-width: 768px) {
+	.alsp-locations-column-1,
+	.alsp-locations-column-2,
+	.alsp-locations-column-3,
+	.alsp-locations-column-4 {
+		float: left!important;
+		width: 50%
+	}
+}
+@media handheld,
+only screen and (max-width: 767px) {
+	.alsp-locations-columns {
+		
+	}
+}
+.alsp-locations-columns {
+	float: left!important
+}
+.location-style9.alsp-locations-columns{
+	float: none !important
+}
+.pacz-builtin .alsp-locations-columns {
+	float: none!important
+}
+.alsp-locations-column-wrapper {
+	height:auto;
+}
+@media handheld,
+only screen and (min-width: 768px) and (max-width: 960px) {
+	.location-style4.grid-item.alsp-locations-columns .alsp-locations-column-wrapper {
+		width: 33.3333%
+	}
+	.location-style9.grid-item.alsp-locations-columns .alsp-locations-column-wrapper {
+		width: 33.3333%
+	}
+}
+@media handheld,
+only screen and (min-width: 481px) and (max-width: 767px) {
+	.location-style4.grid-item.alsp-locations-columns .alsp-locations-column-wrapper {
+		width: 50%
+	}
+	.location-style9.grid-item.alsp-locations-columns .alsp-locations-column-wrapper {
+		width: 50%
+	}
+}
+@media handheld,
+only screen and (min-width: 320px) and (max-width: 480px) {
+	.location-style4.grid-item.alsp-locations-columns .alsp-locations-column-wrapper {
+		width: 100%
+	}
+	.location-style9.grid-item.alsp-locations-columns .alsp-locations-column-wrapper {
+		width: 100%
+	}
+}
+
+/* location archive */
+.location-grid-wrapper .alsp-locations-columns{
+	float:none !important;
+	
+}
+.location-grid-wrapper .alsp-locations-columns-1 .alsp-locations-column-wrapper{
+	width:100%;
+}
+.location-grid-wrapper .alsp-locations-columns-2 .alsp-locations-column-wrapper{
+	width:50%;
+}
+.location-grid-wrapper .alsp-locations-columns-3 .alsp-locations-column-wrapper{
+	width:33.3333%;
+}
+.location-grid-wrapper .alsp-locations-columns-4 .alsp-locations-column-wrapper{
+	width:25%;
+}
+.location-grid-wrapper .alsp-locations-columns .alsp-locations-column-wrapper{
+	float:left;
+	
+}
+
+@media handheld,
+only screen and (min-width: 600px) and (max-width: 767px) {
+	.location-grid-wrapper .alsp-locations-columns-3 .alsp-locations-column-wrapper{
+		width:50%;
+	}
+	.location-grid-wrapper .alsp-locations-columns-4 .alsp-locations-column-wrapper{
+		width:50%;
+	}
+}
+@media handheld,
+only screen and (max-width: 599px) {
+	.location-grid-wrapper .alsp-locations-columns-2 .alsp-locations-column-wrapper{
+		width:100%;
+	}
+	.location-grid-wrapper .alsp-locations-columns-3 .alsp-locations-column-wrapper{
+		width:100%;
+	}
+	.location-grid-wrapper .alsp-locations-columns-4 .alsp-locations-column-wrapper{
+		width:100%;
+	}
+}

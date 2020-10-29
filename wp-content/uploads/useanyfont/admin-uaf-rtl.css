@@ -1,0 +1,8 @@
+				@font-face {
+					font-family: 'pyidaungsu';
+					src: url('/wp-content/uploads/useanyfont/191117074214Pyidaungsu.woff') format('woff');
+				}
+
+				.et_gf_pyidaungsu{background:none !important;font-family:pyidaungsu;text-indent:0 !important;font-size:25px;}
+
+		

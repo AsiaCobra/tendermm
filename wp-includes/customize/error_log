@@ -1,0 +1,4 @@
+[30-Jul-2020 14:45:08 America/Chicago] PHP Fatal error:  Class 'WP_Customize_Control' not found in /home3/inzkdy93/www.mmtender.com/wp-includes/customize/class-wp-customize-theme-control.php on line 17
+[30-Jul-2020 20:00:01 America/Chicago] PHP Fatal error:  Class 'WP_Customize_Control' not found in /home3/inzkdy93/www.mmtender.com/wp-includes/customize/class-wp-widget-form-customize-control.php on line 17
+[31-Jul-2020 08:26:37 America/Chicago] PHP Fatal error:  Class 'WP_Customize_Control' not found in /home3/inzkdy93/www.mmtender.com/wp-includes/customize/class-wp-widget-form-customize-control.php on line 17
+[31-Jul-2020 10:18:35 America/Chicago] PHP Fatal error:  Class 'WP_Customize_Control' not found in /home3/inzkdy93/www.mmtender.com/wp-includes/customize/class-wp-customize-theme-control.php on line 17
