@@ -5,7 +5,25 @@ include 'function-for-newsletter.php';
 
 //Sorting tender_field 
 add_action('wp_footer',function(){
-  
+    global $wp_scripts, $wp_styles;
+    // $remove = array(
+    //   'wpb_composer_front_js',
+    //   'wp-sanitize',
+    //   'jquery-ui-position',
+    //   'jquery-ui-widget',
+    //   'jquery-ui-core',
+    // );
+    // foreach($wp_scripts->in_footer as $key => $script){
+    //   echo " $key<br>";
+    //     if(in_array($script,$remove)){
+
+    //       // wp_dequeue_script($script);
+    //       // output($script);
+    //     }
+    //   // output($script);
+    // }
+    output($wp_scripts->queue);
+    output($wp_styles->queue);
     ?>
     <style>
         .pacz-header-toolbar .pacz-grid{
@@ -42,35 +60,82 @@ add_action('wp_footer',function(){
        var strPh = jQuery('.alsp-field-content').find('meta').attr('content');
        jQuery('.alsp-field-content.field-phone-content').find('a').text(strPh);
        console.log("<?Php echo home_url(); ?>");
+         jQuery(document).ready(function(){
+
+         /**
+          * Image Lazyload 
+          */
+          $("img.lazyload").lazyload({ event: "scrollstop", })
+          $("img.lazyload").lazyload();
+       })
+       $(document).on('appear',function(e){
+         console.log(e)
+       })
     </script>
     <?php
 },10000);
 
 add_filter( 'show_admin_bar', '__return_false' );
-
-function montserrat_remove_google_fonts() {
-  wp_dequeue_style('montserrat');
-  wp_dequeue_style('montserrat');
-  wp_deregister_style('montserrat');
-
-  wp_dequeue_style('embedded_css');
-  wp_deregister_style('embedded_css');
-
-  wp_dequeue_style('jquery-ui-css');
-  wp_deregister_style('jquery-ui-css');
-  wp_dequeue_style('alsp-jquery-ui-style-css');
-  wp_deregister_style('alsp-jquery-ui-style-css');
-  wp_dequeue_style('google-roboto-regular-css');
-  wp_deregister_style('google-roboto-regular-css');
-  wp_dequeue_script('media-upload');
-  wp_enqueue_script('lazyload', get_stylesheet_directory_uri().'/js/jquery.lazyload.min.js',array('jquery'),'','');
+function remove_scripts(){
+    // global $wp_scripts;
+    $remove = array(
+      // 'wpb_composer_front_js',
+      'alsp_applications',
+      'wp-sanitize',
+      // 'pacz-theme-plugins',
+      // 'jquery-ui-position',
+      // 'jquery-ui-widget',
+      // 'jquery-ui-core',
+    );
+    $remove_styles = array(
+      // 'theme-dynamic-styles',
+      // 'js_composer_front',
+    );
+    foreach($remove as $script){
+      wp_deregister_script($script);
+      wp_dequeue_script($script);
+    }
+    foreach($remove_styles as $script){
+      wp_deregister_style($script);
+      wp_dequeue_style($script);
+    }
+  
 }
-add_action('wp_print_styles','montserrat_remove_google_fonts',200);
-add_action('wp_enqueue_scripts', 'montserrat_remove_google_fonts', 2000);
+// add_action('wp_header','remove_scripts',100);
+// add_action('init','remove_scripts',100);
+// add_action('wp_print_scripts','remove_scripts',100);
+add_action('template_redirect','remove_scripts',120);
+add_action('wp_enqueue_scripts','remove_scripts',120);
+// add_action('vc_base_register_front_js','remove_scripts',120);
+function montserrat_remove_google_fonts() {
+
+  // wp_dequeue_style('montserrat');
+  // wp_dequeue_style('montserrat');
+  // wp_deregister_style('montserrat');
+
+  // wp_dequeue_style('embedded_css');
+  // wp_deregister_style('embedded_css');
+
+  // wp_dequeue_style('jquery-ui-css');
+  // wp_deregister_style('jquery-ui-css');
+  // wp_dequeue_style('alsp-jquery-ui-style-css');
+  // wp_deregister_style('alsp-jquery-ui-style-css');
+  // wp_dequeue_style('google-roboto-regular-css');
+  // wp_deregister_style('google-roboto-regular-css');
+  // wp_dequeue_script('media-upload');
+  wp_enqueue_script('jquery.scrolltop', get_stylesheet_directory_uri().'/js/jquery.scrolltop.js',array('jquery'),'','');
+  wp_enqueue_script('child-lazyload', get_stylesheet_directory_uri().'/js/jquery.lazyload.min.js',array('jquery'),'','');
+}
+// add_action('wp_print_styles','montserrat_remove_google_fonts',200);
+add_action('wp_enqueue_scripts', 'montserrat_remove_google_fonts', 100);
 
 /*
 * Create Header Logo
 ******/
+// remove_action( 'header_logo', 'pacz_header_logo' );
+// remove_action( 'header_mobile_logo', 'pacz_header_mobile_logo' );
+// add_action( 'header_logo', 'pacz_header_logo' );
+// add_action( 'header_mobile_logo', 'pacz_header_mobile_logo' );
 if ( !function_exists( 'pacz_header_logo' ) ) {
 	function paczheader_logo() {
 
@@ -105,9 +170,9 @@ if ( !function_exists( 'pacz_header_logo' ) ) {
 		$output .= '<a href="'.esc_url(home_url( '/' )).'" title="'.get_bloginfo( 'name' ).'">';
 
 		if ( !empty( $logo ) ) {
-			$output .= '<img data-id="1" alt="'.get_bloginfo( 'name' ).'" class="pacz-dark-logo" src="'.$logo.'" data-retina-src="'.$logo_retina.'" />';
+			$output .= '<img data-id="1" alt="'.get_bloginfo( 'name' ).'" class="pacz-dark-logo" src="'.$logo.'" data-original="'.$logo.'" data-retina-src="'.$logo_retina.'" />';
 		} else {
-			$output .= '<img data-id="1" alt="'.get_bloginfo( 'name' ).'" class="pacz-dark-logo" src="'.PACZ_THEME_IMAGES.'/classiadspro-logo.png" data-retina-src="'.PACZ_THEME_IMAGES.'/classiadspro-logo-2x.png" />';
+			$output .= '<img data-id="1" alt="'.get_bloginfo( 'name' ).'" class="pacz-dark-logo lazyload" data-original="'.PACZ_THEME_IMAGES.'/classiadspro-logo.png" data-retina-src="'.PACZ_THEME_IMAGES.'/classiadspro-logo-2x.png" />';
         }
         $output .= "<h1 class='c-title'>".get_bloginfo( 'description' )."</h1>";
 		$output .= '</a></li>';
@@ -120,7 +185,7 @@ if ( !function_exists( 'pacz_header_logo' ) ) {
 }
 
 if ( !function_exists( 'pacz_header_mobile_logo' ) ) {
-	function paczheader_mobile_logo() {
+	function pacz_header_mobile_logo() {
 
 		global $pacz_settings,$allowedtags;
 		$mobile_logo = isset($pacz_settings['mobile-logo']['url']) ? $pacz_settings['mobile-logo']['url'] : '';
@@ -147,7 +212,7 @@ if ( !function_exists( 'pacz_header_mobile_logo' ) ) {
 		$output .= '<a href="'.esc_url(home_url( '/' )).'" title="'.get_bloginfo( 'name' ).'">';
 
 		if ( !empty( $mobile_logo) ) {
-			$output .= '<img alt="'.get_bloginfo( 'name' ).'" class="pacz-mobile-logo" src="'.$mobile_logo.'" data-retina-src="'.$mobile_logo_retina.'" />';
+			$output .= '<img alt="'.get_bloginfo( 'name' ).'" class="pacz-mobile-logo lazyload" data-original="'.$mobile_logo.'" data-retina-src="'.$mobile_logo_retina.'" />';
         }
         $output .= "<h1 class='c-title'>".get_bloginfo( 'description' )."</h1>";
 		$output .= '</a>';
@@ -223,14 +288,12 @@ add_action( 'admin_head',function(){
 //NGO & Company Post List
 add_shortcode( 'company-ngo-post-list', 'wpc_shortcode_company_ngo_post_list' );
 function wpc_shortcode_company_ngo_post_list() {
-	$cncat_args = array(
-    'orderby'       => 'date', 
-    'order'         => 'DESC',
-    'hide_empty'    => true, 
-);
-$cnterms = get_terms("'taxonomy' => array(
-                         'company-mm',
-                         'ngo-ingo-mm')", $cncat_args);
+    $cncat_args = array(
+        'orderby'       => 'date', 
+        'order'         => 'DESC',
+        'hide_empty'    => true, 
+    );
+    $cnterms = get_terms("'taxonomy' => array( 'company-mm', 'ngo-ingo-mm')", $cncat_args);
 
     $cntax_post_args = array(
           'post_type' => 'alsp_listing',
@@ -267,14 +330,14 @@ $cnterms = get_terms("'taxonomy' => array(
 /*NotIn NGO & Company Post List*/
 add_shortcode( 'Not-company-ngo-post-list', 'wpc_shortcode_not_company_ngo_post_list' );
 function wpc_shortcode_not_company_ngo_post_list() {
-	$cat_args = array(
-    'orderby'       => 'date', 
-    'order'         => 'DESC',
-    'hide_empty'    => true, 
-);
-$terms = get_terms("'taxonomy' => array(
-                         'company-mm',
-                         'ngo-ingo-mm')", $cat_args);
+  $cat_args = array(
+      'orderby'       => 'date', 
+      'order'         => 'DESC',
+      'hide_empty'    => true, 
+  );
+  $terms = get_terms("'taxonomy' => array(
+          'company-mm',
+          'ngo-ingo-mm')", $cat_args);
 
     $tax_post_args = array(
           'post_type' => 'alsp_listing',
@@ -307,17 +370,17 @@ $terms = get_terms("'taxonomy' => array(
 } //end foreach loop
 //NOTNGO End
 //slider start
-add_shortcode( 'home-page-slider', 'wpc_shortcode_home_page_slider' );
+// add_shortcode( 'home-page-slider', 'wpc_shortcode_home_page_slider' );
 function wpc_shortcode_home_page_slider() {
     echo "<rs-module-wrap id='rev_slider_14_1_wrapper' data-alias='blur-effect-slider' data-source='gallery' style='background:#2d3032;padding:0;margin:0px auto;margin-top:0;margin-bottom:0;'>";
        echo " <rs-module id='rev_slider_14_1' style='display:none;' data-version='6.2.2'>";
            echo "<rs-slides>
                 <rs-slide data-key='rs-41' data-title='One' data-thumb='https://mmtender.com/wp-content/uploads/2020/09/Ads-Slidder-010-100x50.jpg' data-anim='ei:d;eo:d;s:d;r:0;t:fadethroughtransparent;sl:d;' data-firstanim='t:fade;sl:7;'>
                 <img src='//mmtender.com/wp-content/uploads/2020/09/Ads-Slidder-010.jpg' title='Ads Slidder 010' width='1500' height='437' data-parallax='6' class='rev-slidebg' data-no-retina>
-  <!---->           </rs-slide>
+    <!---->           </rs-slide>
                 <rs-slide data-key='rs-43' data-title='Three' data-thumb='//mmtender.com/wp-content/uploads/2020/09/Ads-4-MMTender-Banner-100x50.jpg' data-anim='ei:d;eo:d;s:d;r:0;t:fadethroughtransparent;sl:d;'>
                 <img src='//mmtender.com/wp-content/uploads/2020/09/Ads-4-MMTender-Banner.jpg' title='Ads 4 MMTender Banner' width='3244' height='945' data-parallax='6' class='rev-slidebg' data-no-retina>
-  <!---->           </rs-slide>
+      <!---->           </rs-slide>
             </rs-slides>";
            echo " <rs-static-layers><!--
           --></rs-static-layers>

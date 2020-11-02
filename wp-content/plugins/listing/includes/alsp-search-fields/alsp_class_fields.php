@@ -482,37 +482,40 @@ class alsp_search_fields {
 	
 	public function enqueue_scripts_styles() {
 		global $alsp_instance, $ALSP_ADIMN_SETTINGS;
-	
-		if (function_exists('is_rtl') && is_rtl()) {
-			wp_deregister_script('jquery-ui-slider');
-			wp_register_script('jquery-ui-slider', ALSP_RESOURCES_URL . 'js/min/jquery.ui.slider-rtl.min.js', array('jquery-ui-core') , false, true);
-		}
-		wp_enqueue_script('jquery-ui-slider');
-		wp_enqueue_script('jquery-touch-punch');
-	
-		wp_localize_script(
-			'jquery-ui-slider',
-			'slider_params',
-			array(
-				'min' => $ALSP_ADIMN_SETTINGS['alsp_radius_search_min'],
-				'max' => $ALSP_ADIMN_SETTINGS['alsp_radius_search_max']
-			)
-		);
+		//nhs
+		if(is_admin()){
 
-		// radius_params must be localized by 2 ways: inside retrieve_search_args() function and in wp_enqueue_scripts hook
-		// this one for alsp shortcode
-		foreach ($alsp_instance->radius_values_array AS $shortcode_hash=>$value) {
-			if (($public_control = $alsp_instance->getShortcodeByHash($shortcode_hash)) && isset($value['x_coord']) && isset($value['y_coord'])) {
-				wp_localize_script(
-					'alsp_applications',
-					'radius_params_'.$public_control->hash,
-					array(
-						'radius_value' => $value['radius'],
-						'map_coords_1' => $value['x_coord'],
-						'map_coords_2' => $value['y_coord'],
-						'dimension' => $ALSP_ADIMN_SETTINGS['alsp_miles_kilometers_in_search']
-					)
-				);
+			if (function_exists('is_rtl') && is_rtl()) {
+				wp_deregister_script('jquery-ui-slider');
+				wp_register_script('jquery-ui-slider', ALSP_RESOURCES_URL . 'js/min/jquery.ui.slider-rtl.min.js', array('jquery-ui-core') , false, true);
+			}
+			wp_enqueue_script('jquery-ui-slider');
+			wp_enqueue_script('jquery-touch-punch');
+		
+			wp_localize_script(
+				'jquery-ui-slider',
+				'slider_params',
+				array(
+					'min' => $ALSP_ADIMN_SETTINGS['alsp_radius_search_min'],
+					'max' => $ALSP_ADIMN_SETTINGS['alsp_radius_search_max']
+				)
+			);
+	
+			// radius_params must be localized by 2 ways: inside retrieve_search_args() function and in wp_enqueue_scripts hook
+			// this one for alsp shortcode
+			foreach ($alsp_instance->radius_values_array AS $shortcode_hash=>$value) {
+				if (($public_control = $alsp_instance->getShortcodeByHash($shortcode_hash)) && isset($value['x_coord']) && isset($value['y_coord'])) {
+					wp_localize_script(
+						'alsp_applications',
+						'radius_params_'.$public_control->hash,
+						array(
+							'radius_value' => $value['radius'],
+							'map_coords_1' => $value['x_coord'],
+							'map_coords_2' => $value['y_coord'],
+							'dimension' => $ALSP_ADIMN_SETTINGS['alsp_miles_kilometers_in_search']
+						)
+					);
+				}
 			}
 		}
 	}

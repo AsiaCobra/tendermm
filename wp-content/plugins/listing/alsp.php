@@ -1324,10 +1324,14 @@ class alsp_plugin {
 				wp_enqueue_style('alsp_frontend_rtl');
 			}
 			wp_enqueue_style('alsp_frontend-custom');
-			wp_enqueue_script('jquery-ui-dialog');
-			wp_enqueue_script('jquery-ui-draggable');
-			wp_enqueue_script('jquery-ui-selectmenu');
-			wp_enqueue_script('jquery-ui-autocomplete');
+			//nhs
+			if(is_admin()){
+
+				wp_enqueue_script('jquery-ui-dialog');
+				wp_enqueue_script('jquery-ui-draggable');
+				wp_enqueue_script('jquery-ui-selectmenu');
+				wp_enqueue_script('jquery-ui-autocomplete');
+			}
 			wp_enqueue_style('alsp-jquery-ui-style');
 			wp_enqueue_script('alsp_applications');
 			

@@ -185,30 +185,31 @@ function pacz_theme_enqueue_scripts()
 				
 				global $pacz_settings;
 				$theme_data = wp_get_theme("classiadspro");
-				
-				wp_enqueue_script('jquery-ui-tabs');
-				wp_register_script('jquery-jplayer', PACZ_THEME_JS . '/jquery.jplayer.min.js', array(
-						'jquery'
-				) , $theme_data['Version'], true);
-				wp_register_script('instafeed', PACZ_THEME_JS . '/instafeed.min.js', array(
-						'jquery'
-				) , $theme_data['Version'], true);
+				//nhs
+				// wp_enqueue_script('jquery-ui-tabs');
+				// wp_register_script('jquery-jplayer', PACZ_THEME_JS . '/jquery.jplayer.min.js', array(
+				// 		'jquery'
+				// ) , $theme_data['Version'], true);
+				// wp_register_script('instafeed', PACZ_THEME_JS . '/instafeed.min.js', array(
+				// 		'jquery'
+				// ) , $theme_data['Version'], true);
 				if ( ! wp_script_is( 'bootstrap', 'enqueued' ) ) {
-				wp_enqueue_script('bootstrap', PACZ_THEME_JS . '/bootstrap.min.js', array(
-						'jquery'
-				) , $theme_data['Version'], true);
+					wp_enqueue_script('bootstrap', PACZ_THEME_JS . '/bootstrap.min.js', array(
+							'jquery'
+					) , $theme_data['Version'], true);
 				}
 				//if ( ! wp_script_is( 'select2', 'enqueued' ) ) {
 				wp_enqueue_script('select2', PACZ_THEME_JS . '/select2.min.js', array(
 						'jquery'
 				) , $theme_data['Version'], true);
 				//}
-				wp_enqueue_script('slick.carousel', PACZ_THEME_JS . '/slick.min.js', array(
-						'jquery'
-				) , $theme_data['Version'], true);
-				wp_enqueue_script('pacz-triger', PACZ_THEME_JS . '/triger.min.js', array(
-						'jquery'
-				) , $theme_data['Version'], true);
+				// wp_enqueue_script('slick.carousel', PACZ_THEME_JS . '/slick.min.js', array(
+				// 		'jquery'
+				// ) , $theme_data['Version'], true);
+				// wp_enqueue_script('pacz-triger', PACZ_THEME_JS . '/triger.min.js', array(
+				// 		'jquery'
+				// ) , $theme_data['Version'], true);
+
 				wp_enqueue_script('pacz-theme-plugins', PACZ_THEME_JS . '/plugins.min.js', array(
 						'jquery'
 				) , $theme_data['Version'], true);
@@ -230,8 +231,8 @@ function pacz_theme_enqueue_scripts()
 						) , $theme_data['Version'], true);
 				}
 				
-				if (is_singular()) {
-						wp_enqueue_script('comment-reply');
+				if (is_single()) {
+					wp_enqueue_script('comment-reply');
 				}
 				if($pacz_settings['minify-css']){
 					$css_min = '';

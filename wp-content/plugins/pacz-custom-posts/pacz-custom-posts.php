@@ -118,8 +118,9 @@ function pacz_get_attachment_id_from_src($image_src) {
 function pacz_add_media_upload_scripts() {
     if ( is_admin() ) {
          return;
-       }
-    wp_enqueue_media();
+	   }
+	//nhs
+    // wp_enqueue_media();
 }
 add_action('wp_enqueue_scripts', 'pacz_add_media_upload_scripts');
 

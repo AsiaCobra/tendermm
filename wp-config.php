@@ -1,5 +1,4 @@
 <?php
-define('WP_CACHE', 1); // Added by WP Rocket
 define('WP_ROCKET_CF_API_KEY', 'e30dbc461d10077d899227d3819d150f9cb3d');
 define( 'WP_ROCKET_CF_API_KEY_HIDDEN', true );
 /**
@@ -22,18 +21,24 @@ define( 'WP_ROCKET_CF_API_KEY_HIDDEN', true );
  */
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define( 'DB_NAME', 'inzkdy93_dev-mmtender' );
+// define( 'DB_NAME', 'mmtenders' );
+// define( 'DB_NAME', 'inzkdy93_tender' );
+define( 'DB_NAME', 'devtender' );
 /** MySQL database username */
-define( 'DB_USER', 'inzkdy93_tender' );
+// define( 'DB_USER', 'inzkdy93_tender' );
+define( 'DB_USER', 'root' );
+// define( 'DB_USER', 'root' );
 /** MySQL database password */
-define( 'DB_PASSWORD', 'fortender123!' );
+// define( 'DB_PASSWORD', 'fortender123!' );
+define( 'DB_PASSWORD', '' );
 /** MySQL hostname */
 define( 'DB_HOST', 'localhost' );
 /** Database Charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8' );
  
 /** The Database Collate type. Don't change this if in doubt. */
-define( 'DB_COLLATE', 'utf8_general_ci' );
+// define( 'DB_COLLATE', 'utf8_general_ci' );
+define( 'DB_COLLATE', 'utf8mb4_general_ci' );
 /**#@+
  * Authentication Unique Keys and Salts.
  *

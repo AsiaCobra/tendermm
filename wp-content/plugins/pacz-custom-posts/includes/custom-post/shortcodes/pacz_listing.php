@@ -1,4 +1,6 @@
 <?php 
+//nhs added class
+class pacz_listing{
 
 
 	public $request_by = 'listings_controller';
@@ -21,7 +23,7 @@
 				'sticky_featured' => 0,
 				'order_by' => 'post_date',
 				'order' => 'ASC',
-/* 				'order_by' => (isset($_GET['order_by']) && $_GET['order_by'] ? $_GET['order_by'] : 'post_date'),
+		/* 				'order_by' => (isset($_GET['order_by']) && $_GET['order_by'] ? $_GET['order_by'] : 'post_date'),
 				'order' => (isset($_GET['order']) && $_GET['order'] ? $_GET['order'] : 'ASC'), */
 				'hide_order' => 0,
 				'hide_count' => 0,
@@ -113,6 +115,6 @@
 		
 		apply_filters('alsp_frontend_controller_construct', $this);
 	}
-
+}
 
 ?>

@@ -81,8 +81,8 @@ if ($twitter_name && $consumer_key && $consumer_secret && $access_token && $acce
     if ($twitter && is_array($twitter)) {
         
         $output .= '<div id="tweets_' . $id . '">';
-        
-        $output .= '<ul class="pacz-tweet-shortcode slick-carousel" data-items="1" data-items-1024="1" data-items-768="1" data-autoplay="true" data-gutter="0" data-autoplay-speed="1000" data-delay="1000" data-loop="true" data-arrow="false">';>';
+        //nhs
+        $output .= '<ul class="pacz-tweet-shortcode slick-carousel" data-items="1" data-items-1024="1" data-items-768="1" data-autoplay="true" data-gutter="0" data-autoplay-speed="1000" data-delay="1000" data-loop="true" data-arrow="false">';
         foreach ($twitter as $tweet):
             $output .= '<li class="slide">';
 			$output .='<div class="tweet-icon"><i class="twitter_icons ' . $twitter_icon . '"></i></div>';
@@ -112,4 +112,4 @@ if ($twitter_name && $consumer_key && $consumer_secret && $access_token && $acce
 
 $output .= '</div>';
 
-echo $output';
+echo $output;

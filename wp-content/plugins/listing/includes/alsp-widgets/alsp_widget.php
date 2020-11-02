@@ -554,7 +554,8 @@ abstract class alsp_widget extends WP_Widget {
 
 add_action('admin_enqueue_scripts', 'alsp_widgets_enqueue_scripts');
 function alsp_widgets_enqueue_scripts($hook) {
-	if ($hook == "widgets.php"){
+	//nhs
+	if ($hook == "widgets.php" && is_admin()){
 		wp_enqueue_style( 'wp-color-picker' );
 		wp_enqueue_script( 'wp-color-picker' );
 	}

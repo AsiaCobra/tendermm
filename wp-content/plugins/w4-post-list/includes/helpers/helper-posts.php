@@ -813,7 +813,9 @@ class W4PL_Helper_Posts
 	public static function template_content($attr, $cont){
 		return sprintf(
 			'<div class="post-excerpt">%s</div>',
-			$this->post_content($attr, $cont)
+			//nhs
+			// $this->post_content($attr, $cont)
+			self::post_content($attr, $cont)
 		);
 	}
 	public static function template_more($attr, $cont){
