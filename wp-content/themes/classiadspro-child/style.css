@@ -12,7 +12,76 @@ Tags:translation-ready
 License: GNU General Public License v2.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
+div.alsp-content .alsp-field-output-block {
+    margin-top: 10px;
+    border: 2px solid #ffffff;
+    border-radius: 4px;
+}
 
+input[type=text] {
+    border: 2px solid #e7e7e7;
+    border-radius: 4px;
+}
+
+.alsp-submit-section-label {
+    color: black;
+}
+
+.cz-creat-listing ul.alsp-categorychecklist li label span.radio-check-item:before {
+    border-color: #cdebd3;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: black;
+    border: 2px solid #e7e7e7;
+    border-radius: 4px;
+    font-family: pyidaungsu !important;
+}
+
+input {
+    border: 1px solid #959494 !important;
+}
+
+::placeholder {
+    color: black !important;
+    opacity: 1;
+    font-family: pyidaungsu !important;
+}
+
+:-ms-input-placeholder {
+    color: black !important;
+    font-family: pyidaungsu !important;
+}
+
+::-ms-input-placeholder {
+    color: black !important;
+    font-family: pyidaungsu !important;
+}
+
+.vc_row-has-fill>.vc_column_container>.vc_column-inner {
+    padding-top: 0px !important;
+}
+
+.pacz-header-mainnavbar {
+    background: #973895;
+}
+
+.select2-selection__rendered {
+    padding-top: 5px !important;
+    text-align: center;
+}
+
+.select2-selection--single {
+    height: 40px !important;
+}
+
+.alsp-fields-group-caption {
+    line-height: 25px;
+}
+
+.cat-icon img.alsp-field-icon {
+    padding-top: 10px;
+}
 .select2-results li {
     margin: 0;
     padding: 10px 21px;

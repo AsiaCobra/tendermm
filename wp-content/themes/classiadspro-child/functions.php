@@ -6,24 +6,9 @@ include 'function-for-newsletter.php';
 //Sorting tender_field 
 add_action('wp_footer',function(){
     global $wp_scripts, $wp_styles;
-    // $remove = array(
-    //   'wpb_composer_front_js',
-    //   'wp-sanitize',
-    //   'jquery-ui-position',
-    //   'jquery-ui-widget',
-    //   'jquery-ui-core',
-    // );
-    // foreach($wp_scripts->in_footer as $key => $script){
-    //   echo " $key<br>";
-    //     if(in_array($script,$remove)){
 
-    //       // wp_dequeue_script($script);
-    //       // output($script);
-    //     }
-    //   // output($script);
-    // }
-    output($wp_scripts->queue);
-    output($wp_styles->queue);
+    // output($wp_scripts->queue);
+    // output($wp_styles->queue);
     ?>
     <style>
         .pacz-header-toolbar .pacz-grid{
@@ -82,14 +67,24 @@ function remove_scripts(){
       // 'wpb_composer_front_js',
       'alsp_applications',
       'wp-sanitize',
-      // 'pacz-theme-plugins',
+      'jquery-ui-tabs',
       // 'jquery-ui-position',
       // 'jquery-ui-widget',
       // 'jquery-ui-core',
     );
     $remove_styles = array(
-      // 'theme-dynamic-styles',
       // 'js_composer_front',
+      'wp-block-library',
+      'rs-plugin-settings-css',
+      'difp-style',
+      'alsp_fsubmit',
+      'ubermenu-white',
+      'alsp_listings_slider',
+      'difp-common-style',
+      'dhvc-form-font-awesome',
+      'ubermenu-font-awesome-all',
+      // 'theme-dynamic-styles',
+      // 'theme-options',
     );
     foreach($remove as $script){
       wp_deregister_script($script);
@@ -101,11 +96,41 @@ function remove_scripts(){
     }
   
 }
+function disable_scripts(){
+  $remove_scripts = array(
+      'pacz-triger',
+      'select2-full',
+      'libphonenumber-mobile',
+      'firebase',
+      'firebase-auth',
+      'scrollTo',
+      'digits-main-script',
+      'digits-login-script',
+      // 'pacz-theme-plugins',
+  );
+  $remove_styles = array(
+      'digits-login-style',
+      'digits-style',
+      'google-roboto-regular',
+  
+  );
+  foreach($remove_scripts as $script){
+      // wp_deregister_script($script);
+      wp_dequeue_script($script);
+  }
+  foreach($remove_styles as $script){
+      // wp_deregister_script($script);
+      wp_dequeue_style($script);
+  }
+}
+
 // add_action('wp_header','remove_scripts',100);
 // add_action('init','remove_scripts',100);
 // add_action('wp_print_scripts','remove_scripts',100);
+add_action('login_enqueue_scripts','remove_scripts');
 add_action('template_redirect','remove_scripts',120);
-add_action('wp_enqueue_scripts','remove_scripts',120);
+add_action('wp_enqueue_scripts','remove_scripts',1000);
+add_action('wp_enqueue_scripts','disable_scripts',99999);
 // add_action('vc_base_register_front_js','remove_scripts',120);
 function montserrat_remove_google_fonts() {
 
