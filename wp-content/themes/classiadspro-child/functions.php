@@ -100,8 +100,8 @@ function remove_scripts(){
       'difp-common-style',
       'dhvc-form-font-awesome',
       'ubermenu-font-awesome-all',
-      // 'theme-dynamic-styles',
-      // 'theme-options',
+      'theme-dynamic-styles',
+      'theme-options',
     );
     foreach($remove as $script){
       wp_deregister_script($script);
@@ -165,7 +165,7 @@ add_action('wp_enqueue_scripts','remove_js_composer_front_css',PHP_INT_MAX - 1);
 
 function remove_home_all_css(){
   global $wp_styles;
-  if(is_home()){
+  if( is_front_page() || is_home() ){
     foreach( $wp_styles->queue as $style ) {
         wp_dequeue_style($wp_styles->registered[$style]->handle);
     }
