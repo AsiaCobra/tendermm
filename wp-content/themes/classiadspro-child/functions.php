@@ -14,6 +14,9 @@ add_action('wp_footer',function(){
         .pacz-header-toolbar .pacz-grid{
             overflow:visible;
         }
+        button.slick-prev.slick-arrow {
+            display: none!important;
+        }
     </style>
     <script id="blabla">
         
