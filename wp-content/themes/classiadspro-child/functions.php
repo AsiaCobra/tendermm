@@ -174,7 +174,7 @@ function remove_home_all_css(){
 add_action('wp_print_styles', 'remove_home_all_css', PHP_INT_MAX - 1);
 add_action('wp_print_styles', 'home_css', PHP_INT_MAX);
 function home_css(){
-  wp_enqueue_style('home-style', get_stylesheet_directory_uri().'/css/styles-home.min.css');
+  wp_enqueue_style('home-style', get_stylesheet_directory_uri().'/css/styles.home.min.css');
   // wp_enqueue_style('theme-options', get_stylesheet_directory_uri().'/css/theme-option.css');
 }
 // add_action('vc_base_register_front_js','remove_scripts',120);
