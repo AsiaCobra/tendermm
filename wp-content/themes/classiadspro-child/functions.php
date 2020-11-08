@@ -143,7 +143,11 @@ function digit_disable_scripts(){
     }
   }
 }
+if(is_home() ){
+  function dig_custom_modal_temp(){
 
+  }
+}
 // add_action('wp_header','remove_scripts',100);
 // add_action('init','remove_scripts',100);
 // add_action('wp_print_scripts','remove_scripts',100);
@@ -166,11 +170,11 @@ function remove_home_all_css(){
     }
   }
 }
-// add_action('wp_print_styles', 'remove_home_all_css', PHP_INT_MAX - 1);
+add_action('wp_print_styles', 'remove_home_all_css', PHP_INT_MAX - 1);
 add_action('wp_print_styles', 'home_css', PHP_INT_MAX);
 function home_css(){
-  // wp_enqueue_style('home-style', get_stylesheet_directory_uri().'/css/style-home.css');
-  // wp_enqueue_style('theme-options2', get_stylesheet_directory_uri().'/css/theme-option.css');
+  wp_enqueue_style('home-style', get_stylesheet_directory_uri().'/css/style-home.css');
+  // wp_enqueue_style('theme-options', get_stylesheet_directory_uri().'/css/theme-option.css');
 }
 // add_action('vc_base_register_front_js','remove_scripts',120);
 function montserrat_remove_google_fonts() {
