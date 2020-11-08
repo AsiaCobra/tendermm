@@ -7,8 +7,8 @@ include 'function-for-newsletter.php';
 add_action('wp_footer',function(){
     global $wp_scripts, $wp_styles;
 
-    // output($wp_scripts->queue);
-    // output($wp_styles->queue);
+    output($wp_scripts->queue);
+    output($wp_styles->queue);
     ?>
     <style>
         .pacz-header-toolbar .pacz-grid{
@@ -64,7 +64,7 @@ add_filter( 'show_admin_bar', '__return_false' );
 function remove_scripts(){
     // global $wp_scripts;
     $remove = array(
-      'bootstrap',
+      // 'bootstrap',
       // 'wpb_composer_front_js',
       'wp-embed',
       'alsp_applications',
@@ -94,14 +94,14 @@ function remove_scripts(){
       'pacz-blog',
       // 'pacz-blog',
       'pacz-common-shortcode',
-      // 'pacz-styles-default',
+      'pacz-styles-default',
       'ubermenu-white',
       'alsp_listings_slider',
       'difp-common-style',
       'dhvc-form-font-awesome',
       'ubermenu-font-awesome-all',
-      'theme-dynamic-styles',
-      'theme-options',
+      // 'theme-dynamic-styles',
+      // 'theme-options',
     );
     foreach($remove as $script){
       wp_deregister_script($script);
@@ -148,9 +148,7 @@ if(is_home() ){
 
   }
 }
-// add_action('wp_header','remove_scripts',100);
-// add_action('init','remove_scripts',100);
-// add_action('wp_print_scripts','remove_scripts',100);
+
 
 add_action('login_enqueue_scripts','remove_scripts');
 add_action('wp_enqueue_scripts','remove_scripts',1000);
