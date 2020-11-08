@@ -65,7 +65,7 @@
 		  };
 		</script>
 		
-		<noscript><style type="text/css"> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript>
+	<noscript><style type="text/css"> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript>
 <?php endif; ?>
     </head>
 

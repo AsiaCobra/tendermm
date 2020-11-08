@@ -49,14 +49,15 @@ if($have_bold){
     src:local('".$font_family."'), 
     url('".$current_url.$font."_Regular.woff') format('woff'), 
     url('".$current_url.$font."_Regular.ttf') format('ttf');
-}
-@font-face {
-    font-family:'MyanmarFont';
-    src:local('".$font_family."'), 
-    url('".$current_url.$font."_Bold.woff') format('woff'), 
-    url('".$current_url.$font."_Bold.ttf') format('ttf');
-    font-weight:bold;
 }";
+// nhs
+// $css ="@font-face {
+//     font-family:'MyanmarFont';
+//     src:local('".$font_family."'), 
+//     url('".$current_url.$font."_Bold.woff') format('woff'), 
+//     url('".$current_url.$font."_Bold.ttf') format('ttf');
+//     font-weight:bold;
+// }";
 } else {
     $css = "@font-face {
     font-family:'MyanmarFont';

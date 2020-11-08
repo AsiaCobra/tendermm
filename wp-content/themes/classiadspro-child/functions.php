@@ -65,6 +65,7 @@ function remove_scripts(){
     // global $wp_scripts;
     $remove = array(
       // 'wpb_composer_front_js',
+      'wp-embed',
       'alsp_applications',
       'wp-sanitize',
       'jquery-ui-tabs',
@@ -78,6 +79,21 @@ function remove_scripts(){
       'rs-plugin-settings-css',
       'difp-style',
       'alsp_fsubmit',
+      'alsp_locations',
+      'alsp_category',
+      'alsp_listings',
+      // 'alsp-search',
+      'alsp_frontend',
+      'embedded_css',
+      'dhvc-form',
+      'single-listing',
+      // 'bootstrap',
+      'pacz-fonticon-custom',
+      // 'classiadspro-style',
+      'pacz-blog',
+      // 'pacz-blog',
+      // 'pacz-common-shortcode',
+      // 'pacz-styles-default',
       'ubermenu-white',
       'alsp_listings_slider',
       'difp-common-style',
@@ -96,7 +112,7 @@ function remove_scripts(){
     }
   
 }
-function disable_scripts(){
+function digit_disable_scripts(){
   $remove_scripts = array(
       'pacz-triger',
       'select2-full',
@@ -114,13 +130,16 @@ function disable_scripts(){
       'google-roboto-regular',
   
   );
-  foreach($remove_scripts as $script){
-      // wp_deregister_script($script);
-      wp_dequeue_script($script);
-  }
-  foreach($remove_styles as $script){
-      // wp_deregister_script($script);
-      wp_dequeue_style($script);
+  if(!isset($_REQUEST['login'])){
+
+    foreach($remove_scripts as $script){
+        // wp_deregister_script($script);
+        wp_dequeue_script($script);
+    }
+    foreach($remove_styles as $script){
+        // wp_deregister_script($script);
+        wp_dequeue_style($script);
+    }
   }
 }
 
@@ -130,7 +149,7 @@ function disable_scripts(){
 add_action('login_enqueue_scripts','remove_scripts');
 add_action('template_redirect','remove_scripts',120);
 add_action('wp_enqueue_scripts','remove_scripts',1000);
-add_action('wp_enqueue_scripts','disable_scripts',99999);
+add_action('wp_enqueue_scripts','digit_disable_scripts',99999);
 // add_action('vc_base_register_front_js','remove_scripts',120);
 function montserrat_remove_google_fonts() {
 

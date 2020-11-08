@@ -245,7 +245,9 @@ span.alsp-field-content.content-multi:after {
 .alsp-field-output-block-92 span.alsp-field-caption {
     display: block;
 }
-
+#pacz-header:not(.header-structure-vertical) .listing-btn{
+    display:none;
+}
 @media(max-width:959px) {
     .logo-left>ul>li.pacz-header-logo {
         /* 	width:auto; */
