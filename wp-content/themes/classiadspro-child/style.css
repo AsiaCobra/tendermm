@@ -125,7 +125,7 @@ input {
 }
 
 /* UniPress */
-@font-face {
+/* @font-face {
     font-family: 'MyanmarFont';
     src: local('Pyidaungsu'),
         url('https://mmtender.com:443/wp-content/plugins/myanmar-unipress/_inc/fonts/pyidaungsu-1.8_Regular.woff') format('woff'),
@@ -138,7 +138,7 @@ input {
         url('https://mmtender.com:443/wp-content/plugins/myanmar-unipress/_inc/fonts/pyidaungsu-1.8_Bold.woff') format('woff'),
         url('https://mmtender.com:443/wp-content/plugins/myanmar-unipress/_inc/fonts/pyidaungsu-1.8_Bold.ttf') format('ttf');
     font-weight: bold;
-}
+} */
 
 .myan_mar_Font {
     font-family: MyanmarFont !important;
@@ -248,6 +248,19 @@ span.alsp-field-content.content-multi:after {
 #pacz-header:not(.header-structure-vertical) .listing-btn{
     display:none;
 }
+.vc_column_container {
+    padding-left: 0;
+    padding-right: 0;
+}
+.vc_clearfix:after,
+.vc_clearfix:before {
+    content: " ";
+    display: table;
+}
+.vc_clearfix:after {
+    clear: both;
+}
+.vc_column-inner.vc_custom_1573969162506 {margin-bottom: 80px;}
 @media(max-width:959px) {
     .logo-left>ul>li.pacz-header-logo {
         /* 	width:auto; */
@@ -268,7 +281,26 @@ span.alsp-field-content.content-multi:after {
         position: absolute;
     }
 }
-
+@media( min-width: 768px){
+    .vc_col-sm-4 {
+        width: 33.33333333%;
+        float: left;
+    }
+    .vc_col-sm-8 {
+        width: 66.66666667%;
+        float:left
+    }
+    .vc_col-sm-6 {
+        width: 50%;
+        float: left;
+    }
+    .vc_column_container>.vc_column-inner {
+        box-sizing: border-box;
+        padding-left: 15px;
+        padding-right: 15px;
+        width: 100%;
+    }
+}
 @media(max-width: 777px) {
     .alsp-listings-block.cz-listview article .listing-wrapper .alsp-listing-text-content-wrap {
         width: fit-content !important;

@@ -7,8 +7,8 @@ include 'function-for-newsletter.php';
 add_action('wp_footer',function(){
     global $wp_scripts, $wp_styles;
 
-    // output($wp_scripts->queue);
-    // output($wp_styles->queue);
+    output($wp_scripts->queue);
+    output($wp_styles->queue);
     ?>
     <style>
         .pacz-header-toolbar .pacz-grid{
@@ -46,7 +46,7 @@ add_action('wp_footer',function(){
        jQuery('.alsp-field-content.field-phone-content').find('a').text(strPh);
        console.log("<?Php echo home_url(); ?>");
          jQuery(document).ready(function(){
-
+          $('.slider-home').slick({lazyLoad: 'ondemand',    infinite: true})
          /**
           * Image Lazyload 
           */
@@ -64,6 +64,7 @@ add_filter( 'show_admin_bar', '__return_false' );
 function remove_scripts(){
     // global $wp_scripts;
     $remove = array(
+      'bootstrap',
       // 'wpb_composer_front_js',
       'wp-embed',
       'alsp_applications',
@@ -74,7 +75,7 @@ function remove_scripts(){
       // 'jquery-ui-core',
     );
     $remove_styles = array(
-      // 'js_composer_front',
+      'js_composer_front',
       'wp-block-library',
       'rs-plugin-settings-css',
       'difp-style',
@@ -92,7 +93,7 @@ function remove_scripts(){
       // 'classiadspro-style',
       'pacz-blog',
       // 'pacz-blog',
-      // 'pacz-common-shortcode',
+      'pacz-common-shortcode',
       // 'pacz-styles-default',
       'ubermenu-white',
       'alsp_listings_slider',
@@ -100,7 +101,7 @@ function remove_scripts(){
       'dhvc-form-font-awesome',
       'ubermenu-font-awesome-all',
       // 'theme-dynamic-styles',
-      // 'theme-options',
+      'theme-options',
     );
     foreach($remove as $script){
       wp_deregister_script($script);
@@ -146,27 +147,35 @@ function digit_disable_scripts(){
 // add_action('wp_header','remove_scripts',100);
 // add_action('init','remove_scripts',100);
 // add_action('wp_print_scripts','remove_scripts',100);
+
 add_action('login_enqueue_scripts','remove_scripts');
-add_action('template_redirect','remove_scripts',120);
 add_action('wp_enqueue_scripts','remove_scripts',1000);
 add_action('wp_enqueue_scripts','digit_disable_scripts',99999);
+
+function remove_js_composer_front_css(){
+  wp_deregister_style('js_composer_front');
+  wp_dequeue_style('js_composer_front');
+}
+add_action('template_redirect','remove_js_composer_front_css',PHP_INT_MAX - 1);
+add_action('wp_enqueue_scripts','remove_js_composer_front_css',PHP_INT_MAX - 1);
+function remove_home_all_css(){
+  global $wp_styles;
+  if(is_home()){
+    foreach( $wp_styles->queue as $style ) {
+        wp_dequeue_style($wp_styles->registered[$style]->handle);
+    }
+  }
+}
+// add_action('wp_print_styles', 'remove_home_all_css', PHP_INT_MAX - 1);
+add_action('wp_print_styles', 'home_css', PHP_INT_MAX);
+function home_css(){
+  // wp_enqueue_style('home-style', get_stylesheet_directory_uri().'/css/style-home.css');
+  wp_enqueue_style('theme-options2', get_stylesheet_directory_uri().'/css/theme-option.css');
+}
 // add_action('vc_base_register_front_js','remove_scripts',120);
 function montserrat_remove_google_fonts() {
 
-  // wp_dequeue_style('montserrat');
-  // wp_dequeue_style('montserrat');
-  // wp_deregister_style('montserrat');
-
-  // wp_dequeue_style('embedded_css');
-  // wp_deregister_style('embedded_css');
-
-  // wp_dequeue_style('jquery-ui-css');
-  // wp_deregister_style('jquery-ui-css');
-  // wp_dequeue_style('alsp-jquery-ui-style-css');
-  // wp_deregister_style('alsp-jquery-ui-style-css');
-  // wp_dequeue_style('google-roboto-regular-css');
-  // wp_deregister_style('google-roboto-regular-css');
-  // wp_dequeue_script('media-upload');
+  // wp_enqueue_style('pure-styles', get_stylesheet_directory_uri().'/styles.pure.css');
   wp_enqueue_script('jquery.scrolltop', get_stylesheet_directory_uri().'/js/jquery.scrolltop.js',array('jquery'),'','');
   wp_enqueue_script('child-lazyload', get_stylesheet_directory_uri().'/js/jquery.lazyload.min.js',array('jquery'),'','');
 }
@@ -276,23 +285,24 @@ function digits_login_redirect(){
     return home_url('/my-dashboard');
 }
 
-// set a variable to make it easy to enable and disable the purifycss feature
-// while testing, just append this parameter to your url: http://www.yourwebsite.com/?purifytest
-    $purifyCssEnabled = array_key_exists('cleanCss',$_GET);
+  // set a variable to make it easy to enable and disable the purifycss feature
+  // while testing, just append this parameter to your url: http://www.yourwebsite.com/?purifytest
+  $purifyCssEnabled = array_key_exists('cleanCss',$_GET);
 
-    // when you're done, set the variable to true - you will be able to disable it anytime with just one change
-    // $purifyCssEnabled = true;
+  // when you're done, set the variable to true - you will be able to disable it anytime with just one change
+  // $purifyCssEnabled = true;
     
-    function dequeue_all_styles() {
-        global $wp_styles;
-        foreach( $wp_styles->queue as $style ) {
-            wp_dequeue_style($wp_styles->registered[$style]->handle);
-        }
+function dequeue_all_styles() {
+    global $wp_styles;
+    foreach( $wp_styles->queue as $style ) {
+        wp_dequeue_style($wp_styles->registered[$style]->handle);
     }
+}
     
-    function enqueue_pure_styles() {
-        wp_enqueue_style('pure-styles', get_stylesheet_directory_uri().'/styles.home.pure.css');
-    }
+function enqueue_pure_styles() {
+  // wp_enqueue_style('theme-options', get_stylesheet_directory_uri().'/css/theme-option.css');
+  wp_enqueue_style('pure-styles', get_stylesheet_directory_uri().'/styles.pure.css');
+}
     /* Remove inline <style> blocks. */
 function start_html_buffer() {
     // buffer output html
@@ -309,6 +319,9 @@ function end_html_buffer() {
 }
 
 
+// add_action('wp_enqueue_scripts', 'dequeue_all_styles', PHP_INT_MAX - 1);
+// add_action('template_redirect', 'dequeue_all_styles', PHP_INT_MAX - 1);
+// add_action('wp_print_styles', 'enqueue_pure_styles', PHP_INT_MAX - 1);
 if ($purifyCssEnabled) {
     // this will remove all enqueued styles in head
     add_action('wp_print_styles', 'dequeue_all_styles', PHP_INT_MAX - 1);
@@ -320,7 +333,9 @@ if ($purifyCssEnabled) {
         // if there are any plugins that print styles in body (like Elementor),
         // you'll need to remove them as well
         // add_action('elementor/frontend/after_enqueue_styles', 'dequeue_all_styles',PHP_INT_MAX);
-    }
+}
+
+
 add_action( 'admin_head',function(){
 	wp_enqueue_script ( "jquery" );
 	?>
@@ -415,6 +430,15 @@ function wpc_shortcode_not_company_ngo_post_list() {
 //NOTNGO End
 //slider start
 // add_shortcode( 'home-page-slider', 'wpc_shortcode_home_page_slider' );
+add_shortcode( 'home-page-slider', 'home_page_slider' );
+
+function home_page_slider(){
+  echo '<div class="slider-home">
+    <div class=""><img data-sizes="100vw" data-srcset="/wp-content/uploads/2020/09/Ads-4-MMTender-Banner.jpg" data-lazy="/wp-content/uploads/2020/09/Ads-4-MMTender-Banner.jpg" alt=""></div>
+    <div class=""><img data-sizes="100vw" data-srcset="/wp-content/uploads/2020/09/Ads-Slidder-010.jpg" data-lazy="/wp-content/uploads/2020/09/Ads-Slidder-010.jpg" alt=""></div>
+  </div>';
+
+}
 function wpc_shortcode_home_page_slider() {
     echo "<rs-module-wrap id='rev_slider_14_1_wrapper' data-alias='blur-effect-slider' data-source='gallery' style='background:#2d3032;padding:0;margin:0px auto;margin-top:0;margin-bottom:0;'>";
        echo " <rs-module id='rev_slider_14_1' style='display:none;' data-version='6.2.2'>";
