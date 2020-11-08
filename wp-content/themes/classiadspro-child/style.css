@@ -246,7 +246,7 @@ span.alsp-field-content.content-multi:after {
     display: block;
 }
 #pacz-header:not(.header-structure-vertical) .listing-btn{
-    display:none;
+    /* display:none; */
 }
 .vc_column_container {
     padding-left: 0;
