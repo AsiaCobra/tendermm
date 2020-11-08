@@ -103,13 +103,16 @@ function remove_scripts(){
       // 'theme-dynamic-styles',
       // 'theme-options',
     );
-    foreach($remove as $script){
-      wp_deregister_script($script);
-      wp_dequeue_script($script);
-    }
-    foreach($remove_styles as $script){
-      wp_deregister_style($script);
-      wp_dequeue_style($script);
+    if(is_home()){
+
+      foreach($remove as $script){
+        wp_deregister_script($script);
+        wp_dequeue_script($script);
+      }
+      foreach($remove_styles as $script){
+        wp_deregister_style($script);
+        wp_dequeue_style($script);
+      }
     }
   
 }
@@ -172,8 +175,11 @@ function remove_home_all_css(){
 add_action('wp_print_styles', 'remove_home_all_css', PHP_INT_MAX - 1);
 add_action('wp_print_styles', 'home_css', PHP_INT_MAX);
 function home_css(){
-  wp_enqueue_style('home-style', get_stylesheet_directory_uri().'/css/styles.home.min.css');
-  // wp_enqueue_style('theme-options', get_stylesheet_directory_uri().'/css/theme-option.css');
+  if( is_home() ){
+
+    wp_enqueue_style('home-style', get_stylesheet_directory_uri().'/css/styles.home.min.css');
+    // wp_enqueue_style('theme-options', get_stylesheet_directory_uri().'/css/theme-option.css');
+  }
 }
 // add_action('vc_base_register_front_js','remove_scripts',120);
 function montserrat_remove_google_fonts() {
