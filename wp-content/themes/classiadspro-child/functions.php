@@ -108,8 +108,8 @@ function remove_scripts(){
       wp_dequeue_script($script);
     }
     foreach($remove_styles as $script){
-      // wp_deregister_style($script);
-      // wp_dequeue_style($script);
+      wp_deregister_style($script);
+      wp_dequeue_style($script);
     }
   
 }
