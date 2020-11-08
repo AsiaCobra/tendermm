@@ -7,8 +7,8 @@ include 'function-for-newsletter.php';
 add_action('wp_footer',function(){
     global $wp_scripts, $wp_styles;
 
-    output($wp_scripts->queue);
-    output($wp_styles->queue);
+    // output($wp_scripts->queue);
+    // output($wp_styles->queue);
     ?>
     <style>
         .pacz-header-toolbar .pacz-grid{
