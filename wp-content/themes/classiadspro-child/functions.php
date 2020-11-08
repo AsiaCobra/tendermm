@@ -178,6 +178,7 @@ function home_css(){
   if( is_front_page() || is_home() ){
 
     wp_enqueue_style('home-style', get_stylesheet_directory_uri().'/css/styles.home.min.css');
+    wp_enqueue_style('slick-slider', '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css');
     // wp_enqueue_style('theme-options', get_stylesheet_directory_uri().'/css/theme-option.css');
   }
 }
