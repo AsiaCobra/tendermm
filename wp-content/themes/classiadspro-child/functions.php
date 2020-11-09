@@ -17,6 +17,8 @@ add_action('wp_footer',function(){
         button.slick-prev.slick-arrow, button.slick-next.slick-arrow {
             display: none!important;
         }
+        .list-scroll{ height:300px;overflow:auto }
+        .list-scroll ul li{ padding-top:10px;padding-left:10px;padding-bottom:10px;background:#fffaff; margin:2px; }
     </style>
     <script id="blabla">
         
@@ -49,7 +51,7 @@ add_action('wp_footer',function(){
        jQuery('.alsp-field-content.field-phone-content').find('a').text(strPh);
        console.log("<?Php echo home_url(); ?>");
          jQuery(document).ready(function(){
-          $('.slider-home').slick({autoplay:true,autoplaySpeed: 1000,})
+          $('.slider-home').slick({autoplay:true,autoplaySpeed: 2000,})
          /**
           * Image Lazyload 
           */
@@ -60,9 +62,18 @@ add_action('wp_footer',function(){
             '/wp-content/plugins/js_composer/assets/css/js_composer.min.css',
             '/wp-content/plugins/ubermenu/assets/fontawesome/css/all.min.css',
           ];
+          let scripts =  [
+            '/wp-content/plugins/myanmar-unipress/_inc/js/rabbit.js',
+            '/wp-content/plugins/myanmar-unipress/_inc/js/bunny.js',
+            '/wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js',
+          ];
           for( let style of styles){
             // console.log(style);
-            $('body').append(`<link rel='stylesheet' id="${style}" href="${style}">`);
+            $('body').append(`<link rel='stylesheet'  href="${style}">`);
+          }
+          for( let style of scripts){
+            // console.log(style);
+            $('body').append(`<script src="${style}">`);
           }
        })
        $(document).on('appear',function(e){ })
@@ -77,6 +88,8 @@ function remove_scripts(){
       'rabbit',
       'bunny',
       'ubermenu',
+      'slick-js',
+      'select2',
       // 'bootstrap',
       // 'wpb_composer_front_js',
       'wp-embed',
@@ -264,8 +277,10 @@ function home_css(){
 function montserrat_remove_google_fonts() {
 
   // wp_enqueue_style('pure-styles', get_stylesheet_directory_uri().'/styles.pure.css');
-  wp_enqueue_script('jquery.scrolltop', get_stylesheet_directory_uri().'/js/jquery.scrolltop.js',array('jquery'),'','');
-  wp_enqueue_script('child-lazyload', get_stylesheet_directory_uri().'/js/jquery.lazyload.min.js',array('jquery'),'','');
+  // wp_enqueue_script('datepicker','//cdnjs.cloudflare.com/ajax/libs/datepicker/1.0.10/datepicker.min.js',array('jquery'),'',true);
+  wp_enqueue_script('slick','//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js',array('jquery'),'',true);
+  wp_enqueue_script('jquery.scrolltop', get_stylesheet_directory_uri().'/js/jquery.scrolltop.js',array('jquery'),'',true);
+  wp_enqueue_script('child-lazyload', get_stylesheet_directory_uri().'/js/jquery.lazyload.min.js',array('jquery'),'',true);
 }
 // add_action('wp_print_styles','montserrat_remove_google_fonts',200);
 add_action('wp_enqueue_scripts', 'montserrat_remove_google_fonts', 100);
@@ -436,12 +451,6 @@ add_action( 'admin_head',function(){
 //NGO & Company Post List
 add_shortcode( 'company-ngo-post-list', 'wpc_shortcode_company_ngo_post_list' );
 function wpc_shortcode_company_ngo_post_list() {
-    $cncat_args = array(
-        'orderby'       => 'date', 
-        'order'         => 'DESC',
-        'hide_empty'    => true, 
-    );
-    $cnterms = get_terms("'taxonomy' => array( 'company-mm', 'ngo-ingo-mm')", $cncat_args);
 
     $cntax_post_args = array(
           'post_type' => 'alsp_listing',
@@ -458,12 +467,12 @@ function wpc_shortcode_company_ngo_post_list() {
     );
 
     $cntax_post_qry = new WP_Query($cntax_post_args);
-    echo "<div style='height:300px;overflow:auto'><ul style='list-style-type:none'>";
+    echo "<div class='list-scroll'><ul style='list-style-type:none'>";
     if($cntax_post_qry->have_posts()) :
        
          while($cntax_post_qry->have_posts()) :
                 $cntax_post_qry->the_post();
-            echo "<li style='padding-top:10px;padding-left:10px;padding-bottom:10px;background:#fffaff; margin:2px;'>";
+            echo "<li>";
                 the_title('<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a>');
                 echo "</li>";
 
@@ -472,20 +481,13 @@ function wpc_shortcode_company_ngo_post_list() {
     echo "</ul></div>";
 } //end foreach loop
 ?>
-<?php wp_reset_postdata(); ?>
+<?php //wp_reset_postdata(); ?>
 
 <?php
 /*NotIn NGO & Company Post List*/
 add_shortcode( 'Not-company-ngo-post-list', 'wpc_shortcode_not_company_ngo_post_list' );
 function wpc_shortcode_not_company_ngo_post_list() {
-  $cat_args = array(
-      'orderby'       => 'date', 
-      'order'         => 'DESC',
-      'hide_empty'    => true, 
-  );
-  $terms = get_terms("'taxonomy' => array(
-          'company-mm',
-          'ngo-ingo-mm')", $cat_args);
+  
 
     $tax_post_args = array(
           'post_type' => 'alsp_listing',
@@ -503,12 +505,12 @@ function wpc_shortcode_not_company_ngo_post_list() {
     );
 
     $tax_post_qry = new WP_Query($tax_post_args);
-    echo "<div style='height:300px;overflow:auto'><ul style='list-style-type:none'>";
+    echo "<div class='list-scroll'><ul style='list-style-type:none'>";
     if($tax_post_qry->have_posts()) :
        
          while($tax_post_qry->have_posts()) :
                 $tax_post_qry->the_post();
-            echo "<li style='padding-top:10px;padding-left:10px;padding-bottom:10px;background:#fffaff; margin:2px;'>";
+            echo "<li>";
                 the_title('<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a>');
                 echo "</li>";
 
@@ -524,8 +526,8 @@ add_shortcode( 'home_page_slider', 'home_page_slider' );
 
 function home_page_slider(){
   echo '<div class="slider-home">
-    <div class=""><img class="lazyload" data-sizes="100vw" data-original="/wp-content/uploads/2020/09/Ads-4-MMTender-Banner.jpg" data-lazy="/wp-content/uploads/2020/09/Ads-4-MMTender-Banner.jpg" alt=""></div>
-    <div class=""><img class="lazyload" data-sizes="100vw" data-original="/wp-content/uploads/2020/09/Ads-Slidder-010.jpg" data-lazy="/wp-content/uploads/2020/09/Ads-Slidder-010.jpg" alt=""></div>
+    <div class=""><img class="lazyload" data-sizes="100vw" data-original="/wp-content/uploads/2020/09/Ads-4-MMTender-Banner.jpg" data-lazy1="/wp-content/uploads/2020/09/Ads-4-MMTender-Banner.jpg" alt=""></div>
+    <div class=""><img class="lazyload" data-sizes="100vw" data-original="/wp-content/uploads/2020/09/Ads-Slidder-010.jpg" data-lazy1="/wp-content/uploads/2020/09/Ads-Slidder-010.jpg" alt=""></div>
   </div>';
 
 }
