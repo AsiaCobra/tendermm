@@ -11,6 +11,16 @@ add_action('wp_footer',function(){
     // output($wp_styles->queue);
     ?>
     <style>
+        @font-face {
+            font-family: 'Glyphicons Halflings';
+            src: url('http://tenderopt.nhs/wp-content/themes/classiadspro/styles/fonts/glyphicons-halflings-regular.eot');
+            src: url('http://tenderopt.nhs/wp-content/themes/classiadspro/styles/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('http://tenderopt.nhs/wp-content/themes/classiadspro/styles/fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('http://tenderopt.nhs/wp-content/themes/classiadspro/styles/fonts/glyphicons-halflings-regular.woff') format('woff'), url('http://tenderopt.nhs/wp-content/themes/classiadspro/styles/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('http://tenderopt.nhs/wp-content/themes/classiadspro/styles/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+            font-weight: normal;
+            font-style: normal;
+        }
+        .search-form-style3 .select2-container--default .select2-selection--single .select2-selection__arrow b:before{
+          font-family: "Font Awesome 5 Free";
+        }
         .pacz-header-toolbar .pacz-grid{
             overflow:visible;
         }
@@ -137,6 +147,7 @@ function remove_scripts(){
       'difp-style',
       'difp-common-style',
       'wp-block-library',
+      // 'theme-dynamic-styles',
     );
     $remove_styles = array(
       'js_composer_front',

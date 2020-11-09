@@ -218,7 +218,7 @@ class Pacz_Static_Files
         }
            $output .= $app_global_dynamic_styles;
         // test
-       $output.= pacz_enqueue_font_icons();
+    //    $output.= pacz_enqueue_font_icons();
 		
 
         $output.= $this->insert_shortcode_styles(global_get_post_id());
@@ -235,7 +235,7 @@ class Pacz_Static_Files
         self::StoreAsset($folder, $filename, $app_global_dynamic_styles);
         update_option("global_theme_options", $filename, true);
 		$output2 = '';
-		$output2 .= pacz_enqueue_font_icons();
+		// $output2 .= pacz_enqueue_font_icons();
 		 $output2 .= $pacz_settings['custom-css'];
 		//$output2 .= pacz_enqueue_cominecss();
 		 $minifier = new SimpleCssMinifier();
