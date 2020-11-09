@@ -10,9 +10,12 @@
  */
 
 
-if(class_exists('alsp_plugin') || class_exists('GeoDirectory')):
+if(class_exists('alsp_plugin') || class_exists('GeoDirectory') || class_exists('DirectoryPress')):
 if(class_exists('alsp_plugin')){
 	global $ALSP_ADIMN_SETTINGS;
+}elseif(class_exists('DirectoryPress')){
+	global $DIRECTORYPRESS_ADIMN_SETTINGS;
+	$ALSP_ADIMN_SETTINGS = $DIRECTORYPRESS_ADIMN_SETTINGS;
 }else{
 	global $gdud_settings;
 	$ALSP_ADIMN_SETTINGS = $gdud_settings;
@@ -50,12 +53,12 @@ $loop_style = $pacz_settings['archive-loop-style'];
 			$author_dribbble = get_the_author_meta('author_dribbble', $authorID);
 		}
 		
-		if ( pacz_is_user_online($authorID) ){
+		//if ( pacz_is_user_online($authorID) ){
 			$author_log_status = '<span class="author-active"></span>';
-		} else {
+		//} else {
 			//$author_log_status = ( pacz_user_last_online($authorID) )? '<small>Last Seen: <br /><em>' . date('M j, Y @ g:ia', pacz_user_last_online($authorID)) . '</em></small>' : ''; //Return the user's "Last Seen" date, or return empty if that user has never logged in.
-			$author_log_status = '<span class="author-in-active"></span>';
-		}
+		//	$author_log_status = '<span class="author-in-active"></span>';
+		//}
 		global $product;
 		require_once PACZ_THEME_PLUGINS_CONFIG . "/image-cropping.php";
 		$output = '';
@@ -69,7 +72,7 @@ get_header(); ?>
 <div id="theme-page">
 	<div class="pacz-main-wrapper-holder">
 		<div class="theme-page-wrapper pacz-main-wrapper <?php echo esc_attr($layout); ?>-layout pacz-grid vc_row-fluid">
-			<div class="inner-page-wrapper">
+			<div class="inner-page-wrapper clearfix">
 				<div class="theme-content  author-page" itemprop="mainContentOfPage">
 					<?php
 					$output .='<div class="author-detail-section clearfix">';
@@ -85,11 +88,11 @@ get_header(); ?>
 						$output .='<div class="author-content-section">';
 							$output .='<div class="author-title">'.$author_name.$author_log_status.'</div>';
 							$output .='<p class="author-reg-date">'. esc_html__('Member since', 'classiadspro').' '.$registered.'</p>';
-							if($author_verified == 'verified'){
-								$output .='<span class="author_verifed ">'. esc_html__('Verified', 'classiadspro').'</span>';
-							}else{
-								$output .='<span class="author_unverifed ">'. esc_html__('Unverified', 'classiadspro').'</span>';
-							}
+							//if($author_verified == 'verified'){
+								//$output .='<span class="author_verifed ">'. esc_html__('Verified', 'classiadspro').'</span>';
+							//}else{
+							//	$output .='<span class="author_unverifed ">'. esc_html__('Unverified', 'classiadspro').'</span>';
+							//}
 							if($ALSP_ADIMN_SETTINGS['frontend_panel_user_type']){
 								if(isset($author_type) && !empty($author_type)){
 									if($author_type == 'dealer'){
@@ -111,7 +114,7 @@ get_header(); ?>
 									if($ALSP_ADIMN_SETTINGS['frontend_panel_user_website']){ $output .='<p class=" clearfix"><span class="author-info-title">'.esc_html__('Website ', 'classiadspro').'</span><span class="author-info-content">'.$author_website.'</span></p>'; }
 									if($ALSP_ADIMN_SETTINGS['frontend_panel_user_address']){ $output .='<p class=" clearfix"><span class="author-info-title">'.esc_html__('Address ', 'classiadspro').'</span><span class="author-info-content">'.$author_address.'</span></p>'; }
 									if($ALSP_ADIMN_SETTINGS['frontend_panel_social_links']){
-										$output .='<div class="author-details-info clearfix"><span class="author-info-title">'.esc_html__('Follow Me ', 'classiadspro').'</span>';
+										$output .='<div class="author-details-info clearfix"><span class="author-info-title">'.esc_html__('Follow ', 'classiadspro').'</span>';
 											$output .='<ul class="author-info-content">';
 											
 												if(!empty($author_fb)){
@@ -176,6 +179,16 @@ get_header(); ?>
 					$single_listing_otherads_gridview_col = 2;
 				}
 				echo do_shortcode('[alsp-listings perpage="'.$single_listing_othoradd_limit.'" show_views_switcher="0" hide_order="1" hide_paginator="1" order_by="post_date" order="DESC" hide_count="1" listings_view_type="'.$single_listing_otherads_view_type.'" listings_view_grid_columns="'.$single_listing_otherads_gridview_col.'" author="'.$authorID.'"]');
+				
+			}elseif(class_exists('DirectoryPress')){
+				$author = get_user_by( 'slug', get_query_var( 'author_name' ) );
+				$authorID = $author->ID;
+				$listing_number = (isset($DIRECTORYPRESS_ADIMN_SETTINGS['authorpage_ads_limit']))? $DIRECTORYPRESS_ADIMN_SETTINGS['authorpage_ads_limit'] : 4;
+				$listing_column = (isset($DIRECTORYPRESS_ADIMN_SETTINGS['authorpage_grid_col']))? $DIRECTORYPRESS_ADIMN_SETTINGS['authorpage_grid_col'] : 2;
+				$listing_view_type = (isset($DIRECTORYPRESS_ADIMN_SETTINGS['authorpage_view_type']))? $DIRECTORYPRESS_ADIMN_SETTINGS['authorpage_view_type'] : 'grid';
+				$directorypress_listing_post_style = (isset($DIRECTORYPRESS_ADIMN_SETTINGS['directorypress_listing_post_style']))? $DIRECTORYPRESS_ADIMN_SETTINGS['directorypress_listing_post_style'] : 10; 
+
+				echo do_shortcode( '[directorypress-listings listing_post_style="'.$directorypress_listing_post_style.'" author="'.$authorID.'" listing_has_featured_tag_style="'.$directorypress_listing_post_style.'" masonry_layout="1" perpage="'.$listing_number.'" hide_paginator="0" hide_order="1" hide_count="1" show_views_switcher="0" listings_view_type="'.$listing_view_type.'" listings_view_grid_columns="'.$listing_column.'"]' );
 				
 			}else{
 				echo do_shortcode('[gd_listings_custom category="All" sort_by="latest" post_author="'.$authorID.'" layout="3" post_limit="15" add_location_filter="" show_featured_only="" show_special_only="" with_pics_only="" with_videos_only="" show_favorites_only="" use_viewing_post_type="" hide_if_empty="" view_all_link="0" with_pagination="1"]');

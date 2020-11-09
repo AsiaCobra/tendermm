@@ -21,11 +21,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 $page_title = ( 'billing' === $load_address ) ? __( 'Billing address', 'classiadspro' ) : __( 'Shipping address', 'classiadspro' );
-if(class_exists('alsp_plugin')){
-	echo do_action('dashboard_panel_html');
-}
+
 ?>
-   <div class="content-wrapper">
+
 <?php
 do_action( 'woocommerce_before_edit_account_address_form' ); ?>
 
@@ -65,4 +63,3 @@ do_action( 'woocommerce_before_edit_account_address_form' ); ?>
 <?php endif; ?>
 
 <?php do_action( 'woocommerce_after_edit_account_address_form' ); ?>
-</div>

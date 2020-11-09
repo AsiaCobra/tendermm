@@ -92,6 +92,9 @@ p.demo_store {
     padding: 40px;
 	background:#fff;
 }
+.woocommerce-thanks-text{
+	margin-top:30px;
+}
 .woocommerce-page,
 .woocommerce {
 
@@ -4326,8 +4329,12 @@ ul.product_list_widget .star-rating{
   width: 100%;
   padding: 10px 0;
   margin: 0;
-  font-size: 12em;
+  font-size: 12px;
   line-height: 1.5em;
+}
+#wc-stripe-cc-form{
+	padding:15px;
+	line-height:1;
 }
 .woocommerce-page #payment div.payment_box ::-webkit-input-placeholder,
 .woocommerce #payment div.payment_box ::-webkit-input-placeholder {

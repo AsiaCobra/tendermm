@@ -1,3 +1,6 @@
+.theme-content.author-page{
+	padding-top:0;
+}
 .pacz-pricing-table .pacz-pricing-offer-grid {
   width: 20%;
   display: inline-block;
@@ -2027,4 +2030,79 @@ table td {
     width: 100%;
     margin-top: 5px;
 }
+}
+
+/* gd details */
+.gd-item-detail .image-gallery-pricetag {
+    background-color: #ea686a;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    font-size: 18px;
+    margin-left: 0;
+	display:inline-block;
+	width:auto;
+}
+.gd-item-detail .theme-content .listing-detail-contentarea .geodir_post_meta{
+	float:none;
+	width: 100%;
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+    display: block;
+}
+.gd-item-detail .theme-content .geodir_post_meta .geodir_post_meta_icon{
+	font-weight:700;
+	color:#777;
+}
+.gd-item-detail .theme-content .listing-detail-contentarea .geodir_post_meta ul li{
+	display:inline-block;
+	margin:0;
+}
+.gd-item-detail #pacz-sidebar .geodir-categories-container ul li a .gd-cptcat-icon {
+    font-size: 16px;
+}
+.gd-item-detail #pacz-sidebar .geodir-categories-container ul li .gd-cptcat-cat-left {
+    width: 45px;
+    border-radius: 0px;
+}
+.gd-item-detail .geodir-categories-container ul {
+    width: 100%;
+}
+.gd-item-detail .geodir-categories-container ul li {
+    margin: 5px 0px;
+	background: #fff;
+	border-radius: 0px;
+	border: 1px solid #eee;
+}
+.gd-item-detail .geodir-categories-container ul li .gd-cptcat-cat-right a {
+    padding-left: 20px;
+}
+.gd-item-detail .geodir-post-slider .geodir-image-container ul.geodir-images li::after{
+	margin-top:0 !important;
+}
+.gd-item-detail .geodir-post-slider .geodir-image-container ul.geodir-images li,
+.gd-item-detail .geodir-post-slider .geodir-image-container ul.geodir-images li img{
+	border-radius:0;
+}
+.gd-item-detail .geodir-single-tabs-container .geodir-post-slider .geodir-image-container ul.geodir-images li img{
+	position:relative;
+}
+
+/* wp blocks */
+.wp-block-button{
+	margin-bottom:15px;
+}
+
+/* directorypress search*/
+
+.responsive-search-form-container .directorypress-search-holder{
+	width:100% !important;
+	margin:0 !important;
+}
+.responsive-search-form-container .directorypress-search-holder .search-element-col{
+	padding:0 !important;
+	margin-bottom:10px;
 }

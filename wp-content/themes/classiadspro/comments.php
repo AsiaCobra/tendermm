@@ -14,7 +14,7 @@ if( $comment->user_id === $post->post_author ) {
 	<div class="pacz-single-comment <?php echo esc_attr($userClass); ?> clearfix" id="comment-<?php comment_ID(); ?>">
 		<div class="comment-content">
 			<?php 
-				if ($post->post_type == "alsp_listing") {
+				if ($post->post_type == 'alsp_listing' || $post->post_type == 'dp_listing') {
 					$rating = get_comment_meta($comment->comment_ID, 'dirrater', true );
 					$dirrater_title = get_comment_meta($comment->comment_ID, 'dirrater_title', true );
 					if ( !empty( $dirrater_title )  ) {
@@ -117,7 +117,7 @@ return;
 endif;
 
 if ( have_comments() ) : 
-if ($post->post_type == "alsp_listing") {
+if ($post->post_type == 'alsp_listing' || $post->post_type == 'dp_listing') {
 	$comments_label = esc_html__('User Reviews', 'classiadspro');
 }else{
 	$comments_label = esc_html__('Comments', 'classiadspro');
@@ -167,7 +167,7 @@ if ( have_comments() ) : ?>
 			'email' => '<div class="comment-form-email comment-form-row"><i class="pacz-icon-envelope-o"></i><input type="text" name="email" class="text-input" id="email" tabindex="56" placeholder="'.esc_html__('EMAIL ADDRESS', 'classiadspro').'" /></div>',
 			'url' 	=> '<div class="comment-form-website comment-form-row"><i class="pacz-icon-globe"></i><input type="text" name="url" class="text-input" id="url" tabindex="57" placeholder="'.esc_html__('WEBSITE', 'classiadspro').'" /></div>',
 		);
-if ($post->post_type == "alsp_listing") {
+if ($post->post_type == 'alsp_listing' || $post->post_type == 'dp_listing') {
 	$comment_form_label = esc_html__('Post New Review', 'classiadspro');
 	$comment_form_submit = esc_html__('Submit Review','classiadspro');
 }else{

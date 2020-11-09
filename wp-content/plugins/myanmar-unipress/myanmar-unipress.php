@@ -37,7 +37,7 @@ function unipress_enqueue_scripts(){
     // font embedding
     if(!is_admin()){
         $font = get_option('fontFamily') ; 
-        wp_enqueue_style( 'embedded_css', $a . '_inc/fonts/?font=' . $font , array(), $v );
+        wp_enqueue_style( 'myanmar_ui', $a . '_inc/fonts/?font=' . $font , array(), $v );
     }
     
     // Adding Zawgyi-Meta Tags for Facebook sharing.

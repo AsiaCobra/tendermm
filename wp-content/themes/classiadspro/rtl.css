@@ -118,7 +118,9 @@ input[type=password]{
 .header-style-v12 .search-form-style-header1 .listing-btn.left {
     float: left;
 }
-.header-style-v12 .search-form-style-header1 .listing-btn.left .listing-header-btn {
+.header-style-v12 .search-form-style-header1 .listing-btn.left .listing-header-btn,
+.header-style-v12 .search-form-style-header1 .listing-btn.left .directorypress-new-listing-button .btn,
+.header-style-v12 .search-form-style-header1 .listing-btn.left .submit-listing-button-single.btn, {
     margin-right: 15px;
 	margin-left: 0;
 }
@@ -722,6 +724,12 @@ input[type=password]{
 }
 .woocommerce-page div.product form.cart .button, .woocommerce div.product form.cart .button, .woocommerce-page #content div.product form.cart .button, .woocommerce #content div.product form.cart .button {
     float: right;
+}
+.woocommerce-page .addresses .title h3, .woocommerce .addresses .title h3 {
+    float: right;
+}
+.woocommerce-page .addresses .title .edit, .woocommerce .addresses .title .edit {
+    float: left;
 }
 /* footer */
 .pacz-footer-copyright {

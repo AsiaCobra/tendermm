@@ -11,14 +11,14 @@
 
 	function pacz_social_network_widgets() {
 
-		jQuery('.social_icon_select_sites').live('change', function() {
+		jQuery('#pacz-social-custom-skin').on('change', '.social_icon_select_sites', function() {
 			var wrap = jQuery(this).closest('p').siblings('.social_icon_wrap');
 			wrap.children('p').hide();
 			jQuery('option:selected', this).each(function() {
 				wrap.find('.social_icon_' + this.value).show();
 			});
 		});
-		jQuery('.social_icon_custom_count').live('change', function() {
+		jQuery('#pacz-social-custom-skin').on('change', '.social_icon_custom_count',function(){
 
 			var wrap = jQuery(this).closest('p').siblings('.social_custom_icon_wrap');
 			wrap.children('div').hide();
@@ -87,7 +87,7 @@
 
 	function pacz_social_networks_custom_skin() {
 
-			jQuery('.social-network-select-skin').live('change', function() {
+			jQuery('body').on('change', '.social-network-select-skin', function() {
 				var $container = jQuery(this).parent('p').siblings('#pacz-social-custom-skin');
 				if(jQuery(this).val() == 'custom') {
 					$container.show();

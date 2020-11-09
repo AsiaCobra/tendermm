@@ -19,7 +19,9 @@
             <span class="spinner"></span>
             <?php if ( false === $this->parent->args['hide_save'] ) { ?>
                 <?php submit_button( esc_attr__( 'Save Changes', 'classiadspro' ), 'primary', 'redux_save', false ); ?>
-            <?php } ?>
+            <?php }else{
+				echo esc_html__( 'Save option disabled on demo site.', 'classiadspro' );
+			} ?>
             
             <?php if ( false === $this->parent->args['hide_reset'] ) { ?>
                 <?php submit_button( esc_attr__( 'Reset Section', 'classiadspro' ), 'secondary', $this->parent->args['opt_name'] . '[defaults-section]', false, array( 'id' => 'redux-defaults-section' ) ); ?>

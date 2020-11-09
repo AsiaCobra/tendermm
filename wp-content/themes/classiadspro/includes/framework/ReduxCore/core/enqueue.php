@@ -274,7 +274,14 @@
 
                     array_push( $depArray, 'redux-vendor' );
                 }
-
+				
+				wp_register_script(
+                    'cookie-js',
+                    ReduxFramework::$_url . 'assets/js/vendor/cookie.js',
+                    $depArray,
+                    $this->timestamp,
+                    true
+                );
                 //*****************************************************************
                 // Redux JS
                 //*****************************************************************
@@ -499,7 +506,7 @@
                 $this->parent->localize_data = apply_filters( "redux/{$this->parent->args['opt_name']}/localize", $this->parent->localize_data );
 
                 $this->get_warnings_and_errors_array();
-
+				wp_enqueue_script( 'cookie-js' ); // Enque the JS now
                 wp_localize_script(
                     'redux-js',
                     'redux',

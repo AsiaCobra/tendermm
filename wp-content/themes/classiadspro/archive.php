@@ -1,13 +1,15 @@
 <?php 
 
 
-$layout = $pacz_settings['archive-layout'];
+
 $columns = $pacz_settings['archive-columns'];
 $loop_style = $pacz_settings['archive-loop-style'];
+$layout_option = $pacz_settings['archive-layout'];
 
-
-if(empty($layout)) {
-	$layout = 'right';
+if(isset($layout_option) && is_active_sidebar("sidebar-6")) {
+	$layout = $pacz_settings['archive-layout'];
+}else{
+	$layout = 'full';
 }
 $blog_style = '';
 $column = '';

@@ -1,11 +1,13 @@
 <?php
 
-
+global $post;
 $layout_meta = get_post_meta( $post->ID, '_layout', true );
 if(isset($layout_meta) && !empty($layout_meta)){
-$layout = $layout_meta;	
+	$layout = $layout_meta;	
+}elseif(is_active_sidebar('sidebar-3')){
+	$layout = 'right';	
 }else{
-$layout = 'right';	
+	$layout = 'full';
 }
 $image_height = $pacz_settings['blog-single-image-height'];
 $image_width = pacz_content_width($layout);

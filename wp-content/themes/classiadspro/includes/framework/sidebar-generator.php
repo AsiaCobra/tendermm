@@ -85,7 +85,7 @@ class classiadsproSidebarGenerator {
 
 	function get_sidebar( $post_id = null ) {
 		global $post;
-		if ( is_active_sidebar("archive") && is_archive() ) {
+		if ( is_active_sidebar("sidebar-6") && is_archive() ) {
 			$sidebar = $this->sidebar_names["archive"];
 		}
 		if (is_home() ) {
@@ -97,16 +97,16 @@ class classiadsproSidebarGenerator {
 		if (is_active_sidebar("404") && is_404() ) {
 			$sidebar = $this->sidebar_names["404"];
 		}
-		if (is_active_sidebar("single_post") && is_singular( 'post' ) ) {
+		if (is_active_sidebar("sidebar-3") && is_singular( 'post' ) ) {
 			$sidebar = $this->sidebar_names['single_post'];
 		}
-		if (is_active_sidebar("alsp_listing_single") && is_page() && has_shortcode($post->post_content, 'alsp-listing') ) {
+		if (is_active_sidebar("alsp_listing_single") && is_page() && (has_shortcode($post->post_content, 'alsp-listing') ||  has_shortcode($post->post_content, 'directorypress-listing'))) {
 			$sidebar = $this->sidebar_names['alsp_listing_single'];
 		}
 		if (is_author()) {
 			$sidebar = $this->sidebar_names['alsp_listing_single'];
 		}
-		if (is_active_sidebar("page") && is_page() && !is_home() ) {
+		if (is_active_sidebar("sidebar-1") && is_page() && !is_home() ) {
 			$sidebar = $this->sidebar_names['page'];
 		}
 		if ( function_exists('is_woocommerce') && is_active_sidebar("woocommerce") && is_woocommerce() && is_archive()) {
@@ -123,6 +123,8 @@ class classiadsproSidebarGenerator {
 			$sidebar = $this->sidebar_names['author'];
 		}else{
 			if ( !empty( $post_id ) ) {
+				$layout = get_post_meta( $post_id, '_layout', true );
+				$custom_sidebar = get_post_meta( $post_id, '_sidebar', true );
 				if(defined('GD_SINGLE_PAGE_TEMP_ID')){
 					$custom = get_post_meta( GD_SINGLE_PAGE_TEMP_ID, '_sidebar', true );
 				}else{

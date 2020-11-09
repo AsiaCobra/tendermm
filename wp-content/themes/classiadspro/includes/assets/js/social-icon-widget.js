@@ -1,12 +1,12 @@
 jQuery(document).ready( function($) {
-	jQuery('.social_icon_select_sites').live('change',function(){
+	jQuery('#pacz-social-custom-skin').on('change', '.social_icon_select_sites', function(){
 		var wrap = jQuery(this).closest('p').siblings('.social_icon_wrap');
 		wrap.children('p').hide();
 		jQuery('option:selected',this).each(function(){
 			wrap.find('.social_icon_'+this.value).show();
 		});
 	});
-	jQuery('.social_icon_custom_count').live('change',function(){
+	jQuery('#pacz-social-custom-skin').on('change', '.social_icon_custom_count',function(){
 		
 		var wrap = jQuery(this).closest('p').siblings('.social_custom_icon_wrap');
 		wrap.children('div').hide();

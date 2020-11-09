@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ClassiadsPro\n"
-"POT-Creation-Date: 2019-10-14 18:41+0500\n"
+"POT-Creation-Date: 2020-08-10 10:04+0500\n"
 "PO-Revision-Date: 2017-10-23 15:45+0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -10,7 +10,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.8\n"
+"X-Generator: Poedit 2.3\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
@@ -34,52 +34,44 @@ msgstr ""
 msgid "Page None Found"
 msgstr ""
 
-#: author.php:87
+#: author.php:90
 msgid "Member since"
 msgstr ""
 
-#: author.php:89
-msgid "Verified"
-msgstr ""
-
-#: author.php:91
-msgid "Unverified"
-msgstr ""
-
-#: author.php:96
+#: author.php:99
 msgid "Dealer"
 msgstr ""
 
-#: author.php:98
+#: author.php:101
 msgid "Individual"
 msgstr ""
 
-#: author.php:100
+#: author.php:103
 msgid "Agency"
 msgstr ""
 
-#: author.php:102
+#: author.php:105
 msgid "Supplier"
 msgstr ""
 
-#: author.php:109
+#: author.php:112
 msgid "Mobile "
 msgstr ""
 
-#: author.php:110
+#: author.php:113
 msgid "Email "
 msgstr ""
 
-#: author.php:111
+#: author.php:114
 msgid "Website "
 msgstr ""
 
-#: author.php:112
+#: author.php:115
 msgid "Address "
 msgstr ""
 
-#: author.php:114
-msgid "Follow Me "
+#: author.php:117
+msgid "Follow "
 msgstr ""
 
 #: comments.php:30 comments.php:99
@@ -99,7 +91,7 @@ msgstr ""
 msgid "User Reviews"
 msgstr ""
 
-#: comments.php:123 includes/framework/ReduxCore/options-config.php:2529
+#: comments.php:123 includes/framework/ReduxCore/options-config.php:2500
 msgid "Comments"
 msgstr ""
 
@@ -139,36 +131,31 @@ msgstr ""
 msgid "Your Comment"
 msgstr ""
 
-#: footer.php:223 footer.php:281
+#: footer.php:228 footer.php:288
 msgid "back to top"
 msgstr ""
 
-#: functions.php:71 includes/framework/pacz-panel/pacz-admin.php:221
-#: includes/framework/pacz-panel/pacz-admin.php:222
-#: includes/framework/pacz-panel/pacz-admin.php:231
-#: includes/framework/pacz-panel/pacz-admin.php:232
+#: functions.php:79 includes/framework/pacz-panel/pacz-admin.php:77
+#: includes/framework/pacz-panel/pacz-admin.php:78
+#: includes/framework/pacz-panel/pacz-admin.php:87
+#: includes/framework/pacz-panel/pacz-admin.php:88
 msgid "Classiads Dashboard"
 msgstr ""
 
-#: functions.php:329
+#: functions.php:335
 msgid "Enter Captcha"
 msgstr ""
 
-#: functions.php:330
+#: functions.php:336
 msgid "Invalid. Try again."
 msgstr ""
 
-#: functions.php:332
+#: functions.php:338
 msgid "Captcha correct."
 msgstr ""
 
-#: functions.php:344
+#: functions.php:350
 msgid "No More Posts"
-msgstr ""
-
-#: gd-singlepahe.php:63 includes/templates/content/single-listing-2.php:30
-#: includes/templates/content/single-listing-3.php:30 page.php:45
-msgid "Pages:"
 msgstr ""
 
 #: includes/actions/general.php:44 includes/actions/general.php:67
@@ -230,73 +217,81 @@ msgid "Merge"
 msgstr ""
 
 #: includes/actions/general.php:380 includes/actions/general.php:394
-#: includes/actions/general.php:414 woocommerce/myaccount/my-address.php:48
+#: includes/actions/general.php:414 woocommerce/myaccount/my-address.php:55
 msgid "Edit"
 msgstr ""
 
-#: includes/actions/general.php:484 includes/actions/general.php:492
-#: includes/actions/general.php:503 includes/actions/general.php:511
-msgid "please install and activate DHVC plugin"
-msgstr ""
-
-#: includes/actions/general.php:499
+#: includes/actions/general.php:476
 msgid "SUBSCRIBE TO OUR NEWSLETTER"
 msgstr ""
 
-#: includes/actions/header.php:228 includes/actions/header.php:238
-#: includes/actions/header.php:257 includes/actions/header.php:267
-#: includes/actions/header.php:320
+#: includes/actions/general.php:487
+msgid "Please Install And Activate Form Builder Plugin"
+msgstr ""
+
+#: includes/actions/header.php:218 includes/actions/header.php:228
+#: includes/actions/header.php:238 includes/actions/header.php:257
+#: includes/actions/header.php:267 includes/actions/header.php:277
+#: includes/actions/header.php:330 includes/actions/header.php:335
 msgid "My Dashboard"
 msgstr ""
 
-#: includes/actions/header.php:229 includes/actions/header.php:239
-#: includes/actions/header.php:258 includes/actions/header.php:268
+#: includes/actions/header.php:219 includes/actions/header.php:229
+#: includes/actions/header.php:239 includes/actions/header.php:258
+#: includes/actions/header.php:268 includes/actions/header.php:278
 msgid "My Listings"
 msgstr ""
 
-#: includes/actions/header.php:230 includes/actions/header.php:240
-#: includes/actions/header.php:259 includes/actions/header.php:269
+#: includes/actions/header.php:220 includes/actions/header.php:230
+#: includes/actions/header.php:240 includes/actions/header.php:259
+#: includes/actions/header.php:269 includes/actions/header.php:279
 msgid "Edit Profile"
 msgstr ""
 
-#: includes/actions/header.php:231 includes/actions/header.php:241
-#: includes/actions/header.php:245 includes/actions/header.php:260
-#: includes/actions/header.php:270 includes/actions/header.php:274
-#: includes/actions/header.php:323
+#: includes/actions/header.php:221 includes/actions/header.php:231
+#: includes/actions/header.php:241 includes/actions/header.php:245
+#: includes/actions/header.php:260 includes/actions/header.php:270
+#: includes/actions/header.php:280 includes/actions/header.php:284
+#: includes/actions/header.php:338
 msgid "logout"
 msgstr ""
 
-#: includes/actions/header.php:248 includes/actions/header.php:278
-#: includes/actions/header.php:282 includes/actions/header.php:328
+#: includes/actions/header.php:248 includes/actions/header.php:288
+#: includes/actions/header.php:292 includes/actions/header.php:343
 msgid "login"
 msgstr ""
 
-#: includes/actions/header.php:249 includes/actions/header.php:280
-#: includes/actions/header.php:283
+#: includes/actions/header.php:249 includes/actions/header.php:290
+#: includes/actions/header.php:293
+#: includes/framework/pacz-panel/templates/registration.php:28
 msgid "Register"
 msgstr ""
 
-#: includes/actions/header.php:328
+#: includes/actions/header.php:343
 msgid "or create your"
 msgstr ""
 
-#: includes/actions/header.php:328
+#: includes/actions/header.php:343
 msgid "Account"
 msgstr ""
 
-#: includes/actions/header.php:328
+#: includes/actions/header.php:343
 msgid "With us"
 msgstr ""
 
-#: includes/actions/header.php:626
+#: includes/actions/header.php:357
+msgid "Add New"
+msgstr ""
+
+#: includes/actions/header.php:632
 msgid "Phone"
 msgstr ""
 
-#: includes/actions/header.php:636
+#: includes/actions/header.php:642
 msgid "Email: "
 msgstr ""
 
-#: includes/actions/header.php:665
+#: includes/actions/header.php:671
 msgid "Phone: "
 msgstr ""
 
@@ -318,7 +313,6 @@ msgid "Categories:"
 msgstr ""
 
 #: includes/custom-post/blog-styles/classic.php:163
-#: includes/custom-post/blog-styles/tile-elegant.php:191
 msgid "0 Comments"
 msgstr ""
 
@@ -327,7 +321,6 @@ msgid "1 Comment"
 msgstr ""
 
 #: includes/custom-post/blog-styles/classic.php:163
-#: includes/custom-post/blog-styles/tile-elegant.php:191
 msgid "% Comments"
 msgstr ""
 
@@ -340,7 +333,6 @@ msgid "0"
 msgstr ""
 
 #: includes/custom-post/blog-styles/masonry.php:62
-#: includes/custom-post/blog-styles/tile-elegant.php:191
 msgid "1"
 msgstr ""
 
@@ -348,7 +340,7 @@ msgstr ""
 msgid "%"
 msgstr ""
 
-#: includes/custom-post/blog-styles/thumb.php:46 single.php:73
+#: includes/custom-post/blog-styles/thumb.php:46 single.php:75
 msgid "comments"
 msgstr ""
 
@@ -360,11 +352,11 @@ msgstr ""
 msgid "Read more"
 msgstr ""
 
-#: includes/custom-post/blog-styles/tile-elegant.php:193
+#: includes/custom-post/blog-styles/tile-elegant.php:191
 msgid "Posted By :"
 msgstr ""
 
-#: includes/custom-post/blog-styles/tile-elegant.php:208
+#: includes/custom-post/blog-styles/tile-elegant.php:206
 #: includes/custom-post/blog-styles/tile.php:210
 #: woocommerce/content-product.php:117
 msgid "Read More"
@@ -373,40 +365,39 @@ msgstr ""
 #: includes/custom-post/shortcodes/pacz_blog.php:186
 #: includes/framework/ReduxCore/inc/fields/border/field_border.php:125
 #: includes/framework/ReduxCore/inc/fields/spacing/field_spacing.php:191
-#: includes/framework/pacz-panel/templates/demo-import.php:267
 msgid "All"
 msgstr ""
 
-#: includes/framework/ReduxCore/core/enqueue.php:453
+#: includes/framework/ReduxCore/core/enqueue.php:460
 #: includes/framework/ReduxCore/inc/extensions/customizer/extension_customizer.php:559
 msgid "You have changes that are not saved. Would you like to save them now?"
 msgstr ""
 
-#: includes/framework/ReduxCore/core/enqueue.php:461
+#: includes/framework/ReduxCore/core/enqueue.php:468
 #: includes/framework/ReduxCore/inc/extensions/customizer/extension_customizer.php:560
 msgid "Are you sure? Resetting will lose all custom values."
 msgstr ""
 
-#: includes/framework/ReduxCore/core/enqueue.php:469
+#: includes/framework/ReduxCore/core/enqueue.php:476
 msgid "Are you sure? Resetting will lose all custom values in this section."
 msgstr ""
 
-#: includes/framework/ReduxCore/core/enqueue.php:477
+#: includes/framework/ReduxCore/core/enqueue.php:484
 #: includes/framework/ReduxCore/inc/extensions/customizer/extension_customizer.php:561
 msgid ""
 "Your current options will be replaced with the values of this preset. Would "
 "you like to proceed?"
 msgstr ""
 
-#: includes/framework/ReduxCore/core/enqueue.php:484
+#: includes/framework/ReduxCore/core/enqueue.php:491
 msgid "Please Wait"
 msgstr ""
 
-#: includes/framework/ReduxCore/core/enqueue.php:495
+#: includes/framework/ReduxCore/core/enqueue.php:502
 msgid "There was an error saving. Here is the result of your action:"
 msgstr ""
 
-#: includes/framework/ReduxCore/core/enqueue.php:496
+#: includes/framework/ReduxCore/core/enqueue.php:503
 msgid ""
 "There was a problem with your action. Please try again or reload the page."
 msgstr ""
@@ -455,23 +446,24 @@ msgstr ""
 msgid "Options"
 msgstr ""
 
-#: includes/framework/ReduxCore/framework.php:1652
+#: includes/framework/ReduxCore/framework.php:1659
 msgid "Enable"
 msgstr ""
 
-#: includes/framework/ReduxCore/framework.php:1657
+#: includes/framework/ReduxCore/framework.php:1664
+#: includes/framework/ReduxCore/options-config.php:1025
 msgid "Disable"
 msgstr ""
 
-#: includes/framework/ReduxCore/framework.php:1663
+#: includes/framework/ReduxCore/framework.php:1670
 msgid "moving the mouse over"
 msgstr ""
 
-#: includes/framework/ReduxCore/framework.php:1665
+#: includes/framework/ReduxCore/framework.php:1672
 msgid "clicking"
 msgstr ""
 
-#: includes/framework/ReduxCore/framework.php:1669
+#: includes/framework/ReduxCore/framework.php:1676
 #, php-format
 msgid ""
 "Hints are tooltips that popup when %d the hint icon, offering addition "
@@ -479,27 +471,27 @@ msgid ""
 "the link below."
 msgstr ""
 
-#: includes/framework/ReduxCore/framework.php:1674
+#: includes/framework/ReduxCore/framework.php:1681
 msgid "Hints"
 msgstr ""
 
-#: includes/framework/ReduxCore/framework.php:1801
+#: includes/framework/ReduxCore/framework.php:1808
 msgid "Default"
 msgstr ""
 
-#: includes/framework/ReduxCore/framework.php:2681
+#: includes/framework/ReduxCore/framework.php:2688
 msgid "Invalid security credential.  Please reload the page and try again."
 msgstr ""
 
-#: includes/framework/ReduxCore/framework.php:2690
+#: includes/framework/ReduxCore/framework.php:2697
 msgid "Invalid user capability.  Please reload the page and try again."
 msgstr ""
 
-#: includes/framework/ReduxCore/framework.php:2770
+#: includes/framework/ReduxCore/framework.php:2777
 msgid "Your panel has no fields. Nothing to save."
 msgstr ""
 
-#: includes/framework/ReduxCore/framework.php:3892
+#: includes/framework/ReduxCore/framework.php:3899
 msgid ""
 "<strong>Redux Framework Notice: </strong>There are references to the Redux "
 "Framework support site in your config's <code>admin_bar_links</code> "
@@ -507,7 +499,7 @@ msgid ""
 "shipping your product."
 msgstr ""
 
-#: includes/framework/ReduxCore/framework.php:3907
+#: includes/framework/ReduxCore/framework.php:3914
 msgid ""
 "<strong>Redux Framework Notice: </strong>There are references to the Redux "
 "Framework support site in your config's <code>share_icons</code> argument.  "
@@ -550,22 +542,13 @@ msgid ""
 "Please ensure that it is installed and <a href=\"%s\">activated</a>"
 msgstr ""
 
-#: includes/framework/ReduxCore/inc/class.redux_filesystem.php:31
-#: includes/framework/ReduxCore/inc/class.redux_filesystem.php:60
-#: includes/framework/ReduxCore/inc/class.redux_filesystem.php:271
+#: includes/framework/ReduxCore/inc/class.redux_filesystem.php:50
+#: includes/framework/ReduxCore/inc/class.redux_filesystem.php:289
 msgid "File Permission Issues"
 msgstr ""
 
-#: includes/framework/ReduxCore/inc/class.redux_filesystem.php:31
-#, php-format
-msgid ""
-"We were unable to modify required files. Please check your permissions, or "
-"modify your wp-config.php file to contain your FTP login credentials as <a "
-"href=\"%s\" target=\"_blank\">outlined here</a>."
-msgstr ""
-
-#: includes/framework/ReduxCore/inc/class.redux_filesystem.php:60
-#: includes/framework/ReduxCore/inc/class.redux_filesystem.php:271
+#: includes/framework/ReduxCore/inc/class.redux_filesystem.php:50
+#: includes/framework/ReduxCore/inc/class.redux_filesystem.php:289
 #, php-format
 msgid ""
 "We were unable to modify required files. Please ensure that <code>%1s</code> "
@@ -574,7 +557,7 @@ msgid ""
 "\">outlined here</a>."
 msgstr ""
 
-#: includes/framework/ReduxCore/inc/class.redux_helpers.php:610
+#: includes/framework/ReduxCore/inc/class.redux_helpers.php:622
 #, php-format
 msgid ""
 "<code>%s</code> version <strong style=\"color:red\">%s</strong> is out of "
@@ -624,7 +607,7 @@ msgid "Press return or enter to expand"
 msgstr ""
 
 #: includes/framework/ReduxCore/inc/extensions/import_export/extension_import_export.php:120
-#: includes/framework/ReduxCore/options-config.php:2841
+#: includes/framework/ReduxCore/options-config.php:2794
 msgid "Import / Export"
 msgstr ""
 
@@ -653,8 +636,6 @@ msgid ""
 msgstr ""
 
 #: includes/framework/ReduxCore/inc/extensions/import_export/import_export/field_import_export.php:116
-#: includes/framework/pacz-panel/templates/demo-import.php:147
-#: includes/framework/pacz-panel/templates/demo-import.php:295
 msgid "Import"
 msgstr ""
 
@@ -808,7 +789,7 @@ msgstr ""
 
 #: includes/framework/ReduxCore/inc/fields/border/field_border.php:138
 #: includes/framework/ReduxCore/inc/fields/spacing/field_spacing.php:215
-#: includes/framework/ReduxCore/options-config.php:1596
+#: includes/framework/ReduxCore/options-config.php:1567
 msgid "Top"
 msgstr ""
 
@@ -819,7 +800,7 @@ msgstr ""
 
 #: includes/framework/ReduxCore/inc/fields/border/field_border.php:152
 #: includes/framework/ReduxCore/inc/fields/spacing/field_spacing.php:229
-#: includes/framework/ReduxCore/options-config.php:1597
+#: includes/framework/ReduxCore/options-config.php:1568
 msgid "Bottom"
 msgstr ""
 
@@ -879,7 +860,7 @@ msgid "Visited"
 msgstr ""
 
 #: includes/framework/ReduxCore/inc/fields/link_color/field_link_color.php:99
-#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2408
+#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2405
 msgid "Active"
 msgstr ""
 
@@ -892,7 +873,7 @@ msgid "Hover Background Color"
 msgstr ""
 
 #: includes/framework/ReduxCore/inc/fields/nav_color/field_nav_color.php:104
-msgid "active Background Color"
+msgid "Active Background Color"
 msgstr ""
 
 #: includes/framework/ReduxCore/inc/fields/password/field_password.php:62
@@ -1221,7 +1202,7 @@ msgid ""
 msgstr ""
 
 #: includes/framework/ReduxCore/inc/tracking.php:157
-#: woocommerce/myaccount/form-edit-account.php:45
+#: woocommerce/myaccount/form-edit-account.php:43
 msgid "Email address"
 msgstr ""
 
@@ -1306,7 +1287,6 @@ msgstr ""
 #: includes/framework/ReduxCore/inc/welcome/views/extensions.php:81
 #: includes/framework/ReduxCore/inc/welcome/views/status_report.php:34
 #: includes/framework/ReduxCore/inc/welcome/views/support.php:8
-#: includes/framework/pacz-panel/templates/demo-import.php:11
 #, php-format
 msgid "Version %s"
 msgstr ""
@@ -1820,8 +1800,8 @@ msgid "The name of the current active theme."
 msgstr ""
 
 #: includes/framework/ReduxCore/inc/welcome/views/status_report.php:715
-#: includes/framework/pacz-panel/pacz-admin.php:59
-#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2654
+#: includes/framework/pacz-panel/pacz-admin.php:49
+#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2637
 msgid "Version"
 msgstr ""
 
@@ -2073,222 +2053,218 @@ msgid "Defines search Page layout."
 msgstr ""
 
 #: includes/framework/ReduxCore/options-config.php:288
-msgid "Sidebar and Content Area Radius"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:299
 #: includes/framework/metaboxes/metabox-pages.php:66
 msgid "Breadcrumb"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:300
+#: includes/framework/ReduxCore/options-config.php:289
 msgid ""
 "Breadcrumbs will appear horizontally across the top of all pages below "
 "header."
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:301
+#: includes/framework/ReduxCore/options-config.php:290
 msgid "Using this option you can disable breadcrumbs throughout the site."
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:309
+#: includes/framework/ReduxCore/options-config.php:298
 msgid "Smooth Scroll"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:310
+#: includes/framework/ReduxCore/options-config.php:299
 msgid ""
 "Adds easing movement in page scroll and modifys browser native scrollbar"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:311
-#: includes/framework/ReduxCore/options-config.php:1321
-#: includes/framework/ReduxCore/options-config.php:1362
-#: includes/framework/ReduxCore/options-config.php:1382
+#: includes/framework/ReduxCore/options-config.php:300
+#: includes/framework/ReduxCore/options-config.php:1292
+#: includes/framework/ReduxCore/options-config.php:1333
+#: includes/framework/ReduxCore/options-config.php:1353
 #: includes/framework/metaboxes/metabox-skinning.php:64
 msgid "If you don't want this feature just disable it from this option."
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:319
+#: includes/framework/ReduxCore/options-config.php:308
 msgid "Page Comments"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:320
+#: includes/framework/ReduxCore/options-config.php:309
 msgid "Option to globally enable/disable comments in pages."
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:329
+#: includes/framework/ReduxCore/options-config.php:318
 msgid "Custom Sidebars"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:331
+#: includes/framework/ReduxCore/options-config.php:320
 msgid ""
 "Will create custom widget areas to help you make custom sidebars in pages & "
 "posts."
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:332
+#: includes/framework/ReduxCore/options-config.php:321
 msgid "No Special characters please! eg: \"contact page 3\""
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:337
+#: includes/framework/ReduxCore/options-config.php:326
 msgid "Typekit Kit ID"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:338
+#: includes/framework/ReduxCore/options-config.php:327
 msgid ""
 "If you want to use typekit in your site simply enter The Type Kit ID you get "
 "from Typekit site."
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:338
+#: includes/framework/ReduxCore/options-config.php:327
 msgid ""
 "<a target='_blank' href='http://help.typekit.com/customer/portal/"
 "articles/6840-using-typekit-with-wordpress-com'>Read More</a>"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:345
-#: includes/framework/ReduxCore/options-config.php:2832
+#: includes/framework/ReduxCore/options-config.php:334
+#: includes/framework/ReduxCore/options-config.php:2785
 msgid "Remove query string from Static Files"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:346
-#: includes/framework/ReduxCore/options-config.php:2833
+#: includes/framework/ReduxCore/options-config.php:335
+#: includes/framework/ReduxCore/options-config.php:2786
 msgid "Removes \"ver\" query string from JS and CSS files."
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:347
-#: includes/framework/ReduxCore/options-config.php:2834
+#: includes/framework/ReduxCore/options-config.php:336
+#: includes/framework/ReduxCore/options-config.php:2787
 msgid ""
 "For More info Please <a href=\"https://developers.google.com/speed/docs/best-"
 "practices/caching#LeverageProxyCaching\">Read Here</a>."
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:355
+#: includes/framework/ReduxCore/options-config.php:344
 #: includes/framework/metabox-generator.php:519
 msgid "Header"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:361
+#: includes/framework/ReduxCore/options-config.php:350
 msgid "Header Skins"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:369
+#: includes/framework/ReduxCore/options-config.php:358
 msgid "Main Navigation Top Level"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:370
+#: includes/framework/ReduxCore/options-config.php:359
 msgid "Will affect main navigation top level links"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:387
+#: includes/framework/ReduxCore/options-config.php:376
 msgid "Main Navigation Sub Level Background Color"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:388
+#: includes/framework/ReduxCore/options-config.php:377
 msgid "This value will affect Sub level background color including mega menu."
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:396
+#: includes/framework/ReduxCore/options-config.php:385
 msgid "Main Navigation Sub Level"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:397
+#: includes/framework/ReduxCore/options-config.php:386
 msgid "all sub level menus ans sidebar links."
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:414
+#: includes/framework/ReduxCore/options-config.php:403
 msgid "Show Main Navigation Border Top?"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:424
+#: includes/framework/ReduxCore/options-config.php:413
 msgid "Show Toolbar Border Top?"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:435
+#: includes/framework/ReduxCore/options-config.php:424
 msgid "Header Toolbar Border Bottom Color"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:443
+#: includes/framework/ReduxCore/options-config.php:432
 msgid "Header Toolbar Text Color"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:451
+#: includes/framework/ReduxCore/options-config.php:440
 msgid "Header Toolbar Phone & Email Icon Color"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:459
+#: includes/framework/ReduxCore/options-config.php:448
 msgid "Header Toolbar Link Color"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:471
+#: includes/framework/ReduxCore/options-config.php:460
 msgid "Header Toolbar Social Network Link Color"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:486
+#: includes/framework/ReduxCore/options-config.php:475
 msgid "toolbar Social links background "
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:487
+#: includes/framework/ReduxCore/options-config.php:476
 msgid "you can use rgba color "
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:496
+#: includes/framework/ReduxCore/options-config.php:485
 msgid "Header Search Icon Color"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:504
+#: includes/framework/ReduxCore/options-config.php:493
 msgid "Header cart Link Color"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:520
+#: includes/framework/ReduxCore/options-config.php:509
 msgid "Header listing button colors"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:537
+#: includes/framework/ReduxCore/options-config.php:526
 msgid "Toolbar Contact info "
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:543
+#: includes/framework/ReduxCore/options-config.php:532
 msgid "Header contact"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:548
-#: includes/framework/ReduxCore/options-config.php:612
-#: includes/framework/ReduxCore/options-config.php:852
-#: includes/framework/ReduxCore/options-config.php:881
-#: includes/framework/ReduxCore/options-config.php:889
-#: includes/framework/ReduxCore/options-config.php:931
-#: includes/framework/ReduxCore/options-config.php:1034
-#: includes/framework/ReduxCore/options-config.php:2682
+#: includes/framework/ReduxCore/options-config.php:537
+#: includes/framework/ReduxCore/options-config.php:601
+#: includes/framework/ReduxCore/options-config.php:841
+#: includes/framework/ReduxCore/options-config.php:870
+#: includes/framework/ReduxCore/options-config.php:878
+#: includes/framework/ReduxCore/options-config.php:920
+#: includes/framework/ReduxCore/options-config.php:1023
+#: includes/framework/ReduxCore/options-config.php:2653
 msgid "Header Toolbar"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:549
-#: includes/framework/ReduxCore/options-config.php:614
-#: includes/framework/ReduxCore/options-config.php:854
-#: includes/framework/ReduxCore/options-config.php:1343
-#: includes/framework/ReduxCore/options-config.php:2684
+#: includes/framework/ReduxCore/options-config.php:538
+#: includes/framework/ReduxCore/options-config.php:603
+#: includes/framework/ReduxCore/options-config.php:843
+#: includes/framework/ReduxCore/options-config.php:1314
+#: includes/framework/ReduxCore/options-config.php:2655
 msgid "Disabled"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:556
+#: includes/framework/ReduxCore/options-config.php:545
 msgid "Header Toolbar contact Align"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:557
-#: includes/framework/ReduxCore/options-config.php:622
-#: includes/framework/ReduxCore/options-config.php:873
-#: includes/framework/ReduxCore/options-config.php:940
-#: includes/framework/ReduxCore/options-config.php:1054
+#: includes/framework/ReduxCore/options-config.php:546
+#: includes/framework/ReduxCore/options-config.php:611
+#: includes/framework/ReduxCore/options-config.php:862
+#: includes/framework/ReduxCore/options-config.php:929
+#: includes/framework/ReduxCore/options-config.php:1033
 msgid "if logo location is toolbar selected "
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:558
-#: includes/framework/ReduxCore/options-config.php:623
-#: includes/framework/ReduxCore/options-config.php:874
-#: includes/framework/ReduxCore/options-config.php:941
-#: includes/framework/ReduxCore/options-config.php:1055
-#: includes/framework/ReduxCore/options-config.php:1246
+#: includes/framework/ReduxCore/options-config.php:547
+#: includes/framework/ReduxCore/options-config.php:612
+#: includes/framework/ReduxCore/options-config.php:863
+#: includes/framework/ReduxCore/options-config.php:930
+#: includes/framework/ReduxCore/options-config.php:1034
+#: includes/framework/ReduxCore/options-config.php:1217
 #: includes/framework/metaboxes/metabox-skinning.php:36
 #: includes/framework/metaboxes/metabox-skinning.php:45
 msgid ""
@@ -2296,71 +2272,32 @@ msgid ""
 "below option instead"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:566
+#: includes/framework/ReduxCore/options-config.php:555
 msgid "Header Toolbar Phone Number"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:575
+#: includes/framework/ReduxCore/options-config.php:564
 msgid "Header Toolbar Phone Icon"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:576
-#: includes/framework/ReduxCore/options-config.php:594
+#: includes/framework/ReduxCore/options-config.php:565
+#: includes/framework/ReduxCore/options-config.php:583
 msgid ""
 "This option will give you the ability to add any icon you want to use for "
 "front of the email address.  to get the icon class name."
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:584
+#: includes/framework/ReduxCore/options-config.php:573
 msgid "Header Toolbar Email Address"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:593
+#: includes/framework/ReduxCore/options-config.php:582
 msgid "Header Toolbar Email Icon"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:601
-#: includes/framework/ReduxCore/options-config.php:607
-#: includes/framework/ReduxCore/options-config.php:633
-#: includes/framework/ReduxCore/options-config.php:643
-#: includes/framework/ReduxCore/options-config.php:653
-#: includes/framework/ReduxCore/options-config.php:663
-#: includes/framework/ReduxCore/options-config.php:673
-#: includes/framework/ReduxCore/options-config.php:683
-#: includes/framework/ReduxCore/options-config.php:693
-#: includes/framework/ReduxCore/options-config.php:703
-#: includes/framework/ReduxCore/options-config.php:713
-#: includes/framework/ReduxCore/options-config.php:722
-#: includes/framework/ReduxCore/options-config.php:731
-#: includes/framework/ReduxCore/options-config.php:741
-#: includes/framework/ReduxCore/options-config.php:751
-#: includes/framework/ReduxCore/options-config.php:760
-#: includes/framework/ReduxCore/options-config.php:769
-#: includes/framework/ReduxCore/options-config.php:778
-#: includes/framework/ReduxCore/options-config.php:787
-#: includes/framework/ReduxCore/options-config.php:796
-#: includes/framework/ReduxCore/options-config.php:805
-msgid "Header Social Networks"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:613
-#: includes/framework/ReduxCore/options-config.php:853
-#: includes/framework/ReduxCore/options-config.php:932
-#: includes/framework/ReduxCore/options-config.php:1035
-#: includes/framework/ReduxCore/options-config.php:2683
-msgid "Header Section"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:621
-msgid "Header Toolbar SAocial Align"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:631
-#: includes/framework/ReduxCore/options-config.php:1606
-#: includes/framework/metaboxes/metabox-employee.php:48
-msgid "Facebook"
-msgstr ""
-
+#: includes/framework/ReduxCore/options-config.php:590
+#: includes/framework/ReduxCore/options-config.php:596
+#: includes/framework/ReduxCore/options-config.php:622
 #: includes/framework/ReduxCore/options-config.php:632
 #: includes/framework/ReduxCore/options-config.php:642
 #: includes/framework/ReduxCore/options-config.php:652
@@ -2369,723 +2306,60 @@ msgstr ""
 #: includes/framework/ReduxCore/options-config.php:682
 #: includes/framework/ReduxCore/options-config.php:692
 #: includes/framework/ReduxCore/options-config.php:702
-#: includes/framework/ReduxCore/options-config.php:712
-#: includes/framework/ReduxCore/options-config.php:721
+#: includes/framework/ReduxCore/options-config.php:711
+#: includes/framework/ReduxCore/options-config.php:720
 #: includes/framework/ReduxCore/options-config.php:730
 #: includes/framework/ReduxCore/options-config.php:740
-#: includes/framework/ReduxCore/options-config.php:750
-#: includes/framework/ReduxCore/options-config.php:759
-#: includes/framework/ReduxCore/options-config.php:768
-#: includes/framework/ReduxCore/options-config.php:777
-#: includes/framework/ReduxCore/options-config.php:786
-#: includes/framework/ReduxCore/options-config.php:795
-#: includes/framework/ReduxCore/options-config.php:804
-#: includes/framework/ReduxCore/options-config.php:1063
-#: includes/framework/ReduxCore/options-config.php:1586
-#: includes/framework/ReduxCore/options-config.php:1607
-#: includes/framework/ReduxCore/options-config.php:1617
-#: includes/framework/ReduxCore/options-config.php:1627
-#: includes/framework/ReduxCore/options-config.php:1637
-#: includes/framework/ReduxCore/options-config.php:1647
-#: includes/framework/ReduxCore/options-config.php:1657
-#: includes/framework/ReduxCore/options-config.php:1667
-#: includes/framework/ReduxCore/options-config.php:1677
-#: includes/framework/ReduxCore/options-config.php:1687
-#: includes/framework/ReduxCore/options-config.php:1697
-#: includes/framework/ReduxCore/options-config.php:1707
-#: includes/framework/ReduxCore/options-config.php:1717
-#: includes/framework/ReduxCore/options-config.php:1727
-#: includes/framework/ReduxCore/options-config.php:1736
-#: includes/framework/ReduxCore/options-config.php:1745
-#: includes/framework/ReduxCore/options-config.php:1754
-#: includes/framework/ReduxCore/options-config.php:1763
-#: includes/framework/ReduxCore/options-config.php:1772
-#: includes/framework/ReduxCore/options-config.php:1781
-#: includes/framework/ReduxCore/options-config.php:1790
-msgid "Including http://"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:641
-#: includes/framework/ReduxCore/options-config.php:1616
-#: includes/framework/metaboxes/metabox-employee.php:57
-msgid "Twitter"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:651
-#: includes/framework/ReduxCore/options-config.php:1626
-msgid "RSS"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:661
-#: includes/framework/ReduxCore/options-config.php:1636
-#: includes/framework/metaboxes/metabox-employee.php:83
-msgid "Dribbble"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:671
-#: includes/framework/ReduxCore/options-config.php:1646
-#: includes/framework/metaboxes/metabox-employee.php:100
-msgid "Pinterest"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:681
-#: includes/framework/ReduxCore/options-config.php:1656
-#: includes/framework/metaboxes/metabox-employee.php:74
-msgid "Instagram"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:691
-#: includes/framework/ReduxCore/options-config.php:1666
-#: includes/framework/metaboxes/metabox-employee.php:91
-msgid "Google Plus"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:701
-#: includes/framework/ReduxCore/options-config.php:1676
-msgid "Linkedin"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:711
-#: includes/framework/ReduxCore/options-config.php:1686
-msgid "Youtube"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:720
-#: includes/framework/ReduxCore/options-config.php:1696
-msgid "Vimeo"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:729
-#: includes/framework/ReduxCore/options-config.php:1706
-msgid "Spotify"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:739
-#: includes/framework/ReduxCore/options-config.php:1716
-msgid "Tumblr"
-msgstr ""
-
 #: includes/framework/ReduxCore/options-config.php:749
-#: includes/framework/ReduxCore/options-config.php:1726
-msgid "Behance"
-msgstr ""
-
 #: includes/framework/ReduxCore/options-config.php:758
-#: includes/framework/ReduxCore/options-config.php:1735
-msgid "WhatsApp"
-msgstr ""
-
 #: includes/framework/ReduxCore/options-config.php:767
-#: includes/framework/ReduxCore/options-config.php:1753
-msgid "qzone"
-msgstr ""
-
 #: includes/framework/ReduxCore/options-config.php:776
-#: includes/framework/ReduxCore/options-config.php:1762
-msgid "vk.com"
-msgstr ""
-
 #: includes/framework/ReduxCore/options-config.php:785
-#: includes/framework/ReduxCore/options-config.php:1771
-msgid "IMDb"
-msgstr ""
-
 #: includes/framework/ReduxCore/options-config.php:794
-#: includes/framework/ReduxCore/options-config.php:1780
-msgid "Renren"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:803
-#: includes/framework/ReduxCore/options-config.php:1789
-msgid "Weibo"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:811
-msgid "Header Login Register"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:819
-msgid "add login and register button in top header"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:847
-msgid "Longin/Registered Button Location"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:859
-msgid "Longin/Registered Button Style"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:860
-msgid "Choose button style"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:864
-msgid "Button Style 1"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:865
-msgid "Button Style 2"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:872
-msgid "Longin/Registered Button Align on Toolbar"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:890
-#: includes/framework/ReduxCore/options-config.php:901
-msgid "Enable/Disable Header Toolbar"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:900
-msgid "Header Toolbar in grid"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:908
-msgid "Header Toolbar Custom Menu"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:920
-msgid "Header Logo"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:926
-msgid "Header logo location"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:939
-msgid "Header Toolbar Logo Align"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:949
-msgid "Logo Dimensions"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:950
-msgid "Set logo width and height"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:959
-msgid "Logo Height"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:960
-msgid "Set logo height"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:970
-msgid "Upload Logo"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:981
-msgid "Upload Retina Logo"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:983
-msgid ""
-"Please note that the image you are uploading should be exactly 2x size of "
-"the original logo you have uploaded in above option."
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:984
-#: includes/framework/metaboxes/metabox-skinning.php:93
-#: includes/framework/metaboxes/metabox-skinning.php:122
-msgid ""
-"Use this option if you want your logo appear crystal clean in retina "
-"devices(eg. macbook retina, ipad, iphone)."
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:992
-msgid "Pre-loader Overlay Logo"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:994
-msgid ""
-"This logo will be viewed in the pre-loader overlay. This overlay can be "
-"enabled form page meta option and mostly used for heavy pages with alot of "
-"content and images."
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:995
-msgid "Image size is up to you."
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1003
-msgid "Upload Mobile Logo"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1005
-msgid ""
-"This option comes handly when your logo is just too long for a mobile device "
-"and you would like to upload a shorter and smaller logo just to fit the "
-"header area."
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1014
-msgid "Upload Mobile Retina Logo"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1016
-msgid ""
-"Please note that the image you are uploading should be exactly 2x size of "
-"the original logo you have uploaded in above option (Upload Mobile Logo)."
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1023
-msgid "Header Listing Button"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1029
-msgid "Listing Button Location"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1040
-msgid "Listing Button Style"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1045
-msgid "Listing Button Style 1 ( Default )"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1046
-msgid "Listing Button Style 2 ( Ultra )"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1053
-msgid "Header Listing Button Align"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1062
-msgid "Header New Listing Button Url "
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1064
-msgid "Header New Listing Button url"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1070
-msgid "Header New Listing Button Text"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1071
-msgid "button text"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1072
-msgid "Header New Listing Button"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1078
-#: includes/framework/ReduxCore/options-config.php:1086
-msgid "Header Background"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1101
-msgid "Transparent Header Background"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1111
-msgid "Header Bottom Border Color"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1119
-msgid "Header Toolbar Background"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1134
-msgid "Header Layout"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1142
-msgid "Main Navigation Responsive Width"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1143
-msgid "The width Main navigation converts to responsive mode."
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1144
-msgid ""
-"Navigation item can vary from site to site and it totally depends on you to "
-"define a the best width Main Navigation convert to responsive mode. you can "
-"find the right value by just resizing the window to find the best fit "
-"coresponding to navigation items."
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1153
-msgid "Preset Header Layout"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1154
-msgid "Select Preset Header"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1161
-msgid "Header Styles"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1162
-msgid "Block/Transparent"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1170
-msgid "Preset Header Skin "
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1171
-msgid "Turn on Preset Header custom Skins"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1177
-#: includes/framework/metaboxes/metabox-skinning.php:25
-msgid "Header Structure"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1188
-msgid "Header Location"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1190
-msgid "Whether stay at the top or bottom of the screen."
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1199
-msgid "Vertical Header State"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1200
-msgid "Choose vertical header defaut state."
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1201
-msgid ""
-"If condensed header chosen, header will be narrow by default and by clicking "
-"burger icon it will be expanded to reveal logo and navigation."
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1210
-msgid "Header Vertical Width?"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1211
-msgid "Default : 280px"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1212
-msgid "Using this option you can increase or decrease header width."
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1221
-#: includes/framework/ReduxCore/options-config.php:1233
-msgid "Header Padding"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1222
-msgid "Top & Bottom. default : 30px"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1223
-#: includes/framework/ReduxCore/options-config.php:1235
-msgid ""
-"Using this option you can increase or decrease header padding from its top "
-"and bottom."
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1234
-msgid "Left & Right. default : 30px"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1244
-#: includes/framework/metaboxes/metabox-skinning.php:34
-msgid "Header Align"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1253
-msgid "Vertical Header Menu Align"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1262
-msgid "Boxed Header"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1263
-msgid "Full screen wide header content or inside main grid?."
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1264
-msgid "If you want the cotent be stretched screen wide, disable this option."
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1272
-msgid "header in grid"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1273
-msgid "Header will be in grid"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1282
-msgid "header in grid Postion Absolute"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1287
-#: includes/framework/metaboxes/metabox-skinning.php:49
-msgid "in grid header margin top"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1300
-#: includes/framework/metaboxes/metabox-pages.php:58
-msgid "Header Listing Search Form"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1306
-msgid "Header toolbar Height"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1319
-#: includes/framework/metaboxes/metabox-skinning.php:62
-msgid "Sticky Header"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1320
-#: includes/framework/metaboxes/metabox-skinning.php:63
-msgid "Will make header stay in top of browser while scrolling down"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1329
-msgid "Squeeze Sticky Header"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1330
-msgid ""
-"This option to give you the control on whether to squeeze the sticky header "
-"or keep it same height as none-sticky."
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1331
-msgid "Disable this option if you dont want this feature."
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1337
-msgid "Main Navigation Hover Style"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1342
-#: includes/framework/ReduxCore/options-config.php:1476
-#: includes/framework/ReduxCore/options-config.php:1536
-msgid "Style 1"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1350
-#: includes/framework/metaboxes/metabox-skinning.php:72
-msgid "Show Header Border Top?"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1360
-msgid "Header Search Form"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1361
-msgid "Will stay on right hand of main navigation."
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1371
-msgid "Header Search Location"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1380
-msgid "Header Wpml Language Selector"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1391
-msgid "Page Title : Pages"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1392
-msgid "This option will affect Pages."
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1393
-msgid ""
-"If you don't want to show page title section (title, breadcrumb) in Pages "
-"disable this option. this option will not affect archive, search, 404, "
-"category templates as well as blog and portfolio single posts."
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1399
-msgid "Main Navigation for Logged In User"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1400
-#: includes/framework/ReduxCore/options-config.php:1472
-msgid ""
-"Please choose the menu location that you would like to show as global main "
-"navigation for logged in users."
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1404
-#: includes/framework/metaboxes/metabox-pages.php:130
-msgid "Primary Navigation"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1405
-#: includes/framework/metaboxes/metabox-pages.php:131
-msgid "Second Navigation"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1406
-#: includes/framework/metaboxes/metabox-pages.php:132
-msgid "Third Navigation"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1407
-#: includes/framework/metaboxes/metabox-pages.php:133
-msgid "Fourth Navigation"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1408
-#: includes/framework/metaboxes/metabox-pages.php:134
-msgid "Fifth Navigation"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1409
-#: includes/framework/metaboxes/metabox-pages.php:135
-msgid "Sixth Navigation"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1410
-#: includes/framework/metaboxes/metabox-pages.php:136
-msgid "Seventh Navigation"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1418
-#: includes/framework/ReduxCore/options-config.php:1426
-#: includes/framework/metabox-generator.php:528
-msgid "Footer"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1427
-msgid ""
-"Will be located after content. Please note that sub footer will not be "
-"affected by this option."
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1428
-msgid "If you don't want to have footer section you can disable it."
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1437
-msgid "Footer Widget Area Columns"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1438
-msgid "Defines in which strcuture footer widget areas would be divided"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1439
-msgid "Please choose your footer widget area column strucutre."
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1462
-msgid "Top Footer"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1463
-#: includes/framework/ReduxCore/options-config.php:1513
-msgid "Locates below footer."
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1464
-msgid "If you don't want to have Top footer section you can disable it."
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1470
-msgid "footer subscription form styles"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1477
-#: includes/framework/ReduxCore/options-config.php:1537
-msgid "Style 2"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1478
-#: includes/framework/ReduxCore/options-config.php:1538
-msgid "Style 3"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1479
-#: includes/framework/ReduxCore/options-config.php:1539
-msgid "Style 4"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1488
-msgid "Upload Top Footer Logo"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1496
-msgid "Form id"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1504
-msgid "Mailchimp id"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1512
-msgid "Sub Footer"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1514
-msgid "If you don't want to have sub footer section you can disable it."
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1522
-msgid "Sub Footer Back to Top Button"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1530
-msgid "footer back to top button style"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1546
-msgid "Footer Sell Button"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1559
-msgid "Sell"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1565
-msgid "Sub Footer Copyright text"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1566
-msgid "You may write your site copyright information."
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1575
-msgid "Sub Footer Right Section Logo Image"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1585
-msgid "Sub Footer Right Section Logo Link"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1591
-msgid "Footer Social Location"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:1592
-msgid ""
-"Please choose the Social Network location for footer. location top will show "
-"social networks links with subscription form if form style 3 is selected, "
-"location bottom and will show icons on sub-footer and both with show icons "
-"on both locations "
-msgstr ""
-
+msgid "Header Social Networks"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:602
+#: includes/framework/ReduxCore/options-config.php:842
+#: includes/framework/ReduxCore/options-config.php:921
+#: includes/framework/ReduxCore/options-config.php:1024
+#: includes/framework/ReduxCore/options-config.php:2654
+msgid "Header Section"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:610
+msgid "Header Toolbar SAocial Align"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:620
+#: includes/framework/ReduxCore/options-config.php:1577
+#: includes/framework/metaboxes/metabox-employee.php:48
+msgid "Facebook"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:621
+#: includes/framework/ReduxCore/options-config.php:631
+#: includes/framework/ReduxCore/options-config.php:641
+#: includes/framework/ReduxCore/options-config.php:651
+#: includes/framework/ReduxCore/options-config.php:661
+#: includes/framework/ReduxCore/options-config.php:671
+#: includes/framework/ReduxCore/options-config.php:681
+#: includes/framework/ReduxCore/options-config.php:691
+#: includes/framework/ReduxCore/options-config.php:701
+#: includes/framework/ReduxCore/options-config.php:710
+#: includes/framework/ReduxCore/options-config.php:719
+#: includes/framework/ReduxCore/options-config.php:729
+#: includes/framework/ReduxCore/options-config.php:739
+#: includes/framework/ReduxCore/options-config.php:748
+#: includes/framework/ReduxCore/options-config.php:757
+#: includes/framework/ReduxCore/options-config.php:766
+#: includes/framework/ReduxCore/options-config.php:775
+#: includes/framework/ReduxCore/options-config.php:784
+#: includes/framework/ReduxCore/options-config.php:793
+#: includes/framework/ReduxCore/options-config.php:1557
+#: includes/framework/ReduxCore/options-config.php:1578
+#: includes/framework/ReduxCore/options-config.php:1588
 #: includes/framework/ReduxCore/options-config.php:1598
-msgid "Both"
-msgstr ""
-
 #: includes/framework/ReduxCore/options-config.php:1608
 #: includes/framework/ReduxCore/options-config.php:1618
 #: includes/framework/ReduxCore/options-config.php:1628
@@ -3096,638 +2370,1319 @@ msgstr ""
 #: includes/framework/ReduxCore/options-config.php:1678
 #: includes/framework/ReduxCore/options-config.php:1688
 #: includes/framework/ReduxCore/options-config.php:1698
+#: includes/framework/ReduxCore/options-config.php:1707
+#: includes/framework/ReduxCore/options-config.php:1716
+#: includes/framework/ReduxCore/options-config.php:1725
+#: includes/framework/ReduxCore/options-config.php:1734
+#: includes/framework/ReduxCore/options-config.php:1743
+#: includes/framework/ReduxCore/options-config.php:1752
+#: includes/framework/ReduxCore/options-config.php:1761
+msgid "Including http://"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:630
+#: includes/framework/ReduxCore/options-config.php:1587
+#: includes/framework/metaboxes/metabox-employee.php:57
+msgid "Twitter"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:640
+#: includes/framework/ReduxCore/options-config.php:1597
+msgid "RSS"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:650
+#: includes/framework/ReduxCore/options-config.php:1607
+#: includes/framework/metaboxes/metabox-employee.php:83
+msgid "Dribbble"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:660
+#: includes/framework/ReduxCore/options-config.php:1617
+#: includes/framework/metaboxes/metabox-employee.php:100
+msgid "Pinterest"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:670
+#: includes/framework/ReduxCore/options-config.php:1627
+#: includes/framework/metaboxes/metabox-employee.php:74
+msgid "Instagram"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:680
+#: includes/framework/ReduxCore/options-config.php:1637
+#: includes/framework/metaboxes/metabox-employee.php:91
+msgid "Google Plus"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:690
+#: includes/framework/ReduxCore/options-config.php:1647
+msgid "Linkedin"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:700
+#: includes/framework/ReduxCore/options-config.php:1657
+msgid "Youtube"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:709
+#: includes/framework/ReduxCore/options-config.php:1667
+msgid "Vimeo"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:718
+#: includes/framework/ReduxCore/options-config.php:1677
+msgid "Spotify"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:728
+#: includes/framework/ReduxCore/options-config.php:1687
+msgid "Tumblr"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:738
+#: includes/framework/ReduxCore/options-config.php:1697
+msgid "Behance"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:747
+#: includes/framework/ReduxCore/options-config.php:1706
+msgid "WhatsApp"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:756
+#: includes/framework/ReduxCore/options-config.php:1724
+msgid "qzone"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:765
+#: includes/framework/ReduxCore/options-config.php:1733
+msgid "vk.com"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:774
+#: includes/framework/ReduxCore/options-config.php:1742
+msgid "IMDb"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:783
+#: includes/framework/ReduxCore/options-config.php:1751
+msgid "Renren"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:792
+#: includes/framework/ReduxCore/options-config.php:1760
+msgid "Weibo"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:800
+msgid "Header Login Register"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:808
+msgid "add login and register button in top header"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:836
+msgid "Longin/Registered Button Location"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:848
+msgid "Longin/Registered Button Style"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:849
+msgid "Choose button style"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:853
+msgid "Button Style 1"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:854
+msgid "Button Style 2"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:861
+msgid "Longin/Registered Button Align on Toolbar"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:879
+#: includes/framework/ReduxCore/options-config.php:890
+msgid "Enable/Disable Header Toolbar"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:889
+msgid "Header Toolbar in grid"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:897
+msgid "Header Toolbar Custom Menu"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:909
+msgid "Header Logo"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:915
+msgid "Header logo location"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:928
+msgid "Header Toolbar Logo Align"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:938
+msgid "Logo Dimensions"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:939
+msgid "Set logo width and height"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:948
+msgid "Logo Height"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:949
+msgid "Set logo height"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:959
+msgid "Upload Logo"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:970
+msgid "Upload Retina Logo"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:972
+msgid ""
+"Please note that the image you are uploading should be exactly 2x size of "
+"the original logo you have uploaded in above option."
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:973
+#: includes/framework/metaboxes/metabox-skinning.php:93
+#: includes/framework/metaboxes/metabox-skinning.php:122
+msgid ""
+"Use this option if you want your logo appear crystal clean in retina "
+"devices(eg. macbook retina, ipad, iphone)."
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:981
+msgid "Pre-loader Overlay Logo"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:983
+msgid ""
+"This logo will be viewed in the pre-loader overlay. This overlay can be "
+"enabled form page meta option and mostly used for heavy pages with alot of "
+"content and images."
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:984
+msgid "Image size is up to you."
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:992
+msgid "Upload Mobile Logo"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:994
+msgid ""
+"This option comes handly when your logo is just too long for a mobile device "
+"and you would like to upload a shorter and smaller logo just to fit the "
+"header area."
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1003
+msgid "Upload Mobile Retina Logo"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1005
+msgid ""
+"Please note that the image you are uploading should be exactly 2x size of "
+"the original logo you have uploaded in above option (Upload Mobile Logo)."
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1012
+msgid "Header Listing Button"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1018
+msgid "Listing Button Location"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1032
+msgid "Header Listing Button Align"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1041
+msgid "Header New Listing Button Text"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1042
+msgid "button text"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1043
+msgid "Header New Listing Button"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1049
+#: includes/framework/ReduxCore/options-config.php:1057
+msgid "Header Background"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1072
+msgid "Transparent Header Background"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1082
+msgid "Header Bottom Border Color"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1090
+msgid "Header Toolbar Background"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1105
+msgid "Header Layout"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1113
+msgid "Main Navigation Responsive Width"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1114
+msgid "The width Main navigation converts to responsive mode."
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1115
+msgid ""
+"Navigation item can vary from site to site and it totally depends on you to "
+"define a the best width Main Navigation convert to responsive mode. you can "
+"find the right value by just resizing the window to find the best fit "
+"coresponding to navigation items."
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1124
+msgid "Preset Header Layout"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1125
+msgid "Select Preset Header"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1132
+msgid "Header Styles"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1133
+msgid "Block/Transparent"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1141
+msgid "Preset Header Skin "
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1142
+msgid "Turn on Preset Header custom Skins"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1148
+#: includes/framework/metaboxes/metabox-skinning.php:25
+msgid "Header Structure"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1159
+msgid "Header Location"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1161
+msgid "Whether stay at the top or bottom of the screen."
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1170
+msgid "Vertical Header State"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1171
+msgid "Choose vertical header defaut state."
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1172
+msgid ""
+"If condensed header chosen, header will be narrow by default and by clicking "
+"burger icon it will be expanded to reveal logo and navigation."
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1181
+msgid "Header Vertical Width?"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1182
+msgid "Default : 280px"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1183
+msgid "Using this option you can increase or decrease header width."
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1192
+#: includes/framework/ReduxCore/options-config.php:1204
+msgid "Header Padding"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1193
+msgid "Top & Bottom. default : 30px"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1194
+#: includes/framework/ReduxCore/options-config.php:1206
+msgid ""
+"Using this option you can increase or decrease header padding from its top "
+"and bottom."
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1205
+msgid "Left & Right. default : 30px"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1215
+#: includes/framework/metaboxes/metabox-skinning.php:34
+msgid "Header Align"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1224
+msgid "Vertical Header Menu Align"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1233
+msgid "Boxed Header"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1234
+msgid "Full screen wide header content or inside main grid?."
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1235
+msgid "If you want the cotent be stretched screen wide, disable this option."
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1243
+msgid "header in grid"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1244
+msgid "Header will be in grid"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1253
+msgid "header in grid Postion Absolute"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1258
+#: includes/framework/metaboxes/metabox-skinning.php:49
+msgid "in grid header margin top"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1271
+#: includes/framework/metaboxes/metabox-pages.php:58
+msgid "Header Listing Search Form"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1277
+msgid "Header toolbar Height"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1290
+#: includes/framework/metaboxes/metabox-skinning.php:62
+msgid "Sticky Header"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1291
+#: includes/framework/metaboxes/metabox-skinning.php:63
+msgid "Will make header stay in top of browser while scrolling down"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1300
+msgid "Squeeze Sticky Header"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1301
+msgid ""
+"This option to give you the control on whether to squeeze the sticky header "
+"or keep it same height as none-sticky."
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1302
+msgid "Disable this option if you dont want this feature."
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1308
+msgid "Main Navigation Hover Style"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1313
+#: includes/framework/ReduxCore/options-config.php:1447
+#: includes/framework/ReduxCore/options-config.php:1507
+msgid "Style 1"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1321
+#: includes/framework/metaboxes/metabox-skinning.php:72
+msgid "Show Header Border Top?"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1331
+msgid "Header Search Form"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1332
+msgid "Will stay on right hand of main navigation."
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1342
+msgid "Header Search Location"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1351
+msgid "Header Wpml Language Selector"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1362
+msgid "Page Title : Pages"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1363
+msgid "This option will affect Pages."
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1364
+msgid ""
+"If you don't want to show page title section (title, breadcrumb) in Pages "
+"disable this option. this option will not affect archive, search, 404, "
+"category templates as well as blog and portfolio single posts."
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1370
+msgid "Main Navigation for Logged In User"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1371
+#: includes/framework/ReduxCore/options-config.php:1443
+msgid ""
+"Please choose the menu location that you would like to show as global main "
+"navigation for logged in users."
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1375
+#: includes/framework/metaboxes/metabox-pages.php:130
+msgid "Primary Navigation"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1376
+#: includes/framework/metaboxes/metabox-pages.php:131
+msgid "Second Navigation"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1377
+#: includes/framework/metaboxes/metabox-pages.php:132
+msgid "Third Navigation"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1378
+#: includes/framework/metaboxes/metabox-pages.php:133
+msgid "Fourth Navigation"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1379
+#: includes/framework/metaboxes/metabox-pages.php:134
+msgid "Fifth Navigation"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1380
+#: includes/framework/metaboxes/metabox-pages.php:135
+msgid "Sixth Navigation"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1381
+#: includes/framework/metaboxes/metabox-pages.php:136
+msgid "Seventh Navigation"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1389
+#: includes/framework/ReduxCore/options-config.php:1397
+#: includes/framework/metabox-generator.php:528
+msgid "Footer"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1398
+msgid ""
+"Will be located after content. Please note that sub footer will not be "
+"affected by this option."
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1399
+msgid "If you don't want to have footer section you can disable it."
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1408
+msgid "Footer Widget Area Columns"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1409
+msgid "Defines in which strcuture footer widget areas would be divided"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1410
+msgid "Please choose your footer widget area column strucutre."
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1433
+msgid "Top Footer"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1434
+#: includes/framework/ReduxCore/options-config.php:1484
+msgid "Locates below footer."
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1435
+msgid "If you don't want to have Top footer section you can disable it."
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1441
+msgid "footer subscription form styles"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1448
+#: includes/framework/ReduxCore/options-config.php:1508
+msgid "Style 2"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1449
+#: includes/framework/ReduxCore/options-config.php:1509
+msgid "Style 3"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1450
+#: includes/framework/ReduxCore/options-config.php:1510
+msgid "Style 4"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1459
+msgid "Upload Top Footer Logo"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1467
+msgid "Form id"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1475
+msgid "Mailchimp id"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1483
+msgid "Sub Footer"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1485
+msgid "If you don't want to have sub footer section you can disable it."
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1493
+msgid "Sub Footer Back to Top Button"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1501
+msgid "footer back to top button style"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1517
+msgid "Footer Sell Button"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1530
+msgid "Sell"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1536
+msgid "Sub Footer Copyright text"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1537
+msgid "You may write your site copyright information."
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1546
+msgid "Sub Footer Right Section Logo Image"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1556
+msgid "Sub Footer Right Section Logo Link"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1562
+msgid "Footer Social Location"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1563
+msgid ""
+"Please choose the Social Network location for footer. location top will show "
+"social networks links with subscription form if form style 3 is selected, "
+"location bottom and will show icons on sub-footer and both with show icons "
+"on both locations "
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1569
+msgid "Both"
+msgstr ""
+
+#: includes/framework/ReduxCore/options-config.php:1579
+#: includes/framework/ReduxCore/options-config.php:1589
+#: includes/framework/ReduxCore/options-config.php:1599
+#: includes/framework/ReduxCore/options-config.php:1609
+#: includes/framework/ReduxCore/options-config.php:1619
+#: includes/framework/ReduxCore/options-config.php:1629
+#: includes/framework/ReduxCore/options-config.php:1639
+#: includes/framework/ReduxCore/options-config.php:1649
+#: includes/framework/ReduxCore/options-config.php:1659
+#: includes/framework/ReduxCore/options-config.php:1669
+#: includes/framework/ReduxCore/options-config.php:1679
+#: includes/framework/ReduxCore/options-config.php:1689
+#: includes/framework/ReduxCore/options-config.php:1699
 #: includes/framework/ReduxCore/options-config.php:1708
-#: includes/framework/ReduxCore/options-config.php:1718
-#: includes/framework/ReduxCore/options-config.php:1728
-#: includes/framework/ReduxCore/options-config.php:1737
-#: includes/framework/ReduxCore/options-config.php:1746
-#: includes/framework/ReduxCore/options-config.php:1755
-#: includes/framework/ReduxCore/options-config.php:1764
-#: includes/framework/ReduxCore/options-config.php:1773
-#: includes/framework/ReduxCore/options-config.php:1782
-#: includes/framework/ReduxCore/options-config.php:1791
+#: includes/framework/ReduxCore/options-config.php:1717
+#: includes/framework/ReduxCore/options-config.php:1726
+#: includes/framework/ReduxCore/options-config.php:1735
+#: includes/framework/ReduxCore/options-config.php:1744
+#: includes/framework/ReduxCore/options-config.php:1753
+#: includes/framework/ReduxCore/options-config.php:1762
 msgid "Sub Footer Social Networks"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:1744
+#: includes/framework/ReduxCore/options-config.php:1715
 msgid "Wechat"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:1799
+#: includes/framework/ReduxCore/options-config.php:1770
 msgid "Typography"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:1807
+#: includes/framework/ReduxCore/options-config.php:1778
 msgid "Body Font"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:1819
+#: includes/framework/ReduxCore/options-config.php:1790
 msgid "Choose your body font properties."
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:1830
+#: includes/framework/ReduxCore/options-config.php:1801
 msgid "Headings Font"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:1842
+#: includes/framework/ReduxCore/options-config.php:1813
 msgid ""
 "Choose your Heading fonts properties. <br>(will affect H1, H2, H3, H4, H5, "
 "H6)"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:1853
+#: includes/framework/ReduxCore/options-config.php:1824
 msgid "Widgets Title"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:1865
+#: includes/framework/ReduxCore/options-config.php:1836
 msgid ""
 "This will apply to all widget areas title including footer, sidebar and side "
 "dashboard"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:1877
+#: includes/framework/ReduxCore/options-config.php:1848
 #: includes/framework/metaboxes/metabox-skinning.php:444
 msgid "Page Title Text Size"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:1887
+#: includes/framework/ReduxCore/options-config.php:1858
 msgid "Paragraph Text Size"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:1897
+#: includes/framework/ReduxCore/options-config.php:1868
 msgid "Paragraph Line Height"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:1907
+#: includes/framework/ReduxCore/options-config.php:1878
 msgid "Footer Paragraph Text Size"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:1917
+#: includes/framework/ReduxCore/options-config.php:1888
 msgid "Main Navigation Top level"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:1941
+#: includes/framework/ReduxCore/options-config.php:1912
 msgid "Main Menu Items Gutter Space"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:1942
+#: includes/framework/ReduxCore/options-config.php:1913
 msgid "Left & Right. default : 17px"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:1943
+#: includes/framework/ReduxCore/options-config.php:1914
 msgid "This Value will be applied as padding to left and right of the item."
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:1953
+#: includes/framework/ReduxCore/options-config.php:1924
 msgid "Main Menu Items Top & Bottom Padding"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:1954
+#: includes/framework/ReduxCore/options-config.php:1925
 msgid "Top & Bottom. default : 10px"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:1955
+#: includes/framework/ReduxCore/options-config.php:1926
 msgid "This Value will be applied as padding to top and bottom of the item."
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:1964
+#: includes/framework/ReduxCore/options-config.php:1935
 msgid "Main Menu Top Level Text Transform"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:1974
+#: includes/framework/ReduxCore/options-config.php:1945
 msgid "Main Menu Sub Level Font Size"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:1985
+#: includes/framework/ReduxCore/options-config.php:1956
 msgid "Main Menu Sub Level Text Transform"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:1994
+#: includes/framework/ReduxCore/options-config.php:1965
 msgid "Main Menu Sub Level Font Weight"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2003
+#: includes/framework/ReduxCore/options-config.php:1974
 msgid "Toolbar Font"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2015
+#: includes/framework/ReduxCore/options-config.php:1986
 msgid "Choose your header toolbar font properties."
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2027
+#: includes/framework/ReduxCore/options-config.php:1998
 msgid "Note: Adobe Typekit is a premium service"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2027
+#: includes/framework/ReduxCore/options-config.php:1998
 msgid " "
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2034
+#: includes/framework/ReduxCore/options-config.php:2005
 msgid "Choose a Typekit Font"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2035
+#: includes/framework/ReduxCore/options-config.php:2006
 msgid "Type the name of the font family you have picked from typekit library."
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2042
+#: includes/framework/ReduxCore/options-config.php:2013
 msgid "Add Typekit Elements Class Names."
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2043
+#: includes/framework/ReduxCore/options-config.php:2014
 msgid ""
 "Add class names you want the Typekit apply the above font family. Add Class, "
 "ID or tag names (e.g. : body, p, #custom-id, .custom-class)."
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2051
+#: includes/framework/ReduxCore/options-config.php:2022
 msgid "Skin"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2059
+#: includes/framework/ReduxCore/options-config.php:2030
 msgid "Accent Color"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2060
+#: includes/framework/ReduxCore/options-config.php:2031
 msgid "Main color scheme. Choose a vivid and bold color."
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2068
+#: includes/framework/ReduxCore/options-config.php:2039
 msgid "Body text Color"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2069
+#: includes/framework/ReduxCore/options-config.php:2040
 msgid "Will affect all texts if no color is defined for them."
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2076
+#: includes/framework/ReduxCore/options-config.php:2047
 msgid "Headings Color"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2077
+#: includes/framework/ReduxCore/options-config.php:2048
 msgid "Will affect all headings (h1,h2,h3,h4,h5,h6)"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2084
+#: includes/framework/ReduxCore/options-config.php:2055
 msgid "Links Color"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2085
+#: includes/framework/ReduxCore/options-config.php:2056
 msgid "Will affect all links color."
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2097
+#: includes/framework/ReduxCore/options-config.php:2068
 #: includes/framework/metabox-generator.php:522
 msgid "Page Title"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2106
+#: includes/framework/ReduxCore/options-config.php:2077
 msgid "Sidebar Widget Title"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2115
+#: includes/framework/ReduxCore/options-config.php:2086
 msgid "Sidebar Widget Texts"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2116
+#: includes/framework/ReduxCore/options-config.php:2087
 msgid ""
 "Will affect all texts in sidebar widget (unless there is a color value for "
 "the specific option in theme styles)"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2124
+#: includes/framework/ReduxCore/options-config.php:2095
 msgid "Sidebar Widget Links"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2125
+#: includes/framework/ReduxCore/options-config.php:2096
 msgid "Will affect all links in sidebar section."
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2137
+#: includes/framework/ReduxCore/options-config.php:2108
 msgid "Footer Widget Title"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2146
+#: includes/framework/ReduxCore/options-config.php:2117
 msgid "Footer Widget Texts"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2147
+#: includes/framework/ReduxCore/options-config.php:2118
 msgid ""
 "Will affect all texts in footer widget (unless there is a color value for "
 "the specific option in theme styles)"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2155
+#: includes/framework/ReduxCore/options-config.php:2126
 msgid "Footer Widget Links"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2156
+#: includes/framework/ReduxCore/options-config.php:2127
 msgid "Will affect all links in footer section."
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2167
+#: includes/framework/ReduxCore/options-config.php:2138
 msgid "Footer recent Posts border Bottom"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2177
+#: includes/framework/ReduxCore/options-config.php:2148
 msgid "Show Sub Footer Border Top?"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2187
+#: includes/framework/ReduxCore/options-config.php:2158
 msgid "Sub-Footer border top color"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2195
+#: includes/framework/ReduxCore/options-config.php:2166
 msgid "Show Border Right to Footer Collumns?"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2206
+#: includes/framework/ReduxCore/options-config.php:2177
 msgid "Footer Collumn Border Color"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2207
-#: includes/framework/ReduxCore/options-config.php:2216
+#: includes/framework/ReduxCore/options-config.php:2178
+#: includes/framework/ReduxCore/options-config.php:2187
 msgid ""
 "Will affect all social network icons in sub footer. you can set its active "
 "and hover values."
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2215
+#: includes/framework/ReduxCore/options-config.php:2186
 msgid "Sub-Footer Social Networks Color"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2233
+#: includes/framework/ReduxCore/options-config.php:2204
 msgid "Sub-Footer Copyright Color"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2234
+#: includes/framework/ReduxCore/options-config.php:2205
 msgid "Will affect sub footer left side copyright text."
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2241
+#: includes/framework/ReduxCore/options-config.php:2212
 msgid "Preloader Text Color"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2242
+#: includes/framework/ReduxCore/options-config.php:2213
 msgid "Will affect global site preloader text color."
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2250
+#: includes/framework/ReduxCore/options-config.php:2221
 msgid "Preloader Backgroud Color"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2251
+#: includes/framework/ReduxCore/options-config.php:2222
 msgid "Will affect global site preloader Background color."
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2259
+#: includes/framework/ReduxCore/options-config.php:2230
 msgid "Preloader Bar Color"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2260
+#: includes/framework/ReduxCore/options-config.php:2231
 msgid "Will affect global site preloader Bar color."
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2267
+#: includes/framework/ReduxCore/options-config.php:2238
 msgid "Buttons hover color"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2268
-#: includes/framework/ReduxCore/options-config.php:2276
+#: includes/framework/ReduxCore/options-config.php:2239
+#: includes/framework/ReduxCore/options-config.php:2247
 msgid "setting will effect all dynamic buttons"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2275
+#: includes/framework/ReduxCore/options-config.php:2246
 msgid "Subscription Button hover color"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2283
+#: includes/framework/ReduxCore/options-config.php:2254
 #: includes/framework/metaboxes/metabox-skinning.php:493
 msgid "Breadcrumb Skin"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2295
+#: includes/framework/ReduxCore/options-config.php:2266
 msgid "Breadcrumb Custom Skin Color"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2308
+#: includes/framework/ReduxCore/options-config.php:2279
 msgid "Custom CSS"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2309
+#: includes/framework/ReduxCore/options-config.php:2280
 msgid "Add some quick css into this box."
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2310
+#: includes/framework/ReduxCore/options-config.php:2281
 msgid ""
 "For larger scale css modifications use custom.css file in theme root or "
 "consider using a child theme."
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2318
+#: includes/framework/ReduxCore/options-config.php:2289
 msgid "Custom JS"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2319
+#: includes/framework/ReduxCore/options-config.php:2290
 msgid "Script will be placed in an script tag in document footer"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2332
+#: includes/framework/ReduxCore/options-config.php:2303
 msgid "Backgrounds"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2333
+#: includes/framework/ReduxCore/options-config.php:2304
 msgid "In this section you will customize your website backgrounds."
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2340
+#: includes/framework/ReduxCore/options-config.php:2311
 msgid "Site Layout"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2342
+#: includes/framework/ReduxCore/options-config.php:2313
 msgid "Boxed layout best works on standart header style."
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2351
+#: includes/framework/ReduxCore/options-config.php:2322
 msgid "Body Background"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2352
+#: includes/framework/ReduxCore/options-config.php:2323
 msgid ""
 "Affects body background Properties, use this option when boxed layout is "
 "chosen."
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2367
-#: includes/framework/ReduxCore/options-config.php:2378
+#: includes/framework/ReduxCore/options-config.php:2338
+#: includes/framework/ReduxCore/options-config.php:2349
 msgid "Main search bar background color"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2386
+#: includes/framework/ReduxCore/options-config.php:2357
 msgid "Page Title Background"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2404
+#: includes/framework/ReduxCore/options-config.php:2375
 msgid "Page Background"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2420
+#: includes/framework/ReduxCore/options-config.php:2391
 msgid "Footer Background"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2436
+#: includes/framework/ReduxCore/options-config.php:2407
 msgid "Sub Footer Background Color"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2444
+#: includes/framework/ReduxCore/options-config.php:2415
 msgid "Top Footer Background Color"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2456
+#: includes/framework/ReduxCore/options-config.php:2427
 #: includes/framework/sidebar-generator.php:12
 msgid "Blog"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2464
+#: includes/framework/ReduxCore/options-config.php:2435
 msgid "Page Title : Blog Posts"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2465
+#: includes/framework/ReduxCore/options-config.php:2436
 msgid "This option will affect Blog single posts."
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2466
+#: includes/framework/ReduxCore/options-config.php:2437
 msgid ""
 "If you don't want to show page title section (title, breadcrumb) in blog "
 "single posts disable this option."
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2474
+#: includes/framework/ReduxCore/options-config.php:2445
 msgid "Blog Single Featured image, audio, video "
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2475
+#: includes/framework/ReduxCore/options-config.php:2446
 msgid ""
 "Will completely disable Featued Image, Video and Audio players from blog "
 "single post."
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2485
+#: includes/framework/ReduxCore/options-config.php:2456
 msgid "Featured image hard cropping"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2486
+#: includes/framework/ReduxCore/options-config.php:2457
 msgid "This option will affect single blog post featrued image."
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2487
+#: includes/framework/ReduxCore/options-config.php:2458
 msgid ""
 "If you want to disable automatic image cropping for featured image, disable "
 "this option. The original image size will be used. However it will be "
 "responsive and fit to container."
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2497
+#: includes/framework/ReduxCore/options-config.php:2468
 msgid "Single Post Featured Image Height"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2498
+#: includes/framework/ReduxCore/options-config.php:2469
 msgid "This height applies to featured image and gallery post type slideshow.."
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2509
+#: includes/framework/ReduxCore/options-config.php:2480
 msgid "About Author Section"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2519
+#: includes/framework/ReduxCore/options-config.php:2490
 msgid "Blog Single Social Share"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2539
+#: includes/framework/ReduxCore/options-config.php:2510
 msgid "Archive Layout"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2540
-#: includes/framework/ReduxCore/options-config.php:2553
+#: includes/framework/ReduxCore/options-config.php:2511
+#: includes/framework/ReduxCore/options-config.php:2524
 msgid "Defines archive loop layout."
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2552
+#: includes/framework/ReduxCore/options-config.php:2523
 msgid "Archive columns"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2562
+#: includes/framework/ReduxCore/options-config.php:2533
 msgid "Archive Loop Style"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2565
+#: includes/framework/ReduxCore/options-config.php:2536
 msgid "Tile"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2566
+#: includes/framework/ReduxCore/options-config.php:2537
 msgid "Classic"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2567
+#: includes/framework/ReduxCore/options-config.php:2538
 msgid "Thumb"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2568
+#: includes/framework/ReduxCore/options-config.php:2539
 msgid "Masonry"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2575
+#: includes/framework/ReduxCore/options-config.php:2546
 msgid "Archive Loop Page Title"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2576
+#: includes/framework/ReduxCore/options-config.php:2547
 msgid ""
 "Using this option you can enable/disable page title section (including "
 "breadcrumbs)"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2586
+#: includes/framework/ReduxCore/options-config.php:2557
 msgid "Woocommerce"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2593
+#: includes/framework/ReduxCore/options-config.php:2564
 msgid "Shop Layout"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2594
+#: includes/framework/ReduxCore/options-config.php:2565
 msgid "Defines shop loop layout."
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2607
+#: includes/framework/ReduxCore/options-config.php:2578
 msgid "Product Loop Image Height"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2608
+#: includes/framework/ReduxCore/options-config.php:2579
 msgid "Using this option you can change the product loop image height."
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2609
+#: includes/framework/ReduxCore/options-config.php:2580
 msgid "default : 330"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2616
+#: includes/framework/ReduxCore/options-config.php:2587
 msgid "Shop Loop Image Size"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2620
-#: includes/framework/ReduxCore/options-config.php:2643
+#: includes/framework/ReduxCore/options-config.php:2591
+#: includes/framework/ReduxCore/options-config.php:2614
 msgid "Resize & Crop"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2621
-#: includes/framework/ReduxCore/options-config.php:2644
+#: includes/framework/ReduxCore/options-config.php:2592
+#: includes/framework/ReduxCore/options-config.php:2615
 msgid "Original Size"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2622
-#: includes/framework/ReduxCore/options-config.php:2645
+#: includes/framework/ReduxCore/options-config.php:2593
+#: includes/framework/ReduxCore/options-config.php:2616
 msgid "Large Size"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2623
-#: includes/framework/ReduxCore/options-config.php:2646
+#: includes/framework/ReduxCore/options-config.php:2594
+#: includes/framework/ReduxCore/options-config.php:2617
 msgid "Medium Size"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2630
+#: includes/framework/ReduxCore/options-config.php:2601
 msgid "Single Product Image Height"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2631
+#: includes/framework/ReduxCore/options-config.php:2602
 msgid "Using this option you can change the single product image height."
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2632
+#: includes/framework/ReduxCore/options-config.php:2603
 msgid "default : 400"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2639
+#: includes/framework/ReduxCore/options-config.php:2610
 msgid "Shop Single Product Image Size"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2654
+#: includes/framework/ReduxCore/options-config.php:2625
 msgid "Single Layout"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2655
+#: includes/framework/ReduxCore/options-config.php:2626
 msgid "Defines shop single product layout."
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2668
+#: includes/framework/ReduxCore/options-config.php:2639
 msgid "Header Checkout/Shopping Box"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2669
+#: includes/framework/ReduxCore/options-config.php:2640
 msgid "Using This option you can remove header shopping box from header."
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2676
+#: includes/framework/ReduxCore/options-config.php:2647
 msgid "Header Checkout/Shopping Box Location"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2692
+#: includes/framework/ReduxCore/options-config.php:2663
 msgid "checkout box align on toolbal"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2702
+#: includes/framework/ReduxCore/options-config.php:2673
 msgid "Product Loops image quality"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2712
+#: includes/framework/ReduxCore/options-config.php:2683
 msgid "Show Product Category as Product Single Title."
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2713
+#: includes/framework/ReduxCore/options-config.php:2684
 msgid ""
 "If you want to show product category(if multiple only first will be used) as "
 "single product page title enable this option. having this option disabled "
 "shop page title will be used."
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2722
+#: includes/framework/ReduxCore/options-config.php:2693
 msgid "Woocommerce Single Product Page Title"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2723
+#: includes/framework/ReduxCore/options-config.php:2694
 msgid ""
 "Using this option you can disable/enable single product page title "
 "(including breadcrumbs)."
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2732
+#: includes/framework/ReduxCore/options-config.php:2703
 msgid "Woocommerce Shop Loop Page Title"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2733
+#: includes/framework/ReduxCore/options-config.php:2704
 msgid ""
 "Using this option you can disable/enable Shop product Loop title (including "
 "breadcrumbs)."
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2743
+#: includes/framework/ReduxCore/options-config.php:2714
 msgid "Third Party API"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2750
+#: includes/framework/ReduxCore/options-config.php:2721
 msgid "Google maps Api Key"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2751
+#: includes/framework/ReduxCore/options-config.php:2722
 msgid ""
 "please generate your own api key to make map work you can generate a key "
 "here https://developers.google.com/maps/documentation/javascript/get-api-key"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2758
+#: includes/framework/ReduxCore/options-config.php:2729
 msgid "Twitter Consumer Key"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2759
+#: includes/framework/ReduxCore/options-config.php:2730
 msgid ""
 "<ol style=\"list-style-type:decimal !important;\">\n"
 "\t\t\t\t\t<li>Go to \"<a href=\"https://dev.twitter.com/apps\">https://dev."
@@ -3741,75 +3696,40 @@ msgid ""
 "\t\t\t\t\t<li>You are done! You will need the following data later on:</ol>"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2771
+#: includes/framework/ReduxCore/options-config.php:2742
 msgid "Twitter Consumer Secret"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2780
+#: includes/framework/ReduxCore/options-config.php:2751
 msgid "Twitter Access Token"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2789
+#: includes/framework/ReduxCore/options-config.php:2760
 msgid "Twitter Access Token Secret"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2798
+#: includes/framework/ReduxCore/options-config.php:2769
 msgid "Flickr API Key"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2799
+#: includes/framework/ReduxCore/options-config.php:2770
 msgid ""
 "You can obtain your API key from <a href=\"http://www.flickr.com/services/"
 "api/misc.api_keys.html\">Flickr The App Garden</a>"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2800
+#: includes/framework/ReduxCore/options-config.php:2771
 msgid ""
 "You will need to fill this field if you want to use flickr widget or "
 "shrotcode"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2807
+#: includes/framework/ReduxCore/options-config.php:2778
 msgid "Manage Theme Speed"
 msgstr ""
 
-#: includes/framework/ReduxCore/options-config.php:2814
-msgid "Minify Java Script Files"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:2815
-#: includes/framework/ReduxCore/options-config.php:2824
-msgid "Minifies file to decrease the file size by 40%"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:2816
-msgid ""
-"You can enable JS minification using this option. This option will only "
-"pickup the pre-minified JS files(theme-scripts-min.js & plugins.js). So use "
-"this option if you did not hack the JS files."
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:2823
-msgid "Minify CSS Files"
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:2825
-msgid ""
-"You can enable CSS minification using this option. This option will only "
-"pickup the pre-minified CSS files. So use this option if you did not hack "
-"the CSS files."
-msgstr ""
-
-#: includes/framework/ReduxCore/options-config.php:2842
+#: includes/framework/ReduxCore/options-config.php:2795
 msgid "Import and Export your Redux Framework settings from file, text or URL."
-msgstr ""
-
-#: includes/framework/ReduxCore/templates/panel/container.tpl.php:17
-msgid "Listing Management"
-msgstr ""
-
-#: includes/framework/ReduxCore/templates/panel/container.tpl.php:21
-msgid "Theme Management"
 msgstr ""
 
 #: includes/framework/ReduxCore/templates/panel/footer.tpl.php:57
@@ -3818,17 +3738,17 @@ msgid "Save Changes"
 msgstr ""
 
 #: includes/framework/ReduxCore/templates/panel/footer.tpl.php:61
-#: includes/framework/ReduxCore/templates/panel/header_stickybar.tpl.php:25
+#: includes/framework/ReduxCore/templates/panel/header_stickybar.tpl.php:27
 msgid "Reset Section"
 msgstr ""
 
 #: includes/framework/ReduxCore/templates/panel/footer.tpl.php:62
-#: includes/framework/ReduxCore/templates/panel/header_stickybar.tpl.php:26
+#: includes/framework/ReduxCore/templates/panel/header_stickybar.tpl.php:28
 msgid "Reset All"
 msgstr ""
 
 #: includes/framework/ReduxCore/templates/panel/footer.tpl.php:67
-#: includes/framework/ReduxCore/templates/panel/header_stickybar.tpl.php:29
+#: includes/framework/ReduxCore/templates/panel/header_stickybar.tpl.php:31
 msgid "Working..."
 msgstr ""
 
@@ -3861,6 +3781,10 @@ msgstr ""
 
 #: includes/framework/ReduxCore/templates/panel/header_stickybar.tpl.php:15
 msgid "Expand"
+msgstr ""
+
+#: includes/framework/ReduxCore/templates/panel/header_stickybar.tpl.php:23
+msgid "Save option disabled on demo site."
 msgstr ""
 
 #: includes/framework/general.php:335
@@ -3897,6 +3821,36 @@ msgstr ""
 
 #: includes/framework/general.php:357
 msgid "ago"
+msgstr ""
+
+#: includes/framework/general.php:970
+msgid "Registration Completed successfully"
+msgstr ""
+
+#: includes/framework/general.php:974
+msgid "Validation Failed, Make sure you are providing correct Purchase code"
+msgstr ""
+
+#: includes/framework/general.php:978
+msgid ""
+"Validation Failed, Designinvento Templates plugin must be installed and "
+"active"
+msgstr ""
+
+#: includes/framework/general.php:997
+msgid "Listing Management"
+msgstr ""
+
+#: includes/framework/general.php:1008
+msgid "DirectoryPress Settings"
+msgstr ""
+
+#: includes/framework/general.php:1009
+msgid "All DirectoryPress Settings can be handle here"
+msgstr ""
+
+#: includes/framework/general.php:1019
+msgid "Theme Management"
 msgstr ""
 
 #: includes/framework/metabox-generator.php:439
@@ -4621,16 +4575,6 @@ msgid ""
 msgstr ""
 
 #: includes/framework/pacz-panel/index.php:36
-#: includes/framework/pacz-panel/pacz-admin.php:393
-#: includes/framework/pacz-panel/pacz-admin.php:413
-#: includes/framework/pacz-panel/pacz-admin.php:433
-#: includes/framework/pacz-panel/pacz-admin.php:448
-#: includes/framework/pacz-panel/pacz-admin.php:463
-#: includes/framework/pacz-panel/pacz-admin.php:483
-#: includes/framework/pacz-panel/pacz-admin.php:503
-#: includes/framework/pacz-panel/pacz-admin.php:518
-#: includes/framework/pacz-panel/pacz-admin.php:543
-#: includes/framework/pacz-panel/pacz-admin.php:622
 #: includes/framework/pacz-panel/templates/tutorial.php:37
 msgid "Documentation"
 msgstr ""
@@ -4736,7 +4680,6 @@ msgstr ""
 #: includes/framework/pacz-panel/index.php:175
 #: includes/framework/pacz-panel/index.php:200
 #: includes/framework/pacz-panel/index.php:227
-#: includes/framework/pacz-panel/templates/demo-import.php:47
 msgid "How to fix it"
 msgstr ""
 
@@ -4852,282 +4795,35 @@ msgstr ""
 msgid "php_value max_input_time"
 msgstr ""
 
-#: includes/framework/pacz-panel/pacz-admin.php:45
-msgid "Browse to Listing Dashboard"
-msgstr ""
-
-#: includes/framework/pacz-panel/pacz-admin.php:52
-msgid "Browse to Theme Dashboard"
-msgstr ""
-
-#: includes/framework/pacz-panel/pacz-admin.php:57
-#: includes/framework/pacz-panel/templates/demo-import.php:9
+#: includes/framework/pacz-panel/pacz-admin.php:47
 msgid "Welcome to "
 msgstr ""
 
-#: includes/framework/pacz-panel/pacz-admin.php:58
-#: includes/framework/pacz-panel/templates/demo-import.php:10
+#: includes/framework/pacz-panel/pacz-admin.php:48
 msgid ""
 " is now installed and ready to use! Let’s convert your imaginations to real "
 "things on the web!"
 msgstr ""
 
-#: includes/framework/pacz-panel/pacz-admin.php:251
-#: includes/framework/pacz-panel/pacz-admin.php:252
-msgid "Plugins"
+#: includes/framework/pacz-panel/pacz-admin.php:97
+#: includes/framework/pacz-panel/pacz-admin.php:98
+msgid "License"
 msgstr ""
 
-#: includes/framework/pacz-panel/pacz-admin.php:261
-#: includes/framework/pacz-panel/pacz-admin.php:262
+#: includes/framework/pacz-panel/pacz-admin.php:105
+#: includes/framework/pacz-panel/pacz-admin.php:106
+#: includes/framework/pacz-panel/templates/theme-setup.php:15
+msgid "Theme Setup"
+msgstr ""
+
+#: includes/framework/pacz-panel/pacz-admin.php:115
+#: includes/framework/pacz-panel/pacz-admin.php:116
 msgid "Icon Library"
 msgstr ""
 
-#: includes/framework/pacz-panel/pacz-admin.php:272
-#: includes/framework/pacz-panel/pacz-admin.php:273
+#: includes/framework/pacz-panel/pacz-admin.php:126
+#: includes/framework/pacz-panel/pacz-admin.php:127
 msgid "Tutorials"
-msgstr ""
-
-#: includes/framework/pacz-panel/pacz-admin.php:359
-msgid "Preview page"
-msgstr ""
-
-#: includes/framework/pacz-panel/pacz-admin.php:364
-msgid "Update page"
-msgstr ""
-
-#: includes/framework/pacz-panel/pacz-admin.php:383
-msgid "Post options"
-msgstr ""
-
-#: includes/framework/pacz-panel/pacz-admin.php:388
-#: includes/framework/pacz-panel/pacz-admin.php:408
-#: includes/framework/pacz-panel/pacz-admin.php:428
-#: includes/framework/pacz-panel/pacz-admin.php:443
-#: includes/framework/pacz-panel/pacz-admin.php:458
-#: includes/framework/pacz-panel/pacz-admin.php:478
-#: includes/framework/pacz-panel/pacz-admin.php:498
-#: includes/framework/pacz-panel/pacz-admin.php:513
-#: includes/framework/pacz-panel/pacz-admin.php:538
-#: includes/framework/pacz-panel/pacz-admin.php:616
-#: includes/framework/pacz-panel/templates/demo-import.php:283
-msgid "Theme options"
-msgstr ""
-
-#: includes/framework/pacz-panel/pacz-admin.php:403
-msgid "Page options"
-msgstr ""
-
-#: includes/framework/pacz-panel/pacz-admin.php:423
-msgid "Cause options"
-msgstr ""
-
-#: includes/framework/pacz-panel/pacz-admin.php:473
-msgid "Portfolio options"
-msgstr ""
-
-#: includes/framework/pacz-panel/pacz-admin.php:493
-msgid "Sermon options"
-msgstr ""
-
-#: includes/framework/pacz-panel/pacz-admin.php:528
-msgid "Event options"
-msgstr ""
-
-#: includes/framework/pacz-panel/pacz-admin.php:533
-msgid "M.E. Calendar settings"
-msgstr ""
-
-#: includes/framework/pacz-panel/pacz-admin.php:552
-msgid "Add new post"
-msgstr ""
-
-#: includes/framework/pacz-panel/pacz-admin.php:558
-msgid "Add new page"
-msgstr ""
-
-#: includes/framework/pacz-panel/pacz-admin.php:565
-msgid "Add new gallery"
-msgstr ""
-
-#: includes/framework/pacz-panel/pacz-admin.php:572
-msgid "Add new footer"
-msgstr ""
-
-#: includes/framework/pacz-panel/pacz-admin.php:578
-msgid "Add new mega menu"
-msgstr ""
-
-#: includes/framework/pacz-panel/pacz-admin.php:585
-msgid "Add new portfolio"
-msgstr ""
-
-#: includes/framework/pacz-panel/pacz-admin.php:593
-msgid "Add new event"
-msgstr ""
-
-#: includes/framework/pacz-panel/pacz-admin.php:601
-msgid "Add new cause"
-msgstr ""
-
-#: includes/framework/pacz-panel/pacz-admin.php:609
-msgid "Add new sermon"
-msgstr ""
-
-#: includes/framework/pacz-panel/templates/demo-import.php:28
-msgid "\"PHP Maximum Execution Time\""
-msgstr ""
-
-#: includes/framework/pacz-panel/templates/demo-import.php:29
-msgid "\"PHP Maximum Input Vars\""
-msgstr ""
-
-#: includes/framework/pacz-panel/templates/demo-import.php:32
-msgid " and "
-msgstr ""
-
-#: includes/framework/pacz-panel/templates/demo-import.php:33
-msgid " values of "
-msgstr ""
-
-#: includes/framework/pacz-panel/templates/demo-import.php:36
-msgid " value of "
-msgstr ""
-
-#: includes/framework/pacz-panel/templates/demo-import.php:40
-msgid "The configuration"
-msgstr ""
-
-#: includes/framework/pacz-panel/templates/demo-import.php:40
-msgid ""
-" should be increased in your host. Otherwise, you may face these issues:"
-msgstr ""
-
-#: includes/framework/pacz-panel/templates/demo-import.php:42
-msgid "Duplicating or repeating menu"
-msgstr ""
-
-#: includes/framework/pacz-panel/templates/demo-import.php:43
-msgid ""
-"The revslider plugin will not install completely and slider of the demo will "
-"not be imported"
-msgstr ""
-
-#: includes/framework/pacz-panel/templates/demo-import.php:44
-msgid ""
-"In some huge (size) demos such as \"Shop\", it will take a lot of time to "
-"install"
-msgstr ""
-
-#: includes/framework/pacz-panel/templates/demo-import.php:48
-#: includes/framework/pacz-panel/templates/demo-import.php:80
-msgid "Let's go, I take the risk"
-msgstr ""
-
-#: includes/framework/pacz-panel/templates/demo-import.php:70
-msgid "You have imported the demo(s)"
-msgstr ""
-
-#: includes/framework/pacz-panel/templates/demo-import.php:79
-msgid ""
-"before. Please note that importing demos and overriding them, can mess up "
-"your site and you can not have good demo."
-msgstr ""
-
-#: includes/framework/pacz-panel/templates/demo-import.php:118
-msgid "Import Demo"
-msgstr ""
-
-#: includes/framework/pacz-panel/templates/demo-import.php:124
-msgid "Demo Imported"
-msgstr ""
-
-#: includes/framework/pacz-panel/templates/demo-import.php:138
-msgid "Preview"
-msgstr ""
-
-#: includes/framework/pacz-panel/templates/demo-import.php:146
-#: includes/framework/pacz-panel/templates/demo-import.php:154
-msgid "Please Wait..."
-msgstr ""
-
-#: includes/framework/pacz-panel/templates/demo-import.php:153
-msgid "Imported"
-msgstr ""
-
-#: includes/framework/pacz-panel/templates/demo-import.php:155
-msgid "Re-Import"
-msgstr ""
-
-#: includes/framework/pacz-panel/templates/demo-import.php:176
-msgid "Choose page builder"
-msgstr ""
-
-#: includes/framework/pacz-panel/templates/demo-import.php:182
-msgid "Elementor"
-msgstr ""
-
-#: includes/framework/pacz-panel/templates/demo-import.php:189
-msgid "King Composer"
-msgstr ""
-
-#: includes/framework/pacz-panel/templates/demo-import.php:196
-msgid "Visual Composer"
-msgstr ""
-
-#: includes/framework/pacz-panel/templates/demo-import.php:205
-msgid "These below plugins are required"
-msgstr ""
-
-#: includes/framework/pacz-panel/templates/demo-import.php:229
-msgid "Activated"
-msgstr ""
-
-#: includes/framework/pacz-panel/templates/demo-import.php:261
-#: includes/framework/pacz-panel/templates/demo-import.php:262
-msgid "Import content"
-msgstr ""
-
-#: includes/framework/pacz-panel/templates/demo-import.php:261
-msgid "(menus only import by selecting \"All\")"
-msgstr ""
-
-#: includes/framework/pacz-panel/templates/demo-import.php:273
-msgid "Images"
-msgstr ""
-
-#: includes/framework/pacz-panel/templates/demo-import.php:278
-msgid "Widgets"
-msgstr ""
-
-#: includes/framework/pacz-panel/templates/demo-import.php:288
-msgid "Sliders"
-msgstr ""
-
-#: includes/framework/pacz-panel/templates/demo-import.php:304
-#: includes/framework/pacz-panel/templates/demo-import.php:311
-msgid "Visit Site"
-msgstr ""
-
-#: includes/framework/pacz-panel/templates/demo-import.php:307
-msgid "Demo is Successfully Imported"
-msgstr ""
-
-#: includes/framework/pacz-panel/templates/demo-import.php:309
-msgid "Deep Dashboard"
-msgstr ""
-
-#: includes/framework/pacz-panel/templates/demo-import.php:310
-msgid "Theme Options"
-msgstr ""
-
-#: includes/framework/pacz-panel/templates/demo-import.php:314
-msgid ""
-"Please don’t refresh the page until import is done completely, import time "
-"is related to your host configuration and it may take till 15 minutes."
-msgstr ""
-
-#: includes/framework/pacz-panel/templates/demo-import.php:327
-msgid "No Demo Data Provided"
 msgstr ""
 
 #: includes/framework/pacz-panel/templates/icon-library.php:7
@@ -5141,18 +4837,16 @@ msgid ""
 "need character code for custom list shortcode!"
 msgstr ""
 
-#: includes/framework/pacz-panel/templates/plugins.php:19
-msgid "Plugins Management"
+#: includes/framework/pacz-panel/templates/registration.php:21
+msgid "Registration"
 msgstr ""
 
-#: includes/framework/pacz-panel/templates/plugins.php:28
-#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2360
-msgid "Required"
+#: includes/framework/pacz-panel/templates/theme-setup.php:21
+msgid "Start Theme Setup"
 msgstr ""
 
-#: includes/framework/pacz-panel/templates/plugins.php:31
-#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2363
-msgid "Recommended"
+#: includes/framework/pacz-panel/templates/theme-setup.php:23
+msgid "Setup Rquired Registration"
 msgstr ""
 
 #: includes/framework/sidebar-generator.php:11
@@ -5333,18 +5027,18 @@ msgid "..."
 msgstr ""
 
 #: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:334
-#: includes/plugins-config/tgm-plugin-activation/request-plugins.php:199
+#: includes/plugins-config/tgm-plugin-activation/request-plugins.php:78
 msgid "Install Required Plugins"
 msgstr ""
 
 #: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:335
-#: includes/plugins-config/tgm-plugin-activation/request-plugins.php:200
+#: includes/plugins-config/tgm-plugin-activation/request-plugins.php:79
 msgid "Install Plugins"
 msgstr ""
 
 #. translators: %s: plugin name.
 #: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:337
-#: includes/plugins-config/tgm-plugin-activation/request-plugins.php:201
+#: includes/plugins-config/tgm-plugin-activation/request-plugins.php:80
 #, php-format
 msgid "Installing Plugin: %s"
 msgstr ""
@@ -5356,13 +5050,13 @@ msgid "Updating Plugin: %s"
 msgstr ""
 
 #: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:340
-#: includes/plugins-config/tgm-plugin-activation/request-plugins.php:202
+#: includes/plugins-config/tgm-plugin-activation/request-plugins.php:81
 msgid "Something went wrong with the plugin API."
 msgstr ""
 
 #. translators: 1: plugin name(s).
 #: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:343
-#: includes/plugins-config/tgm-plugin-activation/request-plugins.php:203
+#: includes/plugins-config/tgm-plugin-activation/request-plugins.php:82
 #, php-format
 msgid "This theme requires the following plugin: %1$s."
 msgid_plural "This theme requires the following plugins: %1$s."
@@ -5371,7 +5065,7 @@ msgstr[1] ""
 
 #. translators: 1: plugin name(s).
 #: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:349
-#: includes/plugins-config/tgm-plugin-activation/request-plugins.php:204
+#: includes/plugins-config/tgm-plugin-activation/request-plugins.php:83
 #, php-format
 msgid "This theme recommends the following plugin: %1$s."
 msgid_plural "This theme recommends the following plugins: %1$s."
@@ -5380,7 +5074,7 @@ msgstr[1] ""
 
 #. translators: 1: plugin name(s).
 #: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:355
-#: includes/plugins-config/tgm-plugin-activation/request-plugins.php:209
+#: includes/plugins-config/tgm-plugin-activation/request-plugins.php:88
 #, php-format
 msgid ""
 "The following plugin needs to be updated to its latest version to ensure "
@@ -5401,7 +5095,7 @@ msgstr[1] ""
 
 #. translators: 1: plugin name(s).
 #: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:367
-#: includes/plugins-config/tgm-plugin-activation/request-plugins.php:206
+#: includes/plugins-config/tgm-plugin-activation/request-plugins.php:85
 #, php-format
 msgid "The following required plugin is currently inactive: %1$s."
 msgid_plural "The following required plugins are currently inactive: %1$s."
@@ -5410,7 +5104,7 @@ msgstr[1] ""
 
 #. translators: 1: plugin name(s).
 #: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:373
-#: includes/plugins-config/tgm-plugin-activation/request-plugins.php:207
+#: includes/plugins-config/tgm-plugin-activation/request-plugins.php:86
 #, php-format
 msgid "The following recommended plugin is currently inactive: %1$s."
 msgid_plural "The following recommended plugins are currently inactive: %1$s."
@@ -5418,7 +5112,7 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:378
-#: includes/plugins-config/tgm-plugin-activation/request-plugins.php:211
+#: includes/plugins-config/tgm-plugin-activation/request-plugins.php:90
 msgid "Begin installing plugin"
 msgid_plural "Begin installing plugins"
 msgstr[0] ""
@@ -5431,32 +5125,32 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:388
-#: includes/plugins-config/tgm-plugin-activation/request-plugins.php:212
+#: includes/plugins-config/tgm-plugin-activation/request-plugins.php:91
 msgid "Begin activating plugin"
 msgid_plural "Begin activating plugins"
 msgstr[0] ""
 msgstr[1] ""
 
 #: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:392
-#: includes/plugins-config/tgm-plugin-activation/request-plugins.php:213
+#: includes/plugins-config/tgm-plugin-activation/request-plugins.php:92
 msgid "Return to Required Plugins Installer"
 msgstr ""
 
 #: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:393
-#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:914
-#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2634
-#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:3684
+#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:911
+#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2617
+#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:3664
 msgid "Return to the Dashboard"
 msgstr ""
 
 #: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:394
-#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:3263
-#: includes/plugins-config/tgm-plugin-activation/request-plugins.php:214
+#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:3243
+#: includes/plugins-config/tgm-plugin-activation/request-plugins.php:93
 msgid "Plugin activated successfully."
 msgstr ""
 
 #: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:395
-#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:3056
+#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:3036
 msgid "The following plugin was activated successfully:"
 msgid_plural "The following plugins were activated successfully:"
 msgstr[0] ""
@@ -5496,86 +5190,98 @@ msgstr ""
 msgid "Please contact the administrator of this site for help."
 msgstr ""
 
-#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:607
+#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:598
 msgid "This plugin needs to be updated to be compatible with your theme."
 msgstr ""
 
-#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:608
+#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:599
 msgid "Update Required"
 msgstr ""
 
-#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:1021
+#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:716
+msgid "Set the parent_slug config variable instead."
+msgstr ""
+
+#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:1018
 msgid ""
 "The remote plugin package does not contain a folder with the desired slug "
 "and renaming did not work."
 msgstr ""
 
+#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:1018
 #: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:1021
-#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:1024
 msgid ""
 "Please contact the plugin provider and ask them to package their plugin "
 "according to the WordPress guidelines."
 msgstr ""
 
-#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:1024
+#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:1021
 msgid ""
 "The remote plugin package consists of more than one file, but the files are "
 "not packaged in a folder."
 msgstr ""
 
-#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:1208
-#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:3052
+#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:1205
+#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:3032
 msgctxt "plugin A *and* plugin B"
 msgid "and"
 msgstr ""
 
 #. translators: %s: version number
-#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2069
+#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2066
 #, php-format
 msgid "TGMPA v%s"
 msgstr ""
 
-#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2379
+#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2357
+msgid "Required"
+msgstr ""
+
+#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2360
+msgid "Recommended"
+msgstr ""
+
+#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2376
 msgid "WordPress Repository"
 msgstr ""
 
-#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2382
+#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2379
 msgid "External Source"
 msgstr ""
 
-#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2385
+#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2382
 msgid "Pre-Packaged"
 msgstr ""
 
-#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2402
+#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2399
 msgid "Not Installed"
 msgstr ""
 
-#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2406
+#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2403
 msgid "Installed But Not Activated"
 msgstr ""
 
-#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2414
+#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2411
 msgid "Required Update not Available"
 msgstr ""
 
-#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2417
+#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2414
 msgid "Requires Update"
 msgstr ""
 
-#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2420
+#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2417
 msgid "Update recommended"
 msgstr ""
 
 #. translators: 1: install status, 2: update status
-#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2429
+#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2426
 #, php-format
 msgctxt "Install/Update Status"
 msgid "%1$s, %2$s"
 msgstr ""
 
 #. translators: 1: number of plugins.
-#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2475
+#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2472
 #, php-format
 msgctxt "plugins"
 msgid "All <span class=\"count\">(%s)</span>"
@@ -5584,7 +5290,7 @@ msgstr[0] ""
 msgstr[1] ""
 
 #. translators: 1: number of plugins.
-#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2479
+#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2476
 #, php-format
 msgid "To Install <span class=\"count\">(%s)</span>"
 msgid_plural "To Install <span class=\"count\">(%s)</span>"
@@ -5592,7 +5298,7 @@ msgstr[0] ""
 msgstr[1] ""
 
 #. translators: 1: number of plugins.
-#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2483
+#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2480
 #, php-format
 msgid "Update Available <span class=\"count\">(%s)</span>"
 msgid_plural "Update Available <span class=\"count\">(%s)</span>"
@@ -5600,187 +5306,187 @@ msgstr[0] ""
 msgstr[1] ""
 
 #. translators: 1: number of plugins.
-#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2487
+#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2484
 #, php-format
 msgid "To Activate <span class=\"count\">(%s)</span>"
 msgid_plural "To Activate <span class=\"count\">(%s)</span>"
 msgstr[0] ""
 msgstr[1] ""
 
-#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2583
+#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2566
 msgctxt "as in: \"version nr unknown\""
 msgid "unknown"
 msgstr ""
 
-#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2591
+#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2574
 msgid "Installed version:"
 msgstr ""
 
-#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2599
+#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2582
 msgid "Minimum required version:"
 msgstr ""
 
-#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2611
+#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2594
 msgid "Available version:"
 msgstr ""
 
-#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2634
+#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2617
 msgid "No plugins to install, update or activate."
 msgstr ""
 
-#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2648
+#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2631
 msgid "Plugin"
 msgstr ""
 
-#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2649
+#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2632
 msgid "Source"
 msgstr ""
 
-#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2650
+#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2633
 msgid "Type"
 msgstr ""
 
-#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2655
+#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2638
 #: woocommerce/myaccount/my-orders.php:34
 #: woocommerce/myaccount/my-orders.php:55
 msgid "Status"
 msgstr ""
 
 #. translators: %2$s: plugin name in screen reader markup
-#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2705
-#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2718
+#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2687
 #, php-format
-msgid "Activate %2$s"
+msgid "Install %2$s"
 msgstr ""
 
 #. translators: %2$s: plugin name in screen reader markup
-#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2710
+#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2692
 #, php-format
 msgid "Update %2$s"
 msgstr ""
 
-#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2712
+#. translators: %2$s: plugin name in screen reader markup
+#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2698
 #, php-format
-msgid "Deactivate %2$s"
+msgid "Activate %2$s"
 msgstr ""
 
-#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2788
+#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2768
 msgid "Upgrade message from the plugin author:"
 msgstr ""
 
-#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2821
+#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2801
 msgid "Install"
 msgstr ""
 
-#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2827
+#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2807
 msgid "Update"
 msgstr ""
 
-#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2830
+#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2810
 msgid "Activate"
 msgstr ""
 
-#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2861
+#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2841
 msgid "No plugins were selected to be installed. No action taken."
 msgstr ""
 
-#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2863
+#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2843
 msgid "No plugins were selected to be updated. No action taken."
 msgstr ""
 
-#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2904
+#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2884
 msgid "No plugins are available to be installed at this time."
 msgstr ""
 
-#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2906
+#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2886
 msgid "No plugins are available to be updated at this time."
 msgstr ""
 
-#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:3012
+#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:2992
 msgid "No plugins were selected to be activated. No action taken."
 msgstr ""
 
-#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:3038
+#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:3018
 msgid "No plugins are available to be activated at this time."
 msgstr ""
 
-#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:3262
+#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:3242
 msgid "Plugin activation failed."
 msgstr ""
 
 #. translators: 1: plugin name, 2: action number 3: total number of actions.
-#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:3602
+#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:3582
 #, php-format
 msgid "Updating Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
 #. translators: 1: plugin name, 2: error message.
-#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:3605
+#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:3585
 #, php-format
 msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
 msgstr ""
 
 #. translators: 1: plugin name.
-#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:3607
+#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:3587
 #, php-format
 msgid "The installation of %1$s failed."
 msgstr ""
 
-#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:3611
+#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:3591
 msgid ""
 "The installation and activation process is starting. This process may take a "
 "while on some hosts, so please be patient."
 msgstr ""
 
 #. translators: 1: plugin name.
-#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:3613
+#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:3593
 #, php-format
 msgid "%1$s installed and activated successfully."
 msgstr ""
 
-#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:3613
-#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:3621
+#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:3593
+#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:3601
 msgid "Show Details"
 msgstr ""
 
-#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:3613
-#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:3621
+#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:3593
+#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:3601
 msgid "Hide Details"
 msgstr ""
 
-#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:3614
+#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:3594
 msgid "All installations and activations have been completed."
 msgstr ""
 
 #. translators: 1: plugin name, 2: action number 3: total number of actions.
-#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:3616
+#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:3596
 #, php-format
 msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
-#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:3619
+#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:3599
 msgid ""
 "The installation process is starting. This process may take a while on some "
 "hosts, so please be patient."
 msgstr ""
 
 #. translators: 1: plugin name.
-#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:3621
+#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:3601
 #, php-format
 msgid "%1$s installed successfully."
 msgstr ""
 
-#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:3622
+#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:3602
 msgid "All installations have been completed."
 msgstr ""
 
 #. translators: 1: plugin name, 2: action number 3: total number of actions.
-#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:3624
+#: includes/plugins-config/tgm-plugin-activation/class-tgm-plugin-activation.php:3604
 #, php-format
 msgid "Installing Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
-#: includes/plugins-config/tgm-plugin-activation/request-plugins.php:205
+#: includes/plugins-config/tgm-plugin-activation/request-plugins.php:84
 #, php-format
 msgid ""
 "Sorry, but you do not have the correct permissions to install the %s plugin. "
@@ -5793,7 +5499,7 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: includes/plugins-config/tgm-plugin-activation/request-plugins.php:208
+#: includes/plugins-config/tgm-plugin-activation/request-plugins.php:87
 #, php-format
 msgid ""
 "Sorry, but you do not have the correct permissions to activate the %s "
@@ -5806,7 +5512,7 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: includes/plugins-config/tgm-plugin-activation/request-plugins.php:210
+#: includes/plugins-config/tgm-plugin-activation/request-plugins.php:89
 #, php-format
 msgid ""
 "Sorry, but you do not have the correct permissions to update the %s plugin. "
@@ -5819,7 +5525,7 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: includes/plugins-config/tgm-plugin-activation/request-plugins.php:215
+#: includes/plugins-config/tgm-plugin-activation/request-plugins.php:94
 #, php-format
 msgid "All plugins installed and activated successfully. %s"
 msgstr ""
@@ -5921,6 +5627,11 @@ msgstr ""
 msgid "Original: %s"
 msgstr ""
 
+#: includes/templates/content/single-listing-2.php:30
+#: includes/templates/content/single-listing-3.php:30 page.php:43
+msgid "Pages:"
+msgstr ""
+
 #: includes/thirdparty-integration/bbpress/loop-single-reply.php:32
 #, php-format
 msgid "%1$s at %2$s"
@@ -5988,16 +5699,16 @@ msgstr ""
 msgid "Type your keyword"
 msgstr ""
 
-#: single.php:71
+#: single.php:73
 msgid "Category : "
 msgstr ""
 
-#: single.php:72
+#: single.php:74
 msgid "posted by : "
 msgstr ""
 
 #: woocommerce/cart/cart.php:25 woocommerce/checkout/review-order.php:17
-#: woocommerce/order/order-details.php:30
+#: woocommerce/order/order-details.php:22
 msgid "Product"
 msgstr ""
 
@@ -6008,7 +5719,7 @@ msgstr ""
 #: woocommerce/cart/cart.php:28 woocommerce/checkout/review-order.php:18
 #: woocommerce/myaccount/my-orders.php:35
 #: woocommerce/myaccount/my-orders.php:58
-#: woocommerce/order/order-details.php:31
+#: woocommerce/order/order-details.php:23
 msgid "Total"
 msgstr ""
 
@@ -6101,10 +5812,8 @@ msgstr ""
 msgid "My Account"
 msgstr ""
 
-#: woocommerce/checkout/thankyou.php:34
-msgid ""
-"<i class=\"pacz-theme-icon-tick\"></i> Thank you. Your order has been "
-"received."
+#: woocommerce/checkout/thankyou.php:34 woocommerce/checkout/thankyou.php:65
+msgid "Thank you. Your order has been received."
 msgstr ""
 
 #: woocommerce/checkout/thankyou.php:38
@@ -6117,10 +5826,6 @@ msgstr ""
 
 #: woocommerce/checkout/thankyou.php:51
 msgid "Payment method:"
-msgstr ""
-
-#: woocommerce/checkout/thankyou.php:65
-msgid "Thank you. Your order has been received."
 msgstr ""
 
 #: woocommerce/content-product.php:96
@@ -6169,88 +5874,78 @@ msgid ""
 "and <a href=\"%3$s\">edit your password and account details</a>."
 msgstr ""
 
-#: woocommerce/myaccount/downloads.php:67
+#: woocommerce/myaccount/downloads.php:64
 msgid "&infin;"
 msgstr ""
 
-#: woocommerce/myaccount/downloads.php:73
+#: woocommerce/myaccount/downloads.php:70
 msgid "Never"
 msgstr ""
 
-#: woocommerce/myaccount/downloads.php:81
+#: woocommerce/myaccount/downloads.php:78
 msgid "Download"
 msgstr ""
 
-#: woocommerce/myaccount/downloads.php:103 woocommerce/myaccount/orders.php:125
+#: woocommerce/myaccount/downloads.php:100 woocommerce/myaccount/orders.php:125
 msgid "Go shop"
 msgstr ""
 
-#: woocommerce/myaccount/downloads.php:105
+#: woocommerce/myaccount/downloads.php:102
 msgid "No downloads available yet."
 msgstr ""
 
-#: woocommerce/myaccount/form-edit-account.php:35
+#: woocommerce/myaccount/form-edit-account.php:33
 msgid "First name"
 msgstr ""
 
-#: woocommerce/myaccount/form-edit-account.php:39
+#: woocommerce/myaccount/form-edit-account.php:37
 msgid "Last name"
 msgstr ""
 
-#: woocommerce/myaccount/form-edit-account.php:50
+#: woocommerce/myaccount/form-edit-account.php:48
 msgid "Password change"
 msgstr ""
 
-#: woocommerce/myaccount/form-edit-account.php:53
+#: woocommerce/myaccount/form-edit-account.php:51
 msgid "Current password (leave blank to leave unchanged)"
 msgstr ""
 
-#: woocommerce/myaccount/form-edit-account.php:57
+#: woocommerce/myaccount/form-edit-account.php:55
 msgid "New password (leave blank to leave unchanged)"
 msgstr ""
 
-#: woocommerce/myaccount/form-edit-account.php:61
+#: woocommerce/myaccount/form-edit-account.php:59
 msgid "Confirm new password"
 msgstr ""
 
-#: woocommerce/myaccount/form-edit-account.php:71
+#: woocommerce/myaccount/form-edit-account.php:69
 msgid "Save changes"
 msgstr ""
 
 #: woocommerce/myaccount/form-edit-address.php:23
+#: woocommerce/myaccount/my-address.php:18
+#: woocommerce/myaccount/my-address.php:27
 msgid "Billing address"
 msgstr ""
 
 #: woocommerce/myaccount/form-edit-address.php:23
+#: woocommerce/myaccount/my-address.php:19
 msgid "Shipping address"
 msgstr ""
 
-#: woocommerce/myaccount/form-edit-address.php:57
+#: woocommerce/myaccount/form-edit-address.php:55
 msgid "Save address"
-msgstr ""
-
-#: woocommerce/myaccount/my-address.php:17
-msgid "My Addresses"
-msgstr ""
-
-#: woocommerce/myaccount/my-address.php:19
-#: woocommerce/myaccount/my-address.php:25
-msgid "Billing Address"
-msgstr ""
-
-#: woocommerce/myaccount/my-address.php:20
-msgid "Shipping Address"
-msgstr ""
-
-#: woocommerce/myaccount/my-address.php:23
-msgid "My Address"
 msgstr ""
 
 #: woocommerce/myaccount/my-address.php:38
 msgid "The following addresses will be used on the checkout page by default."
 msgstr ""
 
-#: woocommerce/myaccount/my-address.php:67
+#: woocommerce/myaccount/my-address.php:55
+msgid "Add"
+msgstr ""
+
+#: woocommerce/myaccount/my-address.php:59
 msgid "You have not set up this type of address yet."
 msgstr ""
 
@@ -6308,20 +6003,20 @@ msgid "No order has been made yet."
 msgstr ""
 
 #. translators: 1: credit card type 2: last 4 digits
-#: woocommerce/myaccount/payment-methods.php:56
+#: woocommerce/myaccount/payment-methods.php:53
 #, php-format
 msgid "%1$s ending in %2$s"
 msgstr ""
 
-#: woocommerce/myaccount/payment-methods.php:77
+#: woocommerce/myaccount/payment-methods.php:74
 msgid "No saved methods found."
 msgstr ""
 
-#: woocommerce/myaccount/payment-methods.php:84
+#: woocommerce/myaccount/payment-methods.php:81
 msgid "Add payment method"
 msgstr ""
 
-#: woocommerce/order/order-details.php:26
+#: woocommerce/order/order-details.php:18
 msgid "Order Details"
 msgstr ""
 
@@ -6367,9 +6062,5 @@ msgid "Profile Page"
 msgstr ""
 
 #. Template Name of the plugin/theme
-msgid "GeoDirectory Single Page"
-msgstr ""
-
-#. Template Name of the plugin/theme
-msgid "Gd User Dashboard Template"
+msgid "ALSP Dashboard Template"
 msgstr ""

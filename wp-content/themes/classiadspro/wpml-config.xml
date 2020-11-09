@@ -19,7 +19,6 @@
 		<key name="pacz-login-slug" />
 		<key name="pacz-register-slug" />
 		<key name="pacz-forgot-slug" />
-		<key name="listing-btn-url" />
 		<key name="listing-btn-text" />    
     </key>
 </admin-texts>

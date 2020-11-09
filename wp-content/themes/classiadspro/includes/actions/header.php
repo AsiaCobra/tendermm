@@ -76,14 +76,11 @@ if ( !function_exists( 'pacz_header_logo' ) ) {
 			$output .= '<img alt="'.get_bloginfo( 'name' ).'" class="pacz-dark-logo" src="'.PACZ_THEME_IMAGES.'/classiadspro-logo.png" data-retina-src="'.PACZ_THEME_IMAGES.'/classiadspro-logo-2x.png" />';
 		}
 		$output .= '</a></li>';
-       
 
 		echo wp_kses_post($output);
 
-	  
-	}  
+	}
 }
-
 if ( !function_exists( 'pacz_header_mobile_logo' ) ) {
 	function pacz_header_mobile_logo() {
 
@@ -109,20 +106,17 @@ if ( !function_exists( 'pacz_header_mobile_logo' ) ) {
 		$mobile_logo_csss = (!empty($mobile_logo)) ? 'mobile-menu-exists' : '';
 
 		$output = '';
-		$output .= '<a style="margin-top:30px;margin-left:10px;" href="'.esc_url(home_url( '/' )).'" title="'.get_bloginfo( 'name' ).'">';
+		$output .= '<a href="'.esc_url(home_url( '/' )).'" title="'.get_bloginfo( 'name' ).'">';
 
 		if ( !empty( $mobile_logo) ) {
 			$output .= '<img alt="'.get_bloginfo( 'name' ).'" class="pacz-mobile-logo" src="'.$mobile_logo.'" data-retina-src="'.$mobile_logo_retina.'" />';
 		}
 		$output .= '</a>';
-        
+
 		echo wp_kses_post($output);
-        
+
 	}
 }
-
-
-
 /***************************************/
 
 
@@ -199,21 +193,17 @@ if ( !function_exists( 'pacz_header_logreg' ) ) {
 			if(!empty($image_src_array)) {
 				$params = array( 'width' => 37, 'height' => 37, 'crop' => true );
 				$user_thumb = '<img src="' . bfi_thumb( $image_src_array, $params ) . '" alt="'.$logedin_user_name.'" />';
-			} elseif(function_exists('pacz_get_avatar_url')){ 
-				$avatar_url = pacz_get_avatar_url ( get_the_author_meta('user_email', $logedin_user), $size = '37' );
+			} else{ 
+				$avatar_url = get_avatar_url($logedin_user, ['size' => '37']);
 				$user_thumb ='<img src="'.$avatar_url.'" alt="'.$logedin_user_name.'" />';
-			}else{
-				$user_thumb ='';
 			}
 		}else{
 			if(!empty($image_src_array)) {
 				$params = array( 'width' => 48, 'height' => 48, 'crop' => true );
 				$user_thumb = '<img src="' . bfi_thumb( $image_src_array, $params ) . '" alt="'.$logedin_user_name.'" />';
-			} elseif(function_exists('pacz_get_avatar_url')){  
-				$avatar_url = pacz_get_avatar_url ( get_the_author_meta('user_email', $logedin_user), $size = '48' );
+			} else{  
+				$avatar_url = get_avatar_url($logedin_user, ['size' => '48']);
 				$user_thumb ='<img src="'.$avatar_url.'" alt="'.$logedin_user_name.'" />';
-			}else{
-				$user_thumb ='';
 			}
 		}
 		
@@ -224,17 +214,21 @@ if ( !function_exists( 'pacz_header_logreg' ) ) {
 				if(class_exists('alsp_dashboard_controller')){
 					echo '<div class="dropdown clearfix">';
 						echo '<button class="dropbtn">'.$user_thumb .'<p class="author-name-header"><span class="author-displayname">'.$logedin_user_display_name.'</span><span class="author-nicename">'.$logedin_user_name.'</span></p></button>';
-						global $frontend_controller;
-						//if($frontend_controller->listings_count > 0){
-							//$listing_count = $frontend_controller->listings_count;
-						//}else{
-							//$listing_count = 0;
-						//}
 						echo '<div class="dropdown-content"><ul class="clearfix">';
-							echo '<li><i class="pacz-icon-file-o"></i><a href="'.alsp_dashboardUrl().'">'.esc_html__('My Dashboard', 'classiadspro').'</a></li>';
-							echo '<li><i class="pacz-icon-check-square-o"></i><a href="'.alsp_dashboardUrl().'">'.esc_html__('My Listings', 'classiadspro').'</a></li>';
-							echo '<li><i class="pacz-li-settings"></i><a href="'.alsp_dashboardUrl(array('alsp_action' => 'profile')).'">'.esc_html__('Edit Profile', 'classiadspro').'</a></li>';
-							echo '<li><i class="pacz-icon-sign-out"></i><a href="'.wp_logout_url(esc_url( home_url('/'))).'">'.esc_html__('logout', 'classiadspro').'</a></li>';
+							echo '<li><i class="fas fa-tachometer-alt"></i><a href="'.alsp_dashboardUrl().'">'.esc_html__('My Dashboard', 'classiadspro').'</a></li>';
+							echo '<li><i class="fas fa-ad"></i><a href="'.alsp_dashboardUrl().'">'.esc_html__('My Listings', 'classiadspro').'</a></li>';
+							echo '<li><i class="fas fa-user"></i><a href="'.alsp_dashboardUrl(array('alsp_action' => 'profile')).'">'.esc_html__('Edit Profile', 'classiadspro').'</a></li>';
+							echo '<li><i class="fas fa-sign-out-alt"></i><a href="'.wp_logout_url(esc_url( home_url('/'))).'">'.esc_html__('logout', 'classiadspro').'</a></li>';
+						echo '<ul></div>';
+					echo '</div>'; 
+				}elseif(class_exists('Directorypress_Frontend')){
+					echo '<div class="dropdown clearfix">';
+						echo '<button class="dropbtn">'.$user_thumb .'<p class="author-name-header"><span class="author-displayname">'.$logedin_user_display_name.'</span><span class="author-nicename">'.$logedin_user_name.'</span></p></button>';
+						echo '<div class="dropdown-content"><ul class="clearfix">';
+							echo '<li><i class="fas fa-tachometer-alt"></i><a href="'.directorypress_dashboardUrl().'">'.esc_html__('My Dashboard', 'classiadspro').'</a></li>';
+							echo '<li><i class="fas fa-ad"></i><a href="'.directorypress_dashboardUrl().'">'.esc_html__('My Listings', 'classiadspro').'</a></li>';
+							echo '<li><i class="fas fa-user"></i><a href="'.directorypress_dashboardUrl(array('directorypress_action' => 'profile')).'">'.esc_html__('Edit Profile', 'classiadspro').'</a></li>';
+							echo '<li><i class="fas fa-sign-out-alt"></i><a href="'.wp_logout_url(esc_url( home_url('/'))).'">'.esc_html__('logout', 'classiadspro').'</a></li>';
 						echo '<ul></div>';
 					echo '</div>'; 
 				}elseif(class_exists('Gd_User_Dashboard')){
@@ -260,10 +254,20 @@ if ( !function_exists( 'pacz_header_logreg' ) ) {
 					echo '<div class="dropdown">';
 						echo '<button class="dropbtn">'.$user_thumb .'<p class="author-name-header"><span class="author-displayname">'.$logedin_user_display_name.'</span><span class="author-nicename">'.$logedin_user_name.'</span></p></button>';
 						echo '<div class="dropdown-content"><ul class="clearfix">';
-							echo '<li><i class="pacz-icon-file-o"></i><a href="'.alsp_dashboardUrl().'">'.esc_html__('My Dashboard', 'classiadspro').'</a></li>';
-							echo '<li><i class="pacz-icon-check-square-o"></i><a href="'.alsp_dashboardUrl().'">'.esc_html__('My Listings', 'classiadspro').'</a></li>';
-							echo '<li><i class="pacz-li-settings"></i><a href="'.alsp_dashboardUrl(array('alsp_action' => 'profile')).'">'.esc_html__('Edit Profile', 'classiadspro').'</a></li>';
-							echo '<li><i class="pacz-icon-sign-out"></i><a href="'.wp_logout_url(esc_url( home_url('/'))).'">'.esc_html__('logout', 'classiadspro').'</a></li>';
+							echo '<li><i class="fas fa-tachometer-alt"></i><a href="'.alsp_dashboardUrl().'">'.esc_html__('My Dashboard', 'classiadspro').'</a></li>';
+							echo '<li><i class="fas fa-ad"></i><a href="'.alsp_dashboardUrl().'">'.esc_html__('My Listings', 'classiadspro').'</a></li>';
+							echo '<li><i class="fas fa-user"></i><a href="'.alsp_dashboardUrl(array('alsp_action' => 'profile')).'">'.esc_html__('Edit Profile', 'classiadspro').'</a></li>';
+							echo '<li><i class="fas fa-sign-out-alt"></i><a href="'.wp_logout_url(esc_url( home_url('/'))).'">'.esc_html__('logout', 'classiadspro').'</a></li>';
+						echo '<ul></div>';
+					echo '</div>'; 
+				}elseif(class_exists('Directorypress_Frontend')){
+					echo '<div class="dropdown">';
+						echo '<button class="dropbtn">'.$user_thumb .'<p class="author-name-header"><span class="author-displayname">'.$logedin_user_display_name.'</span><span class="author-nicename">'.$logedin_user_name.'</span></p></button>';
+						echo '<div class="dropdown-content"><ul class="clearfix">';
+							echo '<li><i class="fas fa-tachometer-alt"></i><a href="'.directorypress_dashboardUrl().'">'.esc_html__('My Dashboard', 'classiadspro').'</a></li>';
+							echo '<li><i class="fas fa-ad"></i><a href="'.directorypress_dashboardUrl().'">'.esc_html__('My Listings', 'classiadspro').'</a></li>';
+							echo '<li><i class="fas fa-user"></i><a href="'.directorypress_dashboardUrl(array('directorypress_action' => 'profile')).'">'.esc_html__('Edit Profile', 'classiadspro').'</a></li>';
+							echo '<li><i class="fas fa-sign-out-alt"></i><a href="'.wp_logout_url(esc_url( home_url('/'))).'">'.esc_html__('logout', 'classiadspro').'</a></li>';
 						echo '<ul></div>';
 					echo '</div>'; 
 				}elseif(class_exists('Gd_User_Dashboard')){
@@ -285,7 +289,8 @@ if ( !function_exists( 'pacz_header_logreg' ) ) {
 					echo '<span class="pacz-login-3-div">&#47;</span>';
 					echo '<a class="pacz-register-3" href="'.esc_url(home_url('/').$register).'">'.esc_html__('Register', 'classiadspro').'</a>';
 				}else{
-				echo '<a href="https://dev.mmtender.com/?login=true" style="padding:30px;">'.esc_html__('Login / Register', 'classiadspro').'</a>';
+					echo '<a class="pacz-login-2 clearfix" href="'.esc_url(home_url('/').$login).'">'.esc_html__('login', 'classiadspro').'</a>';
+					echo '<a class="pacz-register-2" href="'.esc_url(home_url('/').$register).'">'.esc_html__('Register', 'classiadspro').'</a>';
 				}
 			}
 		}
@@ -324,6 +329,11 @@ if ( !function_exists( 'pacz_header_login_active_menu' ) ) {
 						echo '<div class="mobile-active-menu-user-thumb"><span class="user_default_image">'.$user_thumb .'</span></div>';
 						echo '<p class="mobile-active-menu-logreg-links"><span class="author-displayname">'.$logedin_user_display_name.'</span><br/><span class="author-nicename">'.$logedin_user_name.'</span><br/><a href="'.alsp_dashboardUrl().'">'.esc_html__('My Dashboard', 'classiadspro').'</a></p>';
 					echo '</div>';
+				}elseif(class_exists('Directorypress_Frontend')){
+					echo '<div class="mobile-active-menu-user-wrap">';
+						echo '<div class="mobile-active-menu-user-thumb"><span class="user_default_image">'.$user_thumb .'</span></div>';
+						echo '<p class="mobile-active-menu-logreg-links"><span class="author-displayname">'.$logedin_user_display_name.'</span><br/><span class="author-nicename">'.$logedin_user_name.'</span><br/><a href="'.directorypress_dashboardUrl().'">'.esc_html__('My Dashboard', 'classiadspro').'</a></p>';
+					echo '</div>';
 				}else{
 					echo '<a class="pacz-logout clearfix" href="'.wp_logout_url(esc_url( home_url('/'))).'">'.esc_html__('logout', 'classiadspro').'<i class="pacz-icon-unlock"></i></a>';
 				}
@@ -343,28 +353,19 @@ if ( !function_exists( 'pacz_header_login_active_menu' ) ) {
 if ( !function_exists( 'pacz_nav_listing_btn' ) ) {
 	function pacz_nav_listing_btn() {
 		global $pacz_settings;
-		$listing_btn_style = (isset($pacz_settings['listing_btn_style']))? $pacz_settings['listing_btn_style']: '';
-		$header_listing_url = $pacz_settings['listing-btn-url'];
-		$header_listing_btn_text = $pacz_settings['listing-btn-text'];
+		
+		$header_listing_btn_text = (!empty($pacz_settings['listing-btn-text']))? $pacz_settings['listing-btn-text']: esc_html__('Add New', 'classiadspro');
 		$listing_btn_align = $pacz_settings['listing-btn-align'];
-		if(empty($pacz_settings['listing-btn'])){
-			//$detect_mobile = new Mobile_Detect();
 			if(!wp_is_mobile()){
-				if($listing_btn_style == 1){
-					echo '<li class="listing-btn '.$listing_btn_align.'">
-						<a class="listing-header-btn" href="'.$header_listing_url.'">'.$header_listing_btn_text.'</a>
-					</li>';	
-				}else if($listing_btn_style == 2){
-					echo '<li style="line-height:60px !important;height:50px !important;" class="listing-btn '.$listing_btn_align.'">
-						<a class="listing-header-btn listing-btn-style2" href="'.$header_listing_url.'">'.$header_listing_btn_text.'</a>
-					</li>';	
-				}
+					echo '<li class="listing-btn '.$listing_btn_align.'">';
+					echo do_action('directorypress_submit_button_dropdown', $header_listing_btn_text);
+					echo '</li>';	
 			}else{
-				echo '<div class="listing-btn mobile-submit">
-					<a class="listing-header-btn" href="'.$header_listing_url.'">'.$header_listing_btn_text.'</a>
-				</div>';
+				echo '<div class="listing-btn mobile-submit">';
+					echo do_action('directorypress_submit_button_dropdown', $header_listing_btn_text);
+				echo '</div>';
 			}
-		}
+		
 	}
 }
 /***************************************/
@@ -434,7 +435,11 @@ if ( !function_exists( 'pacz_responsive_nav_trigger_link' ) ) {
 	function pacz_responsive_nav_trigger_link() {
 
 		echo '<li class="responsive-nav-link">
-		
+			<div class="pacz-burger-icon">
+	              <div class="burger-icon-1"></div>
+	              <div class="burger-icon-2"></div>
+	              <div class="burger-icon-3"></div>
+            	</div>
 		</li>';
 
 	}
@@ -722,6 +727,7 @@ if ( !function_exists( 'pacz_main_navigation' ) ) {
 	}
 }
 /***************************************/
+
 
 
 
@@ -1031,7 +1037,7 @@ if ( !function_exists( 'add_first_nav_item' ) ) {
 				ob_end_clean();
 				$output .='</li>';
 			}
-			if(isset($listing_btn_location) && $listing_btn_location == 'header_section' && $pacz_settings['listing-btn-url'] && $preset_headers != 12 && !wp_is_mobile()) {
+			if(isset($listing_btn_location) && $listing_btn_location == 'header_section' && $preset_headers != 12 && !wp_is_mobile()) {
 				ob_start();
 				do_action( 'nav_listing_btn' );
 				$output .= ob_get_contents();
@@ -1060,7 +1066,6 @@ if ( !function_exists( 'add_first_nav_item' ) ) {
 	add_filter( 'wp_nav_menu_items', 'add_first_nav_item', 10, 2 );
 }
 /***************************************/
-
 
 /*
 * Header Toolbar Menu

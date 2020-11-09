@@ -117,7 +117,13 @@
           do_action( 'main_navigation', $menu_location );
 		  if($header_search_form){
 			 if($header_search_form_onpage == 'true'){
-				echo do_shortcode('[alsp-search search_form_type="4" categories_search_level="1" locations_search_level="1"]');
+				if(class_exists('alsp_plugin')){
+					echo do_shortcode('[alsp-search search_form_type="4" categories_search_level="1" locations_search_level="1"]');
+				}elseif(class_exists('DirectoryPress')){
+					echo '<div class="search-form-style-header1-wrapper">';
+						echo do_shortcode('[directorypress-search search_form_type="4" show_default_filed_label="0"]');
+					echo '</div>';
+				}
 			  }
 		  }
         }else{
@@ -126,7 +132,13 @@
           do_action( 'main_navigation', 'primary-menu' );
 		  if($header_search_form){
 			  if($header_search_form_onpage == 'true'){
-				echo do_shortcode('[alsp-search search_form_type="4" show_default_filed_label="0"]');
+				if(class_exists('alsp_plugin')){
+					echo do_shortcode('[alsp-search search_form_type="4" show_default_filed_label="0"]');
+				}elseif(class_exists('DirectoryPress')){
+					echo '<div class="search-form-style-header1-wrapper">';
+						echo do_shortcode('[directorypress-search search_form_type="4" show_default_filed_label="0"]');
+					echo '</div>';
+				}
 			  }
 		  }
         }

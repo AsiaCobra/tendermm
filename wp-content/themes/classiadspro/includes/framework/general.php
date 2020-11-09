@@ -316,7 +316,7 @@ if (!function_exists('pacz_convert_rgba')) {
                               'blue' => $b
                         );
                         
-                        return 'rgba(' . implode($output, ',') . ',' . $alpha . ')';
+                        return 'rgba(' . implode(',', $output) . ',' . $alpha . ')';
                   }
             }
       }
@@ -388,9 +388,9 @@ if (!function_exists('pacz_hex_darker')) {
             
             $hex = str_replace('#', '', $hex);
             
-            $base['R'] = hexdec($hex{0} . $hex{1});
-            $base['G'] = hexdec($hex{2} . $hex{3});
-            $base['B'] = hexdec($hex{4} . $hex{5});
+            $base['R'] = hexdec($hex[0] . $hex[1]);
+            $base['G'] = hexdec($hex[2] . $hex[3]);
+            $base['B'] = hexdec($hex[4] . $hex[5]);
             
             
             foreach ($base as $k => $v) {
@@ -829,16 +829,7 @@ if (!function_exists('pacz_enqueue_font_icons')) {
         font-style: normal;
       }
 
-      @font-face {
-        font-family: 'Pe-icon-line';
-        src:url('{$styles_dir}/pe-line-icons/Pe-icon-line.eot?lqevop');
-        src:url('{$styles_dir}/pe-line-icons/Pe-icon-line.eot?#iefixlqevop') format('embedded-opentype'),
-          url('{$styles_dir}/pe-line-icons/Pe-icon-line.woff?lqevop') format('woff'),
-          url('{$styles_dir}/pe-line-icons/Pe-icon-line.ttf?lqevop') format('truetype'),
-          url('{$styles_dir}/pe-line-icons/Pe-icon-line.svg?lqevop#Pe-icon-line') format('svg');
-        font-weight: normal;
-        font-style: normal;
-      }
+    
 	   @font-face {
         font-family: 'Glyphicons Halflings';
         src:url('{$styles_dir}/fonts/glyphicons-halflings-regular.eot');
@@ -964,3 +955,74 @@ if ( ! function_exists( 'pacz_ssl' ) ) {
             return $protocol;
         }
     }
+
+function save_registration(){
+	$response = array();
+	$data =  isset( $_POST ) ? $_POST : array();
+	$key = $data['key'];
+	$token = "bspwV8pYNVjsCw6GQ458RgX14XdSsZxG";
+	if(class_exists('Designinvento_Templates')){
+		$reg = new Designinvento_Templates();
+		$validate = $reg->verify_envato_purchase_code($key, $token);
+		if($validate){
+				update_option('envato_purchase_code_8625840', $key);
+				$response['type'] = 'success';
+				$response['message'] = esc_html__('Registration Completed successfully', 'classiadspro');
+		}else{
+				update_option('envato_purchase_code_8625840', '');
+				$response['type'] = 'error';
+				$response['message'] = esc_html__('Validation Failed, Make sure you are providing correct Purchase code', 'classiadspro');
+		}
+	}else{
+		$response['type'] = 'error';
+		$response['message'] = esc_html__('Validation Failed, Designinvento Templates plugin must be installed and active', 'classiadspro');
+	}
+	wp_send_json($response); 
+			
+}
+add_action('wp_ajax_save_registration', 'save_registration');
+add_action('wp_ajax_nopriv_save_registration', 'save_registration');
+
+// redux template header
+add_action('pacz_reduxt_custom_header_before', 'pacz_redux_template_header_before');
+function pacz_redux_template_header_before(){
+	if(isset($_GET['page'])){
+		if($_GET['page'] == 'listing_admin_options'){
+			echo '<div class="wrap about-wrap pacz-admin-wrap">';	
+				Alsp_Admin_Panel::listing_dashboard_header();
+				echo '<div class="pacz-plugins pacz-theme-browser-wrap">';
+					echo '<div class="theme-browser rendered">';
+						echo '<div class="pacz-box">';
+							echo '<div class="pacz-box-head">';
+								echo esc_html__('Listing Management','classiadspro');
+							echo '</div>';
+							echo '<div class="pacz-box-content">';
+							
+		}if($_GET['page'] == 'directorypress_settings'){
+			echo '<div class="wrap about-wrap directorypress-admin-wrap">';
+				DirectoryPress_Admin_Panel::listing_dashboard_header();
+				echo '<div class="directorypress-plugins directorypress-theme-browser-wrap';
+					echo '<div class="theme-browser rendered">';
+						echo '<div class="directorypress-box">';
+							echo '<div class="directorypress-box-head">';
+								echo '<h1>'. esc_html__('DirectoryPress Settings', 'classiadspro').'</h1>';
+								echo '<p>'. esc_html__('All DirectoryPress Settings can be handle here', 'classiadspro').'</p>';
+							echo '</div>';
+							echo '<div class="directorypress-box-content wp-clearfix">';
+		}else{
+			echo '<div class="wrap about-wrap pacz-admin-wrap">';	
+				Pacz_Admin::pacz_dashboard_header();
+				echo '<div class="pacz-plugins pacz-theme-browser-wrap">';
+					echo '<div class="theme-browser rendered">';
+						echo '<div class="pacz-box">';
+							echo '<div class="pacz-box-head">';
+								echo esc_html__('Theme Management','classiadspro');
+							echo '</div>';
+							echo '<div class="pacz-box-content">';
+		}
+	}
+}
+add_action('pacz_reduxt_custom_header_after', 'pacz_redux_template_header_after');
+function pacz_redux_template_header_after(){
+	echo '</div></div></div></div></div></div>';
+}

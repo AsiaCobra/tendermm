@@ -135,9 +135,9 @@ if (!class_exists('ReduxFramework_bg_selector')) {
                     
                     $width = ' style="width:320px"';
                     
-                    $placeholder = (isset($this->field['placeholder'])) ? esc_attr($this->field['placeholder']) : __('Select Preset Images', 'mk_framework');
+                    $placeholder = (isset($this->field['placeholder'])) ? esc_attr($this->field['placeholder']) : __('Select Preset Images', 'classiadspro');
                     
-                    echo '<strong>' . __('Select from presets', 'mk_framework') . '</strong><div class="bg-selector-option"><select id="' . $this->field['id'] . '-select_image" data-placeholder="' . $placeholder . '" name="' . $this->args['opt_name'] . '[' . $this->field['id'] . '][preset]" class="redux-select-item redux-select-image-item"' . $width . ' rows="6"' . '>';
+                    echo '<strong>' . __('Select from presets', 'classiadspro') . '</strong><div class="bg-selector-option"><select id="' . $this->field['id'] . '-select_image" data-placeholder="' . $placeholder . '" name="' . $this->args['opt_name'] . '[' . $this->field['id'] . '][preset]" class="redux-select-item redux-select-image-item"' . $width . ' rows="6"' . '>';
                     echo '<option></option>';
                     
                     foreach ($sample_patterns as $k => $v) {
@@ -263,8 +263,8 @@ if (!class_exists('ReduxFramework_bg_selector')) {
                 }
                 
                 
-                $placeholder = isset($this->field['placeholder']) ? $this->field['placeholder'] : __('No media selected', 'mk_framework');
-                echo '<strong style="padding-top:20px;">' . __('Upload Custom Image', 'mk_framework') . '</strong>';    
+                $placeholder = isset($this->field['placeholder']) ? $this->field['placeholder'] : __('No media selected', 'classiadspro');
+                echo '<strong style="padding-top:20px;">' . __('Upload Custom Image', 'classiadspro') . '</strong>';    
                 echo '<div class="bg-selector-option"><fieldset class="redux-field-container redux-field redux-field-init redux-container-media " data-id="'.$this->value['id'].'" data-type="media">';
                 
                 echo '<input placeholder="' . $placeholder . '" type="text" class="upload regular-text ' . $this->field['class'] . '" name="' . $this->field['name'] . $this->field['name_suffix'] . '[url]" id="' . $this->parent->args['opt_name'] . '[' . $this->field['id'] . '][url]" value="' . $this->value['url'] . '"/>';
@@ -291,7 +291,7 @@ if (!class_exists('ReduxFramework_bg_selector')) {
                 
                 echo '<div class="' . $hide . 'screenshot">';
                 echo '<a class="of-uploaded-image" href="' . $this->value['url'] . '" target="_blank">';
-                echo '<img class="redux-option-image" id="image_' . $this->field['id'] . '" src="' . $this->value['thumbnail'] . '" alt="" target="_blank" rel="external" />';
+                echo '<img class="redux-option-image" id="image_' . $this->field['id'] . '" src="' . $this->value['thumbnail'] . '" target="_blank" rel="external" />';
                 echo '</a>';
                 echo '</div>';
                 
@@ -299,14 +299,14 @@ if (!class_exists('ReduxFramework_bg_selector')) {
                 echo '<div class="upload_button_div">';
                 
                 //If the user has WP3.5+ show upload/remove button
-                echo '<span class="button media_upload_button" id="' . $this->field['id'] . '-media">' . __('Upload', 'mk_framework') . '</span>';
+                echo '<span class="button media_upload_button" id="' . $this->field['id'] . '-media">' . __('Upload', 'classiadspro') . '</span>';
                 
                 $hide = '';
                 if (empty($this->value['url']) || $this->value['url'] == '') {
                     $hide = ' hide';
                 }
                 
-                echo '<span class="button remove-image' . $hide . '" id="reset_' . $this->field['id'] . '" rel="' . $this->field['id'] . '">' . __('Remove', 'mk_framework') . '</span>';
+                echo '<span class="button remove-image' . $hide . '" id="reset_' . $this->field['id'] . '" rel="' . $this->field['id'] . '">' . __('Remove', 'classiadspro') . '</span>';
                 
                 echo '</div></fieldset></div><br><br><br>';
             endif;
@@ -321,7 +321,7 @@ if (!class_exists('ReduxFramework_bg_selector')) {
              * Background Color
              */
             if ($this->field['color'] === true && $this->field['default']['color'] !== false):
-                echo '<strong>' . __('Background Color', 'mk_framework') . '</strong><div class="bg-selector-option">';
+                echo '<strong>' . __('Background Color', 'classiadspro') . '</strong><div class="bg-selector-option">';
                 
                 echo '<input data-id="' . $this->field['id'] . '" name="' . $this->args['opt_name'] . '[' . $this->field['id'] . '][color]" id="' . $this->field['id'] . '-color" class="redux-color redux-color-init"  type="text" value="' . $this->value['color'] . '"  data-default-color="' . (isset($this->value['color']) ? $this->value['color'] : "") . '" />';
                 
@@ -352,7 +352,7 @@ if (!class_exists('ReduxFramework_bg_selector')) {
                     'right bottom' => 'right bottom'
                 );
                 echo '<div class="redux-container-select">';
-                echo '<strong>' . __('Background Position', 'mk_framework') . '</strong><div class="bg-selector-option">';
+                echo '<strong>' . __('Background Position', 'classiadspro') . '</strong><div class="bg-selector-option">';
                 
                 
                 
@@ -391,7 +391,7 @@ if (!class_exists('ReduxFramework_bg_selector')) {
                     'fixed' => 'Fixed'
                 );
                 echo '<div class="redux-container-button_set">';
-                echo '<strong>' . __('Background Attachment', 'mk_framework') . '</strong><div class="bg-selector-option">';
+                echo '<strong>' . __('Background Attachment', 'classiadspro') . '</strong><div class="bg-selector-option">';
                 echo '<div class="buttonset ui-buttonset">';
                 
                 foreach ($this->field['options'] as $k => $v) {
@@ -422,7 +422,7 @@ if (!class_exists('ReduxFramework_bg_selector')) {
                     
                 );
                 echo '<div class="redux-container-button_set">';
-                echo '<strong>' . __('Background Repeat', 'mk_framework') . '</strong><div class="bg-selector-option">';
+                echo '<strong>' . __('Background Repeat', 'classiadspro') . '</strong><div class="bg-selector-option">';
                 echo '<div class="buttonset ui-buttonset">';
                 
                 foreach ($this->field['options'] as $k => $v) {
@@ -448,7 +448,7 @@ if (!class_exists('ReduxFramework_bg_selector')) {
                     
                 );
                 echo '<div class="redux-container-button_set">';
-                echo '<strong>' . __('Background Cover', 'mk_framework') . '</strong><div class="bg-selector-option">';
+                echo '<strong>' . __('Background Cover', 'classiadspro') . '</strong><div class="bg-selector-option">';
                 echo '<div class="buttonset ui-buttonset">';
                 
                 foreach ($this->field['options'] as $k => $v) {
@@ -459,7 +459,7 @@ if (!class_exists('ReduxFramework_bg_selector')) {
                 }
                 
                 echo '</div>';
-                echo '<div class="description field-desc">' . __('Enable this option if you want the image fit to the area no matter what size it is.', 'mk_framework') . '</div>';
+                echo '<div class="description field-desc">' . __('Enable this option if you want the image fit to the area no matter what size it is.', 'classiadspro') . '</div>';
                 echo '</div></div><br><br><br>';
             endif;
             
@@ -472,7 +472,7 @@ if (!class_exists('ReduxFramework_bg_selector')) {
              * Border Bottom Color
              */
             if ($this->field['border'] === true && $this->field['default']['border'] !== false):
-                echo '<strong>' . __('Bottom Border Color', 'mk_framework') . '</strong><div class="bg-selector-option">';
+                echo '<strong>' . __('Bottom Border Color', 'classiadspro') . '</strong><div class="bg-selector-option">';
                 
                 echo '<input data-id="' . $this->field['id'] . '" name="' . $this->args['opt_name'] . '[' . $this->field['id'] . '][border]" id="' . $this->field['id'] . '-color" class="redux-color redux-color-init"  type="text" value="' . $this->value['border'] . '"  data-default-color="' . (isset($this->value['border']) ? $this->value['border'] : "") . '" />';
                 

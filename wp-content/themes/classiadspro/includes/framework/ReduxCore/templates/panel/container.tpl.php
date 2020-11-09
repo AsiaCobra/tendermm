@@ -11,32 +11,11 @@
 
     $expanded = ( $this->parent->args['open_expanded'] ) ? ' fully-expanded' : '' . ( ! empty( $this->parent->args['class'] ) ? ' ' . esc_attr( $this->parent->args['class'] ) : '' );
     $nonce    = wp_create_nonce( "redux_ajax_nonce" . $this->parent->args['opt_name'] );
-if($_GET['page'] == 'listing_admin_options'){
-	$active_class_listing = 'nav-tab-active'; 
-	$active_class_theme = '';
-	$header_text = esc_html__('Listing Management','deep-free');
-}else{
-	$active_class_listing = ''; 
-	$active_class_theme = 'nav-tab-active';
-	$header_text = esc_html__('Theme Management','deep-free');
-}
+
 ?>
-<div class="wrap about-wrap pacz-admin-wrap">
-	<?php
-		if($_GET['page'] =='alsp-admin-listing_settings'){	
-			Alsp_Admin_Panel::listing_dashboard_header();
-		}else{
-			Pacz_Admin::pacz_dashboard_header();
-		}
-	?>
-	<div class="pacz-plugins pacz-theme-browser-wrap">
-		<div class="theme-browser rendered">
-			<div class="pacz-box">
-				<div class="pacz-box-head">
-					<?php echo esc_attr($header_text); ?>
-				</div>
-				<div class="pacz-box-content">
-					<div class="redux-container<?php echo esc_attr( $expanded ); ?>">
+<?php do_action('pacz_reduxt_custom_header_before'); ?>
+
+<div class="redux-container<?php echo esc_attr( $expanded ); ?>">
 						<?php $action = ( $this->parent->args['database'] == "network" && $this->parent->args['network_admin'] && is_network_admin() ? './edit.php?action=redux_' . $this->parent->args['opt_name'] : './options.php' ) ?>
 						<form method="post" 
 							  action="<?php echo esc_attr($action); ?>" 
@@ -75,12 +54,8 @@ if($_GET['page'] == 'listing_admin_options'){
 							<?php $this->get_template( 'content.tpl.php' ); ?>
 
 						</form>
-					</div>
-				</div>
-			</div>
-		</div>
 	</div>
-</div>
+<?php do_action('pacz_reduxt_custom_header_after'); ?>
 <?php if ( isset( $this->parent->args['footer_text'] ) ) { ?>
     <div id="redux-sub-footer"><?php echo wp_kses_post( $this->parent->args['footer_text'] ); ?></div>
 <?php } ?>

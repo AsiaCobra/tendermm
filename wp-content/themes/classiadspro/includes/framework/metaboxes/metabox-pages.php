@@ -43,7 +43,7 @@ $options = array(
         "subtitle" => esc_html__("If enabled this option page will have no padding after header and before footer.", "classiadspro"),
         "desc" => esc_html__("Use this option if you need to use header slideshow or use a callout box before footer.", "classiadspro"),
         "id" => "_padding",
-        "default" => 'true',
+        "default" => 'false',
         "type" => "toggle"
     ),
     array(

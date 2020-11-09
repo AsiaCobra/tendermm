@@ -102,7 +102,7 @@
                     {
                         content: {
                             text: function( event, api ) {
-                                return "<img src='" + $( this ).attr( 'rel' ) + "' style='max-width:150px;' alt='' />";
+                                return "<img src='" + $( this ).attr( 'rel' ) + "' style='max-width:150px;' />";
                             },
                         },
                         style: 'qtip-tipsy',

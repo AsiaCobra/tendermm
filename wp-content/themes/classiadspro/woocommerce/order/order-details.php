@@ -11,18 +11,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if (is_account_page()) {
-	if(class_exists('alsp_plugin')){
-		echo do_action('dashboard_panel_html');
-	}
-?>
- <div class="content-wrapper">
-	<?php } ?>
-	<?php 
-	$order = wc_get_order( $order_id );
-	global $wp;
+$order = wc_get_order( $order_id );
+global $wp;
 	?>
-<div class="woo-myaccount-inner-wrap">
+
 <h2 class="pacz-woocommerce-title"><?php esc_html_e( 'Order Details', 'classiadspro' ); ?></h2>
 <table class="shop_table order_details">
 	<thead>
@@ -61,8 +53,3 @@ if (is_account_page()) {
 <?php do_action( 'woocommerce_order_details_after_order_table', $order ); ?>
 
 <?php wc_get_template( 'order/order-details-customer.php', array( 'order' =>  $order ) ); ?>
-</div>
-<?php 	global $wp;
-	if (is_account_page()) { ?>
-</div>
-	<?php } ?>

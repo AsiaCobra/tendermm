@@ -83,7 +83,7 @@ if($pacz_settings['footer'] == true && $template != 'no-footer-only' && $templat
 				</a>
 			</div>
 			<div class="col-md-6 col-sm-8 col-xs-12">
-				<button class="button dhvc-form-submit" onclick="window.location.href = 'https://www.mmtender.com/email-subscription/';">Receive Update Tenders</button>
+				<?php do_action('topfooter_subscribe'); ?>
 			</div>
 			<?php }else{ ?>
 					<div class="col-md-12 col-sm-12 col-xs-12">
@@ -94,130 +94,135 @@ if($pacz_settings['footer'] == true && $template != 'no-footer-only' && $templat
 	</div>
 </div>
 <?php } }?>
-<div class="footer-wrapper pacz-grid">
-<div class="pacz-padding-wrapper">
-<?php
+<?php if(is_active_sidebar('sidebar-12') || is_active_sidebar('sidebar-13') || is_active_sidebar('sidebar-14') || is_active_sidebar('sidebar-15') || is_active_sidebar('sidebar-16') || is_active_sidebar('sidebar-17')): ?>
+	<?php if($top_footer != 1){ ?>
+		<div class="main-footer-top-padding"></div>
+	<?php } ?>
+	<div class="footer-wrapper pacz-grid">
+		<div class="pacz-padding-wrapper">
+		<?php
 
-$footer_column = $pacz_settings['footer-layout'];
+		$footer_column = $pacz_settings['footer-layout'];
 
-if(is_numeric($footer_column)):
-	switch ( $footer_column ):
-		case 1:
-		$class = '';
-			break;
-		case 2:
-			$class = 'pacz-col-1-2';
-			break;
-		case 3:
-			$class = 'pacz-col-1-3';
-			break;
-		case 4:
-			$class = 'pacz-col-1-4';
-			break;
-		case 5:
-			$class = 'pacz-col-1-5';
-			break;
-		case 6:
-			$class = 'pacz-col-1-6';
-			break;		
-	endswitch;
-	for( $i=1; $i<=$footer_column; $i++ ):
-?>
-<?php if($i == $footer_column): ?>
-<div class="<?php echo esc_attr($class); ?>"><?php pacz_sidebar_generator( 'get_footer_sidebar'); ?></div>
-<?php else:?>
-			<div class="<?php echo esc_attr($class); ?>"><?php pacz_sidebar_generator( 'get_footer_sidebar'); ?></div>
-<?php endif;		
-endfor; 
+		if(is_numeric($footer_column)):
+			switch ( $footer_column ):
+				case 1:
+				$class = '';
+					break;
+				case 2:
+					$class = 'pacz-col-1-2';
+					break;
+				case 3:
+					$class = 'pacz-col-1-3';
+					break;
+				case 4:
+					$class = 'pacz-col-1-4';
+					break;
+				case 5:
+					$class = 'pacz-col-1-5';
+					break;
+				case 6:
+					$class = 'pacz-col-1-6';
+					break;		
+			endswitch;
+			for( $i=1; $i<=$footer_column; $i++ ):
+		?>
+		<?php if($i == $footer_column): ?>
+		<div class="<?php echo esc_attr($class); ?>"><?php pacz_sidebar_generator( 'get_footer_sidebar'); ?></div>
+		<?php else:?>
+					<div class="<?php echo esc_attr($class); ?>"><?php pacz_sidebar_generator( 'get_footer_sidebar'); ?></div>
+		<?php endif;		
+		endfor; 
 
-else : 
+		else : 
 
-switch($footer_column):
-		case 'third_sub_third':
-?>
-		<div class="pacz-col-1-3"><?php pacz_sidebar_generator( 'get_footer_sidebar'); ?></div>
-		<div class="pacz-col-2-3">
-			<div class="pacz-col-1-3"><?php pacz_sidebar_generator( 'get_footer_sidebar'); ?></div>
-			<div class="pacz-col-1-3"><?php pacz_sidebar_generator( 'get_footer_sidebar'); ?></div>
-			<div class="pacz-col-1-3"><?php pacz_sidebar_generator( 'get_footer_sidebar'); ?></div>
+		switch($footer_column):
+				case 'third_sub_third':
+		?>
+				<div class="pacz-col-1-3"><?php pacz_sidebar_generator( 'get_footer_sidebar'); ?></div>
+				<div class="pacz-col-2-3">
+					<div class="pacz-col-1-3"><?php pacz_sidebar_generator( 'get_footer_sidebar'); ?></div>
+					<div class="pacz-col-1-3"><?php pacz_sidebar_generator( 'get_footer_sidebar'); ?></div>
+					<div class="pacz-col-1-3"><?php pacz_sidebar_generator( 'get_footer_sidebar'); ?></div>
+				</div>
+		<?php
+					break;
+				case 'sub_third_third':
+		?>
+				<div class="pacz-col-2-3">
+					<div class="pacz-col-1-3"><?php pacz_sidebar_generator( 'get_footer_sidebar'); ?></div>
+					<div class="pacz-col-1-3"><?php pacz_sidebar_generator( 'get_footer_sidebar'); ?></div>
+					<div class="pacz-col-1-3"><?php pacz_sidebar_generator( 'get_footer_sidebar'); ?></div>
+				</div>
+				<div class="pacz-col-1-3"><?php pacz_sidebar_generator( 'get_footer_sidebar'); ?></div>
+		<?php
+					break;
+				case 'third_sub_fourth':
+		?>
+				<div class="pacz-col-1-3"><?php pacz_sidebar_generator( 'get_footer_sidebar'); ?></div>
+				<div class="pacz-col-2-3 last">
+					<div class="pacz-col-1-4"><?php pacz_sidebar_generator( 'get_footer_sidebar'); ?></div>
+					<div class="pacz-col-1-4"><?php pacz_sidebar_generator( 'get_footer_sidebar'); ?></div>
+					<div class="pacz-col-1-4"><?php pacz_sidebar_generator( 'get_footer_sidebar'); ?></div>
+					<div class="pacz-col-1-4"><?php pacz_sidebar_generator( 'get_footer_sidebar'); ?></div>
+				</div>
+		<?php
+					break;
+				case 'sub_fourth_third':
+		?>
+				<div class="pacz-col-2-3">
+					<div class="pacz-col-1-4"><?php pacz_sidebar_generator( 'get_footer_sidebar'); ?></div>
+					<div class="pacz-col-1-4"><?php pacz_sidebar_generator( 'get_footer_sidebar'); ?></div>
+					<div class="pacz-col-1-4"><?php pacz_sidebar_generator( 'get_footer_sidebar'); ?></div>
+					<div class="pacz-col-1-4"><?php pacz_sidebar_generator( 'get_footer_sidebar'); ?></div>
+				</div>
+				<div class="pacz-col-1-3"><?php pacz_sidebar_generator( 'get_footer_sidebar'); ?></div>
+		<?php
+					break;
+				case 'half_sub_half':
+		?>
+				<div class="pacz-col-1-2"><?php pacz_sidebar_generator( 'get_footer_sidebar'); ?></div>
+				<div class="pacz-col-1-2">
+					<div class="ex-padding-right pacz-col-1-2"><?php pacz_sidebar_generator( 'get_footer_sidebar'); ?></div>
+					<div class="ex-padding-left pacz-col-1-2"><?php pacz_sidebar_generator( 'get_footer_sidebar'); ?></div>
+				</div>
+		<?php
+					break;
+				case 'half_sub_third':
+		?>
+				<div class="pacz-col-1-2"><?php pacz_sidebar_generator( 'get_footer_sidebar'); ?></div>
+				<div class="pacz-col-1-2">
+					<div class="pacz-col-1-3"><?php pacz_sidebar_generator( 'get_footer_sidebar'); ?></div>
+					<div class="pacz-col-1-3"><?php pacz_sidebar_generator( 'get_footer_sidebar'); ?></div>
+					<div class="pacz-col-1-3"><?php pacz_sidebar_generator( 'get_footer_sidebar'); ?></div>
+				</div>
+		<?php
+					break;
+				case 'sub_half_half':
+		?>
+				<div class="pacz-col-1-2">
+					<div class="pacz-col-1-2"><?php pacz_sidebar_generator( 'get_footer_sidebar'); ?></div>
+					<div class="pacz-col-1-2"><?php pacz_sidebar_generator( 'get_footer_sidebar'); ?></div>
+				</div>
+				<div class="pacz-col-1-2"><?php pacz_sidebar_generator( 'get_footer_sidebar'); ?></div>
+		<?php
+					break;
+				case 'sub_third_half':
+		?>
+				<div class="pacz-col-1-2">
+					<div class="pacz-col-1-3"><?php pacz_sidebar_generator( 'get_footer_sidebar'); ?></div>
+					<div class="pacz-col-1-3"><?php pacz_sidebar_generator( 'get_footer_sidebar'); ?></div>
+					<div class="pacz-col-1-3"><?php pacz_sidebar_generator( 'get_footer_sidebar'); ?></div>
+				</div>
+				<div class="pacz-col-1-2"><?php pacz_sidebar_generator( 'get_footer_sidebar'); ?></div>
+		<?php
+					break;
+			endswitch;
+		endif;?> 
+		<div class="clearboth"></div>      
 		</div>
-<?php
-			break;
-		case 'sub_third_third':
-?>
-		<div class="pacz-col-2-3">
-			<div class="pacz-col-1-3"><?php pacz_sidebar_generator( 'get_footer_sidebar'); ?></div>
-			<div class="pacz-col-1-3"><?php pacz_sidebar_generator( 'get_footer_sidebar'); ?></div>
-			<div class="pacz-col-1-3"><?php pacz_sidebar_generator( 'get_footer_sidebar'); ?></div>
-		</div>
-		<div class="pacz-col-1-3"><?php pacz_sidebar_generator( 'get_footer_sidebar'); ?></div>
-<?php
-			break;
-		case 'third_sub_fourth':
-?>
-		<div class="pacz-col-1-3"><?php pacz_sidebar_generator( 'get_footer_sidebar'); ?></div>
-		<div class="pacz-col-2-3 last">
-			<div class="pacz-col-1-4"><?php pacz_sidebar_generator( 'get_footer_sidebar'); ?></div>
-			<div class="pacz-col-1-4"><?php pacz_sidebar_generator( 'get_footer_sidebar'); ?></div>
-			<div class="pacz-col-1-4"><?php pacz_sidebar_generator( 'get_footer_sidebar'); ?></div>
-			<div class="pacz-col-1-4"><?php pacz_sidebar_generator( 'get_footer_sidebar'); ?></div>
-		</div>
-<?php
-			break;
-		case 'sub_fourth_third':
-?>
-		<div class="pacz-col-2-3">
-			<div class="pacz-col-1-4"><?php pacz_sidebar_generator( 'get_footer_sidebar'); ?></div>
-			<div class="pacz-col-1-4"><?php pacz_sidebar_generator( 'get_footer_sidebar'); ?></div>
-			<div class="pacz-col-1-4"><?php pacz_sidebar_generator( 'get_footer_sidebar'); ?></div>
-			<div class="pacz-col-1-4"><?php pacz_sidebar_generator( 'get_footer_sidebar'); ?></div>
-		</div>
-		<div class="pacz-col-1-3"><?php pacz_sidebar_generator( 'get_footer_sidebar'); ?></div>
-<?php
-			break;
-		case 'half_sub_half':
-?>
-		<div class="pacz-col-1-2"><?php pacz_sidebar_generator( 'get_footer_sidebar'); ?></div>
-		<div class="pacz-col-1-2">
-			<div class="ex-padding-right pacz-col-1-2"><?php pacz_sidebar_generator( 'get_footer_sidebar'); ?></div>
-			<div class="ex-padding-left pacz-col-1-2"><?php pacz_sidebar_generator( 'get_footer_sidebar'); ?></div>
-		</div>
-<?php
-			break;
-		case 'half_sub_third':
-?>
-		<div class="pacz-col-1-2"><?php pacz_sidebar_generator( 'get_footer_sidebar'); ?></div>
-		<div class="pacz-col-1-2">
-			<div class="pacz-col-1-3"><?php pacz_sidebar_generator( 'get_footer_sidebar'); ?></div>
-			<div class="pacz-col-1-3"><?php pacz_sidebar_generator( 'get_footer_sidebar'); ?></div>
-			<div class="pacz-col-1-3"><?php pacz_sidebar_generator( 'get_footer_sidebar'); ?></div>
-		</div>
-<?php
-			break;
-		case 'sub_half_half':
-?>
-		<div class="pacz-col-1-2">
-			<div class="pacz-col-1-2"><?php pacz_sidebar_generator( 'get_footer_sidebar'); ?></div>
-			<div class="pacz-col-1-2"><?php pacz_sidebar_generator( 'get_footer_sidebar'); ?></div>
-		</div>
-		<div class="pacz-col-1-2"><?php pacz_sidebar_generator( 'get_footer_sidebar'); ?></div>
-<?php
-			break;
-		case 'sub_third_half':
-?>
-		<div class="pacz-col-1-2">
-			<div class="pacz-col-1-3"><?php pacz_sidebar_generator( 'get_footer_sidebar'); ?></div>
-			<div class="pacz-col-1-3"><?php pacz_sidebar_generator( 'get_footer_sidebar'); ?></div>
-			<div class="pacz-col-1-3"><?php pacz_sidebar_generator( 'get_footer_sidebar'); ?></div>
-		</div>
-		<div class="pacz-col-1-2"><?php pacz_sidebar_generator( 'get_footer_sidebar'); ?></div>
-<?php
-			break;
-	endswitch;
-endif;?> 
-<div class="clearboth"></div>      
-</div>
-</div>
+	</div>
+<?php endif; ?>
 <?php if($back_to_top == 1 && $back_to_top_style == 4){ ?>
 	<div class="pacz-grid goto-top-btn backtotop-style2 position-style2">
 		<a href="#" class="pacz-go-top"><?php echo esc_html__('back to top', 'classiadspro'); ?><i class="pacz-icon-long-arrow-up"></i></a>
@@ -227,6 +232,8 @@ endif;?>
 <?php if($footer_sell_btn == 1){ 
 	if(class_exists('alsp_plugin') && get_option('alsp_fsubmit_button')){
 		$sell_url = alsp_submitUrl();
+	}elseif(class_exists('Directorypress_Frontend')){
+		$sell_url = directorypress_submitUrl();
 	}else{
 		$sell_url = '';
 	}
@@ -253,16 +260,11 @@ endif;?>
 				)
 			);
 		?>
-		
     	<span class="pacz-footer-copyright"><?php echo wp_kses($pacz_settings['footer-copyright'], $allowed_tags); ?></span>
-    	
     	<?php do_action('subfooter_logos'); ?>
 		<?php if($footer_social_location == 2 || $footer_social_location == 3){ do_action('subfooter_social'); }?>
-			Developed By <a class="text-primary" href="https://divergentwebdesigns.com">Divergent Graphic & Web Designs</a>
 		</div>
-		
 	</div>
-
 	<div class="clearboth"></div>
 </div>
 <?php } ?>

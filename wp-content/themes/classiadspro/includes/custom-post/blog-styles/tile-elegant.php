@@ -188,8 +188,6 @@ function blog_tile_elegant_style( $atts, $i) {
 			//$output .='<div class="blog-categories">'.get_the_category_list( ', ' ).'</div>';
 			if($column != 4) {
 				ob_start();
-				comments_number(esc_html__( '0 Comments', 'classiadspro' ), esc_html__( '1', 'classiadspro' ), esc_html__( '% Comments', 'classiadspro' ));
-				$output .= '<a href="'.get_permalink().'#comments" class="blog-comments">'.ob_get_clean().'</a>';
 				$output .= '<span class="author"><span class="postedby">'.esc_html__('Posted By :', 'classiadspro').'</span>'.get_the_author().'</span>';
 				//if( function_exists('pacz_love_this') ) {
 					//ob_start();

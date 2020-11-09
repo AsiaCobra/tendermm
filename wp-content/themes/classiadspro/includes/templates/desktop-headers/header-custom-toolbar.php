@@ -131,11 +131,9 @@
 							echo '</ul>';
 						}
 						do_action('header_toolbar_menu');
-		         echo do_shortcode( '[vc_wp_search]' ); 
-            				echo esc_attr($boxed_header) && $header_structure != 'vertical' ? '</div>' : '' ;
 						
+						echo esc_attr($boxed_header) && $header_structure != 'vertical' ? '</div>' : '' ;
 					echo '</div>';
-				
 					echo '<div class="pacz-responsive-header-toolbar"><a href="#" class="pacz-toolbar-responsive-icon"><i class="pacz-icon-chevron-down"></i></a></div>';
 				}
 			
@@ -241,7 +239,6 @@
 						echo esc_attr($boxed_header) && $header_structure != 'vertical' ? '</div>' : '' ;
 					echo '</div>';
 					echo '<div class="pacz-responsive-header-toolbar"><a href="#" class="pacz-toolbar-responsive-icon"><i class="pacz-icon-chevron-down"></i></a></div>';
-					
 				}
 			}
 

@@ -469,15 +469,6 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 			if ( is_textdomain_loaded( 'tgmpa' ) ) {
 				return;
 			}
-
-			if ( false !== strpos( __FILE__, WP_PLUGIN_DIR ) || false !== strpos( __FILE__, WPMU_PLUGIN_DIR ) ) {
-				// Plugin, we'll need to adjust the file name.
-				add_action( 'load_textdomain_mofile', array( $this, 'correct_plugin_mofile' ), 10, 2 );
-				load_theme_textdomain( 'tgmpa', dirname( __FILE__ ) . '/languages' );
-				remove_action( 'load_textdomain_mofile', array( $this, 'correct_plugin_mofile' ), 10 );
-			} else {
-				load_theme_textdomain( 'tgmpa', dirname( __FILE__ ) . '/languages' );
-			}
 		}
 
 		/**
@@ -721,9 +712,15 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 		 * @param array $args Menu item configuration.
 		 */
 		protected function add_admin_menu( array $args ) {
-			$this->page_hook = add_theme_page( $args['page_title'], $args['menu_title'], $args['capability'], $args['menu_slug'], $args['function'] );
-			// webnus
-			remove_submenu_page( 'themes.php', $args['menu_slug'] );
+			if ( has_filter( 'tgmpa_admin_menu_use_add_theme_page' ) ) {
+				_deprecated_function( 'The "tgmpa_admin_menu_use_add_theme_page" filter', '2.5.0', esc_html__( 'Set the parent_slug config variable instead.', 'classiadspro' ) );
+			}
+
+			if ( 'themes.php' === $this->parent_slug ) {
+				$this->page_hook = call_user_func( 'add_theme_page', $args['page_title'], $args['menu_title'], $args['capability'], $args['menu_slug'], $args['function'] );
+			} else {
+				$this->page_hook = call_user_func( 'add_theme_page', $args['parent_slug'], $args['page_title'], $args['menu_title'], $args['capability'], $args['menu_slug'], $args['function'] );
+			}
 		}
 
 		/**
@@ -911,10 +908,10 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 
 				// Display message based on if all plugins are now active or not.
 				if ( $this->is_tgmpa_complete() ) {
-					echo '<p>', sprintf( esc_html( $this->strings['complete'] ), '<a href="' . esc_url( self_admin_url( 'admin.php?page=wn-admin-plugins' ) ) . '">' . esc_html__( 'Return to the Dashboard', 'classiadspro' ) . '</a>' ), '</p>';
-					echo '<style  >#adminmenu .wp-submenu li.current { display: none !important; }</style>';
+					echo '<p>', sprintf( esc_html( $this->strings['complete'] ), '<a href="' . esc_url( self_admin_url() ) . '">' . esc_html__( 'Return to the Dashboard', 'classiadspro' ) . '</a>' ), '</p>';
+					echo '<style type="text/css">#adminmenu .wp-submenu li.current { display: none !important; }</style>';
 				} else {
-					echo '<p><a href="' . esc_url( self_admin_url( 'admin.php?page=wn-admin-plugins' ) ) . '" target="_parent">', esc_html( $this->strings['return'] ), '</a></p>';
+					echo '<p><a href="', esc_url( $this->get_tgmpa_url() ), '" target="_parent">', esc_html( $this->strings['return'] ), '</a></p>';
 				}
 
 				return true;
@@ -1045,7 +1042,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 
 				if ( is_wp_error( $activate ) ) {
 					echo '<div id="message" class="error"><p>', wp_kses_post( $activate->get_error_message() ), '</p></div>',
-						'<p><a href="' . esc_url( self_admin_url( 'admin.php?page=wn-admin-plugins' ) ) . '" target="_parent">', esc_html( $this->strings['return'] ), '</a></p>';
+						'<p><a href="', esc_url( $this->get_tgmpa_url() ), '" target="_parent">', esc_html( $this->strings['return'] ), '</a></p>';
 
 					return false; // End it here if there is an error with activation.
 				} else {
@@ -1223,7 +1220,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 				}
 
 				// Register the nag messages and prepare them to be processed.
-				add_settings_error( 'tgmpa', 'tgmpa', $rendered, $this->get_admin_notice_class() );
+				add_settings_error( 'tgmpa', 'classiadspro', $rendered, $this->get_admin_notice_class() );
 			}
 
 			// Admin options pages already output settings_errors, so this is to avoid duplication.
@@ -1259,14 +1256,14 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 					$action_links['install'] = sprintf(
 						$link_template,
 						translate_nooped_plural( $this->strings['install_link'], $install_count, 'classiadspro' ),
-						esc_url( esc_url( self_admin_url( 'admin.php?page=wn-admin-plugins' ) ) )
+						esc_url( $this->get_tgmpa_status_url( 'install' ) )
 					);
 				}
 				if ( $update_count > 0 ) {
 					$action_links['update'] = sprintf(
 						$link_template,
 						translate_nooped_plural( $this->strings['update_link'], $update_count, 'classiadspro' ),
-						esc_url( esc_url( self_admin_url( 'admin.php?page=wn-admin-plugins' ) ) )
+						esc_url( $this->get_tgmpa_status_url( 'update' ) )
 					);
 				}
 			}
@@ -1275,7 +1272,7 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
 				$action_links['activate'] = sprintf(
 					$link_template,
 					translate_nooped_plural( $this->strings['activate_link'], $activate_count, 'classiadspro' ),
-					esc_url( esc_url( self_admin_url( 'admin.php?page=wn-admin-plugins' ) ) )
+					esc_url( $this->get_tgmpa_status_url( 'activate' ) )
 				);
 			}
 
@@ -2554,20 +2551,6 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 			);
 		}
 
-		
-		public function actions_plugin( $item ) {
-			return sprintf(
-				'%1$s',
-				$this->row_actions( $this->get_row_actions( $item ), true )
-			);
-		}
-
-		public function pacz_actions_plugin( $item ) {
-			foreach ( $this->get_row_actions( $item ) as $action_key => $action_value ) {
-				return $action_value;
-			}
-		}
-		
 		/**
 		 * Create version information column.
 		 *
@@ -2631,8 +2614,8 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 		 * @since 2.2.0
 		 */
 		public function no_items() {
-			echo esc_html__( 'No plugins to install, update or activate.', 'classiadspro' ) . ' <a href="' . esc_url( self_admin_url( 'admin.php?page=pacz-admin-plugins' ) ) . '"> ' . esc_html__( 'Return to the Dashboard', 'classiadspro' ) . '</a>';
-			echo '<style  >#adminmenu .wp-submenu li.current { display: none !important; }</style>';
+			echo esc_html__( 'No plugins to install, update or activate.', 'classiadspro' ) . ' <a href="' . esc_url( self_admin_url() ) . '"> ' . esc_html__( 'Return to the Dashboard', 'classiadspro' ) . '</a>';
+			echo '<style type="text/css">#adminmenu .wp-submenu li.current { display: none !important; }</style>';
 		}
 
 		/**
@@ -2686,7 +2669,6 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 			}
 		}
 
-		// pacz
 		/**
 		 * Get the actions which are relevant for a specific plugin row.
 		 *
@@ -2708,8 +2690,6 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 				if ( false !== $this->tgmpa->does_plugin_have_update( $item['slug'] ) && $this->tgmpa->can_plugin_update( $item['slug'] ) ) {
 					/* translators: %2$s: plugin name in screen reader markup */
 					$actions['update'] = __( 'Update %2$s', 'classiadspro' );
-				} elseif ( $this->tgmpa->is_plugin_active( $item['slug'] ) ) {
-					$actions['deactivate'] = __( 'Deactivate %2$s', 'classiadspro' );
 				}
 
 				// Display the 'Activate' action link, but only if the plugin meets the minimum version.
@@ -2734,7 +2714,7 @@ if ( ! class_exists( 'TGMPA_List_Table' ) ) {
 				);
 
 				$action_links[ $action ] = sprintf(
-					'<a href="%1$s" data-plugin-action="' . esc_attr( $action ) . '" class="button pacz-admin-btn wsw-btn">' . esc_html( $text ) . '</a>', // $text contains the second placeholder.
+					'<a href="%1$s">' . esc_html( $text ) . '</a>', // $text contains the second placeholder.
 					esc_url( $nonce_url ),
 					'<span class="screen-reader-text">' . esc_html( $item['sanitized_plugin'] ) . '</span>'
 				);
@@ -3678,10 +3658,10 @@ if ( ! function_exists( 'tgmpa_load_bulk_installer' ) ) {
 
 						if ( $this->tgmpa->is_tgmpa_complete() ) {
 							// All plugins are active, so we display the complete string and hide the menu to protect users.
-							echo '<style  >#adminmenu .wp-submenu li.current { display: none !important; }</style>';
+							echo '<style type="text/css">#adminmenu .wp-submenu li.current { display: none !important; }</style>';
 							$update_actions['dashboard'] = sprintf(
 								esc_html( $this->tgmpa->strings['complete'] ),
-								'<a href="' . esc_url( self_admin_url( 'admin.php?page=pacz-admin-plugins' ) ) . '">' . esc_html__( 'Return to the Dashboard', 'classiadspro' ) . '</a>'
+								'<a href="' . esc_url( self_admin_url() ) . '">' . esc_html__( 'Return to the Dashboard', 'classiadspro' ) . '</a>'
 							);
 						} else {
 							$update_actions['tgmpa_page'] = '<a href="' . esc_url( $this->tgmpa->get_tgmpa_url() ) . '" target="_parent">' . esc_html( $this->tgmpa->strings['return'] ) . '</a>';
