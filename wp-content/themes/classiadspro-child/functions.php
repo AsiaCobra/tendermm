@@ -56,7 +56,7 @@ add_action('wp_footer',function(){
           $("img.lazyload").lazyload({ event: "scrollstop",infinite: true })
           $("img.lazyload").lazyload();
           let styles = [
-            'http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.min.css',
+            '//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.min.css',
             '/wp-content/plugins/js_composer/assets/css/js_composer.min.css',
             '/wp-content/plugins/ubermenu/assets/fontawesome/css/all.min.css',
           ];
