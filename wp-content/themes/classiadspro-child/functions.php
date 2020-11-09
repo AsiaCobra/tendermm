@@ -2,7 +2,7 @@
 show_admin_bar(false);
 include 'class-meta-rss-feed.php';
 include 'function-for-newsletter.php';
-
+remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
 //Sorting tender_field 
 add_action('wp_footer',function(){
     global $wp_scripts, $wp_styles;
@@ -14,7 +14,7 @@ add_action('wp_footer',function(){
         .pacz-header-toolbar .pacz-grid{
             overflow:visible;
         }
-        button.slick-prev.slick-arrow {
+        button.slick-prev.slick-arrow, button.slick-next.slick-arrow {
             display: none!important;
         }
     </style>
@@ -48,17 +48,24 @@ add_action('wp_footer',function(){
        var strPh = jQuery('.alsp-field-content').find('meta').attr('content');
        jQuery('.alsp-field-content.field-phone-content').find('a').text(strPh);
        console.log("<?Php echo home_url(); ?>");
-         jQuery(document).on('ready',function(){
-          $('.slider-home').slick({lazyLoad: 'ondemand',    infinite: true})
+         jQuery(document).ready(function(){
+          $('.slider-home').slick({autoplay:true,autoplaySpeed: 1000,})
          /**
           * Image Lazyload 
           */
-          $("img.lazyload").lazyload({ event: "scrollstop", })
+          $("img.lazyload").lazyload({ event: "scrollstop",infinite: true })
           $("img.lazyload").lazyload();
+          let styles = [
+            'http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.min.css',
+            '/wp-content/plugins/js_composer/assets/css/js_composer.min.css',
+            '/wp-content/plugins/ubermenu/assets/fontawesome/css/all.min.css',
+          ];
+          for( let style of styles){
+            // console.log(style);
+            $('body').append(`<link rel='stylesheet' id="${style}" href="${style}">`);
+          }
        })
-       $(document).on('appear',function(e){
-        //  console.log(e)
-       })
+       $(document).on('appear',function(e){ })
     </script>
     <?php
 },10000);
@@ -67,6 +74,9 @@ add_filter( 'show_admin_bar', '__return_false' );
 function remove_scripts(){
     // global $wp_scripts;
     $remove = array(
+      'rabbit',
+      'bunny',
+      'ubermenu',
       // 'bootstrap',
       // 'wpb_composer_front_js',
       'wp-embed',
@@ -80,25 +90,36 @@ function remove_scripts(){
       'pacz-theme-plugins',
       'pacz-theme-scripts',
       'wpb_composer_front_js',
-      // 'jquery-ui-position',
-      // 'jquery-ui-widget',
+      'jquery-ui-position',
+      'jquery-ui-widget',
       // 'jquery-ui-core',
     );
     $home_remove_styles = array(
       // 'bootstrap',
+      // 'theme-options',
       'slick-css',
       'slick-theme',
       'alsp-jquery-ui-style',
+      'wpml-legacy-horizontal-list-0',
+      'wpml-menu-item-0',
+      'vc_lte_ie9',
+      'alsp_locations',
+      'alsp_category',
+      'alsp_listings',
+      // 'alsp-search',
+      'single-listing',
+      // 'alsp_frontend',
       'myanmar_ui',
       'embedded_css',
       'dhvc-form-font-awesome',
       'alsp_listings_slider',
       'dhvc-form',
-      // 'pacz-styles',
+      'pacz-fonticon-custom',
       'pacz-common-shortcode',
       'pacz-styles-default',
       'pacz-blog',
       'ubermenu-font-awesome-all',
+      'ubermenu-white',
       'alsp_fsubmit',
       'difp-style',
       'difp-common-style',
@@ -248,6 +269,7 @@ function montserrat_remove_google_fonts() {
 }
 // add_action('wp_print_styles','montserrat_remove_google_fonts',200);
 add_action('wp_enqueue_scripts', 'montserrat_remove_google_fonts', 100);
+
 
 /*
 * Create Header Logo
@@ -497,8 +519,8 @@ function wpc_shortcode_not_company_ngo_post_list() {
 //NOTNGO End
 //slider start
 // add_shortcode( 'home-page-slider', 'wpc_shortcode_home_page_slider' );
-add_shortcode( 'home-page-slider', 'home_page_slider' );
-// add_shortcode( 'home_page_slider', 'home_page_slider' );
+// add_shortcode( 'home-page-slider', 'home_page_slider' );
+add_shortcode( 'home_page_slider', 'home_page_slider' );
 
 function home_page_slider(){
   echo '<div class="slider-home">

@@ -263,9 +263,9 @@ if($post_id && $layout_template != 'no-title') {
 }
 if(is_front_page()) {
 	?>
-	<!-- <div class="container">
-	<?php //do_shortcode('[home_page_slider]') ?>
-	</div> -->
+	<div class="homepage-slider">
+	<?php do_shortcode('[home_page_slider]') ?>
+	</div>
 	<?php
 }
 ?>
