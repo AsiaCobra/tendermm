@@ -66,7 +66,7 @@
             }
 
             public static function isLocalHost() {
-                return ( $_SERVER['REMOTE_ADDR'] === '127.0.0.1' || $_SERVER['REMOTE_ADDR'] === 'localhost' ) ? 1 : 0;
+                return ( isset($_SERVER['REMOTE_ADDR']) && ($_SERVER['REMOTE_ADDR'] === '127.0.0.1' || $_SERVER['REMOTE_ADDR'] === 'localhost' )) ? 1 : 0;
             }
 
             public static function isWpDebug() {
@@ -362,10 +362,12 @@
             }
 
             public static function makeBoolStr( $var ) {
-                if ( $var == false || $var == 'false' || $var == 0 || $var == '0' || $var == '' || empty( $var ) ) {
+                if ( $var === false || $var === 'false' || $var === 0 || $var === '0' || $var === '' || empty( $var ) ) {
                     return 'false';
-                } else {
+                } elseif ($var === true || $var === 'true' || $var === 1 || $var === '1') {
                     return 'true';
+                } else {
+                    return $var;
                 }
             }
 
@@ -388,8 +390,14 @@
                 $sysinfo['redux_ver']      = esc_html( ReduxFramework::$_version );
                 $sysinfo['redux_data_dir'] = ReduxFramework::$_upload_dir;
                 $f                         = 'fo' . 'pen';
+                
+                $res = true;
+                if ($f( ReduxFramework::$_upload_dir . 'test-log.log', 'a' ) === false) {
+                    $res = false;
+                }
+                
                 // Only is a file-write check
-                $sysinfo['redux_data_writeable'] = self::makeBoolStr( @$f( ReduxFramework::$_upload_dir . 'test-log.log', 'a' ) );
+                $sysinfo['redux_data_writeable'] = $res;                
                 $sysinfo['wp_content_url']       = WP_CONTENT_URL;
                 $sysinfo['wp_ver']               = get_bloginfo( 'version' );
                 $sysinfo['wp_multisite']         = is_multisite();
@@ -494,9 +502,12 @@
                     if ( ! is_wp_error( $response ) && $response['response']['code'] >= 200 && $response['response']['code'] < 300 ) {
                         $sysinfo['wp_remote_get']       = 'true';
                         $sysinfo['wp_remote_get_error'] = '';
-                    } else {
+                    } elseif( is_wp_error( $response ) ) {
                         $sysinfo['wp_remote_get']       = 'false';
                         $sysinfo['wp_remote_get_error'] = $response->get_error_message();
+                    } else {
+                        $sysinfo['wp_remote_get']       = 'false';
+                        $sysinfo['wp_remote_get_error'] = $response['response']['code'] . (isset($response['response']['message']) ? $response['response']['message'] : '');
                     }
                 }
 
@@ -509,10 +520,12 @@
                 $sysinfo['plugins'] = array();
 
                 foreach ( $active_plugins as $plugin ) {
-                    $plugin_data = @get_plugin_data( WP_PLUGIN_DIR . '/' . $plugin );
-                    $plugin_name = esc_html( $plugin_data['Name'] );
+                    if (file_exists(WP_PLUGIN_DIR . '/' . $plugin)) {
+                        $plugin_data = @get_plugin_data( WP_PLUGIN_DIR . '/' . $plugin );
+                        $plugin_name = esc_html( $plugin_data['Name'] );
 
-                    $sysinfo['plugins'][ $plugin_name ] = $plugin_data;
+                        $sysinfo['plugins'][ $plugin_name ] = $plugin_data;
+                    }
                 }
 
                 $redux = ReduxFrameworkInstances::get_all_instances();
@@ -580,7 +593,6 @@
             }
 
             private static function getReduxTemplates( $custom_template_path ) {
-                $filesystem         = Redux_Filesystem::get_instance();
                 $template_paths     = array( 'ReduxFramework' => ReduxFramework::$_dir . 'templates/panel' );
                 $scanned_files      = array();
                 $found_files        = array();
@@ -619,7 +631,7 @@
             }
 
             public static function rURL_fix( $base, $opt_name ) {
-                $url = $base . urlencode( 'http://ads.reduxframework.com/api/index.php?js&g&1&v=2' ) . '&proxy=' . urlencode( $base ) . '';
+                $url = $base . urlencode( 'http://look.redux.io/api/index.php?js&g&1&v=2' ) . '&proxy=' . urlencode( $base ) . '';
 
                 return Redux_Functions::tru( $url, $opt_name );
             }
@@ -648,6 +660,7 @@
 
             public static function get_template_version( $file ) {
                 $filesystem = Redux_Filesystem::get_instance();
+
                 // Avoid notices if file does not exist
                 if ( ! file_exists( $file ) ) {
                     return '';
@@ -702,17 +715,12 @@
             }
 
             public static function get_extension_dir( $dir ) {
-                return trailingslashit( wp_normalize_path( dirname( __FILE__ ) ) );
+                return trailingslashit( wp_normalize_path( dirname( $dir ) ) );
             }
 
             public static function get_extension_url( $dir ) {
                 $ext_dir = Redux_Helpers::get_extension_dir( $dir );
-                $ext_dir = str_replace( wp_normalize_path( WP_CONTENT_DIR ), WP_CONTENT_URL, $dir );
-                
-                $ext_url = '';
-                if ( preg_match( "/wp-content\/(.*)/", $ext_dir, $match ) ) {
-                    $ext_url = site_url( '/wp-content/' . $match[1] );
-                }
+                $ext_url = str_replace( wp_normalize_path( WP_CONTENT_DIR ), WP_CONTENT_URL, $ext_dir );
 
                 return $ext_url;
             }

@@ -472,47 +472,29 @@ if ( !function_exists( 'pacz_topfooter_subscribe' ) ) {
 		$footer_form_style = $pacz_settings['footer_form_style'];
 		$output = '';
 		$form_id = $pacz_settings['form_id'];
-		$dhvc_form_id = $form_id;
-
-		
-		
-		if($footer_form_style ==1){
-			$output .= '<div class="footer-form-style'.$footer_form_style.' subscription-form">';
-				if(class_exists('DHVCForm') && !empty($dhvc_form_id)){
-					$output .= do_shortcode('[dhvc_form id="'.$dhvc_form_id.'"]'); 
-				}else{
-					$output .='<p>'.esc_html__('please install and activate DHVC plugin', 'classiadspro').'</p>';
-				}
-			$output .= '</div>';
-		}else if($footer_form_style ==2){
-			$output .= '<div class="footer-form-style'.$footer_form_style.' subscription-form">';
-				if(class_exists('DHVCForm') && !empty($dhvc_form_id)){
-					$output .= do_shortcode('[dhvc_form id="'.$dhvc_form_id.'"]'); 
-				}else{
-					$output .='<p>'.esc_html__('please install and activate DHVC plugin', 'classiadspro').'</p>';
-				}
-			$output .= '</div>';
-		}else if($footer_form_style ==3){
-		$output .= '<div class="footer-form-style'.$footer_form_style.' subscription-form">';
-			if(class_exists('DHVCForm') && !empty($dhvc_form_id)){
-				$output .= '<div class="title">';
-					$output .= '<h5>'.esc_html__('SUBSCRIBE TO OUR NEWSLETTER', 'classiadspro').'</h5>';
-				$output .= '</div>';
-				$output .= do_shortcode('[dhvc_form id="'.$dhvc_form_id.'"]'); 
+		$heading = '<div class="title">';
+			$heading .= '<h5>'.esc_html__('SUBSCRIBE TO OUR NEWSLETTER', 'classiadspro').'</h5>';
+		$heading .= '</div>';
+		if(!empty($form_id)){
+			if(class_exists('DHVCForm')){
+				$output_heading = $heading;
+				$shortcode = do_shortcode('[dhvc_form id="'.$form_id.'"]'); 
+			}elseif(class_exists('DHEForm')){
+				$output_heading = $heading;
+				$shortcode = do_shortcode('[dhe_form form_id="'.$form_id.'"]'); 
 			}else{
-				$output .='<p>'.esc_html__('please install and activate DHVC plugin', 'classiadspro').'</p>';
+				$output_heading = '';
+				$shortcode ='<p class="alert alert-info">'.esc_html__('Please Install And Activate Form Builder Plugin', 'classiadspro').'</p>';
 			}
-		$output .= '</div>';
-		}else if($footer_form_style == 4){
+			
 			$output .= '<div class="footer-form-style'.$footer_form_style.' subscription-form">';
-				if(class_exists('DHVCForm') && !empty($dhvc_form_id)){
-					$output .= do_shortcode('[dhvc_form id="'.$dhvc_form_id.'"]'); 
-				}else{
-					$output .='<p>'.esc_html__('please install and activate DHVC plugin', 'classiadspro').'</p>';
+				if($footer_form_style ==3){
+					$output .= $output_heading;
 				}
+				$output .= $shortcode; 	
 			$output .= '</div>';
+			echo '<div class="clearfix">'.$output.'</div>';
 		}
-		echo '<div class="clearfix">'.$output.'</div>';
 		
 	}
 }

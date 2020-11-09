@@ -261,5 +261,12 @@ if($post_id && $layout_template != 'no-title') {
       do_action('page_title');
   }
 }
+if(is_front_page()) {
+	?>
+	<!-- <div class="container">
+	<?php //do_shortcode('[home_page_slider]') ?>
+	</div> -->
+	<?php
+}
 ?>
 

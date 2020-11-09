@@ -1,12 +1,6 @@
 <?php
 global $pacz_settings;
-if($pacz_settings['minify-css']){
-	$output2 = '';
-	$output2 .= pacz_merge_css();
-	Pacz_Static_Files::addGlobalStyle("
-		{$output2}
-	"); 
-}
+
 
 /*
  *
@@ -319,24 +313,23 @@ Pacz_Static_Files::addGlobalStyle("
 	display:inline-block;
 	
 	}
-.listing-btn .listing-header-btn{
-	min-width:120px;
-	display:inline;
-	padding:8px 12px;
-	font-weight:bold;
-	text-transform:uppercase;
+.listing-btn .listing-header-btn,
+.listing-btn .directorypress-new-listing-button .btn-primary,
+.listing-btn .submit-listing-button-single.btn-primary{
 	color:{$listing_header_btn_color_regular};
-	border-radius:0;
 	background:{$listing_header_btn_color_bg};
-	font-size:12px;
-	font-weight:normal;
 }
-.listing-btn.mobile-submit a{
+
+.listing-btn.mobile-submit .directorypress-new-listing-button .btn-primary,
+.listing-btn.mobile-submit .submit-listing-button-single.btn-primary{
 	color:{$listing_header_btn_color_regular};
 	background:{$listing_header_btn_color_bg};
 }
 .listing-btn .listing-header-btn:hover,
-.listing-btn.mobile-submit a{
+.listing-btn .directorypress-new-listing-button .btn-primary:hover,
+.listing-btn .submit-listing-button-single.btn-primary:hover,
+.listing-btn.mobile-submit .directorypress-new-listing-button .btn-primary:hover,
+.listing-btn.mobile-submit .submit-listing-button-single.btn-primary:hover{
 	background:{$listing_header_btn_color_bghover} !important;
 	color:{$listing_header_btn_color_hover} !important;
 }
@@ -415,7 +408,7 @@ Pacz_Static_Files::addGlobalStyle("
 if($pacz_settings['top-footer'] == 0){
 	
 Pacz_Static_Files::addGlobalStyle("
-	#pacz-footer{padding-top:100px;}
+	#pacz-footer .main-footer-top-padding{padding-top:100px;}
 
 ");	
 	
@@ -1198,7 +1191,9 @@ if($pacz_settings['preset_headers'] == 12){
 		font-size: 14px;
 	}
 	.search-form-style-header1 .listing-btn{float:right;}
-	.search-form-style-header1 .listing-btn .listing-header-btn{
+	.search-form-style-header1 .listing-btn .listing-header-btn,
+	.search-form-style-header1 .listing-btn .directorypress-new-listing-button .btn-primary,
+	.search-form-style-header1 .listing-btn .submit-listing-button-single.btn-primary{
 		font-size:14px;
 		min-width:150px;
 		line-height:44px;
@@ -2284,11 +2279,6 @@ Pacz_Static_Files::addGlobalStyle("
 }
 .footer-sell-btn a:hover{
 	background-color:{$pacz_settings['btn-hover']};
-}
-.blog-classic-entry,
-.single-post .theme-content .inner-content,
-.pacz-single-comment{
-	border-radius:{$pacz_settings['sidebar_content_radius']}px;
 }
 ");
 

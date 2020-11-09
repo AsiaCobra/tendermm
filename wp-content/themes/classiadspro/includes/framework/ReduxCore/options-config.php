@@ -55,7 +55,7 @@
         // Show the time the page took to load, etc
         'update_notice'        => false,
         // If dev_mode is enabled, will notify developer of updated versions available in the GitHub Repo
-        'customizer'           => true,
+        'customizer'           => false,
         // Enable basic customizer support
         //'open_expanded'     => true,                    // Allow you to start the panel in an expanded way initially.
         //'disable_save_warn' => true,                    // Disable the save warning when a user changes a field
@@ -281,17 +281,6 @@
 					'full' => array('alt' => '3 Column', 'img' =>  PACZ_THEME_ADMIN_ASSETS_URI . '/img/full_layout.png'),
 				),
 				'default' => 'full'
-			),
-			array(
-				'id' => 'sidebar_content_radius',
-				'type' => 'slider',
-				'title' => esc_html__('Sidebar and Content Area Radius', 'classiadspro'),
-				'subtitle' => '',
-				"default" => 0,
-				"min" => "0",
-				"step" => "1",
-				"max" => "25",
-				"unit" => "px",
 			),
 			array(
 				'id' => 'breadcrumb',
@@ -1033,17 +1022,7 @@
 				"options" => array(
 					"header_toolbar" => esc_html__('Header Toolbar', "classiadspro"),
 					"header_section" => esc_html__('Header Section', "classiadspro"),
-				),
-				"type" => "select"
-			),
-			array(
-				"title" => esc_html__("Listing Button Style", "classiadspro"),
-				"desc" => esc_html__("", "classiadspro"),
-				"id" => "listing_btn_style",
-				"default" => 'header_section',
-				"options" => array(
-					"1" => esc_html__('Listing Button Style 1 ( Default )', "classiadspro"),
-					"2" => esc_html__('Listing Button Style 2 ( Ultra )', "classiadspro"),
+					"disable" => esc_html__('Disable', "classiadspro"),
 				),
 				"type" => "select"
 			),
@@ -1055,14 +1034,6 @@
 				'desc' => esc_html__('Please note that this option does not work for vertical header style. Use below option instead', 'classiadspro'),
 				'options' => array('left' => 'Left', 'center' => 'Center', 'right' => 'Right'), //Must provide key => value pairs for radio options
 				'default' => 'right'
-			),
-			array(
-				'id' => 'listing-btn-url',
-				'type' => 'text',
-				'title' => esc_html__('Header New Listing Button Url ', 'classiadspro'),
-				'desc' => esc_html__('Including http://', 'classiadspro'),
-				'subtitle' => esc_html__('Header New Listing Button url', 'classiadspro'),
-				'default' => '',
 			),
 			array(
 				'id' => 'listing-btn-text',
@@ -1426,7 +1397,7 @@
 				'title' => esc_html__('Footer', 'classiadspro'),
 				'subtitle' => esc_html__('Will be located after content. Please note that sub footer will not be affected by this option.', 'classiadspro'),
 				'desc' => esc_html__('If you don\'t want to have footer section you can disable it.', 'classiadspro'),
-				"default" => 0,
+				"default" => 1,
 				'on' => 'Enable',
 				'off' => 'Disable',
 			),
@@ -2544,7 +2515,7 @@
 					'right' => array('alt' => '2 Column', 'img' => PACZ_THEME_ADMIN_ASSETS_URI . '/img/right_layout.png'),
 					'full' => array('alt' => '3 Column', 'img' => PACZ_THEME_ADMIN_ASSETS_URI . '/img/full_layout.png'),
 				),
-				'default' => 'full'
+				'default' => 'right'
 			),
 			array(
 				'id' => 'archive-columns',
@@ -2808,24 +2779,6 @@
 		'desc' => esc_html__('', 'classiadspro'),
 		'icon' => 'el-icon-cogs',
 		'fields' => array(
-			array(
-				'id' => 'minify-js',
-				'type' => 'switch',
-				'title' => esc_html__('Minify Java Script Files', 'classiadspro'),
-				'subtitle' => esc_html__('Minifies file to decrease the file size by 40%', 'classiadspro'),
-				'desc' => esc_html__('You can enable JS minification using this option. This option will only pickup the pre-minified JS files(theme-scripts-min.js & plugins.js). So use this option if you did not hack the JS files.', 'classiadspro'),
-				"default" => false,
-			),
-
-			array(
-				'id' => 'minify-css',
-				'type' => 'switch',
-				'title' => esc_html__('Minify CSS Files', 'classiadspro'),
-				'subtitle' => esc_html__('Minifies file to decrease the file size by 40%', 'classiadspro'),
-				'desc' => esc_html__('You can enable CSS minification using this option. This option will only pickup the pre-minified CSS files. So use this option if you did not hack the CSS files.', 'classiadspro'),
-				"default" => false,
-			),
-
 			array(
 				'id' => 'remove-js-css-ver',
 				'type' => 'switch',

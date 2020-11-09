@@ -8,9 +8,9 @@ function blog_classic_style($atts)
     $output = $item_cat = '';
 
     if ($layout == 'full') {
-        $image_width = $grid_width - 40;
+        $image_width = $grid_width;
     } else {
-        $image_width = (($content_width / 100) * $grid_width) - 40;
+        $image_width = ($content_width / 100) * $grid_width;
     }
 
     $categories = get_the_category();

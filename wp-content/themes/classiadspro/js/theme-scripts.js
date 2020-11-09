@@ -736,39 +736,8 @@ var progressButton = {
             progressButtonError.reverse()
         }
     }
-}
-
-
-
-
-
-;/* Window Scroller */
-/* -------------------------------------------------------------------- */
-
-function pacz_window_scroller() {
-    if (!$.exists('.pacz-window-scroller')) {
-        return false;
-    }
-
-    $('.pacz-window-scroller').each(function() {
-        var $this = $(this),
-            $container_h = $this.attr('data-height'),
-            $image = $this.find('img'),
-            $speed = parseInt($this.attr('data-speed'));
-
-        $this.stop(true, true).hoverIntent(function() {
-            $image.animate({
-                'top': -($image.height() - $container_h)
-            }, $speed);
-
-        }, function() {
-            $image.animate({
-                'top': 0
-            }, $speed / 3);
-        });
-    });
-
-};/* Header Section Sticky function */
+};
+/* Header Section Sticky function */
 /* -------------------------------------------------------------------- */
 
 
@@ -1607,621 +1576,8 @@ function pacz_lightbox_init() {
         });
    // });
 
-};/* Sharp Slideshow */
-/* -------------------------------------------------------------------- */
+};
 
-function pacz_sharp_slider_init() {
-
-    $('.pacz-sharp-slider').each(function(i, val) {
-        var $slider_wrapper = $(this),
-            $slider_holder = $slider_wrapper.find('.sharp-slider-holder'),
-            $nav = $('.pacz-sharp-nav'),
-            $next_arrow = $slider_wrapper.find('.pacz-sharp-next'),
-            $prev_arrow = $slider_wrapper.find('.pacz-sharp-prev'),
-            $pause = $slider_wrapper.attr('data-pause'),
-            $first_el = $slider_wrapper.attr('data-first'),
-            $speed = $slider_wrapper.attr('data-speed'),
-            $animation = $slider_wrapper.attr('data-animation'),
-            $loop = $slider_wrapper.attr('data-loop'),
-            $hash = $slider_wrapper.attr('data-hash') == "true" ? true : false,
-            $height = $slider_wrapper.attr('data-height'),
-            $fullHeight = $slider_wrapper.attr('data-fullHeight'),
-            $header_height = 0,
-            sharp_height = 0,
-            $pagination = $slider_wrapper.attr('data-pagination') == "true" ? true : false;
-
-
-        if ($pagination === true) {
-            var $pagination_class = '#' + $slider_wrapper.attr('id') + ' .swiper-pagination';
-
-            $($pagination_class).on('click', 'span', function(e){
-                e.preventDefault();
-              pacz_swiper.swipeTo($(this).index(), 500);
-            });
-
-            $slider_wrapper.find('.sharp-skip-slider').css('bottom', '14%');
-            } else {
-            var $pagination_class = false;
-        }
-
-        var animationDimensions = function() {
-            if ($.exists('#pacz-header') && !$('#pacz-header').hasClass('transparent-header') && !$('#pacz-header').hasClass('header-structure-vertical')) {
-                $header_height = parseInt($('#pacz-header').attr('data-sticky-height'));
-            }
-            if ($fullHeight === 'true') {
-                sharp_height = abb.fullHeight();
-            } else {
-                sharp_height = $height;
-            }
-            
-        }
-        animationDimensions();
-
-        $(window).on("debouncedresize", function(event) {
-            setTimeout(function() {
-                pacz_sharp_slider_resposnive();
-                animationDimensions();
-            }, 100);
-        });
-
-        if(BrowserDetect.browser == 'IE' && $animation == 'horizontal_curtain') {
-            $animation = 'slide';
-        }
-
-        // remove viewport animations from slider
-        $slider_wrapper.find('.pacz-animate-element').removeClass('pacz-animate-element fade-in scale-up right-to-left left-to-right bottom-to-top top-to-bottom forthy-five-rotate');
-
-        var pacz_swiper = $slider_wrapper.swiper({
-            mode: 'horizontal', 
-            // loop: $loop === 'true' ? true : false,
-            loop: true,
-            roundLengths: true,
-            calculateHeight: true,
-            grabCursor: true,
-            useCSS3Transforms: true,
-            mousewheelControl: false,
-            pagination : $pagination_class,
-            paginationClickable: true,
-            freeModeFluid: true,
-            speed: $speed,
-            autoplay: $pause,
-            progress: true,
-            autoplayDisableOnInteraction: false,
-            hashNav: $hash, 
-            onSwiperCreated: function(swiper) {
-                // if (pacz_detect_ie() == false) {
-                    var prev_active_slide = $slider_wrapper.find('.swiper-slide').eq(0).find('.sharp-slide-content .pacz-sharp-title').text(),
-                        next_active_slide = $slider_wrapper.find('.swiper-slide').eq(2).find('.sharp-slide-content .pacz-sharp-title').text();
-                    //console.log(prev_active_slide + "---" + next_active_slide);
-                    var prev_active_slide_bg = $slider_wrapper.find('.swiper-slide').eq(0).css('background-image'),
-                        next_active_slide_bg = $slider_wrapper.find('.swiper-slide').eq(2).css('background-image');
-                    // console.log(prev_active_slide_bg + "---" + next_active_slide_bg);
-                    var prev_active_slide_bg_video = $slider_wrapper.find('.swiper-slide').eq(0).find('.pacz-video-section-touch').css('background-image'),
-                        next_active_slide_bg_video = $slider_wrapper.find('.swiper-slide').eq(2).find('.pacz-video-section-touch').css('background-image');
-
-                        // console.log(prev_active_slide_bg_video);
-                        // console.log(next_active_slide_bg_video);
-
-                    var prev_active_slide_bg_color = $slider_wrapper.find('.swiper-slide').eq(0).css('background-color'),
-                        next_active_slide_bg_color = $slider_wrapper.find('.swiper-slide').eq(2).css('background-color');
-
-                    if (prev_active_slide.length > 1) {
-                        $prev_arrow.find('.prev-item-caption').show().text(prev_active_slide);
-                        // console.log(prev_active_slide);
-                    }
-
-                    if (typeof prev_active_slide_bg !== 'undefined' && prev_active_slide_bg != "none") {
-                      $prev_arrow.find('.sharp-nav-bg').show().css({ 'background-image': prev_active_slide_bg });
-                      // console.log(prev_active_slide_bg);
-                    } 
-                    else if (typeof prev_active_slide_bg_video !== 'undefined' && prev_active_slide_bg_video != "none") {
-                      $prev_arrow.find('.sharp-nav-bg').show().css({ 'background-image': prev_active_slide_bg_video });
-                      // console.log(prev_active_slide_bg_video);
-                    } 
-                    else if (prev_active_slide_bg_color !== 'undefined') {
-                      $prev_arrow.find('.sharp-nav-bg').show().css({ 'background-color': prev_active_slide_bg_color });
-                      // console.log(prev_active_slide_bg_color);
-                    }
-
-                    if (typeof next_active_slide !== 'undefined') {
-                        $next_arrow.find('.next-item-caption').show().text(next_active_slide);
-                    } 
-
-                    if (typeof next_active_slide_bg !== 'undefined' && next_active_slide_bg != "none") {
-                      $next_arrow.find('.sharp-nav-bg').show().css({ 'background-image': next_active_slide_bg });
-                    } 
-                    else if (typeof next_active_slide_bg_video !== 'undefined' && next_active_slide_bg_video != "none") {
-                      $next_arrow.find('.sharp-nav-bg').show().css({ 'background-image': next_active_slide_bg_video });
-                    } 
-                    else if (typeof next_active_slide_bg_color !== 'undefined') {
-                      $next_arrow.find('.sharp-nav-bg').show().css({ 'background-color': next_active_slide_bg_color });
-                    }
-
-                    if (!$('#pacz-header').hasClass('transparent-header-sticky')) {
-                        if ($first_el == 'true') {
-                            $('#pacz-header.transparent-header').removeClass('light-header-skin dark-header-skin').addClass($slider_wrapper.find('.swiper-slide').eq(1).attr('data-header-skin') + '-header-skin');
-                        }
-                    }
-
-                    var currentSkin = $slider_wrapper.find('.swiper-slide').eq(1).attr("data-header-skin");
-                    $('#' + $slider_wrapper.attr('id') + ' .pacz-sharp-nav a').attr('data-skin', currentSkin);
-                    $($pagination_class).attr('data-skin', currentSkin);
-                    $('#' + $slider_wrapper.attr('id') + ' .sharp-skip-slider').attr('data-skin', currentSkin);
-
-                    $($pagination_class).find('span').append('<a href="#"></a>');
-                    
-
-                    if($nav.hasClass('nav-flip')) {
-                        var slideNextNr = $('.slide-next-nr'),
-                            slidePrevNr = $('.slide-prev-nr'),
-                            slidesAll = $('.slides-all'),
-                            slidesAllNr = swiper.slides.length - 2,
-                            slideNext, 
-                            slidePrev;
-
-                        slidesAll.text(slidesAllNr);
-                        slidePrevNr.text(slidesAllNr);
-                        slideNextNr.text('2');
-                    }
-
-                // } else {
-                //     $next_arrow.find('.next-item-caption').css('display', 'none');
-                //     $prev_arrow.find('.prev-item-caption').css('display', 'none');
-                // }
-
-            },
-            onSlideChangeEnd: function(swiper) {
-
-                // if (pacz_detect_ie() == false) {
-
-                    var currentSlide = $(pacz_swiper.activeSlide()),
-                        currentSkin = currentSlide.attr("data-header-skin");
-                        $('#' + $slider_wrapper.attr('id') + ' .pacz-sharp-nav a').attr('data-skin', currentSkin);
-                        $('#' + $slider_wrapper.attr('id') + ' .sharp-skip-slider').attr('data-skin', currentSkin);
-                        $($pagination_class).attr('data-skin', currentSkin);
-
-
-                        var prev_active_slide = $(pacz_swiper.getSlide(pacz_swiper.activeLoopIndex)).find('.sharp-slide-content .pacz-sharp-title').text(),
-                            next_active_slide = $(pacz_swiper.getSlide(pacz_swiper.activeLoopIndex + 2)).find('.sharp-slide-content .pacz-sharp-title').text();
-
-                        var prev_active_slide_bg = $(pacz_swiper.getSlide(pacz_swiper.activeLoopIndex)).css('background-image'),
-                            next_active_slide_bg = $(pacz_swiper.getSlide(pacz_swiper.activeLoopIndex + 2)).css('background-image');
-
-                        var prev_active_slide_bg_video = $(pacz_swiper.getSlide(pacz_swiper.activeLoopIndex)).find('.pacz-video-section-touch').css('background-image'),
-                            next_active_slide_bg_video = $(pacz_swiper.getSlide(pacz_swiper.activeLoopIndex + 2)).find('.pacz-video-section-touch').css('background-image');
-
-                        var prev_active_slide_bg_color = $(pacz_swiper.getSlide(pacz_swiper.activeLoopIndex)).css('background-color'),
-                            next_active_slide_bg_color = $(pacz_swiper.getSlide(pacz_swiper.activeLoopIndex + 2)).css('background-color');
-
-                        if (typeof prev_active_slide !== 'undefined') {
-                            $prev_arrow.find('.prev-item-caption').show().text(prev_active_slide);
-                            // console.log(prev_active_slide);
-                        }
-
-                        if (typeof prev_active_slide_bg !== 'undefined' && prev_active_slide_bg != "none") {
-                          $prev_arrow.find('.sharp-nav-bg').show().css({ 'background-image': prev_active_slide_bg });
-                          // console.log(prev_active_slide_bg);
-                        } 
-                        else if (typeof prev_active_slide_bg_video !== 'undefined' && prev_active_slide_bg_video != "none") {
-                          $prev_arrow.find('.sharp-nav-bg').show().css({ 'background-image': prev_active_slide_bg_video });
-                          // console.log(prev_active_slide_bg_video);
-                        } 
-                        else if (typeof prev_active_slide_bg_color !== 'undefined') {
-                          $prev_arrow.find('.sharp-nav-bg').show().css({ 'background-color': prev_active_slide_bg_color });
-                          // console.log(prev_active_slide_bg_color);
-                        }
-
-                        if (typeof next_active_slide !== 'undefined') {
-                            $next_arrow.find('.next-item-caption').show().text(next_active_slide);
-                        } 
-
-                        if (typeof next_active_slide_bg !== 'undefined' && next_active_slide_bg != "none") {
-                          $next_arrow.find('.sharp-nav-bg').show().css({ 'background-image': next_active_slide_bg });
-                        } 
-                        else if (typeof next_active_slide_bg_video !== 'undefined' && next_active_slide_bg_video != "none") {
-                          $next_arrow.find('.sharp-nav-bg').show().css({ 'background-image': next_active_slide_bg_video });
-                        } 
-                        else if (typeof next_active_slide_bg_color !== 'undefined') {
-                          $next_arrow.find('.sharp-nav-bg').show().css({ 'background-color': next_active_slide_bg_color });
-                        }
-
-                        if (!$('#pacz-header').hasClass('transparent-header-sticky')) {
-                            if ($first_el == 'true') {
-                                $('#pacz-header.transparent-header').removeClass('light-header-skin dark-header-skin').addClass($(pacz_swiper.getSlide(pacz_swiper.activeLoopIndex + 1)).attr('data-header-skin') + '-header-skin');
-                            }
-                        }
-
-                    var slideNextNr = $('.slide-next-nr'),
-                        slidePrevNr = $('.slide-prev-nr'),
-                        slidesAll = $('.slides-all'),
-                        slidesAllNr = swiper.slides.length -2,
-                        slideNext, 
-                        slidePrev;
-
-                    if( pacz_swiper.activeLoopIndex == 0) {
-                        slidePrev = slidesAllNr;
-                    } else {
-                        slidePrev = pacz_swiper.activeLoopIndex;
-                    }
-
-                    if( pacz_swiper.activeLoopIndex == slidesAllNr - 1) {
-                        slideNext = 1;
-                    } else {
-                        slideNext = pacz_swiper.activeLoopIndex + 2;
-                    }
-
-                    // console.log(swiper.slides.activeLoopIndex)
-
-
-                    slidesAll.text(slidesAllNr);
-                    slidePrevNr.text(slidePrev);
-                    slideNextNr.text(slideNext);
-
-
-                // } else {
-                //     $next_arrow.find('.next-item-caption').css('display', 'none');
-                //     $prev_arrow.find('.prev-item-caption').css('display', 'none');
-                // }
-            },
-            onProgressChange: function(swiper){
-                for (var i = 0; i < swiper.slides.length; i++){
-
-                    var slide = swiper.slides[i];
-                    var progress = slide.progress;
-
-                    // SLIDER ANIMATION EFFECTS
-
-                    if($animation == "vertical_slide") {
-                        var translateX, translateY;
-
-                            translateX = progress*swiper.width;
-                            translateY = progress*sharp_height;
-
-                        swiper.setTransform(slide,'translate3d('+translateX+'px,'+ (-translateY) +'px,0)');
-                    }
-
-                    if($animation == "zoom") {
-                        var scale, scaleContent, translate, opacity, zIndex;
-
-                        if (progress<=0) {
-                            opacity = 1 - Math.min(Math.abs(progress),1);
-                            scale = 1 - Math.min(Math.abs(progress/12),1);
-                            scaleContent = 1;
-                            translate = progress*swiper.width;
-                        }
-                        else {
-                            opacity = 1 - Math.min(Math.abs(progress/2),1);
-                            scale = 1 + Math.min(Math.abs(progress/6),1);
-                            translate = progress*swiper.width;
-                        }
-                            zIndex = (1 - Math.min(Math.abs(progress),1))*10;
-
-                        slide.style.opacity = opacity;
-                        swiper.setTransform(slide,'translate3d('+translate+'px,0,0) scale('+scale+')');
-                        slide.style.zIndex = zIndex;
-                    }
-
-                    if($animation == "zoom_out") {
-                        var scale, translateX, translateY, opacity, zIndex;
-
-                            translateX = progress*swiper.width;
-
-                        if (progress<=0) {
-                            opacity = 1;
-                            scale = 1;
-                            zIndex = 1;
-                            translateY = progress*sharp_height;
-                        }
-                        else if (progress>0){
-                            opacity = (1 - Math.min(Math.abs(progress),1))/2;
-                            scale = 1 - Math.min(Math.abs(progress/2),1);
-                            zIndex = 0;
-                            translateY = 0;
-                        }
-
-                        swiper.setTransform(slide,'translate3d('+translateX+'px,'+ -translateY +'px,0)  scale('+scale+')');
-                        slide.style.opacity = opacity;
-                        slide.style.zIndex = zIndex;
-                    }
-
-                    if($animation == "fade") {
-                        var translateX, opacity, zIndex;
-
-                            translateX = progress*swiper.width;
-                            opacity = 1 - Math.min(Math.abs(progress),1);
-                            zIndex = (1 - Math.min(Math.abs(progress),1))*10;
-
-                        swiper.setTransform(slide,'translate3d('+translateX+'px,0,0)');
-                        slide.style.opacity = opacity;
-                        slide.style.zIndex = zIndex;
-
-                    }
-
-                    if($animation == "horizontal_curtain") {
-                        var translateX, zIndex, transitionTiming;
-                            translateX = progress*swiper.width;
-
-                        if (progress<=0) {
-                            zIndex = 1;
-                            translateX = 0;
-                            transitionTiming = 'ease';
-                        }
-                        else if (progress>0){
-                            zIndex = 0;
-                            translateX = (progress*swiper.width)/2;
-                            transitionTiming = 'ease';
-                        }
-
-                        swiper.setTransform(slide,'translate3d('+(translateX/2)+'px,0,0)');
-                        slide.style.webkitTransitionTimingFunction = transitionTiming;
-                        slide.style.zIndex = zIndex;
-                    }
-
-                    if($animation == "perspective_flip") {
-                        var translateX, translateY, rotateX;
-
-                            translateX = progress*swiper.width;
-                            translateY = progress*sharp_height;
-
-                        if (progress>=0) {
-                            rotateX = 0;
-                        }
-                        else if (progress<0){
-                            rotateX = 70;
-                        }
-
-                        swiper.setTransform(slide,'translate3d('+translateX+'px,'+ (-translateY) +'px,0) rotateX('+rotateX+'deg)');
-                    }
-
-                }
-              },
-              onTouchStart:function(swiper){
-                for (var i = 0; i < swiper.slides.length; i++){
-                  swiper.setTransition(swiper.slides[i], 0);
-                }
-              },
-              onSetWrapperTransition: function(swiper, speed) {
-                for (var i = 0; i < swiper.slides.length; i++){
-                  swiper.setTransition(swiper.slides[i], speed);
-                }
-              }
-
-
-
-        });
-
-        $prev_arrow.click(function(e) {
-            pacz_swiper.swipePrev();
-            e.preventDefault();
-        });
-
-        $next_arrow.click(function(e) {
-            pacz_swiper.swipeNext();
-            e.preventDefault();
-        });
-
-
-        //
-        // PARALLAX
-        //
-        //////////////////////////////////////////////
-
-
-        if ($slider_wrapper.parent().hasClass('pacz-parallax') && !is_touch_device()) {
-            var offset, translateValue,
-                $parent = $slider_wrapper.parent(),
-                height = $parent.outerHeight(),
-                $header = $('#pacz-header'),
-                headerHeight = 0;
-
-
-            if(!$header.hasClass('transparent-header')) {
-                headerHeight = $header.height();
-            }
-
-            if($header.hasClass('header-structure-vertical')) {
-                headerHeight = 0;
-            }
-
-            scrollAnimations.add(function(scrollY) {
-                offset = $parent.offset().top;
-                translateValue = ((scrollY - offset + global_admin_bar_height + headerHeight) * .7);
-                $slider_wrapper.css({'transform' : 'translateY(' + translateValue + 'px)'});
-            });
-        }
-
-    });
-
-
-}
-
-
-
-function pacz_sharp_slider_resposnive() {
-
-
-    $('.pacz-sharp-slider').each(function() {
-
-
-        var $this = $(this),
-            $containers = $this.find('.sharp-slider-holder, .swiper-slide'),
-            $height = $this.attr('data-height'),
-            $fullHeight = $this.attr('data-fullHeight'),
-            $header_height = 0,
-            sharp_full_height = 0;
-
-        if ($.exists('#pacz-header.sticky-header') && !$('#pacz-header').hasClass('transparent-header') && !$('#pacz-header').hasClass('header-structure-vertical') ) {
-            var $header_height = parseInt($('#pacz-header.sticky-header').attr('data-sticky-height'));
-        }
-
-        if ($fullHeight === 'true') {
-            // global_window_height = global_window_height - $header_height - global_admin_bar_height; // after globalising it brought error probably because admin bar was not generated by here and was counted as 0
-            sharp_full_height = abb.fullHeight();
-        } else {
-            sharp_full_height = $height;
-        }
-
-
-        $containers.css('height', sharp_full_height);
-        $this.css('height', sharp_full_height);
-
-
-
-        $this.find('.swiper-slide').each(function() {
-
-
-            var $this = $(this),
-                $content = $this.find('.sharp-slide-content'),
-                $holder = $this.find('.sharp-content-holder');
-
-            if ($this.hasClass('left_center') || $this.hasClass('center_center') || $this.hasClass('right_center')) {
-
-                var $this_height_half = $content.outerHeight() / 2,
-                    $window_half = sharp_full_height / 2;
-
-                $holder.css('marginTop', ($window_half - $this_height_half));
-            }
-
-            if ($this.hasClass('left_bottom') || $this.hasClass('center_bottom') || $this.hasClass('right_bottom')) {
-                if(global_window_width > 960) {
-                    var $distance_from_top = sharp_full_height - $content.outerHeight() - 160;
-                    $holder.css('marginTop', ($distance_from_top));    
-                } else {
-                    var $this_height_half = $content.outerHeight() / 2,
-                    $window_half = sharp_full_height / 2;
-
-                    $holder.css('marginTop', ($window_half - $this_height_half));
-                }
-                
-            }
-
-        });
-
-        $this.find('.sharp-slider-loading').fadeOut();
-    });
-
-}
-
-
-
-function pacz_tab_slider() {
-
-    $('.pacz-tab-slider').each(function(i, val) {
-        var $slider_wrapper = $(this),
-            $slider_holder = $slider_wrapper.find('.sharp-slider-holder'),
-            $pause = $slider_wrapper.attr('data-pause'),
-            $speed = $slider_wrapper.attr('data-speed'),
-            $height = $slider_wrapper.attr('data-height'),
-            $fullHeight = $slider_wrapper.attr('data-fullHeight'),
-            content = $slider_wrapper.find('.pacz-tab-slider-content')[0],
-            $header_height = 0,
-            sharp_height = 0,
-            content_height = $(content).height(),
-            $pagination = $slider_wrapper.attr('data-pagination') == "true" ? true : false,
-            $burger = $slider_wrapper.find('i'),
-            $nav = $('.pacz-tab-slider-pagination'),
-            $menu_titles = $nav.find('.pacz-tab-slider-menu-titles a');
-
-        if ($pagination === true) {
-            var $pagination_class = '#' + $slider_wrapper.attr('id') + ' .swiper-pagination';
-
-            $($pagination_class).on('click', 'span', function(e){
-              e.preventDefault();
-              pacz_swiper.swipeTo($(this).index(), 500);
-            });
-
-            } else {
-            var $pagination_class = false;
-        }
-
-        // remove viewport animations from slider
-        $slider_wrapper.find('.pacz-animate-element').removeClass('pacz-animate-element fade-in scale-up right-to-left left-to-right bottom-to-top top-to-bottom forthy-five-rotate');
-
-
-        var animationDimensions = function() {
-            if ($.exists('#pacz-header') && !$('#pacz-header').hasClass('header-structure-vertical')) {
-                $header_height = parseInt($('#pacz-header').attr('data-sticky-height'));
-            }
-            if ($fullHeight == 'true') {
-                sharp_height = global_window_height - $header_height - global_admin_bar_height;
-            } else {
-                sharp_height = $height;
-            }
-            //console.log('sharp_height: ' + sharp_height);
-        }
-        animationDimensions();
-
-
-        var dynamicHeight = true;
-        function sliderHeight() {
-
-            if($slider_wrapper.find('.swiper-slide-active').length) {
-                content_height = $slider_wrapper.find('.swiper-slide-active').height();
-            }
-
-            var tab_content = $slider_wrapper.find('.pacz-tab-slider-content')[0];
-            //$tab_content_inner_height = $(tab_content).find('.pacz-grid').height() - 300,
-
-
-            if (global_window_width < 960) {
-                $slider_wrapper.find('.pacz-tab-slider-content').css({
-                    'paddingTop' : 0,
-                    'min-height' : 0
-                });
-            }
-            
-            if ($fullHeight == 'true') {
-                $slider_wrapper.find('.pacz-tab-slider-content').css({
-                    'min-height' : sharp_height + 'px'
-                });
-            }
-
-            // console.log(content_height);
-        } 
-        
-
-        var pacz_swiper = $slider_wrapper.swiper({
-            mode: 'horizontal',
-            loop: true,
-            grabCursor: false,
-            useCSS3Transforms: true,
-            mousewheelControl: false,
-            pagination : $pagination_class,
-            paginationClickable: true,
-            freeModeFluid: true,
-            calculateHeight: dynamicHeight, 
-            speed: $speed,
-            autoplay: $pause,
-            simulateTouch: false,
-            autoplayDisableOnInteraction: false,
-            onSwiperCreated: function(swiper) {
-                var currentSkin = $slider_wrapper.find('.swiper-slide').eq(1).attr("data-skin");
-                $($pagination_class).find('span').append('<a href="#"></a>');
-                $($pagination_class).attr('data-skin', currentSkin);
-
-                $slider_wrapper.find('.sharp-slider-loading').fadeOut();
-            },
-            onSlideChangeEnd: function() {
-                var currentSlide = $(pacz_swiper.activeSlide()),
-                    currentSkin = currentSlide.attr("data-skin");
-
-                    $($pagination_class).attr('data-skin', currentSkin);
-            }
-        });
-
-        sliderHeight();
-
-        $(window).on('resize', function() {
-            setTimeout(function() {
-                sliderHeight();
-                pacz_swiper.reInit();
-                // pacz_swiper.params.calculateHeight = dynamicHeight;
-            }, 200);
-        });
-
-    });
-}
-;
 /* Swipe Slideshow */
 /* -------------------------------------------------------------------- */
 
@@ -2434,117 +1790,7 @@ function pacz_gallery_thumbs_width() {
         }
     });
 };
-/* Section Background Parallax Effects */
-/* -------------------------------------------------------------------- */
 
-function pacz_section_parallax() {
-    if (is_touch_device() || global_window_width < 800) {
-        return false;
-    }
-    $('.pacz-page-section.parallax-true').each(function() {
-
-        var $this = $(this),
-            $direction = $this.attr('data-direction'),
-            $speedFactor = $this.attr('data-speedFactor');
-
-        if ($direction === 'horizontal_mouse' || $direction === 'vertical_mouse' || $direction === 'both_axis_mouse') {
-
-            var $yparallax = $this.attr('data-direction') === "vertical_mouse" ? true : false,
-                $xparallax = $this.attr('data-direction') === "horizontal_mouse" ? true : false,
-                $xyparallax = $this.attr('data-direction') === "both_axis_mouse" ? true : false;
-
-            if ($xyparallax === true) {
-                $xparallax = true;
-                $yparallax = true;
-            }
-
-
-            // $(this).find('.parallax-layer').parallax({
-            //     mouseport: $this,
-            //     yparallax: $yparallax,
-            //     xparallax: $xparallax,
-            //     decay: 0.8,
-            //     frameDuration: 50
-            // });
-
-            /* Page Section parallax */
-            /* -------------------------------------------------------------------- */
-
-
-                var $parallaxContainer = $this; //our container
-                var $parallaxItem = $parallaxContainer.find(".parallax-layer"); 
-                var fixer = -0.004;     //experiment with the value
-                var speedX = 50;                 
-                var speedY = 50;
-
- 
-                $parallaxContainer.on("mousemove", function(event){  
-                    var position = $parallaxContainer.offset();                      
-                    var pageX =  $xparallax ? (event.clientX - position.left) - ($parallaxContainer.width() * 0.5) : 0;  
-                    var pageY =  $yparallax ? (event.pageY - position.top) - ($parallaxContainer.height() * 0.5) : 0; 
-                        
-
-                    TweenLite.to($parallaxItem, 3, { scale: 1.2 });
-                    TweenLite.to($parallaxItem, 1, {
-                        x: (pageX * speedX)*fixer,     
-                        y: (pageY * speedY)*fixer
-                      
-                    });  
-                });     
-
-                $parallaxContainer.on("mouseleave", function() {
-                    TweenLite.to($parallaxItem, 60, { x: 0, y: 0, scale: 1 });
-                });
-
-        } else {
-
-            // var pacz_skrollr = skrollr.init({
-            //     forceHeight: false,
-            //     mobileCheck: function() {
-            //         return false;
-            //     }
-            // });
-            // pacz_skrollr.refresh($('.pacz-page-section')); 
-
-            var $this = $(this),
-                $offset = $this.offset(),
-                $speed_factor = 0.16;
-
-         
-                if($offset.top > global_window_height) {
-                    $speed_factor = 0.2;
-                } else {
-                    $speed_factor = -0.2;
-                }
-
-            if ($direction == 'vertical') $this.parallaxScroll("50%", $speed_factor, 'vertical');
-            if ($direction == 'horizontal') $this.parallaxScroll("50%", 0.3, 'horizontal');
-        }
-
-    });
-
-}
-
-
-/*
-function pacz_image() {
-
-    $('.pacz-image').each(function() {
-        var $this = $(this),
-            width = $this.outerWidth(),
-            caption_h = $this.find('.pacz-image-hover').outerHeight(),
-            caption_w = width - 40;
-
-            //console.log(caption_h);
-
-        $this.find('.pacz-image-hover').css({
-            'width': caption_w,
-            'margin-top': -(caption_h / 2),
-            'margin-left': -(caption_w / 2)
-        });
-    });
-}
-*/
 
 function pacz_center_caption() {
     $('.pacz-parent-element').each(function() {
@@ -2853,38 +2099,7 @@ function pacz_event_countdown() {
         });
     }
 };
-/* Instagram Feed */
-/* -------------------------------------------------------------------- */
-
-function pacz_instagram() {
-    if ($.exists('.pacz-instagram-feeds')) {
-
-        $('.pacz-instagram-feeds').each(function() {
-            var $this = $(this),
-                $size = $this.attr('data-size'),
-                $sort_by = $this.attr('data-sort'),
-                $count = $this.attr('data-count'),
-                $userid = parseInt($this.attr('data-userid')),
-                $access_token = $this.attr('data-accesstoken'),
-                $column = $this.attr('data-column'),
-                $id = $this.attr('id');
-
-
-
-            var feed = new Instafeed({
-                get: "user",
-                target: $id,
-                resolution: $size,
-                sortBy: $sort_by,
-                limit: $count,
-                userId: $userid,
-                accessToken: $access_token,
-                template: '<a class="featured-image ' + $column + '-columns" href="{{link}}"><div class="item-holder"><img src="{{image}}" /><div class="hover-overlay"></div></div></a>'
-            });
-            feed.run();
-        });
-    }
-};/* Accordions */
+/* Accordions */
 
 function pacz_accordion() {
 
@@ -3085,111 +2300,6 @@ function section_to_full_height() {
 }
 
 
-
-/* Page Section Intro Effects */
-/* -------------------------------------------------------------------- */
-
-function pacz_section_intro_effects() {
-  if ( !is_touch_device() || BrowserDetect.browser == "IE" ) {
-    if($.exists('.pacz-page-section.intro-true')) {
-      var IEpadding = (BrowserDetect.browser == "IE") ? 50 : 0;
-
-      $('.pacz-page-section.intro-true').each(function() {
-          var $this = $(this),
-              // pageCnt = $('.theme-page-wrapper'),
-              $pageCnt = $this.nextAll('div'),
-              windowHeight = abb.fullHeight(),
-              effectName = $this.attr('data-intro-effect'),
-              $header = $('#pacz-header'),
-              header_height = 0;
-
-          if ($header.length && !$('#pacz-header').hasClass('header-structure-vertical')) {
-              header_height += parseInt($header.attr('data-sticky-height')) + 50;
-          }
-
-
-          var effect = {
-              fade :     new TimelineLite({paused: true})
-                        .set($pageCnt, { opacity: 0, y: (windowHeight * 0.3) })
-                        .set($pageCnt.first(), { paddingTop: header_height })
-                        .to($this, 1, { opacity: 0, ease:Power2.easeInOut })
-                        .set($this, { display: "none" })
-                        .to($pageCnt, 1, { opacity: 1, y: 0, ease:Power2.easeInOut}, "-=.7"),
-
-              zoom_out : new TimelineLite({paused: true})
-                        .set($pageCnt, { opacity: 0, y: (windowHeight * 0.3) })
-                        .set($pageCnt.first(), { paddingTop: header_height })
-                        .to($this, 1.5, { opacity: .8, scale: 0.8, y: -windowHeight - 100, ease:Strong.easeInOut })
-                        .set($this, { display: "none" })
-                        .to($pageCnt, 1.5, { opacity: 1, y: 0, ease:Strong.easeInOut}, "-=1.3"),
-
-              shuffle :  new TimelineLite({paused: true})
-                        .to($this, 1.5, { y: -windowHeight/2, ease:Strong.easeInOut })
-                        .to($this.nextAll('div').first(), 1.5, { paddingTop: (windowHeight/2 + 50), ease:Strong.easeInOut }, "-=1.3")
-          }
-
-          $this.sectiontrans({
-            effect : effectName,
-          });
-
-          $('body').on('page_intro', function() {
-            effect[effectName].play();
-          });
-
-          $('body').on('page_outro', function() {
-            effect[effectName].reverse();
-          });
-
-      });
-    }
-  } else {
-    $('.pacz-page-section.intro-true').each(function() {
-      $(this).attr('data-intro-effect', '');
-    });
-  }
-};
-/* Expandable Page Sections */
-/* -------------------------------------------------------------------- */
-
-function pacz_expandable_page_section() {
-
-
-
-    $('.section-expandable-true').each(function() {
-
-        var $container = $(this).find('.pacz-padding-wrapper').hide();
-
-        $(this).on('click', function() {
-            var $this = $(this);
-            if (!$this.hasClass('active-toggle')) {
-                 $this.addClass('active-toggle');
-                $container.slideDown(500);
-            }
-            setTimeout(function() {
-                //pacz_image();
-                pacz_lightbox_init();
-            }, 1000);
-        });
-
-    });
-
-
-    $(".section-expandable-true").on('click', function(event) {
-        if (event.stopPropagation) {
-          event.stopPropagation();
-        } else if (window.event) {
-          window.event.cancelBubble = true;
-        }
-    });
-
-    $('body').on('click', function() {
-        $('.section-expandable-true').removeClass('active-toggle');
-        $('.section-expandable-true .pacz-padding-wrapper').slideUp(400);
-    });
-
-}
-;
-
 /* Flickr Feeds */
 /* -------------------------------------------------------------------- */
 
@@ -3221,73 +2331,7 @@ function pacz_flickr_feeds() {
 }
 pacz_flickr_feeds();
 ;
-/* Flexslider init */
-/* -------------------------------------------------------------------- */
 
-function pacz_flexslider_init() {
-
-
-    $('.pacz-flexslider.pacz-script-call').each(function() {
-
-        if ($(this).parents('.pacz-tabs').length || $(this).parents('.pacz-accordion').length) {
-            $(this).removeData("flexslider");
-        }
-
-
-        var $this = $(this),
-            $selector = $this.attr('data-selector'),
-            $animation = $this.attr('data-animation'),
-            $easing = $this.attr('data-easing'),
-            $direction = $this.attr('data-direction'),
-            $smoothHeight = $this.attr('data-smoothHeight') == "true" ? true : false,
-            $slideshowSpeed = $this.attr('data-slideshowSpeed'),
-            $animationSpeed = $this.attr('data-animationSpeed'),
-            $controlNav = $this.attr('data-controlNav') == "true" ? true : false,
-            $directionNav = $this.attr('data-directionNav') == "true" ? true : false,
-            $pauseOnHover = $this.attr('data-pauseOnHover') == "true" ? true : false,
-            $isCarousel = $this.attr('data-isCarousel') == "true" ? true : false;
-
-        if ($selector != undefined) {
-            var $selector_class = $selector;
-        } else {
-            var $selector_class = ".pacz-flex-slides > li";
-        }
-
-        if ($isCarousel == true) {
-            var $itemWidth = parseInt($this.attr('data-itemWidth')),
-                $itemMargin = parseInt($this.attr('data-itemMargin')),
-                $minItems = parseInt($this.attr('data-minItems')),
-                $maxItems = parseInt($this.attr('data-maxItems')),
-                $move = parseInt($this.attr('data-move'));
-        } else {
-            var $itemWidth = $itemMargin = $minItems = $maxItems = $move = 0;
-        }
-
-        $this.flexslider({
-            selector: $selector_class,
-            animation: $animation,
-            easing: $easing,
-            direction: $direction,
-            smoothHeight: $smoothHeight,
-            slideshow: true,
-            slideshowSpeed: $slideshowSpeed,
-            animationSpeed: $animationSpeed,
-            controlNav: $controlNav,
-            directionNav: $directionNav,
-            pauseOnHover: $pauseOnHover,
-            prevText: "",
-            nextText: "",
-
-            itemWidth: $itemWidth,
-            itemMargin: $itemMargin,
-            minItems: $minItems,
-            maxItems: $maxItems,
-            move: $move,
-        });
-
-    });
-
-}
 
 function pacz_fade_onload() {
 
@@ -3551,123 +2595,11 @@ var currentTallest = 0,
  });
 }
 
-/* Animated Columns */
-    /* -------------------------------------------------------------------- */
-    function pacz_animated_columns() {
 
-        function prepareCols() {
-
-            equalheight('.vc_row .animated-column-title');
-            equalheight('.vc_row .animated-column-desc');
-
-            $('.pacz-animated-columns').each(function() {
-                var $this = $(this);
-
-                if ($this.hasClass('full-style')) {
-                    $this.find('.animated-column-item').each(function() {
-                        var $this = $(this),
-                            contentHeight = $this.find('.animated-column-icon').innerHeight() + $this.find('.animated-column-title').innerHeight() + $this.find('.animated-column-desc').innerHeight() + $this.find('.animated-column-btn').innerHeight();
-
-                        $this.height(contentHeight * 1.5 + 50);
-
-                        var $box_height = $this.outerHeight(true),
-                            $icon_height = $this.find('.animated-column-icon').height();
-
-                        $this.find('.animated-column-holder').css({
-                            'paddingTop': $box_height / 2 - ($icon_height)
-                        });
-
-
-                        $this.animate({opacity:1}, 300);
-                    });
-                } else {
-                    $this.find('.animated-column-item').each(function() {
-                        var $this = $(this),
-                            $half_box_height = $this.outerHeight(true) / 2,
-                            $icon_height = $this.find('.animated-column-icon').outerHeight(true)/2,
-                            $title_height = $this.find('.animated-column-simple-title').outerHeight(true)/2;
-
-                        $this.find('.animated-column-holder').css({
-                            'paddingTop': $half_box_height - $icon_height
-                        });
-                        $this.find('.animated-column-title').css({
-                            'paddingTop': $half_box_height - $title_height
-                        });
-
-                        $this.animate({opacity:1}, 300);
-
-                    });
-                }
-
-            });
-        }
-        prepareCols();
-
-        $(window).on("resize", function() {
-            prepareCols();
-        });
-
-        $(".pacz-animated-columns.full-style .animated-column-item").hover(
-            function() {
-                TweenLite.to($(this).find(".animated-column-holder"), 0.5, {
-                    top: '-15%',
-                    ease: Back.easeOut
-                });
-                TweenLite.to($(this).find(".animated-column-desc"), 0.5, {
-                    top: '-50%',
-                    ease: Expo.easeOut
-                }, 0.4);
-                TweenLite.to($(this).find(".animated-column-btn"), 0.3, {
-                    top: '-50%',
-                    ease: Expo.easeOut
-                }, 0.6);
-            },
-            function() {
-
-                TweenLite.to($(this).find(".animated-column-holder"), 0.5, {
-                    top: '0%',
-                    ease: Back.easeOut, easeParams:[3]
-                });
-                TweenLite.to($(this).find(".animated-column-desc"), 0.5, {
-                    top: '100%',
-                    ease: Back.easeOut
-                }, 0.4);
-                TweenLite.to($(this).find(".animated-column-btn"), 0.5, {
-                    top: '100%',
-                    ease: Back.easeOut
-                }, 0.2);
-            }
-        );
-
-        $(".pacz-animated-columns.simple-style .animated-column-item, .pacz-animated-columns.simple_text-style .animated-column-item").hover(
-            function() {
-                var colHolderHeight = $(this).height(); 
-                TweenLite.to($(this).find(".animated-column-holder"), 0.7, {
-                    y: colHolderHeight,
-                    ease: Expo.easeOut
-                });
-                TweenLite.to($(this).find(".animated-column-title"), 0.7, {
-                    y: colHolderHeight,
-                    ease: Back.easeOut
-                }, 0.2);
-            },
-            function() {
-                TweenLite.to($(this).find(".animated-column-holder"), 0.7, {
-                    y: 0,
-                    ease: Expo.easeOut
-                });
-                TweenLite.to($(this).find(".animated-column-title"), 0.7, {
-                    y: 0,
-                    ease: Back.easeOut
-                }, 0.2);
-            }
-        );
-
-    }
-    ;$(document).ready(function() {
+$(document).ready(function() {
 
     pacz_go_to_top();
-    pacz_instagram();
+    //pacz_instagram();
     pacz_main_navigation_functions();
     // pacz_main_navigation();
     sticky_header();
@@ -3678,7 +2610,7 @@ var currentTallest = 0,
     pacz_google_maps();
     pacz_event_countdown();
     pacz_text_typer();
-    pacz_flexslider_init();
+    //pacz_flexslider_init();
     pacz_one_page_scroller();
     pacz_one_pager_resposnive();
     pacz_child_ul_toggle_event();
@@ -3688,44 +2620,44 @@ var currentTallest = 0,
 
     $(window).load(function() {
         pacz_update_globals();
-        pacz_animated_columns();
+        //pacz_animated_columns();
         pacz_fade_onload();
         pacz_lightbox_init();
 		//isotop_load_fix2();
         //pacz_image();
         pacz_gallery_image();
-        pacz_window_scroller();
-        pacz_expandable_page_section();
+        //pacz_window_scroller();
+        //pacz_expandable_page_section();
         pacz_accordion();
         pacz_employees();
 		pacz_causes();
         pacz_process_steps();
         pacz_gallery_thumbs_width();
-        pacz_sharp_slider_init();
-        pacz_sharp_slider_resposnive();
-        pacz_tab_slider();
+        //pacz_sharp_slider_init();
+        //pacz_sharp_slider_resposnive();
+       // pacz_tab_slider();
         pacz_swipe_slider();
         pacz_hash_scroll();
         pacz_center_caption();
         loops_iosotop_init();
         isotop_load_fix();
         pacz_page_title_intro();
-        pacz_section_intro_effects();
+        //pacz_section_intro_effects();
         pacz_secondary_header_res();
         pacz_tabs();
         secondary_header();
         //scrollAnimations(); 
-        pacz_theatre_responsive_calculator();
-        pacz_mobile_tablet_responsive_calculator();
+        //pacz_theatre_responsive_calculator();
+        //pacz_mobile_tablet_responsive_calculator();
         pacz_button_animation();
         pacz_tabs_responsive();
         pacz_header_wpml();
         pacz_vertical_menu_submenu();
         pacz_theatre_autoplay_freeze();
         pacz_imagebox_autoplay_freeze();
-        pacz_section_parallax();
-        shop_isotop_init();
-        shop_categories_isotop_init();
+       // pacz_section_parallax();
+        //shop_isotop_init();
+       // shop_categories_isotop_init();
         pacz_one_pager_resposnive();
         pacz_main_nav_scroll();
         section_to_full_height();
@@ -3741,16 +2673,16 @@ var currentTallest = 0,
         pacz_main_navigation_functions();
         pacz_employees();
 		pacz_causes();
-        pacz_window_scroller();
-        pacz_section_parallax();
-        pacz_section_intro_effects();
+        //pacz_window_scroller();
+        //pacz_section_parallax();
+        //pacz_section_intro_effects();
         // pacz_page_title_intro();
         pacz_secondary_header_res();
         secondary_header();
         pacz_center_caption();
         pacz_one_pager_resposnive();
-        pacz_theatre_responsive_calculator();
-        pacz_mobile_tablet_responsive_calculator();
+       // pacz_theatre_responsive_calculator();
+       // pacz_mobile_tablet_responsive_calculator();
         transparent_header_sticky();
         sticky_header();
         pacz_tabs_responsive();
@@ -3969,148 +2901,6 @@ var currentTallest = 0,
         });
     }
 
-    /* Theatre Slider Responsive Calculator */
-    /* -------------------------------------------------------------------- */
-
-    function pacz_theatre_responsive_calculator() {
-        var $laptopContainer = $(".laptop-theatre-slider");
-        var $computerContainer = $(".computer-theatre-slider");
-
-        if ($.exists('.laptop-theatre-slider')) {
-            $laptopContainer.each(function() {
-                var $this = $(this),
-                    $window = $(window),
-                    $windowWidth = $window.outerWidth(),
-                    $windowHeight = $window.outerHeight(),
-                    $width = $this.outerWidth(),
-                    $height = $this.outerHeight(),
-                    $paddingTop = 32,
-                    $paddingRight = 110,
-                    $paddingBottom = 47,
-                    $paddingLeft = 110;
-
-                var $player = $this.find('.player-container');
-
-                if ($windowWidth > $width) {
-                    $player.css({
-                        'padding-left': ($width * $paddingLeft) / 920,
-                        'padding-right': ($width * $paddingRight) / 920,
-                        'padding-top': ($height * $paddingTop) / 536,
-                        'padding-bottom': ($height * $paddingBottom) / 536,
-                    });
-                }
-
-            });
-        }
-
-        if ($.exists('.computer-theatre-slider')) {
-            $computerContainer.each(function() {
-                var $this = $(this),
-                    $window = $(window),
-                    $windowWidth = $window.outerWidth(),
-                    $windowHeight = $window.outerHeight(),
-                    $width = $this.outerWidth(),
-                    $height = $this.outerHeight(),
-                    $paddingTop = 37,
-                    $paddingRight = 35,
-                    $paddingBottom = 190,
-                    $paddingLeft = 38;
-
-                var $player = $this.find('.player-container');
-
-                if ($windowWidth > $width) {
-                    $player.css({
-                        'padding-left': ($width * $paddingLeft) / 920,
-                        'padding-right': ($width * $paddingRight) / 920,
-                        'padding-top': ($height * $paddingTop) / 705,
-                        'padding-bottom': ($height * $paddingBottom) / 705,
-                    });
-                }
-
-            });
-        }
-
-    }
-
-    /* Mobile and Tablet Slideshow Responsive Calculator */
-    /* -------------------------------------------------------------------- */
-    function pacz_mobile_tablet_responsive_calculator() {
-        var $mobilePortrait = $(".pacz-mobile-slideshow.portrait-style");
-        var $mobileLandscape = $(".pacz-mobile-slideshow.landscape-style");
-        var $tabletPortrait = $(".pacz-tablet-slideshow");
-
-        if ($.exists(".pacz-mobile-slideshow.portrait-style")) {
-            $mobilePortrait.each(function() {
-                var $this = $(this),
-                    $window = $(window),
-                    $windowWidth = $window.outerWidth(),
-                    $windowHeight = $window.outerHeight(),
-                    $width = $this.outerWidth(),
-                    $height = $this.outerHeight(),
-                    $paddingTop = 106,
-                    $paddingRight = 25,
-                    $paddingBottom = 100,
-                    $paddingLeft = 30;
-
-                var $player = $this.find(".slideshow-container");
-
-                $player.css({
-                    "padding-left": ($width * $paddingLeft) / 357,
-                    "padding-right": ($width * $paddingRight) / 357,
-                    "padding-top": ($height * $paddingTop) / 741,
-                    "padding-bottom": ($height * $paddingBottom) / 735,
-                });
-
-            });
-        }
-
-        if ($.exists(".pacz-mobile-slideshow.landscape-style")) {
-            $mobileLandscape.each(function() {
-                var $this = $(this),
-                    $window = $(window),
-                    $windowWidth = $window.outerWidth(),
-                    $windowHeight = $window.outerHeight(),
-                    $width = $this.outerWidth(),
-                    $height = $this.outerHeight(),
-                    $paddingTop = 40,
-                    $paddingRight = 125,
-                    $paddingBottom = 40,
-                    $paddingLeft = 135;
-
-                var $player = $this.find(".slideshow-container");
-                $player.css({
-                    "padding-left": ($width * $paddingLeft) / 902,
-                    "padding-right": ($width * $paddingRight) / 902,
-                    "padding-top": ($height * $paddingTop) / 436,
-                    "padding-bottom": ($height * $paddingBottom) / 436,
-                });
-            });
-        }
-
-        if ($.exists(".pacz-tablet-slideshow")) {
-            $tabletPortrait.each(function() {
-                var $this = $(this),
-                    $window = $(window),
-                    $windowWidth = $window.outerWidth(),
-                    $windowHeight = $window.outerHeight(),
-                    $width = $this.outerWidth(),
-                    $height = $this.outerHeight(),
-                    $paddingTop = 78,
-                    $paddingRight = 36,
-                    $paddingBottom = 83,
-                    $paddingLeft = 30;
-
-                var $player = $this.find(".slideshow-container");
-                $player.css({
-                    "padding-left": ($width * $paddingLeft) / 501,
-                    "padding-right": ($width * $paddingRight) / 501,
-                    "padding-top": ($height * $paddingTop) / 739,
-                    "padding-bottom": ($height * $paddingBottom) / 739,
-                });
-            });
-        }
-    }
-
     /* Imagebox Video Player Autoplay Freeze
     /* -------------------------------------------------------------------- */
 
@@ -4160,42 +2950,6 @@ var currentTallest = 0,
                 }
             });
         });
-    }
-
-    function shop_isotop_init() {
-        if ($.exists('.products') && !$('.products').hasClass('related')) {
-            $('.products.isotope-enabled').each(function() {
-                //console.log('shop_isotop_init_inside');
-                if (!$(this).parents('.pacz-woocommerce-carousel').length) {
-                    var $woo_container = $(this),
-                        $container_item = '.products .product';
-
-                    $woo_container.isotope({
-                        itemSelector: $container_item,
-                        masonry: {
-                            columnWidth: 1
-                        }
-                    });
-                }
-            });
-        }
-    }
-
-    function shop_categories_isotop_init() {
-        if ($.exists('.pacz-product-categories')) {
-            $('.pacz-product-categories-list').each(function() {
-                //console.log('shop_isotop_init_inside');
-                var $woo_container = $(this),
-                    $container_item = '.pacz-product-categories-list .product-item';
-
-                $woo_container.isotope({
-                    itemSelector: $container_item,
-                    masonry: {
-                        columnWidth: 1
-                    }
-                });
-            });
-        }
     }
 
 
@@ -5807,22 +4561,7 @@ jQuery(".header-hover-style-1 .current-menu-item a.menu-item-link").append('<div
     e.preventDefault();
   });
   
- /* $('.chosen').chosen({
-    width: '100%',
-    allow_single_deselect: true,
-	disable_search_threshold: 10,
-	no_results_text: 'Oops, nothing found!',
-	rtl: true,
-	
-});*/
- jQuery('.pacz-select2').select2();
-// $('.select2 span').addClass('needsclick')
+ jQuery('.pacz-select2, .widget_archive select, .widget_categories select, .widget_text select').select2();
 
-/*var $owl = $( '.alsp-listings-block-content .owl-carousel, .alsp-categories-row.owl-carousel, testimonial-main .owl-carousel' );
-	$owl.hide();
-$owl.on('initialized.owl.carousel', function(event){ 
-	$owl.show();
-});
-$owl.owlCarousel();*/
 
 });

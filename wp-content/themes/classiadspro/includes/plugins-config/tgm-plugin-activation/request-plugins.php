@@ -41,152 +41,31 @@ function pacz_classiadspro_register_required_plugins() {
      * If the source is NOT from the .org repo, then source is also required.
      */
 	 
-	 $dynamic_url = 'https://assets.designinvento.net/plugins/classiadspro/5-6/';
+	$dynamic_url = 'https://assets.designinvento.net/plugins/classiadspro/5-8/';
     $plugins = array(
-
-
-
-        // This is an example of how to include a plugin from the WordPress Plugin Repository
-		
         array(
-            'name' => 'WPBakery Page Builder',
-            'slug' => 'js_composer',
-            'source' => $dynamic_url.'js_composer.zip',
+            'name' => 'Designinvento Templates',
+            'slug' => 'designinvento-templates',
+            'source' => $dynamic_url.'designinvento-templates.zip',
             'required' => true,
-            'version' => '6.0.5',
+            'version' => '1.3',
 			'is_automatic' => true, // automatically activate plugins after installation
             'force_activation' => false,
             'force_deactivation' => false
         ),
 		array(
-            'name' => 'Pacz Custom Posts', // The plugin name.
-            'slug' => 'pacz-custom-posts', // The plugin slug (typically the folder name).
+            'name' => 'ClassiadsPro Custom Posts',
+            'slug' => 'pacz-custom-posts',
             'source' => $dynamic_url.'pacz-custom-posts.zip',
-            'required' => true, // If false, the plugin is only 'recommended' instead of required.
-            'version' => '2.12',
+            'required' => true,
+            'version' => '2.16',
 			'is_automatic' => true, // automatically activate plugins after installation
             'force_activation' => false,
             'force_deactivation' => false
         ),
-		array(
-            'name' => ' Ultimate Addons for WPBakery Page Builder',
-            'slug' => 'Ultimate_VC_Addons',
-            'source' => $dynamic_url.'Ultimate_VC_Addons.zip',
-            'required' => false,
-            'version' => '3.19.0',
-			'is_automatic' => true, // automatically activate plugins after installation
-            'force_activation' => false,
-            'force_deactivation' => false
-        ),
-		array(
-            'name' => 'Slider Revolution',
-            'slug' => 'revslider',
-            'source' => $dynamic_url.'revslider.zip',
-            'required' => false,
-            'version' => '5.4.8.2',
-			'is_automatic' => true, // automatically activate plugins after installation
-            'force_activation' => false,
-            'force_deactivation' => false
-        ),
-		array(
-            'name' => 'AccessPress Social Login',
-            'slug' => 'AccessPress_Social_Login',
-            'source' => $dynamic_url.'AccessPress_Social_Login.zip',
-            'required' => false,
-            'version' => '2.0.4',
-			'is_automatic' => true, // automatically activate plugins after installation
-            'force_activation' => false,
-            'force_deactivation' => false
-        ),
-		array(
-            'name' => 'DHVC Form',
-            'slug' => 'dhvc-form',
-            'source' => $dynamic_url.'dhvc-form.zip',
-            'required' => false,
-            'version' => '2.2.33',
-			'is_automatic' => true, // automatically activate plugins after installation
-            'force_activation' => false,
-            'force_deactivation' => false
-        ),
-		array(
-            'name' => 'All-in-One WP Migration',
-            'slug' => 'all-in-one-wp-migration',
-            'source' => '',
-            'required' => false,
-            'version' => '',
-			'is_automatic' => true, // automatically activate plugins after installation
-            'force_activation' => false,
-            'force_deactivation' => false
-        ),
-		array(
-            'name' => 'Classiads Templates By Designinvento',
-            'slug' => 'all-in-one-wp-migration-di-templates',
-            'source' => $dynamic_url.'all-in-one-wp-migration-di-templates.zip',
-            'required' => false,
-            'version' => '1.8',
-			'is_automatic' => true, // automatically activate plugins after installation
-            'force_activation' => false,
-            'force_deactivation' => false
-        ),
-		array(
-            'name' => 'Taxonomy Terms Order',
-            'slug' => 'taxonomy-terms-order',
-            'source' => '',
-            'required' => false,
-            'version' => '',
-			'is_automatic' => true, // automatically activate plugins after installation
-            'force_activation' => false,
-            'force_deactivation' => false
-        ),
-		array(
-            'name' => 'WooCommerce',
-            'slug' => 'woocommerce',
-            'source' => '',
-            'required' => false,
-            'version' => '',
-            'force_activation' => false,
-            'force_deactivation' => false
-        ),
-		/* array(
-            'name' => 'GeoDirectory',
-            'slug' => 'geodirectory',
-            'source' => '',
-            'required' => false,
-            'version' => '',
-            'force_activation' => false,
-            'force_deactivation' => false
-        ),
-		array(
-            'name' => 'User Dashboard For GeoDirectory', // The plugin name.
-            'slug' => 'gd-user-dashboard', // The plugin slug (typically the folder name).
-            'source' => $dynamic_url.'gd-user-dashboard.zip',
-            'required' => false, // If false, the plugin is only 'recommended' instead of required.
-            'version' => '1.0',
-			'is_automatic' => true, // automatically activate plugins after installation
-            'force_activation' => false,
-            'force_deactivation' => false
-        ), */
-		/* array(
-            'name' => 'Listing Styles For GeoDirectory', // The plugin name.
-            'slug' => 'gd-listing-styles', // The plugin slug (typically the folder name).
-            'source' => $dynamic_url.'gd-listing-styles.zip',
-            'required' => false, // If false, the plugin is only 'recommended' instead of required.
-            'version' => '1.0',
-			'is_automatic' => true, // automatically activate plugins after installation
-            'force_activation' => false,
-            'force_deactivation' => false
-        ), */
-
 
     );
 
-/**
-     * Array of configuration settings. Amend each line as needed.
-     * If you want the default strings to be available under your own theme domain,
-     * leave the strings uncommented.
-     * Some of the strings are added into a sprintf, so see the comments at the
-     * end of each line for what each argument will be.
-     */
     $config = array(
         'default_path' => '',                      // Default absolute path to pre-packaged plugins.
         'menu'         => 'tgmpa-install-plugins', // Menu slug.

@@ -118,11 +118,11 @@ remove_action( 'woocommerce_before_single_product', array( $woocommerce, 'show_m
 remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20 );
 //remove_action( 'woocommerce_after_single_product_summary','woocommerce_output_related_products', 20);
 function custom_my_account_menu_items( $items ) {
-    unset($items['downloads']);
-	unset($items['orders']);
-	unset($items['edit-address']);
-	unset($items['edit-account']);
-	unset($items['customer-logout']);
+   // unset($items['downloads']);
+	//unset($items['orders']);
+	//unset($items['edit-address']);
+	//unset($items['edit-account']);
+	//unset($items['customer-logout']);
     return $items;
 }
 add_filter( 'woocommerce_account_menu_items', 'custom_my_account_menu_items' );

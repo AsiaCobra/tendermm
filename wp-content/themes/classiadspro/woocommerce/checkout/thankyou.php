@@ -31,7 +31,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly ?>
 
 	<?php else : ?>
 
-		<p class="woocommerce-thanks-text"><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', wp_kses_post(__( '<i class="pacz-theme-icon-tick"></i> Thank you. Your order has been received.', 'classiadspro' ), $order )); ?></p>
+		<p class="woocommerce-thanks-text"><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', esc_html__( 'Thank you. Your order has been received.', 'classiadspro' ), $order ); ?></p>
 
 		<ul class="order_details">
 			<li class="order">

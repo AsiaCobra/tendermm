@@ -3,8 +3,6 @@ global $post, $ALSP_ADIMN_SETTINGS;
 if(empty(global_get_post_id())){
 	$post_id = $post->ID;
 }else{
-	//$gd_settings = get_option('geodir_settings');
-	//$post_id = $gd_settings['page_details'];
 	$post_id = global_get_post_id();
 }
 

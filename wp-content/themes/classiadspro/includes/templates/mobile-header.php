@@ -37,7 +37,11 @@ global $pacz_settings;
 </header>
 
 <div class="responsive-search-form-container">
-	<?php echo do_shortcode('[alsp-search search_form_type="4"]'); ?>
+	<?php if(class_exists('alsp_plugin')): ?>
+		<?php echo do_shortcode('[alsp-search search_form_type="4"]'); ?>
+	<?php elseif(class_exists('DirectoryPress')): ?>
+		<?php echo do_shortcode('[directorypress-search search_form_type="4" keyword_field_width="100" location_field_width="100" button_field_width="100"]'); ?>
+	<?php endif; ?>
 </div>
 <div class="responsive-nav-container">
 <span class="res-menu-close pacz-icon-long-arrow-left"></span>

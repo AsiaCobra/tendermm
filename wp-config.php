@@ -23,14 +23,14 @@ define( 'WP_ROCKET_CF_API_KEY_HIDDEN', true );
 /** The name of the database for WordPress */
 // define( 'DB_NAME', 'mmtenders' );
 // define( 'DB_NAME', 'inzkdy93_tender' );
-define( 'DB_NAME', 'inzkdy93_dev-mmtender' );
-/** MySQL database username */
-define( 'DB_USER', 'inzkdy93_tender' );
-/** MySQL database password */
-define( 'DB_PASSWORD', 'fortender123!' );
-// define( 'DB_USER', 'root' );
-// define( 'DB_NAME', 'tender' );
-// define( 'DB_PASSWORD', '' );
+// define( 'DB_NAME', 'inzkdy93_dev-mmtender' );
+// /** MySQL database username */
+// define( 'DB_USER', 'inzkdy93_tender' );
+// /** MySQL database password */
+// define( 'DB_PASSWORD', 'fortender123!' );
+define( 'DB_USER', 'root' );
+define( 'DB_NAME', 'tender' );
+define( 'DB_PASSWORD', '' );
 /** MySQL hostname */
 define( 'DB_HOST', 'localhost' );
 /** Database Charset to use in creating database tables. */

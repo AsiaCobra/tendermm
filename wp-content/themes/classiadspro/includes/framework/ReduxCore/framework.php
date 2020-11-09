@@ -434,6 +434,13 @@
             }
 
             private function set_default_args() {
+				if(defined('CLASSIADSPRO_DEMO_SITE') && CLASSIADSPRO_DEMO_SITE == 'active'){
+					$hide_save_btn = true;
+					$hide_reset_btn = true;
+				}else{
+					$hide_save_btn = false;
+					$hide_reset_btn = false;
+				}
                 $this->args = array(
                     'opt_name'                  => '',
                     // Must be defined by theme/plugin
@@ -502,8 +509,8 @@
                     // Enable network admin when using network database mode
                     'network_sites'             => true,
                     // Enable sites as well as admin when using network database mode
-                    'hide_reset'                => false,
-                    'hide_save'                 => false,
+                    'hide_reset'                => $hide_save_btn,
+                    'hide_save'                 => $hide_reset_btn,
                     'hints'                     => array(
                         'icon'          => 'el el-question-sign',
                         'icon_position' => 'right',
@@ -1567,11 +1574,11 @@
                         ?>
                         <script>
                             /* You can add more configuration options to webfontloader by previously defining the WebFontConfig with your options */
-							 var webfotn_lib = '<?php echo PACZ_THEME_DIR_URI.'/includes/framework/ReduxCore/assets/js/webfont.js'; ?>';
+							var webfotn_lib = "<?php echo PACZ_THEME_DIR_URI.'/includes/framework/ReduxCore/assets/js/webfont.js'; ?>";
                             if ( typeof WebFontConfig === "undefined" ) {
                                 WebFontConfig = new Object();
                             }
-                            WebFontConfig['google'] = {families:<?php echo '['.$typography->makeGoogleWebfontString ( $this->typography ).']'; ?>};
+                            WebFontConfig['google'] = {families: [<?php echo $typography->makeGoogleWebfontString ( $this->typography ) ?>]};
 
                             (function() {
                                 var wf = document.createElement( 'script' );

@@ -24,11 +24,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 $downloads     = WC()->customer->get_downloadable_products();
 $has_downloads = (bool) $downloads;
-if(class_exists('alsp_plugin')){
-	echo do_action('dashboard_panel_html');
-}
+
 ?>
-   <div class="content-wrapper">
 <?php
 do_action( 'woocommerce_before_account_downloads', $has_downloads ); ?>
 
@@ -107,4 +104,3 @@ do_action( 'woocommerce_before_account_downloads', $has_downloads ); ?>
 <?php endif; ?>
 
 <?php do_action( 'woocommerce_after_account_downloads', $has_downloads ); ?>
-</div>

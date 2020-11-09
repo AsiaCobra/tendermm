@@ -78,6 +78,7 @@ header("Content-type: text/css");
 echo $css;
 ?>
 
+.myan_mar_text,
 .myan_mar_Font{
     font-family: MyanmarFont !important;
 }

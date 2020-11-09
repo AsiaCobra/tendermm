@@ -73,10 +73,10 @@ function pacz_detect_count_post_vars() {
 
     if( isset( $_POST['save_menu'] ) ){
 
-        $count = 0;
-        foreach( $_POST as $key => $arr ){
-            $count+= count( $arr );
-        }
+       // $count = 0;
+        //foreach( $_POST as $key => $arr ){
+            $count = count( $_POST );
+        //}
 
         update_option( 'pacz_detect-post-var-count' , $count );
     }

@@ -64,9 +64,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 			</div>
 			<div class="pacz-row">
 				<div class="pacz-col-sm-4 pacz-col-sm-6 pacz-col-xs-12">
-					<div class="pacz-box doc">
-						<iframe width="100%" height="315" src="https://www.youtube.com/embed/x2GwC974ncc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>	
-					</div>
+					<!--<div class="pacz-box doc">
+						
+					</div>-->
 				</div>	
 			</div>
 		</div>

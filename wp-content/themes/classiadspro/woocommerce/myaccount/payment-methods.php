@@ -25,11 +25,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 $saved_methods = wc_get_customer_saved_methods_list( get_current_user_id() );
 $has_methods   = (bool) $saved_methods;
 $types         = wc_get_account_payment_methods_types();
-if(class_exists('alsp_plugin')){
-	echo do_action('dashboard_panel_html');
-}
+
 ?>
- <div class="content-wrapper">
  <?php do_action( 'woocommerce_before_account_payment_methods', $has_methods ); ?>
 
 <?php if ( $has_methods ) : ?>
@@ -83,4 +80,3 @@ if(class_exists('alsp_plugin')){
 <?php if ( WC()->payment_gateways->get_available_payment_gateways() ) : ?>
 	<a class="button" href="<?php echo esc_url( wc_get_endpoint_url( 'add-payment-method' ) ); ?>"><?php esc_html_e( 'Add payment method', 'classiadspro' ); ?></a>
 <?php endif; ?>
-</div>

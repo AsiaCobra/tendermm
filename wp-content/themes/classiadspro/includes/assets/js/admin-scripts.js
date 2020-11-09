@@ -1,4 +1,4 @@
-function pacz_upload_option() {
+window.pacz_upload_option = function() {
     if (typeof wp.media != 'undefined') {
         var _custom_media = true,
             _orig_send_attachment = wp.media.editor.send.attachment;

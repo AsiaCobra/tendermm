@@ -97,11 +97,11 @@ if( !class_exists( 'ReduxFramework_nav_color' ) ) {
             endif;            
 
             if ( $this->field['bg-hover'] === true && $this->field['default']['bg-hover'] !== false ):
-                echo '<span class="linkColor"><strong>' . esc_html__( 'Hover Background Color', 'classiadspro' ) . '</strong><input id="' . $this->field['id'] . '-bg-hover" name="' . $this->args['opt_name'] . '[' . $this->field['id'] . '][bg-hover]" value="' . $this->value['bg-hover'] . '" class="redux-color redux-color-init ' . $this->field['class'] . '"  type="text" data-default-color="' . $this->field['default']['bg-hover'] . '" /></span>';
+                echo '<span class="linkColor"><strong>' . esc_html__( 'Hover Background Color', 'classiadspro' ) . '</strong><input id="' . $this->field['id'] . '-bg-hover" name="' . $this->args['opt_name'] . '[' . $this->field['id'] . '][bg-hover]" value="' . $this->value['bg-hover'] . '" class="redux-color redux-color-init ' . $this->field['class'] . '"  type="text" data-default-color="' . $this->field['default']['bg-hover'] . '" /></span><br>';
             endif;
 			
 			if ( $this->field['bg-active'] === true && $this->field['default']['bg-active'] !== false ):
-                echo '<span class="linkColor"><strong>' . esc_html__( 'active Background Color', 'classiadspro' ) . '</strong><input id="' . $this->field['id'] . '-bg-active" name="' . $this->args['opt_name'] . '[' . $this->field['id'] . '][bg-active]" value="' . $this->value['bg-active'] . '" class="redux-color redux-color-init ' . $this->field['class'] . '"  type="text" data-default-color="' . $this->field['default']['bg-active'] . '" /></span>';
+                echo '<span class="linkColor"><strong>' . esc_html__( 'Active Background Color', 'classiadspro' ) . '</strong><input id="' . $this->field['id'] . '-bg-active" name="' . $this->args['opt_name'] . '[' . $this->field['id'] . '][bg-active]" value="' . $this->value['bg-active'] . '" class="redux-color redux-color-init ' . $this->field['class'] . '"  type="text" data-default-color="' . $this->field['default']['bg-active'] . '" /></span>';
             endif;
         
         }
