@@ -1,11 +1,4 @@
-# BEGIN rlrssslReallySimpleSSL rsssl_version[3.2.8]
-<IfModule mod_rewrite.c>
-RewriteEngine on
-RewriteCond %{HTTPS} !=on [NC]
-RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/
-RewriteRule ^(.*)$ http://%{HTTP_HOST}/$1 [R=301,L]
-</IfModule>
-# END rlrssslReallySimpleSSL
+
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
 RewriteEngine On
