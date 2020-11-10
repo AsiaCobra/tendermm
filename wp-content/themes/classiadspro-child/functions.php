@@ -13,11 +13,13 @@ add_action('wp_footer',function(){
     <style>
         @font-face {
             font-family: 'Glyphicons Halflings';
-            src: url('http://tenderopt.nhs/wp-content/themes/classiadspro/styles/fonts/glyphicons-halflings-regular.eot');
-            src: url('http://tenderopt.nhs/wp-content/themes/classiadspro/styles/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('http://tenderopt.nhs/wp-content/themes/classiadspro/styles/fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('http://tenderopt.nhs/wp-content/themes/classiadspro/styles/fonts/glyphicons-halflings-regular.woff') format('woff'), url('http://tenderopt.nhs/wp-content/themes/classiadspro/styles/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('http://tenderopt.nhs/wp-content/themes/classiadspro/styles/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+            src: url('/wp-content/themes/classiadspro/styles/fonts/glyphicons-halflings-regular.eot');
+            src: url('/wp-content/themes/classiadspro/styles/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('http://tenderopt.nhs/wp-content/themes/classiadspro/styles/fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('http://tenderopt.nhs/wp-content/themes/classiadspro/styles/fonts/glyphicons-halflings-regular.woff') format('woff'), url('http://tenderopt.nhs/wp-content/themes/classiadspro/styles/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('http://tenderopt.nhs/wp-content/themes/classiadspro/styles/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
             font-weight: normal;
             font-style: normal;
         }
+        .search-form-style3.alsp-content.alsp-search-form{margin-top:0px!important}
+        .homepage-slider{ margin-bottom:30px; }
         .search-form-style3 .select2-container--default .select2-selection--single .select2-selection__arrow b:before{
           font-family: "Font Awesome 5 Free";
         }
@@ -31,7 +33,11 @@ add_action('wp_footer',function(){
         .list-scroll ul li{ padding-top:10px;padding-left:10px;padding-bottom:10px;background:#fffaff; margin:2px; }
     </style>
     <script id="blabla">
-        
+        <?php if(wp_is_mobile()): ?>
+        /* <![CDATA[ */
+        var ubermenu_data = {"remove_conflicts":"on","reposition_on_load":"off","intent_delay":"300","intent_interval":"100","intent_threshold":"7","scrollto_offset":"50","scrollto_duration":"1000","responsive_breakpoint":"959","accessible":"on","retractor_display_strategy":"responsive","touch_off_close":"on","submenu_indicator_close_mobile":"on","collapse_after_scroll":"on","v":"3.6.0.1","configurations":["main"],"ajax_url":"http:\/\/tenderopt.nhs\/wp-admin\/admin-ajax.php","plugin_url":"http:\/\/tenderopt.nhs\/wp-content\/plugins\/ubermenu\/","disable_mobile":"off","prefix_boost":"","aria_role_navigation":"off","aria_nav_label":"off","aria_expanded":"off","aria_hidden":"off","aria_controls":"","aria_responsive_toggle":"off","icon_tag":"i","theme_locations":{"primary-menu":"Primary Navigation","second-menu":"Second Navigation","third-menu":"Third Navigation","fourth-menu":"Fourth Navigation","fifth-menu":"Fifth Navigation","sixth-menu":"Sixth Navigation","seventh-menu":"Seventh Navigation"}};
+        /* ]]> */
+        <?php endif; ?>
         const union_ministry = { wrapper:$('.mailster-union_ministry-wrapper'), name:'union_ministry', value:'All Ministries', require:false }; const regional_gov = { wrapper:$('.mailster-regional-government-wrapper'), name:'regional-government', value:'All States/Regions Government Offices', require:false };
 
         $(window).on('load',function(){  $('form.mailster-form').find('select').select2(); hide_form_field(); $("select[name='field_tender_field'],select[name='alsp-field-input-92[]']").select2({ sorter:function(results){ return results.sort(function(a, b) { if ( a.text < b.text ){ return -1; } if ( a.text > b.text ){ return 1; } return 0; }); }});
@@ -70,12 +76,14 @@ add_action('wp_footer',function(){
           let styles = [
             '//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.min.css',
             '/wp-content/plugins/js_composer/assets/css/js_composer.min.css',
+            '/wp-content/themes/classiadspro/styles/css/styles.css',
             '/wp-content/plugins/ubermenu/assets/fontawesome/css/all.min.css',
           ];
           let scripts =  [
             '/wp-content/plugins/myanmar-unipress/_inc/js/rabbit.js',
             '/wp-content/plugins/myanmar-unipress/_inc/js/bunny.js',
             '/wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js',
+            // '/wp-content/plugins/ubermenu/assets/js/ubermenu.min.js',
           ];
           for( let style of styles){
             // console.log(style);
@@ -85,6 +93,10 @@ add_action('wp_footer',function(){
             // console.log(style);
             $('body').append(`<script src="${style}">`);
           }
+          <?php if(wp_is_mobile()): ?>
+            $('body').append(`<script src="/wp-content/plugins/ubermenu/assets/js/ubermenu.min.js">`);
+            
+          <?php endif; ?>
        })
        $(document).on('appear',function(e){ })
     </script>
@@ -140,6 +152,7 @@ function remove_scripts(){
       'pacz-fonticon-custom',
       'pacz-common-shortcode',
       'pacz-styles-default',
+      // 'pacz-styles',
       'pacz-blog',
       'ubermenu-font-awesome-all',
       'ubermenu-white',
@@ -538,7 +551,7 @@ add_shortcode( 'home_page_slider', 'home_page_slider' );
 function home_page_slider(){
   echo '<div class="slider-home">
     <div class=""><img class="lazyload" data-sizes="100vw" data-original="/wp-content/uploads/2020/09/Ads-4-MMTender-Banner.jpg" data-lazy1="/wp-content/uploads/2020/09/Ads-4-MMTender-Banner.jpg" alt=""></div>
-    <div class=""><img class="lazyload" data-sizes="100vw" data-original="/wp-content/uploads/2020/09/Ads-Slidder-010.jpg" data-lazy1="/wp-content/uploads/2020/09/Ads-Slidder-010.jpg" alt=""></div>
+    <div class=""><img class="lazyload" data-sizes="100vw" data-doriginal="/wp-content/uploads/2020/09/Ads-Slidder-010.jpg" data-lazy="/wp-content/uploads/2020/09/Ads-Slidder-010.jpg" alt=""></div>
   </div>';
 
 }
